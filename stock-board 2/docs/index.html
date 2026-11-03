@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0E2A47">
+  <title>Stock Board</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230E2A47'/><polyline points='5,23 12,16 17,19 27,8' fill='none' stroke='%231F5FA8' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/><circle cx='27' cy='8' r='2.5' fill='%236B8CAE'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-paper text-ink font-sans antialiased min-h-screen flex flex-col">
+
+  <header class="bg-ink text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-4 pb-3 flex items-start justify-between gap-4">
+      <div>
+        <h1 class="font-cond font-bold text-3xl leading-none tracking-tight">Stock Board</h1>
+        <p id="today" class="text-sm text-line mt-1"></p>
+      </div>
+      <div class="text-right">
+        <p id="updated" class="text-sm text-line"></p>
+        <a id="run-link" href="#" target="_blank" rel="noopener"
+           class="hidden mt-1 inline-block text-sm font-medium text-white underline underline-offset-2 decoration-white/40 hover:decoration-white">
+          Run an update</a>
+      </div>
+    </div>
+    <nav id="filters" aria-label="Show"
+         class="max-w-6xl mx-auto px-4 sm:px-6 pb-3 flex gap-2 overflow-x-auto"></nav>
+  </header>
+
+  <main class="flex-1 w-full max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+    <div id="notice" class="hidden mb-6 rounded-md border border-line bg-white px-4 py-3 text-sm text-muted space-y-1"></div>
+
+    <section id="featured" aria-label="Top-rated stock" class="mb-10"></section>
+
+    <section id="holdings" aria-labelledby="holdings-heading" class="mb-12">
+      <div class="flex items-baseline justify-between mb-4">
+        <h2 id="holdings-heading" class="font-cond font-semibold text-2xl">Your holdings</h2>
+        <p id="holdings-count" class="text-sm text-muted"></p>
+      </div>
+      <div id="holdings-grid" class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"></div>
+    </section>
+
+    <section id="watchlist" aria-labelledby="watch-heading" class="mb-12">
+      <div class="flex flex-wrap items-baseline justify-between gap-2 mb-4">
+        <h2 id="watch-heading" class="font-cond font-semibold text-2xl">Watchlist</h2>
+        <label class="text-sm text-muted flex items-center gap-2">Sort by
+          <select id="sort" class="rounded border border-line bg-white px-2 py-1 text-ink text-sm">
+            <option value="score">Score</option>
+            <option value="trend">Trend</option>
+            <option value="garp">GARP</option>
+            <option value="quality">Quality</option>
+            <option value="dividend">Dividend</option>
+            <option value="day">Today's change</option>
+            <option value="symbol">Ticker</option>
+          </select>
+        </label>
+      </div>
+      <div id="watch-grid" class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"></div>
+    </section>
+
+    <section id="unscored" aria-labelledby="unscored-heading" class="hidden mb-12">
+      <h2 id="unscored-heading" class="font-cond font-semibold text-2xl mb-1">Not enough data to score</h2>
+      <p class="text-sm text-muted mb-4">Yahoo didn't return enough numbers for these to fill all three core lenses. Common for TSX Venture stocks and companies without earnings.</p>
+      <ul id="unscored-list" class="rounded-lg bg-white border border-line divide-y divide-line"></ul>
+    </section>
+
+    <section aria-labelledby="results-heading">
+      <h2 id="results-heading" class="font-cond font-semibold text-2xl mb-1">How the ratings have done</h2>
+      <p id="results-sub" class="text-sm text-muted mb-4"></p>
+      <div id="results"></div>
+    </section>
+  </main>
+
+  <dialog id="detail" aria-labelledby="detail-title"
+          class="w-[min(44rem,calc(100vw-2rem))] max-h-[calc(100vh-2rem)] rounded-xl border border-line bg-white p-0 text-ink shadow-xl backdrop:bg-ink/50">
+    <div id="detail-body"></div>
+  </dialog>
+
+  <footer class="border-t border-line">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 text-xs text-muted leading-relaxed space-y-1">
+      <p id="method"></p>
+      <p>Data from Yahoo Finance through the unofficial yfinance library; it can be delayed, missing or wrong.
+        Scores are research based on fixed rules, not personalized financial advice.</p>
+    </div>
+  </footer>
+
+<script>
+// ---------- Settings ----------
+const RECENT_CALLS = 10;          // rating changes listed under the results table
+const RECHECK_MINUTES = 10;       // re-read the data while the tab is open
+const LENSES = [['trend', 'Trend'], ['garp', 'GARP'], ['quality', 'Quality'], ['dividend', 'Dividend']];
+
+// ---------- Helpers ----------
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c =>
+  ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const ticker = sym => sym.replace(/\.(TO|V|NE|CN)$/, '').replace('-', '.');
+const exch = sym => sym.endsWith('.V') ? 'TSXV' : sym.endsWith('.TO') ? 'TSX' : '';
+const pct = (x, d = 1) => x == null ? '–' : `${(x * 100).toFixed(d)}%`;
+const signedPct = (x, d = 1) => x == null ? '–' : `${x >= 0 ? '+' : '−'}${(Math.abs(x) * 100).toFixed(d)}%`;
+const num = (x, d = 1) => x == null ? '–' : x.toFixed(d);
+const price = x => x == null ? '–' : `$${x >= 100 ? x.toFixed(2) : x >= 1 ? x.toFixed(2) : x.toFixed(3)}`;
+const score = x => x == null ? 'n/a' : x.toFixed(1);
+const tone = n => n > 0 ? 'text-accent' : n < 0 ? 'text-down' : '';
+const shortDate = iso => new Date(iso).toLocaleDateString([], { month: 'short', day: 'numeric', year: 'numeric' });
+const bigMoney = x => x == null ? '–' : x >= 1e9 ? `$${(x / 1e9).toFixed(1)}B` : `$${(x / 1e6).toFixed(0)}M`;
+
+const RATING_STYLE = {
+  'Buy more': 'bg-accent text-white', 'Buy': 'bg-accent text-white',
+  'Hold': 'bg-muted/15 text-ink', 'Sell': 'bg-down/10 text-down', "Don't buy": 'bg-line/60 text-ink',
+};
+const barColor = v => v == null ? 'bg-line' : v >= 7 ? 'bg-accent' : v >= 4 ? 'bg-muted' : 'bg-line';
+const ratingBadge = s => `<span class="shrink-0 rounded px-2 py-0.5 text-xs font-semibold ${RATING_STYLE[s.rating] || ''}">${esc(s.rating)}</span>`
+  + (s.borderline ? `<span class="shrink-0 rounded border border-muted px-1.5 py-0.5 text-[11px] font-semibold text-muted">Borderline</span>` : '');
+
+function ago(iso) {
+  const mins = Math.round((Date.now() - new Date(iso)) / 60000);
+  if (mins < 1) return 'just now';
+  if (mins < 60) return `${mins} min ago`;
+  const h = Math.round(mins / 60);
+  if (h < 24) return `${h} hr ago`;
+  const d = Math.round(h / 24);
+  return `${d} day${d > 1 ? 's' : ''} ago`;
+}
+
+// ---------- State ----------
+let data = null, history = null, view = 'all', sortKey = 'score';
+
+// ---------- Pieces ----------
+function sparkline(points, tall) {
+  if (!points || points.length < 2) return '';
+  const w = 120, h = tall ? 40 : 28, lo = Math.min(...points), hi = Math.max(...points), span = hi - lo || 1;
+  const xy = points.map((v, i) => [i / (points.length - 1) * w, h - 3 - (v - lo) / span * (h - 6)]);
+  const up = points[points.length - 1] >= points[0];
+  const line = xy.map(p => p.map(n => n.toFixed(1)).join(',')).join(' ');
+  const [ex, ey] = xy[xy.length - 1];
+  return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" class="w-full ${tall ? 'h-12' : 'h-8'}" aria-hidden="true">
+    <polygon points="0,${h} ${line} ${w},${h}" class="${up ? 'fill-accent/10' : 'fill-down/10'}"/>
+    <polyline points="${line}" fill="none" class="${up ? 'stroke-accent' : 'stroke-down'}" stroke-width="1.5" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+    <circle cx="${ex.toFixed(1)}" cy="${ey.toFixed(1)}" r="2.2" class="${up ? 'fill-accent' : 'fill-down'}"/>
+  </svg>`;
+}
+
+function lensBars(s, thick) {
+  return `<div class="space-y-1.5">${LENSES.map(([k, label]) => {
+    const v = s.lenses[k];
+    return `<div class="grid grid-cols-[4.5rem_1fr_2.25rem] items-center gap-2 text-sm">
+      <span class="text-muted">${label}</span>
+      <div class="${thick ? 'h-2.5' : 'h-1.5'} rounded-full bg-line/60 overflow-hidden" role="progressbar"
+           aria-valuemin="0" aria-valuemax="10" aria-valuenow="${v ?? 0}" aria-label="${label}">
+        <div class="bar-fill h-full rounded-full ${barColor(v)}" style="width:0" data-w="${v == null ? 0 : v * 10}%"></div>
+      </div>
+      <span class="text-right font-semibold tabular-nums ${v == null ? 'text-muted font-normal' : ''}">${score(v)}</span>
+    </div>`;
+  }).join('')}</div>`;
+}
+
+const REASON_LABEL = { move: 'Moving', caution: 'Caution' };
+function reasonList(s, onlyCaution) {
+  return (s.reasons || []).filter(r => !onlyCaution || r.type === 'caution').map(r =>
+    `<li class="${r.type === 'caution' ? 'text-down' : ''}"><span class="font-semibold">${REASON_LABEL[r.type] || 'Note'}:</span> ${esc(r.text)}</li>`).join('');
+}
+
+function strengths(s) {
+  // The best lens's measures, as the "why" on the featured card
+  const best = LENSES.filter(([k]) => s.lenses[k] != null).sort((a, b) => s.lenses[b[0]] - s.lenses[a[0]])[0];
+  return best ? (s.notes[best[0]] || []).slice(0, 3).map(n => `<li><span class="font-semibold">${best[1]}:</span> ${esc(n)}</li>`).join('') : '';
+}
+
+function renderFeatured(s) {
+  if (!s) {
+    $('featured').innerHTML = `<div class="rounded-xl border border-dashed border-line bg-white px-6 py-12 text-center">
+      <p class="font-cond font-semibold text-2xl">Nothing to show here</p>
+      <p class="text-muted mt-1">No scored stocks in this view yet. The next update will try again.</p></div>`;
+    return;
+  }
+  $('featured').innerHTML = `
+    <h2 class="font-cond font-semibold text-2xl mb-3">Top-rated${view === 'holdings' ? ' holding' : view === 'watch' ? ' on the watchlist' : ''}</h2>
+    <article class="relative overflow-hidden rounded-xl bg-white border border-line">
+      <div class="absolute inset-y-0 left-0 w-1.5 bg-accent" aria-hidden="true"></div>
+      <div class="grid gap-6 md:grid-cols-[1.4fr_1fr] p-5 sm:p-8 pl-6 sm:pl-10">
+        <div class="min-w-0">
+          <p class="text-sm text-muted mb-2">${esc(exch(s.symbol))}${s.sector ? `, ${esc(s.sector)}` : ''}${s.held ? ', you hold this' : ''}</p>
+          <p class="font-cond font-bold text-5xl sm:text-6xl leading-none">${esc(ticker(s.symbol))}</p>
+          <p class="font-cond font-medium text-2xl text-muted mt-1">${esc(s.name)}</p>
+          <div class="mt-4">${sparkline(s.chart, true)}</div>
+          <ul class="mt-4 space-y-1 text-sm">${strengths(s)}${reasonList(s)}</ul>
+          <button type="button" data-open="${esc(s.symbol)}" class="mt-4 text-sm font-medium text-accent underline underline-offset-2">Full breakdown</button>
+        </div>
+        <div class="flex flex-col justify-between gap-6 md:border-l md:border-line md:pl-8">
+          <div>
+            <p class="font-cond font-bold leading-none text-7xl sm:text-8xl text-accent tabular-nums">${s.adjusted.toFixed(2)}</p>
+            <p class="mt-2 text-sm text-muted">Adjusted score out of 10</p>
+            <div class="mt-3 flex flex-wrap gap-2">${ratingBadge(s)}</div>
+            <dl class="mt-4 grid grid-cols-3 gap-3 text-sm">
+              <div><dt class="text-muted">Price</dt><dd class="font-semibold">${price(s.price)}</dd></div>
+              <div><dt class="text-muted">12 months</dt><dd class="font-semibold ${tone(s.metrics.return_12m)}">${signedPct(s.metrics.return_12m)}</dd></div>
+              <div><dt class="text-muted">Fwd P/E</dt><dd class="font-semibold">${num(s.metrics.forward_pe)}</dd></div>
+            </dl>
+          </div>
+          ${lensBars(s, true)}
+        </div>
+      </div>
+    </article>`;
+}
+
+function renderCard(s) {
+  const cautions = reasonList(s, true);
+  return `<article class="rounded-lg bg-white border border-line p-5 flex flex-col gap-4 ${s.stale ? 'opacity-70' : ''}">
+    <div class="flex items-start justify-between gap-3">
+      <div class="min-w-0">
+        <p class="font-cond font-bold text-3xl leading-none">${esc(ticker(s.symbol))}
+          <span class="align-middle text-xs font-sans font-semibold text-muted">${esc(exch(s.symbol))}</span></p>
+        <p class="text-sm text-muted truncate mt-1">${esc(s.name)}</p>
+      </div>
+      <div class="text-right shrink-0">
+        <p class="font-semibold tabular-nums">${price(s.price)}</p>
+        <p class="text-sm tabular-nums ${tone(s.day_change)}">${signedPct(s.day_change, 2)}</p>
+      </div>
+    </div>
+    ${sparkline(s.chart)}
+    <div class="flex items-center justify-between gap-2">
+      <div class="flex flex-wrap gap-1.5">${ratingBadge(s)}</div>
+      <span class="font-cond font-bold text-3xl text-accent tabular-nums">${s.adjusted.toFixed(2)}</span>
+    </div>
+    ${lensBars(s, false)}
+    ${cautions ? `<ul class="text-sm space-y-0.5">${cautions}</ul>` : ''}
+    ${s.stale ? '<p class="text-xs text-muted">Couldn\'t refresh this run; showing the last data.</p>' : ''}
+    <button type="button" data-open="${esc(s.symbol)}" class="mt-auto self-start text-sm font-medium text-accent underline underline-offset-2">Full breakdown</button>
+  </article>`;
+}
+
+// ---------- Detail dialog ----------
+function metricRows(s) {
+  const m = s.metrics, rows = [
+    ['50-day average', price(m.ma50)], ['200-day average', price(m.ma200)],
+    ['52-week range', m.low52 != null ? `${price(m.low52)} – ${price(m.high52)}` : '–'],
+    ['12-month return', signedPct(m.return_12m)], ['Volatility (1 yr)', pct(m.volatility, 0)], ['Beta', num(m.beta, 2)],
+    ['Market value', bigMoney(m.market_cap)], ['Forward P/E', num(m.forward_pe)], ['Trailing P/E', num(m.trailing_pe)],
+    ['PEG', num(m.peg, 2)], ['Expected EPS growth', signedPct(m.eps_growth_next)], ['Return on equity', pct(m.roe)],
+    ['Profit margin', pct(m.profit_margin)], ['Debt-to-equity', m.debt_to_equity == null ? '–' : (m.debt_to_equity / 100).toFixed(2)],
+    ['Free cash flow yield', signedPct(m.fcf_yield)], ['Dividend yield', pct(m.dividend_yield, 2)],
+    ['Payout ratio', pct(m.payout_ratio, 0)], ['Dividend growth (5 yr/yr)', signedPct(m.dividend_cagr_5y)],
+    ['Years of increases', m.dividend_years_raised ?? '–'],
+    ['Analyst target', m.target_price != null ? `${price(m.target_price)}${m.analyst_count ? ` (${m.analyst_count} analysts)` : ''}` : '–'],
+  ];
+  return rows.map(([k, v]) => `<div class="flex justify-between gap-3 py-1 border-b border-line/70"><dt class="text-muted">${k}</dt><dd class="font-semibold tabular-nums text-right">${esc(v)}</dd></div>`).join('');
+}
+
+function openDetail(sym) {
+  const s = (data?.stocks || []).find(x => x.symbol === sym);
+  if (!s) return;
+  const w = s.weights, wtxt = LENSES.map(([k, l]) => w[k] ? `${l} ${Math.round(w[k] * 1000) / 10}%` : null).filter(Boolean).join(' · ');
+  const fc = s.financial_currency && s.financial_currency !== s.currency
+    ? `<p class="text-xs text-muted">Shares trade in ${esc(s.currency)}; the company reports in ${esc(s.financial_currency)}.</p>` : '';
+  const news = (s.news || []).map(n => `<li><a class="text-accent underline underline-offset-2" href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a>
+      <span class="text-muted">${n.source ? `· ${esc(n.source)}` : ''}${n.published ? ` · ${shortDate(n.published)}` : ''}</span></li>`).join('');
+  $('detail-body').innerHTML = `
+    <div class="sticky top-0 z-10 bg-white border-b border-line px-5 sm:px-6 py-4 flex items-start justify-between gap-4">
+      <div class="min-w-0">
+        <h2 id="detail-title" class="font-cond font-bold text-3xl leading-none">${esc(ticker(s.symbol))}
+          <span class="font-medium text-muted text-xl">${esc(s.name)}</span></h2>
+        <div class="mt-2 flex flex-wrap items-center gap-2 text-sm">${ratingBadge(s)}
+          <span class="text-muted">${s.held ? 'You hold this' : 'Watchlist'} · ${price(s.price)}</span></div>
+      </div>
+      <button type="button" data-close class="shrink-0 rounded-md border border-line px-3 py-1 text-sm font-medium hover:bg-paper">Close</button>
+    </div>
+    <div class="px-5 sm:px-6 py-5 space-y-6 text-sm">
+      <div class="rounded-md bg-paper px-3 py-2 font-mono text-xs overflow-x-auto whitespace-nowrap">
+        Weights ${esc(wtxt)} · Composite ${s.composite.toFixed(2)} · Risk −${s.risk_penalty.toFixed(2)} · Adjusted ${s.adjusted.toFixed(2)}</div>
+      ${fc}
+      <div class="grid gap-5 sm:grid-cols-2">${LENSES.map(([k, l]) => `
+        <div class="min-w-0">
+          <div class="flex items-baseline justify-between"><h3 class="font-semibold">${l}</h3>
+            <span class="font-cond font-bold text-xl tabular-nums">${score(s.lenses[k])}</span></div>
+          <ul class="mt-1 space-y-0.5 text-muted list-disc pl-4">${(s.notes[k] || []).map(n => `<li>${esc(n)}</li>`).join('')}</ul>
+        </div>`).join('')}</div>
+      <div><h3 class="font-semibold mb-1">Risk adjustment</h3>
+        ${(s.reasons || []).some(r => r.type === 'caution')
+          ? `<ul class="space-y-0.5 list-disc pl-4 text-down">${(s.reasons || []).filter(r => r.type === 'caution').map(r => `<li>${esc(r.text)}</li>`).join('')}</ul>`
+          : '<p class="text-muted">No risk flags.</p>'}</div>
+      <div><h3 class="font-semibold mb-1">What would change this rating</h3>
+        <ul class="space-y-0.5 list-disc pl-4">${(s.triggers || []).map(t => `<li>${esc(t)}</li>`).join('')}</ul></div>
+      <div><h3 class="font-semibold mb-1">Recent news</h3>
+        ${news ? `<ul class="space-y-1.5">${news}</ul>` : '<p class="text-muted">No headlines from the last 90 days.</p>'}</div>
+      <div><h3 class="font-semibold mb-1">The numbers</h3><dl class="grid gap-x-6 sm:grid-cols-2">${metricRows(s)}</dl></div>
+      <p class="text-muted">Source: <a class="text-accent underline underline-offset-2" target="_blank" rel="noopener"
+        href="https://finance.yahoo.com/quote/${encodeURIComponent(s.symbol)}">Yahoo Finance: ${esc(s.symbol)}</a>,
+        retrieved ${data.sample ? '(sample data)' : shortDate(data.generated_at)}.</p>
+    </div>`;
+  if (!$('detail').open) $('detail').showModal();
+  $('detail').scrollTop = 0;
+  history_replace(s.symbol);
+}
+
+function history_replace(sym) {
+  try { window.history.replaceState(null, '', sym ? `#${sym}` : location.pathname + location.search); } catch (e) {}
+}
+
+// ---------- Results ----------
+const GROUPS = [
+  ['Buy calls', r => r === 'Buy' || r === 'Buy more', 'bg-accent'],
+  ['Hold calls', r => r === 'Hold', 'bg-muted'],
+  ['Sell and Don\'t buy', r => r === 'Sell' || r === "Don't buy", 'bg-down'],
+];
+
+function renderResults() {
+  const calls = history?.calls || [];
+  const horizons = data?.settings?.grade_after_days || [30, 90, 180];
+  const benchName = data?.benchmark?.name || 'the benchmark';
+  $('results-sub').textContent = `Each rating is logged at that day's price when it first appears or changes, then compared with the ${benchName} after ${horizons.join(', ')} days.`;
+  const graded = calls.filter(c => Object.keys(c.results || {}).length);
+  if (!graded.length) {
+    $('results').innerHTML = `<div class="rounded-lg border border-dashed border-line bg-white px-5 py-8 text-center text-muted">
+      ${calls.length} rating${calls.length === 1 ? '' : 's'} logged so far. Results appear once the first ones are ${horizons[0]} days old.</div>`;
+    return;
+  }
+  const cell = (rows, h) => {
+    const r = rows.map(c => c.results[h]).filter(x => x && x.excess != null);
+    if (!r.length) return '<td class="py-2 text-muted">–</td>';
+    const avg = r.reduce((a, x) => a + x.excess, 0) / r.length, beat = r.filter(x => x.excess > 0).length;
+    return `<td class="py-2"><span class="font-semibold ${tone(avg)}">${signedPct(avg)}</span>
+      <span class="block text-xs text-muted">${beat} of ${r.length} beat it</span></td>`;
+  };
+  const recent = calls.slice().sort((a, b) => b.logged_at.localeCompare(a.logged_at)).slice(0, RECENT_CALLS);
+  $('results').innerHTML = `
+    <div class="grid grid-cols-1 items-start gap-4 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
+      <div class="rounded-lg bg-white border border-line p-5 overflow-x-auto">
+        <table class="w-full text-sm">
+          <caption class="text-left text-muted pb-3">Average return vs. ${esc(benchName)} after each period</caption>
+          <thead class="text-muted text-left"><tr><th class="font-normal pb-2">Rating</th>
+            ${horizons.map(h => `<th class="font-normal pb-2">${h} days</th>`).join('')}</tr></thead>
+          <tbody>${GROUPS.map(([label, test, dot]) => {
+            const rows = graded.filter(c => test(c.rating));
+            return `<tr class="border-t border-line"><td class="py-2 pr-3"><span class="flex items-center gap-2 whitespace-nowrap">
+              <span class="inline-block w-2.5 h-2.5 rounded-full ${dot}"></span>${label}</span></td>
+              ${horizons.map(h => cell(rows, String(h))).join('')}</tr>`;
+          }).join('')}</tbody>
+        </table>
+        <p class="mt-4 text-xs text-muted">The honest test: Buy calls should beat the benchmark more often than Sell calls. Give it a year of ratings before reading much into it.</p>
+      </div>
+      <div class="rounded-lg bg-white border border-line">
+        <h3 class="px-5 pt-4 pb-2 text-sm text-muted">Latest rating changes</h3>
+        <ul>${recent.map(c => {
+          const last = horizons.map(String).filter(h => c.results[h]).pop();
+          const r = last ? c.results[last] : null;
+          return `<li class="px-5 py-3 border-t border-line flex items-center gap-3">
+            <span class="shrink-0 w-20 text-center rounded text-xs font-semibold py-0.5 ${RATING_STYLE[c.rating] || ''}">${esc(c.rating)}</span>
+            <div class="min-w-0 flex-1">
+              <p class="font-semibold truncate">${esc(ticker(c.symbol))} <span class="font-normal text-muted">at ${price(c.price)}</span></p>
+              <p class="truncate text-xs text-muted">${shortDate(c.logged_at)} · score ${c.score.toFixed(2)}</p>
+            </div>
+            <span class="shrink-0 text-right text-sm">${r ? `<span class="font-semibold ${tone(r.excess)}">${signedPct(r.excess)}</span>
+              <span class="block text-xs text-muted">vs. index, ${last} d</span>` : '<span class="text-xs text-muted">Not graded yet</span>'}</span>
+          </li>`;
+        }).join('')}</ul>
+      </div>
+    </div>`;
+}
+
+// ---------- Page ----------
+const SORTS = {
+  score: (a, b) => b.adjusted - a.adjusted,
+  day: (a, b) => (b.day_change ?? -9) - (a.day_change ?? -9),
+  symbol: (a, b) => a.symbol.localeCompare(b.symbol),
+};
+const lensSort = k => (a, b) => (b.lenses[k] ?? -1) - (a.lenses[k] ?? -1);
+
+function renderFilters() {
+  const views = [['all', 'All stocks'], ['holdings', 'Holdings'], ['watch', 'Watchlist'], ['buy', 'Rated Buy']];
+  $('filters').innerHTML = views.map(([key, label]) => {
+    const on = key === view;
+    return `<button type="button" data-view="${key}" aria-pressed="${on}"
+      class="shrink-0 rounded-full px-3 py-1 text-sm font-medium ${on ? 'bg-white text-ink' : 'bg-white/10 text-white hover:bg-white/20'}">${label}</button>`;
+  }).join('');
+}
+
+function renderNotices() {
+  const msgs = [];
+  if (data?.sample) msgs.push('Showing sample data built from research in October and November 2026. Live scores replace it after the first scheduled update runs (see the README).');
+  (data?.notes || []).forEach(n => msgs.push(n));
+  const hoursOld = data ? (Date.now() - new Date(data.generated_at)) / 3.6e6 : 0;
+  if (!data?.sample && hoursOld > 80) msgs.push('This data is more than three days old. Check that the update workflow is still running on GitHub.');
+  $('notice').innerHTML = msgs.map(m => `<p>${esc(m)}</p>`).join('');
+  $('notice').classList.toggle('hidden', !msgs.length);
+}
+
+function renderUnscored() {
+  const rows = (data?.unscored || []).filter(u => view === 'all' || (view === 'holdings' ? u.held : view === 'watch' ? !u.held : false));
+  $('unscored').classList.toggle('hidden', !rows.length);
+  $('unscored-list').innerHTML = rows.map(u => `<li class="px-5 py-3 flex items-center justify-between gap-3 text-sm">
+    <div class="min-w-0"><p><span class="font-cond font-bold text-xl">${esc(ticker(u.symbol))}</span>
+      <span class="text-muted">${esc(u.name)}${u.held ? ' · you hold this' : ''}</span></p>
+      <p class="text-xs text-muted">Missing: ${esc(u.missing)}${u.next_earnings ? ` · next earnings ${esc(u.next_earnings.slice(0, 10))}` : ''}</p></div>
+    <a class="shrink-0 text-accent underline underline-offset-2" target="_blank" rel="noopener" href="https://finance.yahoo.com/quote/${encodeURIComponent(u.symbol)}">${price(u.price)} on Yahoo</a></li>`).join('');
+}
+
+function render() {
+  renderFilters();
+  const all = data?.stocks || [];
+  const inView = all.filter(s => view === 'all' || (view === 'holdings' ? s.held : view === 'watch' ? !s.held
+    : (s.rating === 'Buy' || s.rating === 'Buy more')));
+  renderFeatured(inView.slice().sort(SORTS.score)[0]);
+
+  const sorter = SORTS[sortKey] || lensSort(sortKey);
+  const held = inView.filter(s => s.held).sort(SORTS.score);
+  const watch = inView.filter(s => !s.held).sort(sorter);
+  $('holdings').classList.toggle('hidden', !held.length);
+  $('holdings-grid').innerHTML = held.map(renderCard).join('');
+  $('holdings-count').textContent = held.length ? `${held.length} stock${held.length > 1 ? 's' : ''}` : '';
+  $('watchlist').classList.toggle('hidden', !watch.length);
+  $('watch-heading').textContent = view === 'buy' ? 'Rated Buy, not held' : 'Watchlist';
+  $('watch-grid').innerHTML = watch.map(renderCard).join('');
+
+  renderUnscored();
+  renderNotices();
+  renderResults();
+
+  if (data) {
+    $('updated').textContent = data.sample ? 'Sample data' : `Data updated ${ago(data.generated_at)}`;
+    $('updated').title = new Date(data.generated_at).toLocaleString();
+    const st = data.settings || {}, w = st.weights || {};
+    $('method').textContent = `Score = Trend ${pct(w.trend, 0)}, GARP ${pct(w.garp, 0)}, Quality ${pct(w.quality, 0)}, Dividend ${pct(w.dividend, 0)} `
+      + `(spread over the other three for non-payers), minus up to ${st.max_risk_penalty} for risk. `
+      + `Held: ${st.held_buy_more}+ Buy more, ${st.held_hold}+ Hold, else Sell. Not held: ${st.watch_buy}+ Buy, else Don't buy.`;
+  }
+  requestAnimationFrame(() => document.querySelectorAll('.bar-fill').forEach(b => { b.style.width = b.dataset.w; }));
+}
+
+async function load() {
+  const bust = `?t=${Date.now()}`;   // GitHub Pages caches files for ~10 minutes
+  try {
+    const [p, h] = await Promise.all([
+      fetch(`data/scores.json${bust}`, { cache: 'no-store' }),
+      fetch(`data/history.json${bust}`, { cache: 'no-store' }),
+    ]);
+    if (!p.ok) throw new Error(`scores.json: ${p.status}`);
+    data = await p.json();
+    history = h.ok ? await h.json() : { calls: [] };
+    if ($('detail').open) return;    // don't redraw under an open breakdown
+    render();
+    const hash = decodeURIComponent(location.hash.slice(1));
+    if (hash && data.stocks.some(s => s.symbol === hash)) openDetail(hash);
+  } catch (e) {
+    console.error(e);
+    $('notice').innerHTML = `<p>Couldn't load the stock data (${esc(e.message)}). If you opened this file directly, run
+      <code>python -m http.server -d docs</code> and go to http://localhost:8000 instead.</p>`;
+    $('notice').classList.remove('hidden');
+  }
+}
+
+// Link straight to the workflow page when hosted on GitHub Pages
+(function setRunLink() {
+  const [owner] = location.hostname.split('.');
+  const repo = location.pathname.split('/')[1];
+  if (location.hostname.endsWith('github.io') && repo) {
+    $('run-link').href = `https://github.com/${owner}/${repo}/actions/workflows/update-scores.yml`;
+    $('run-link').classList.remove('hidden');
+  }
+})();
+
+$('today').textContent = new Date().toLocaleDateString([], { weekday: 'long', month: 'long', day: 'numeric' });
+$('filters').addEventListener('click', e => {
+  const b = e.target.closest('button[data-view]');
+  if (b) { view = b.dataset.view; render(); }
+});
+$('sort').addEventListener('change', e => { sortKey = e.target.value; render(); });
+document.addEventListener('click', e => {
+  const o = e.target.closest('[data-open]');
+  if (o) openDetail(o.dataset.open);
+  if (e.target.closest('[data-close]') || e.target === $('detail')) $('detail').close();
+});
+$('detail').addEventListener('close', () => history_replace(null));
+document.addEventListener('visibilitychange', () => { if (!document.hidden) load(); });
+setInterval(() => { if (!document.hidden) load(); }, RECHECK_MINUTES * 60000);
+load();
+</script>
+</body>
+</html>

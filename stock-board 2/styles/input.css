@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bar-fill { transition: width 700ms cubic-bezier(.2,.7,.2,1); }
+@media (prefers-reduced-motion: reduce) { .bar-fill { transition: none; } }
+:focus-visible { outline: 3px solid #1F5FA8; outline-offset: 2px; }
+dialog[open] { overflow-y: auto; }

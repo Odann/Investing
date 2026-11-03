@@ -1,0 +1,143 @@
+# Stock Board
+
+A personal research dashboard for TSX stocks. It scores your holdings and
+watchlist on four lenses, rates each one, and tracks whether its own ratings beat
+the market over time. It runs entirely on free GitHub services, with no server
+to keep alive and no API key.
+
+```
+GitHub Actions (weekdays after the close)    GitHub Pages
+  ├─ Yahoo Finance (yfinance): prices,          └─ docs/index.html
+  │  fundamentals, dividends, news                   reads docs/data/*.json
+  ├─ pipeline/ → scores, rates, grades              (loads instantly)
+  └─ commits docs/data/*.json  ─────────────────▶
+```
+
+## About the "API key"
+
+Yahoo Finance doesn't offer an official API or API key any more. This project uses
+[yfinance](https://github.com/ranaroussi/yfinance), a free library that reads the
+same data the Yahoo Finance website shows. That means:
+
+- **Nothing to sign up for**, and no secret to add to GitHub.
+- **It's unofficial.** Yahoo sometimes rate-limits or briefly blocks it, often
+  more on cloud servers like GitHub's. When a stock fails, the run keeps its
+  previous data and says so at the top of the page; the next run usually works.
+  If every run fails for days, update the library version in `requirements.txt`.
+- The workflow runs once a weekday to stay polite.
+
+## Set it up (about 10 minutes)
+
+1. **Make a GitHub repo.** Create a new **public** repository (free GitHub Pages
+   needs a public repo). On its empty page, choose "uploading an existing file"
+   and drag in **everything inside** this folder, not the folder itself.
+   The `.github` folder is hidden on a Mac: in Finder, press **Cmd + Shift + .**
+   to show it before you select everything. After committing, check that
+   `.github/workflows/update-scores.yml` appears at the top of the repo.
+   (The project files can also sit inside a subfolder; the workflow finds them.
+   Only `.github` has to be at the top.)
+2. **Turn on Pages.** Settings → Pages → Build and deployment → Source:
+   **GitHub Actions**.
+3. **Run it once.** Actions tab → Update scores → Run workflow. When it turns
+   green (a few minutes for ~40 stocks), your dashboard is live at
+   `https://<your-username>.github.io/<repo-name>/`. Bookmark it, or use
+   "Add to Home Screen" on your phone.
+
+From then on it updates itself every weekday at about 5:37 PM Toronto time. The
+page shows sample data until the first run finishes.
+
+## Using it
+
+- **Top-rated** is the highest adjusted score in the current view. The chips under
+  the header switch between all stocks, your holdings, the watchlist, and stocks
+  rated Buy.
+- **Full breakdown** on any card shows each lens's measures, the risk flags, what
+  would change the rating, recent headlines, and every number used. Each
+  breakdown has its own link (for example `…/#RY.TO`).
+- **Run an update** in the header opens the GitHub page with the "Run workflow"
+  button, for when you want fresher data than the schedule gives you.
+- **How the ratings have done** logs every rating at that day's price when it first
+  appears or changes, then compares the stock with the S&P/TSX Composite after
+  30, 90 and 180 days. If the model is worth anything, Buy calls should beat the
+  index more often than Sell calls. Give it a year before reading much into it.
+
+## How stocks are scored
+
+All the logic is in `pipeline/analyze.py`. Each lens adds up points from the
+measures Yahoo provides and scales them to 0–10, so a missing number doesn't count
+as zero. A stock is only rated when Trend, GARP and Quality each have at least two
+measures; the rest appear under "Not enough data to score".
+
+1. **Trend (30%):** price vs. the 50- and 200-day averages, whether the 50-day is
+   above the 200-day, 12-month return vs. the S&P/TSX Composite, and position in
+   the 52-week range.
+2. **GARP (30%):** PEG ratio, forward P/E (trailing if there's no forecast) and
+   expected EPS growth. A company with no earnings scores 1.
+3. **Quality (25%):** return on equity, profit margin, debt-to-equity, free cash
+   flow yield, and how often EPS rose in recent years. Banks and insurers skip
+   debt and free cash flow (deposits count as debt). Utilities skip free cash flow
+   and get a looser debt scale, because borrowing to build is how they grow.
+4. **Dividend growth (15%):** 5-year dividend growth, payout ratio and years of
+   increases. Non-payers show "n/a" and the 15% is spread over the other three.
+5. **Risk adjustment (up to −1.5):** high beta, high volatility, a stretched or
+   missing P/E, heavy debt, or a very small company.
+
+**Ratings:** stocks you hold are Buy more at 8+, Hold at 5 to 7.9, Sell below 5.
+Stocks you don't hold are Buy at 7+, Don't buy below 7. Anything within 0.5 of a
+line is marked Borderline.
+
+The rules are mechanical on purpose. They can't see things like a lawsuit, a
+regulator's decision or a one-time charge, so read the breakdown and the
+headlines before acting on a rating.
+
+## Settings
+
+Everything you'd want to change is in `pipeline/config.py`: your holdings, the
+watchlist, weights, rating lines, sector rules and grading periods. The update time
+is in `.github/workflows/update-scores.yml`.
+
+Yahoo symbols: TSX stocks end in `.TO`, TSX Venture in `.V`, and units or class
+shares use a dash (`BEP.UN` → `BEP-UN.TO`, `BBD.A` → `BBD-A.TO`). ETFs are left
+out because the lenses are built for single companies.
+
+## Run it on your own computer
+
+```
+pip install -r requirements.txt
+python -m pipeline.update
+python -m http.server -d docs     # then open http://localhost:8000
+```
+
+If you change classes in `docs/index.html`, rebuild the CSS with
+`npx tailwindcss@3 -i styles/input.css -o docs/styles.css --minify`.
+The workflow also rebuilds it on every run.
+
+## Good to know
+
+- **The data is public.** The dashboard and the files in `docs/data` can be seen
+  by anyone who finds the URL (search engines are asked not to index it). That
+  includes which stocks you hold, so the config only takes tickers: never put
+  share counts or costs in it.
+- **GitHub may pause scheduled runs** in a repo with no activity for 60 days. If the
+  page says the data is more than three days old, open the Actions tab and
+  re-enable the workflow.
+- **Currencies:** prices are in the currency the shares trade in (CAD for `.TO`
+  and `.V`). Some TSX companies report in US dollars; the breakdown says so.
+
+## Files
+
+| Path | What it is |
+| --- | --- |
+| `pipeline/update.py` | One full run: fetch, score, log, grade, save |
+| `pipeline/analyze.py` | The four lenses, risk adjustment and ratings |
+| `pipeline/grade.py` | Logs rating changes and grades them against the index |
+| `pipeline/yahoo_client.py` | Yahoo Finance calls (through yfinance) |
+| `pipeline/config.py` | Settings |
+| `docs/index.html` | The dashboard |
+| `docs/data/scores.json` | Current scores (rewritten each run) |
+| `docs/data/history.json` | Every rating logged, with results |
+| `docs/data/snapshots.json` | Last run's scores, for "score up/down since the last update" |
+| `.github/workflows/update-scores.yml` | The schedule |
+
+Scores come from fixed rules applied to Yahoo Finance data, which can be delayed or
+wrong. This is a research tool, not financial advice.
