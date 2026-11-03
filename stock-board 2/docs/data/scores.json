@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-11-03T16:59:30.444387+00:00",
+ "generated_at": "2026-11-03T17:04:33.253585+00:00",
  "benchmark": {
   "symbol": "^GSPTSE",
-  "price": 35591.69,
-  "return_12m": 0.1756093907360312,
+  "price": 35579.73,
+  "return_12m": 0.17521431565273415,
   "name": "S&P/TSX Composite"
  },
  "settings": {
@@ -47,7 +47,7 @@
      "+39.4% vs. the 200-day average ($0.49)",
      "+2.3% vs. the 50-day average ($0.66)",
      "50-day average above the 200-day",
-     "12-month return +195.7% vs. +17.6% for the S&P/TSX Composite",
+     "12-month return +195.7% vs. +17.5% for the S&P/TSX Composite",
      "77% of the way up its 52-week range ($0.20\u2013$0.82)"
     ],
     "garp": [
@@ -75,7 +75,7 @@
    "adjusted": 8.49,
    "rating": "Buy more",
    "borderline": true,
-   "score_change": null,
+   "score_change": 0.0,
    "reasons": [
     {
      "type": "caution",
@@ -180,25 +180,25 @@
    "sector": "Financial Services",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 62.77,
-   "day_change": 0.001435864709636192,
+   "price": 62.745,
+   "day_change": 0.0010370134014039412,
    "lenses": {
-    "trend": 9.2,
+    "trend": 9.1,
     "garp": 9.4,
     "quality": 5.1,
     "dividend": 7.4
    },
    "notes": {
     "trend": [
-     "+13.0% vs. the 200-day average ($55.56)",
-     "+2.6% vs. the 50-day average ($61.20)",
+     "+12.9% vs. the 200-day average ($55.56)",
+     "+2.5% vs. the 50-day average ($61.20)",
      "50-day average above the 200-day",
-     "12-month return +35.2% vs. +17.6% for the S&P/TSX Composite",
+     "12-month return +35.2% vs. +17.5% for the S&P/TSX Composite",
      "94% of the way up its 52-week range ($44.23\u2013$63.98)"
     ],
     "garp": [
      "PEG 0.93",
-     "Forward P/E 12.6",
+     "Forward P/E 12.5",
      "+35.5% expected EPS growth next year"
     ],
     "quality": [
@@ -219,15 +219,15 @@
     "quality": 0.25,
     "dividend": 0.15
    },
-   "composite": 7.96,
+   "composite": 7.93,
    "risk_penalty": 0,
-   "adjusted": 7.96,
+   "adjusted": 7.93,
    "rating": "Buy",
    "borderline": false,
-   "score_change": null,
+   "score_change": -0.03,
    "reasons": [],
    "triggers": [
-    "Drops to Don't buy if it loses 0.97 points.",
+    "Drops to Don't buy if it loses 0.94 points.",
     "A move below the 200-day average ($55.56) would cut Trend.",
     "Next earnings report: 2026-11-04."
    ],
@@ -236,19 +236,19 @@
     "ma200": 55.5595,
     "low52": 44.23,
     "high52": 63.98,
-    "return_12m": 0.3522189343763569,
-    "volatility": 0.19543890989405965,
+    "return_12m": 0.351680340518858,
+    "volatility": 0.19543916800839994,
     "beta": 0.749,
-    "market_cap": 103840186368.0,
-    "forward_pe": 12.550461,
-    "trailing_pe": 17.01084,
+    "market_cap": 103798824960.0,
+    "forward_pe": 12.545462,
+    "trailing_pe": 17.004065,
     "peg": 0.9305,
     "eps_growth_next": 0.3553956639566396,
     "roe": 0.13313,
     "profit_margin": 0.20312001,
     "debt_to_equity": 42.485,
-    "fcf_yield": 0.01487502168501501,
-    "dividend_yield": 0.030906483989166796,
+    "fcf_yield": 0.014880949033818426,
+    "dividend_yield": 0.030918798310622362,
     "payout_ratio": 0.5014,
     "dividend_cagr_5y": 0.11090836848558672,
     "dividend_years_raised": 12,
@@ -310,7 +310,7 @@
     62.67,
     61.99,
     62.37,
-    62.77
+    62.745
    ]
   },
   {
@@ -320,8 +320,8 @@
    "sector": "Technology",
    "currency": "CAD",
    "financial_currency": "USD",
-   "price": 41.53,
-   "day_change": 0.0014468290330360567,
+   "price": 41.67,
+   "day_change": 0.004822763443453226,
    "lenses": {
     "trend": 8.2,
     "garp": 9.0,
@@ -330,14 +330,14 @@
    },
    "notes": {
     "trend": [
-     "+46.2% vs. the 200-day average ($28.40)",
-     "+15.4% vs. the 50-day average ($35.99)",
+     "+46.7% vs. the 200-day average ($28.40)",
+     "+15.8% vs. the 50-day average ($35.99)",
      "50-day average above the 200-day",
-     "12-month return +15.6% vs. +17.6% for the S&P/TSX Composite",
+     "12-month return +16.0% vs. +17.5% for the S&P/TSX Composite",
      "90% of the way up its 52-week range ($19.87\u2013$44.00)"
     ],
     "garp": [
-     "Forward P/E 14.1",
+     "Forward P/E 14.2",
      "+83.4% expected EPS growth next year"
     ],
     "quality": [
@@ -360,7 +360,7 @@
    "adjusted": 7.92,
    "rating": "Buy",
    "borderline": false,
-   "score_change": null,
+   "score_change": 0.0,
    "reasons": [
     {
      "type": "caution",
@@ -377,18 +377,18 @@
     "ma200": 28.402,
     "low52": 19.87,
     "high52": 44.0,
-    "return_12m": 0.15618042584427783,
-    "volatility": 0.5621248752630016,
+    "return_12m": 0.1600779591623469,
+    "volatility": 0.5621359962692041,
     "beta": 0.806,
-    "market_cap": 1036073536.0,
-    "forward_pe": 14.149609,
-    "trailing_pe": 25.95625,
+    "market_cap": 1039566208.0,
+    "forward_pe": 14.197308,
+    "trailing_pe": 26.043749,
     "peg": null,
     "eps_growth_next": 0.834414625,
     "roe": 1.9548,
     "profit_margin": 0.12977,
     "debt_to_equity": null,
-    "fcf_yield": 0.04169165845772553,
+    "fcf_yield": 0.04155158533202341,
     "dividend_yield": null,
     "payout_ratio": 0.0,
     "dividend_cagr_5y": null,
@@ -451,7 +451,7 @@
     39.09,
     43.05,
     41.56,
-    41.53
+    41.67
    ]
   },
   {
@@ -461,8 +461,8 @@
    "sector": "Financial Services",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 174.57,
-   "day_change": -0.0024571428571429355,
+   "price": 174.43,
+   "day_change": -0.0032571428571428473,
    "lenses": {
     "trend": 9.9,
     "garp": 8.9,
@@ -471,10 +471,10 @@
    },
    "notes": {
     "trend": [
-     "+13.5% vs. the 200-day average ($153.78)",
-     "+3.2% vs. the 50-day average ($169.22)",
+     "+13.4% vs. the 200-day average ($153.78)",
+     "+3.1% vs. the 50-day average ($169.22)",
      "50-day average above the 200-day",
-     "12-month return +51.6% vs. +17.6% for the S&P/TSX Composite",
+     "12-month return +51.4% vs. +17.5% for the S&P/TSX Composite",
      "93% of the way up its 52-week range ($112.26\u2013$178.95)"
     ],
     "garp": [
@@ -505,7 +505,7 @@
    "adjusted": 7.88,
    "rating": "Buy",
    "borderline": false,
-   "score_change": null,
+   "score_change": 0.0,
    "reasons": [],
    "triggers": [
     "Drops to Don't buy if it loses 0.89 points.",
@@ -517,19 +517,19 @@
     "ma200": 153.77824,
     "low52": 112.26,
     "high52": 178.95,
-    "return_12m": 0.515627772718231,
-    "volatility": 0.16951934648145303,
+    "return_12m": 0.5144121567426578,
+    "volatility": 0.16954097499718782,
     "beta": 0.868,
-    "market_cap": 285075734528.0,
-    "forward_pe": 15.592468,
-    "trailing_pe": 18.690578,
+    "market_cap": 284847079424.0,
+    "forward_pe": 15.579963,
+    "trailing_pe": 18.675589,
     "peg": 0.91,
     "eps_growth_next": 0.19869271948608147,
     "roe": 0.12828,
     "profit_margin": 0.26617,
     "debt_to_equity": null,
     "fcf_yield": null,
-    "dividend_yield": 0.025663057799163662,
+    "dividend_yield": 0.025683655334518146,
     "payout_ratio": 0.4636,
     "dividend_cagr_5y": 0.06844733160794769,
     "dividend_years_raised": 15,
@@ -591,7 +591,7 @@
     170.26,
     174.47,
     174.04,
-    174.57
+    174.43
    ]
   },
   {
@@ -601,20 +601,20 @@
    "sector": "Financial Services",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 213.39,
-   "day_change": -0.003828019233462543,
+   "price": 213.21,
+   "day_change": -0.004668316138368933,
    "lenses": {
-    "trend": 8.8,
+    "trend": 8.7,
     "garp": 8.3,
     "quality": 6.0,
     "dividend": 8.3
    },
    "notes": {
     "trend": [
-     "+5.2% vs. the 200-day average ($202.83)",
-     "+2.0% vs. the 50-day average ($209.26)",
+     "+5.1% vs. the 200-day average ($202.83)",
+     "+1.9% vs. the 50-day average ($209.26)",
      "50-day average above the 200-day",
-     "12-month return +34.9% vs. +17.6% for the S&P/TSX Composite",
+     "12-month return +34.8% vs. +17.5% for the S&P/TSX Composite",
      "71% of the way up its 52-week range ($155.60\u2013$237.13)"
     ],
     "garp": [
@@ -628,7 +628,7 @@
      "EPS rose in 1 of the last 3 years"
     ],
     "dividend": [
-     "Yield 2.47%",
+     "Yield 2.48%",
      "+12.5% dividend growth per year over 5 years",
      "Payout ratio 42% of earnings",
      "16 straight calendar years of increases"
@@ -640,15 +640,15 @@
     "quality": 0.25,
     "dividend": 0.15
    },
-   "composite": 7.88,
+   "composite": 7.85,
    "risk_penalty": 0,
-   "adjusted": 7.88,
+   "adjusted": 7.85,
    "rating": "Buy",
    "borderline": false,
-   "score_change": null,
+   "score_change": -0.03,
    "reasons": [],
    "triggers": [
-    "Drops to Don't buy if it loses 0.89 points.",
+    "Drops to Don't buy if it loses 0.86 points.",
     "A move below the 200-day average ($202.83) would cut Trend.",
     "Next earnings report: 2026-12-04."
    ],
@@ -657,19 +657,19 @@
     "ma200": 202.8316,
     "low52": 155.6,
     "high52": 237.13,
-    "return_12m": 0.34877688094393267,
-    "volatility": 0.19690378878352574,
+    "return_12m": 0.34763919895074014,
+    "volatility": 0.1969275618211635,
     "beta": 1.168,
-    "market_cap": 81693753344.0,
-    "forward_pe": 14.839112,
-    "trailing_pe": 17.841972,
+    "market_cap": 81624842240.0,
+    "forward_pe": 14.826595,
+    "trailing_pe": 17.826923,
     "peg": 1.3455,
     "eps_growth_next": 0.20236120401337798,
     "roe": 0.14265999,
     "profit_margin": 0.33283,
     "debt_to_equity": null,
     "fcf_yield": null,
-    "dividend_yield": 0.024743427527063128,
+    "dividend_yield": 0.024764316870690868,
     "payout_ratio": 0.4164,
     "dividend_cagr_5y": 0.12509792619595683,
     "dividend_years_raised": 16,
@@ -731,7 +731,7 @@
     204.2,
     204.96,
     210.58,
-    213.39
+    213.21
    ]
   },
   {
@@ -741,8 +741,8 @@
    "sector": "Energy",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 106.15,
-   "day_change": 0.006161137440758413,
+   "price": 105.89,
+   "day_change": 0.003696682464455092,
    "lenses": {
     "trend": 9.9,
     "garp": 5.9,
@@ -751,11 +751,11 @@
    },
    "notes": {
     "trend": [
-     "+20.5% vs. the 200-day average ($88.09)",
-     "+6.4% vs. the 50-day average ($99.72)",
+     "+20.2% vs. the 200-day average ($88.09)",
+     "+6.2% vs. the 50-day average ($99.72)",
      "50-day average above the 200-day",
-     "12-month return +90.6% vs. +17.6% for the S&P/TSX Composite",
-     "89% of the way up its 52-week range ($54.55\u2013$112.80)"
+     "12-month return +90.2% vs. +17.5% for the S&P/TSX Composite",
+     "88% of the way up its 52-week range ($54.55\u2013$112.80)"
     ],
     "garp": [
      "PEG 11.41",
@@ -770,7 +770,7 @@
      "EPS rose in 1 of the last 3 years"
     ],
     "dividend": [
-     "Yield 2.26%",
+     "Yield 2.27%",
      "+23.4% dividend growth per year over 5 years",
      "Payout ratio 32% of earnings",
      "4 straight calendar years of increases"
@@ -787,7 +787,7 @@
    "adjusted": 7.71,
    "rating": "Buy",
    "borderline": false,
-   "score_change": null,
+   "score_change": 0.0,
    "reasons": [],
    "triggers": [
     "Drops to Don't buy if it loses 0.72 points.",
@@ -799,19 +799,19 @@
     "ma200": 88.0868,
     "low52": 54.55,
     "high52": 112.8,
-    "return_12m": 0.9064296146566588,
-    "volatility": 0.286728092665898,
+    "return_12m": 0.9017600360861591,
+    "volatility": 0.28670894374793876,
     "beta": 0.471,
-    "market_cap": 124156182528.0,
-    "forward_pe": 10.540834,
-    "trailing_pe": 14.172231,
+    "market_cap": 125029113856.0,
+    "forward_pe": 10.515017,
+    "trailing_pe": 14.137517,
     "peg": 11.41,
     "eps_growth_next": 0.34450734312416564,
     "roe": 0.19251,
     "profit_margin": 0.1578,
     "debt_to_equity": 30.48,
-    "fcf_yield": 0.07433681754767685,
-    "dividend_yield": 0.02260951483749411,
+    "fcf_yield": 0.07381781093505761,
+    "dividend_yield": 0.022665029747851544,
     "payout_ratio": 0.3164,
     "dividend_cagr_5y": 0.2336341725167208,
     "dividend_years_raised": 4,
@@ -873,7 +873,7 @@
     110.25,
     111.18,
     111.11,
-    106.15
+    105.89
    ]
   },
   {
@@ -883,10 +883,10 @@
    "sector": "Financial Services",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 283.97,
-   "day_change": -0.007826421159288444,
+   "price": 283.98,
+   "day_change": -0.007791481779113152,
    "lenses": {
-    "trend": 8.5,
+    "trend": 8.6,
     "garp": 6.0,
     "quality": 7.1,
     "dividend": 7.3
@@ -894,9 +894,9 @@
    "notes": {
     "trend": [
      "+8.0% vs. the 200-day average ($263.06)",
-     "+0.3% vs. the 50-day average ($282.99)",
+     "+0.4% vs. the 50-day average ($282.99)",
      "50-day average above the 200-day",
-     "12-month return +37.0% vs. +17.6% for the S&P/TSX Composite",
+     "12-month return +37.0% vs. +17.5% for the S&P/TSX Composite",
      "79% of the way up its 52-week range ($201.76\u2013$306.38)"
     ],
     "garp": [
@@ -922,16 +922,16 @@
     "quality": 0.25,
     "dividend": 0.15
    },
-   "composite": 7.22,
+   "composite": 7.25,
    "risk_penalty": 0,
-   "adjusted": 7.22,
+   "adjusted": 7.25,
    "rating": "Hold",
    "borderline": false,
-   "score_change": null,
+   "score_change": 0.03,
    "reasons": [],
    "triggers": [
-    "Needs 0.78 more points to reach Buy more.",
-    "Drops to Sell if it loses 2.23 points.",
+    "Needs 0.75 more points to reach Buy more.",
+    "Drops to Sell if it loses 2.26 points.",
     "A move below the 200-day average ($263.06) would cut Trend.",
     "Next earnings report: 2026-12-03."
    ],
@@ -940,19 +940,19 @@
     "ma200": 263.056,
     "low52": 201.76,
     "high52": 306.38,
-    "return_12m": 0.37037930483484627,
-    "volatility": 0.15365416046399497,
+    "return_12m": 0.37042760985157264,
+    "volatility": 0.15365207167479103,
     "beta": 0.916,
-    "market_cap": 393136537600.0,
-    "forward_pe": 15.884452,
-    "trailing_pe": 17.904793,
+    "market_cap": 393150398464.0,
+    "forward_pe": 15.885013,
+    "trailing_pe": 17.905424,
     "peg": 1.8968,
     "eps_growth_next": 0.1271897856242119,
     "roe": 0.16209,
     "profit_margin": 0.33870998,
     "debt_to_equity": null,
     "fcf_yield": null,
-    "dividend_yield": 0.024791351199070322,
+    "dividend_yield": 0.024790478202690328,
     "payout_ratio": 0.4149,
     "dividend_cagr_5y": 0.09497709143447408,
     "dividend_years_raised": 15,
@@ -1014,7 +1014,7 @@
     280.01,
     281.77,
     283.93,
-    283.97
+    283.98
    ]
   },
   {
@@ -1024,8 +1024,8 @@
    "sector": "Industrials",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 177.12,
-   "day_change": -0.0012968705948688264,
+   "price": 177.02,
+   "day_change": -0.0018607273752465625,
    "lenses": {
     "trend": 9.0,
     "garp": 4.5,
@@ -1034,10 +1034,10 @@
    },
    "notes": {
     "trend": [
-     "+10.4% vs. the 200-day average ($160.45)",
-     "+3.7% vs. the 50-day average ($170.88)",
+     "+10.3% vs. the 200-day average ($160.45)",
+     "+3.6% vs. the 50-day average ($170.88)",
      "50-day average above the 200-day",
-     "12-month return +31.8% vs. +17.6% for the S&P/TSX Composite",
+     "12-month return +31.7% vs. +17.5% for the S&P/TSX Composite",
      "86% of the way up its 52-week range ($128.05\u2013$185.25)"
     ],
     "garp": [
@@ -1070,7 +1070,7 @@
    "adjusted": 7.14,
    "rating": "Buy",
    "borderline": true,
-   "score_change": null,
+   "score_change": 0.0,
    "reasons": [],
    "triggers": [
     "Drops to Don't buy if it loses 0.15 points.",
@@ -1082,19 +1082,19 @@
     "ma200": 160.45135,
     "low52": 128.05,
     "high52": 185.25,
-    "return_12m": 0.3178571663746228,
-    "volatility": 0.21395767984309197,
+    "return_12m": 0.3171131868413828,
+    "volatility": 0.21396498620639987,
     "beta": 0.953,
-    "market_cap": 106218856448.0,
-    "forward_pe": 19.670187,
-    "trailing_pe": 22.251255,
+    "market_cap": 106158891008.0,
+    "forward_pe": 19.659082,
+    "trailing_pe": 22.238693,
     "peg": 2.4672,
     "eps_growth_next": 0.13121733668341706,
     "roe": 0.2245,
     "profit_margin": 0.26417,
     "debt_to_equity": 108.792,
-    "fcf_yield": 0.02311736460090872,
-    "dividend_yield": 0.020663956639566397,
+    "fcf_yield": 0.023130422790635187,
+    "dividend_yield": 0.02067562987233081,
     "payout_ratio": 0.45630002,
     "dividend_cagr_5y": 0.08465096350278944,
     "dividend_years_raised": 29,
@@ -1156,7 +1156,7 @@
     172.39,
     172.5,
     172.81,
-    177.12
+    177.02
    ]
   },
   {
@@ -1166,8 +1166,8 @@
    "sector": "Financial Services",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 95.12,
-   "day_change": -0.005541035023523322,
+   "price": 95.22,
+   "day_change": -0.004495556717198146,
    "lenses": {
     "trend": 9.6,
     "garp": 9.2,
@@ -1176,10 +1176,10 @@
    },
    "notes": {
     "trend": [
-     "+16.3% vs. the 200-day average ($81.81)",
-     "+2.6% vs. the 50-day average ($92.70)",
+     "+16.4% vs. the 200-day average ($81.81)",
+     "+2.7% vs. the 50-day average ($92.70)",
      "50-day average above the 200-day",
-     "12-month return +43.5% vs. +17.6% for the S&P/TSX Composite",
+     "12-month return +43.6% vs. +17.5% for the S&P/TSX Composite",
      "91% of the way up its 52-week range ($62.50\u2013$98.49)"
     ],
     "garp": [
@@ -1193,7 +1193,7 @@
      "EPS rose in 2 of the last 3 years"
     ],
     "dividend": [
-     "Yield 2.81%",
+     "Yield 2.80%",
      "+7.9% dividend growth per year over 5 years",
      "Payout ratio 63% of earnings",
      "4 straight calendar years of increases"
@@ -1210,7 +1210,7 @@
    "adjusted": 7.1,
    "rating": "Buy",
    "borderline": true,
-   "score_change": null,
+   "score_change": 0.0,
    "reasons": [],
    "triggers": [
     "Drops to Don't buy if it loses 0.11 points.",
@@ -1222,19 +1222,19 @@
     "ma200": 81.8085,
     "low52": 62.5,
     "high52": 98.49,
-    "return_12m": 0.434690774785117,
-    "volatility": 0.20785378853264988,
+    "return_12m": 0.43619904732686976,
+    "volatility": 0.207820581504374,
     "beta": 0.94,
-    "market_cap": 59709452288.0,
-    "forward_pe": 13.530583,
-    "trailing_pe": 23.428572,
+    "market_cap": 59772223488.0,
+    "forward_pe": 13.544807,
+    "trailing_pe": 23.453203,
     "peg": 0.967,
     "eps_growth_next": 0.7315270935960594,
     "roe": 0.102390006,
     "profit_margin": 0.06672,
     "debt_to_equity": 47.754,
-    "fcf_yield": -0.6116514604730316,
-    "dividend_yield": 0.028069806560134566,
+    "fcf_yield": -0.6110091203706368,
+    "dividend_yield": 0.028040327662255827,
     "payout_ratio": 0.6305,
     "dividend_cagr_5y": 0.07868128406993935,
     "dividend_years_raised": 4,
@@ -1296,7 +1296,7 @@
     92.59,
     92.42,
     96.6,
-    95.12
+    95.22
    ]
   },
   {
@@ -1306,8 +1306,8 @@
    "sector": "Financial Services",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 130.95,
-   "day_change": -0.005014816503305375,
+   "price": 130.9,
+   "day_change": -0.005394726844464737,
    "lenses": {
     "trend": 9.2,
     "garp": 9.0,
@@ -1317,9 +1317,9 @@
    "notes": {
     "trend": [
      "+14.3% vs. the 200-day average ($114.53)",
-     "+1.3% vs. the 50-day average ($129.31)",
+     "+1.2% vs. the 50-day average ($129.31)",
      "50-day average above the 200-day",
-     "12-month return +41.8% vs. +17.6% for the S&P/TSX Composite",
+     "12-month return +41.7% vs. +17.5% for the S&P/TSX Composite",
      "92% of the way up its 52-week range ($91.33\u2013$134.50)"
     ],
     "garp": [
@@ -1350,7 +1350,7 @@
    "adjusted": 7.02,
    "rating": "Buy",
    "borderline": true,
-   "score_change": null,
+   "score_change": 0.0,
    "reasons": [
     {
      "type": "caution",
@@ -1367,19 +1367,19 @@
     "ma200": 114.531,
     "low52": 91.33,
     "high52": 134.5,
-    "return_12m": 0.41782152536674544,
-    "volatility": 0.18217959630777403,
+    "return_12m": 0.41728013243227835,
+    "volatility": 0.18219356487805247,
     "beta": 1.204,
-    "market_cap": 159340806144.0,
-    "forward_pe": 13.797731,
-    "trailing_pe": 17.117647,
+    "market_cap": 159544836096.0,
+    "forward_pe": 13.792463,
+    "trailing_pe": 17.11111,
     "peg": 1.0278,
     "eps_growth_next": 0.2406130718954249,
     "roe": 0.11459,
     "profit_margin": 0.28430998,
     "debt_to_equity": null,
     "fcf_yield": null,
-    "dividend_yield": 0.03482245131729668,
+    "dividend_yield": 0.0348357524828113,
     "payout_ratio": 0.5804,
     "dividend_cagr_5y": 0.044708438422444985,
     "dividend_years_raised": 3,
@@ -1441,7 +1441,7 @@
     129.52,
     130.0,
     131.05,
-    130.95
+    130.9
    ]
   },
   {
@@ -1451,20 +1451,20 @@
    "sector": "Energy",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 43.33,
-   "day_change": 0.008847497089639056,
+   "price": 43.23,
+   "day_change": 0.006519208381839281,
    "lenses": {
-    "trend": 8.1,
+    "trend": 8.0,
     "garp": 6.0,
     "quality": 7.4,
     "dividend": 7.0
    },
    "notes": {
     "trend": [
-     "+13.5% vs. the 200-day average ($38.17)",
-     "\u22124.0% vs. the 50-day average ($45.15)",
+     "+13.3% vs. the 200-day average ($38.17)",
+     "\u22124.3% vs. the 50-day average ($45.15)",
      "50-day average above the 200-day",
-     "12-month return +81.2% vs. +17.6% for the S&P/TSX Composite",
+     "12-month return +80.8% vs. +17.5% for the S&P/TSX Composite",
      "84% of the way up its 52-week range ($21.62\u2013$47.46)"
     ],
     "garp": [
@@ -1480,7 +1480,7 @@
      "EPS rose in 1 of the last 3 years"
     ],
     "dividend": [
-     "Yield 2.03%",
+     "Yield 2.04%",
      "+73.1% dividend growth per year over 5 years",
      "Payout ratio 23% of earnings",
      "0 straight calendar years of increases"
@@ -1492,12 +1492,12 @@
     "quality": 0.25,
     "dividend": 0.15
    },
-   "composite": 7.13,
+   "composite": 7.1,
    "risk_penalty": 0.25,
-   "adjusted": 6.88,
+   "adjusted": 6.85,
    "rating": "Don't buy",
    "borderline": true,
-   "score_change": null,
+   "score_change": -0.03,
    "reasons": [
     {
      "type": "caution",
@@ -1505,7 +1505,7 @@
     }
    ],
    "triggers": [
-    "Needs 0.12 more points to reach Buy.",
+    "Needs 0.15 more points to reach Buy.",
     "A move below the 200-day average ($38.17) would cut Trend.",
     "Next earnings report: 2026-11-04."
    ],
@@ -1514,19 +1514,19 @@
     "ma200": 38.1704,
     "low52": 21.62,
     "high52": 47.46,
-    "return_12m": 0.8122125515506642,
-    "volatility": 0.36439991960301654,
+    "return_12m": 0.8080301053165968,
+    "volatility": 0.3643676637116879,
     "beta": 0.55,
-    "market_cap": 79911141376.0,
-    "forward_pe": 8.939238,
-    "trailing_pe": 12.069638,
+    "market_cap": 79726706688.0,
+    "forward_pe": 8.918606,
+    "trailing_pe": 12.041783,
     "peg": 15.91,
     "eps_growth_next": 0.3501866295264624,
     "roe": 0.20933,
     "profit_margin": 0.12365,
     "debt_to_equity": 33.995,
-    "fcf_yield": 0.06851516764399969,
-    "dividend_yield": 0.020309254558042927,
+    "fcf_yield": 0.06867366627128076,
+    "dividend_yield": 0.020356234096692113,
     "payout_ratio": 0.2284,
     "dividend_cagr_5y": 0.7313190403391285,
     "dividend_years_raised": 0,
@@ -1588,7 +1588,7 @@
     46.67,
     45.98,
     45.78,
-    43.33
+    43.23
    ]
   },
   {
@@ -1598,8 +1598,8 @@
    "sector": "Consumer Defensive",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 40.97,
-   "day_change": -0.006306087800145521,
+   "price": 40.93,
+   "day_change": -0.0072762551540139775,
    "lenses": {
     "trend": 5.6,
     "garp": 8.1,
@@ -1608,11 +1608,11 @@
    },
    "notes": {
     "trend": [
-     "\u22120.7% vs. the 200-day average ($41.24)",
-     "+2.4% vs. the 50-day average ($39.99)",
+     "\u22120.8% vs. the 200-day average ($41.24)",
+     "+2.3% vs. the 50-day average ($39.99)",
      "50-day average below the 200-day",
-     "12-month return +21.2% vs. +17.6% for the S&P/TSX Composite",
-     "65% of the way up its 52-week range ($33.41\u2013$45.09)"
+     "12-month return +21.1% vs. +17.5% for the S&P/TSX Composite",
+     "64% of the way up its 52-week range ($33.41\u2013$45.09)"
     ],
     "garp": [
      "PEG 1.23",
@@ -1644,7 +1644,7 @@
    "adjusted": 6.38,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": null,
+   "score_change": 0.0,
    "reasons": [],
    "triggers": [
     "Needs 0.62 more points to reach Buy.",
@@ -1656,19 +1656,19 @@
     "ma200": 41.24445,
     "low52": 33.41,
     "high52": 45.09,
-    "return_12m": 0.21213024099068378,
-    "volatility": 0.2447216530576907,
+    "return_12m": 0.21094678192469996,
+    "volatility": 0.24475214741409498,
     "beta": 0.128,
-    "market_cap": 16262694912.0,
-    "forward_pe": 17.77132,
-    "trailing_pe": 23.819767,
+    "market_cap": 16246816768.0,
+    "forward_pe": 17.75397,
+    "trailing_pe": 23.79651,
     "peg": 1.2283,
     "eps_growth_next": 0.3403488372093024,
     "roe": 0.10421,
     "profit_margin": 0.02895,
     "debt_to_equity": 41.862,
-    "fcf_yield": 0.07095994890419303,
-    "dividend_yield": 0.01977056382719063,
+    "fcf_yield": 0.07102929862992839,
+    "dividend_yield": 0.019789885169802103,
     "payout_ratio": 0.4651,
     "dividend_cagr_5y": 0.02815639324725061,
     "dividend_years_raised": 27,
@@ -1730,7 +1730,7 @@
     39.99,
     40.48,
     40.32,
-    40.97
+    40.93
    ]
   },
   {
@@ -1740,8 +1740,8 @@
    "sector": "Technology",
    "currency": "CAD",
    "financial_currency": "USD",
-   "price": 3434.8,
-   "day_change": -0.0035450911221865944,
+   "price": 3435.95,
+   "day_change": -0.003211469617234619,
    "lenses": {
     "trend": 7.1,
     "garp": 8.7,
@@ -1750,10 +1750,10 @@
    },
    "notes": {
     "trend": [
-     "+23.8% vs. the 200-day average ($2,773.43)",
+     "+23.9% vs. the 200-day average ($2,773.43)",
      "+12.8% vs. the 50-day average ($3,044.77)",
      "50-day average above the 200-day",
-     "12-month return \u22124.2% vs. +17.6% for the S&P/TSX Composite",
+     "12-month return \u22124.2% vs. +17.5% for the S&P/TSX Composite",
      "88% of the way up its 52-week range ($2,196.00\u2013$3,604.56)"
     ],
     "garp": [
@@ -1786,7 +1786,7 @@
    "adjusted": 6.33,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": null,
+   "score_change": 0.0,
    "reasons": [
     {
      "type": "caution",
@@ -1807,23 +1807,23 @@
     "ma200": 2773.431,
     "low52": 2196.0,
     "high52": 3604.56,
-    "return_12m": -0.041856714992413946,
-    "volatility": 0.44046088466178596,
+    "return_12m": -0.04153594778808878,
+    "volatility": 0.4404582418502379,
     "beta": 0.724,
-    "market_cap": 72788664320.0,
-    "forward_pe": 18.533865,
-    "trailing_pe": 54.81647,
+    "market_cap": 72813035520.0,
+    "forward_pe": 18.54007,
+    "trailing_pe": 54.834824,
     "peg": 0.6189,
     "eps_growth_next": 1.9576383657835938,
     "roe": 0.23281,
     "profit_margin": 0.07602,
     "debt_to_equity": 119.528,
-    "fcf_yield": 0.03839711727244949,
-    "dividend_yield": 0.00165657389076511,
+    "fcf_yield": 0.038384265400284195,
+    "dividend_yield": 0.0016560194414936191,
     "payout_ratio": 0.088199995,
     "dividend_cagr_5y": 0.02159714949472602,
     "dividend_years_raised": 4,
-    "target_price": 3955.7207,
+    "target_price": 3956.5684,
     "analyst_rating": "buy",
     "analyst_count": 12.0
    },
@@ -1881,7 +1881,7 @@
     3185.8,
     3395.0,
     3393.3899,
-    3434.8
+    3435.95
    ]
   },
   {
@@ -1891,24 +1891,24 @@
    "sector": "Technology",
    "currency": "CAD",
    "financial_currency": "USD",
-   "price": 193.09,
-   "day_change": -0.0021188630490955873,
+   "price": 193.715,
+   "day_change": 0.0011111111111110628,
    "lenses": {
-    "trend": 8.0,
+    "trend": 8.1,
     "garp": 6.0,
     "quality": 6.7,
     "dividend": null
    },
    "notes": {
     "trend": [
-     "+24.2% vs. the 200-day average ($155.44)",
-     "+6.8% vs. the 50-day average ($180.80)",
+     "+24.6% vs. the 200-day average ($155.44)",
+     "+7.1% vs. the 50-day average ($180.80)",
      "50-day average above the 200-day",
-     "12-month return +13.3% vs. +17.6% for the S&P/TSX Composite",
-     "90% of the way up its 52-week range ($117.22\u2013$201.57)"
+     "12-month return +13.7% vs. +17.5% for the S&P/TSX Composite",
+     "91% of the way up its 52-week range ($117.22\u2013$201.57)"
     ],
     "garp": [
-     "Forward P/E 25.8",
+     "Forward P/E 25.9",
      "+76.6% expected EPS growth next year"
     ],
     "quality": [
@@ -1927,12 +1927,12 @@
     "garp": 0.3529,
     "quality": 0.2941
    },
-   "composite": 6.91,
+   "composite": 6.95,
    "risk_penalty": 0.75,
-   "adjusted": 6.16,
+   "adjusted": 6.2,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": null,
+   "score_change": 0.04,
    "reasons": [
     {
      "type": "caution",
@@ -1940,13 +1940,13 @@
     },
     {
      "type": "caution",
-     "text": "Stretched valuation (forward P/E 25.8)"
+     "text": "Stretched valuation (forward P/E 25.9)"
     }
    ],
    "triggers": [
-    "Needs 0.84 more points to reach Buy.",
+    "Needs 0.80 more points to reach Buy.",
     "A move below the 200-day average ($155.44) would cut Trend.",
-    "Forward P/E falling below 20 (now 25.8) would lift GARP.",
+    "Forward P/E falling below 20 (now 25.9) would lift GARP.",
     "Next earnings report: 2026-11-04."
    ],
    "metrics": {
@@ -1954,23 +1954,23 @@
     "ma200": 155.44395,
     "low52": 117.22,
     "high52": 201.57,
-    "return_12m": 0.1334233132548952,
-    "volatility": 0.3882970963110362,
+    "return_12m": 0.13709201481489042,
+    "volatility": 0.3882861039846202,
     "beta": 0.699,
-    "market_cap": 5249708544.0,
-    "forward_pe": 25.842546,
-    "trailing_pe": 45.647755,
+    "market_cap": 5266700800.0,
+    "forward_pe": 25.926193,
+    "trailing_pe": 45.795506,
     "peg": null,
     "eps_growth_next": 0.7663799054373521,
     "roe": 0.2068,
     "profit_margin": 0.14418,
     "debt_to_equity": 11.139,
-    "fcf_yield": 0.027052525070618474,
+    "fcf_yield": 0.0269652439720897,
     "dividend_yield": null,
     "payout_ratio": 0.0,
     "dividend_cagr_5y": null,
     "dividend_years_raised": 0,
-    "target_price": 213.58159,
+    "target_price": 213.51598,
     "analyst_rating": "buy",
     "analyst_count": 10.0
    },
@@ -2028,7 +2028,7 @@
     187.59,
     199.55,
     194.18,
-    193.09
+    193.715
    ]
   },
   {
@@ -2038,8 +2038,8 @@
    "sector": "Energy",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 55.23,
-   "day_change": 0.002359346642468063,
+   "price": 55.2,
+   "day_change": 0.001814882032667997,
    "lenses": {
     "trend": 9.0,
     "garp": 7.2,
@@ -2049,9 +2049,9 @@
    "notes": {
     "trend": [
      "+8.0% vs. the 200-day average ($51.12)",
-     "+2.4% vs. the 50-day average ($53.94)",
+     "+2.3% vs. the 50-day average ($53.94)",
      "50-day average above the 200-day",
-     "12-month return +34.6% vs. +17.6% for the S&P/TSX Composite",
+     "12-month return +34.6% vs. +17.5% for the S&P/TSX Composite",
      "84% of the way up its 52-week range ($39.45\u2013$58.14)"
     ],
     "garp": [
@@ -2083,7 +2083,7 @@
    "adjusted": 6.07,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": null,
+   "score_change": 0.0,
    "reasons": [],
    "triggers": [
     "Needs 0.93 more points to reach Buy.",
@@ -2096,19 +2096,19 @@
     "ma200": 51.12105,
     "low52": 39.45,
     "high52": 58.14,
-    "return_12m": 0.3464163560676703,
-    "volatility": 0.19299286650035533,
+    "return_12m": 0.34568503527385985,
+    "volatility": 0.1929904647533014,
     "beta": 0.468,
-    "market_cap": 17232343040.0,
-    "forward_pe": 21.06319,
-    "trailing_pe": 27.615,
+    "market_cap": 17222983680.0,
+    "forward_pe": 21.05175,
+    "trailing_pe": 27.6,
     "peg": null,
     "eps_growth_next": 0.3110550000000001,
     "roe": 0.06628,
     "profit_margin": 0.04354,
     "debt_to_equity": 110.639,
-    "fcf_yield": -0.019121021397679884,
-    "dividend_yield": 0.02426217635343111,
+    "fcf_yield": -0.01913141219442879,
+    "dividend_yield": 0.02427536231884058,
     "payout_ratio": 0.65849996,
     "dividend_cagr_5y": 0.058101439664158594,
     "dividend_years_raised": 6,
@@ -2170,156 +2170,7 @@
     56.53,
     55.34,
     55.52,
-    55.23
-   ]
-  },
-  {
-   "symbol": "MG.TO",
-   "name": "Magna International Inc.",
-   "held": false,
-   "sector": "Consumer Cyclical",
-   "currency": "CAD",
-   "financial_currency": "USD",
-   "price": 88.235,
-   "day_change": -0.03642022496450792,
-   "lenses": {
-    "trend": 6.4,
-    "garp": 10.0,
-    "quality": 4.8,
-    "dividend": 4.0
-   },
-   "notes": {
-    "trend": [
-     "+1.3% vs. the 200-day average ($87.11)",
-     "\u22123.3% vs. the 50-day average ($91.25)",
-     "50-day average above the 200-day",
-     "12-month return +27.4% vs. +17.6% for the S&P/TSX Composite",
-     "65% of the way up its 52-week range ($63.93\u2013$101.10)"
-    ],
-    "garp": [
-     "PEG 0.37",
-     "Forward P/E 8.0",
-     "+159.0% expected EPS growth next year"
-    ],
-    "quality": [
-     "Profit margin 2.0%",
-     "Debt-to-equity 0.53",
-     "EPS rose in 1 of the last 3 years"
-    ],
-    "dividend": [
-     "Yield 3.14%",
-     "+5.0% dividend growth per year over 5 years",
-     "Payout ratio 64% of earnings",
-     "6 straight calendar years of increases"
-    ]
-   },
-   "weights": {
-    "trend": 0.3,
-    "garp": 0.3,
-    "quality": 0.25,
-    "dividend": 0.15
-   },
-   "composite": 6.72,
-   "risk_penalty": 0.75,
-   "adjusted": 5.97,
-   "rating": "Don't buy",
-   "borderline": false,
-   "score_change": null,
-   "reasons": [
-    {
-     "type": "caution",
-     "text": "High beta (1.82): moves much more than the market"
-    },
-    {
-     "type": "caution",
-     "text": "Volatile (37% a year)"
-    }
-   ],
-   "triggers": [
-    "Needs 1.03 more points to reach Buy.",
-    "A move below the 200-day average ($87.11) would cut Trend.",
-    "Next earnings report: 2026-10-30."
-   ],
-   "metrics": {
-    "ma50": 91.2488,
-    "ma200": 87.11485,
-    "low52": 63.93,
-    "high52": 101.1,
-    "return_12m": 0.2739676276185836,
-    "volatility": 0.36989512904950217,
-    "beta": 1.816,
-    "market_cap": 22910812160.0,
-    "forward_pe": 7.9978895,
-    "trailing_pe": 20.71244,
-    "peg": 0.368,
-    "eps_growth_next": 1.589738497652582,
-    "roe": null,
-    "profit_margin": 0.01985,
-    "debt_to_equity": 53.427,
-    "fcf_yield": null,
-    "dividend_yield": 0.0313934379781266,
-    "payout_ratio": 0.64169997,
-    "dividend_cagr_5y": 0.05028460388113287,
-    "dividend_years_raised": 6,
-    "target_price": 93.74437,
-    "analyst_rating": "hold",
-    "analyst_count": 7.0
-   },
-   "next_earnings": "2026-10-30",
-   "news": [],
-   "chart": [
-    68.9,
-    68.03,
-    68.39,
-    67.83,
-    71.43,
-    76.22,
-    73.47,
-    75.02,
-    78.18,
-    76.32,
-    72.9,
-    69.61,
-    73.8,
-    93.52,
-    88.86,
-    86.01,
-    79.95,
-    75.59,
-    71.65,
-    75.5,
-    76.73,
-    80.02,
-    83.03,
-    85.96,
-    82.68,
-    86.32,
-    83.05,
-    89.19,
-    89.35,
-    92.13,
-    93.21,
-    91.94,
-    91.49,
-    90.34,
-    91.04,
-    93.17,
-    92.55,
-    96.14,
-    98.04,
-    97.56,
-    100.44,
-    91.48,
-    95.35,
-    91.64,
-    88.58,
-    91.95,
-    92.04,
-    91.24,
-    93.19,
-    89.49,
-    88.91,
-    88.235
+    55.2
    ]
   },
   {
@@ -2329,24 +2180,24 @@
    "sector": "Industrials",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 92.65,
-   "day_change": 0.028987116836961313,
+   "price": 92.75,
+   "day_change": 0.03009773434029306,
    "lenses": {
-    "trend": 6.4,
+    "trend": 6.5,
     "garp": 7.3,
     "quality": 3.9,
     "dividend": 5.8
    },
    "notes": {
     "trend": [
-     "+7.8% vs. the 200-day average ($85.93)",
-     "+9.5% vs. the 50-day average ($84.62)",
+     "+7.9% vs. the 200-day average ($85.93)",
+     "+9.6% vs. the 50-day average ($84.62)",
      "50-day average below the 200-day",
-     "12-month return +14.1% vs. +17.6% for the S&P/TSX Composite",
+     "12-month return +14.2% vs. +17.5% for the S&P/TSX Composite",
      "77% of the way up its 52-week range ($65.60\u2013$100.87)"
     ],
     "garp": [
-     "Forward P/E 20.6",
+     "Forward P/E 20.7",
      "+46.6% expected EPS growth next year"
     ],
     "quality": [
@@ -2369,17 +2220,17 @@
     "quality": 0.25,
     "dividend": 0.15
    },
-   "composite": 5.96,
+   "composite": 5.98,
    "risk_penalty": 0,
-   "adjusted": 5.96,
+   "adjusted": 5.98,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": null,
+   "score_change": 0.02,
    "reasons": [],
    "triggers": [
-    "Needs 1.04 more points to reach Buy.",
+    "Needs 1.02 more points to reach Buy.",
     "A move below the 200-day average ($85.93) would cut Trend.",
-    "Forward P/E falling below 20 (now 20.6) would lift GARP.",
+    "Forward P/E falling below 20 (now 20.7) would lift GARP.",
     "Next earnings report: 2026-11-11."
    ],
    "metrics": {
@@ -2387,19 +2238,19 @@
     "ma200": 85.9307,
     "low52": 65.6,
     "high52": 100.87,
-    "return_12m": 0.1405884241905615,
-    "volatility": 0.34689843150948324,
+    "return_12m": 0.14181947761895652,
+    "volatility": 0.346991001344875,
     "beta": 1.101,
-    "market_cap": 1371206912.0,
-    "forward_pe": 20.648863,
-    "trailing_pe": 30.277779,
+    "market_cap": 1372686976.0,
+    "forward_pe": 20.67115,
+    "trailing_pe": 30.310457,
     "peg": null,
     "eps_growth_next": 0.4663169934640523,
     "roe": 0.063439995,
     "profit_margin": 0.04492,
     "debt_to_equity": 119.27,
-    "fcf_yield": 0.07086822502831724,
-    "dividend_yield": 0.016621694549379385,
+    "fcf_yield": 0.07079181320942321,
+    "dividend_yield": 0.01660377358490566,
     "payout_ratio": 0.4804,
     "dividend_cagr_5y": 0.08218051232896095,
     "dividend_years_raised": 5,
@@ -2461,7 +2312,156 @@
     85.62,
     83.11,
     85.81,
-    92.65
+    92.75
+   ]
+  },
+  {
+   "symbol": "MG.TO",
+   "name": "Magna International Inc.",
+   "held": false,
+   "sector": "Consumer Cyclical",
+   "currency": "CAD",
+   "financial_currency": "USD",
+   "price": 88.12,
+   "day_change": -0.037676094790870196,
+   "lenses": {
+    "trend": 6.3,
+    "garp": 10.0,
+    "quality": 4.8,
+    "dividend": 4.0
+   },
+   "notes": {
+    "trend": [
+     "+1.2% vs. the 200-day average ($87.11)",
+     "\u22123.4% vs. the 50-day average ($91.25)",
+     "50-day average above the 200-day",
+     "12-month return +27.2% vs. +17.5% for the S&P/TSX Composite",
+     "65% of the way up its 52-week range ($63.93\u2013$101.10)"
+    ],
+    "garp": [
+     "PEG 0.37",
+     "Forward P/E 8.0",
+     "+159.0% expected EPS growth next year"
+    ],
+    "quality": [
+     "Profit margin 2.0%",
+     "Debt-to-equity 0.53",
+     "EPS rose in 1 of the last 3 years"
+    ],
+    "dividend": [
+     "Yield 3.14%",
+     "+5.0% dividend growth per year over 5 years",
+     "Payout ratio 64% of earnings",
+     "6 straight calendar years of increases"
+    ]
+   },
+   "weights": {
+    "trend": 0.3,
+    "garp": 0.3,
+    "quality": 0.25,
+    "dividend": 0.15
+   },
+   "composite": 6.69,
+   "risk_penalty": 0.75,
+   "adjusted": 5.94,
+   "rating": "Don't buy",
+   "borderline": false,
+   "score_change": -0.03,
+   "reasons": [
+    {
+     "type": "caution",
+     "text": "High beta (1.82): moves much more than the market"
+    },
+    {
+     "type": "caution",
+     "text": "Volatile (37% a year)"
+    }
+   ],
+   "triggers": [
+    "Needs 1.06 more points to reach Buy.",
+    "A move below the 200-day average ($87.11) would cut Trend.",
+    "Next earnings report: 2026-10-30."
+   ],
+   "metrics": {
+    "ma50": 91.2488,
+    "ma200": 87.11485,
+    "low52": 63.93,
+    "high52": 101.1,
+    "return_12m": 0.27230724846434473,
+    "volatility": 0.3700261531221507,
+    "beta": 1.816,
+    "market_cap": 22880952320.0,
+    "forward_pe": 7.987466,
+    "trailing_pe": 20.685446,
+    "peg": 0.368,
+    "eps_growth_next": 1.589738497652582,
+    "roe": null,
+    "profit_margin": 0.01985,
+    "debt_to_equity": 53.427,
+    "fcf_yield": null,
+    "dividend_yield": 0.03143440762596459,
+    "payout_ratio": 0.64169997,
+    "dividend_cagr_5y": 0.05028460388113287,
+    "dividend_years_raised": 6,
+    "target_price": 93.59417,
+    "analyst_rating": "buy",
+    "analyst_count": 7.0
+   },
+   "next_earnings": "2026-10-30",
+   "news": [],
+   "chart": [
+    68.9,
+    68.03,
+    68.39,
+    67.83,
+    71.43,
+    76.22,
+    73.47,
+    75.02,
+    78.18,
+    76.32,
+    72.9,
+    69.61,
+    73.8,
+    93.52,
+    88.86,
+    86.01,
+    79.95,
+    75.59,
+    71.65,
+    75.5,
+    76.73,
+    80.02,
+    83.03,
+    85.96,
+    82.68,
+    86.32,
+    83.05,
+    89.19,
+    89.35,
+    92.13,
+    93.21,
+    91.94,
+    91.49,
+    90.34,
+    91.04,
+    93.17,
+    92.55,
+    96.14,
+    98.04,
+    97.56,
+    100.44,
+    91.48,
+    95.35,
+    91.64,
+    88.58,
+    91.95,
+    92.04,
+    91.24,
+    93.19,
+    89.49,
+    88.91,
+    88.12
    ]
   },
   {
@@ -2471,20 +2471,20 @@
    "sector": "Basic Materials",
    "currency": "CAD",
    "financial_currency": "USD",
-   "price": 52.28,
-   "day_change": -0.015442561205273098,
+   "price": 52.22,
+   "day_change": -0.016572504708098013,
    "lenses": {
-    "trend": 2.9,
+    "trend": 2.8,
     "garp": 6.4,
     "quality": 9.8,
     "dividend": 6.0
    },
    "notes": {
     "trend": [
-     "\u221210.6% vs. the 200-day average ($58.49)",
-     "\u221211.4% vs. the 50-day average ($59.03)",
+     "\u221210.7% vs. the 200-day average ($58.49)",
+     "\u221211.5% vs. the 50-day average ($59.03)",
      "50-day average above the 200-day",
-     "12-month return +12.6% vs. +17.6% for the S&P/TSX Composite",
+     "12-month return +12.4% vs. +17.5% for the S&P/TSX Composite",
      "26% of the way up its 52-week range ($44.57\u2013$74.00)"
     ],
     "garp": [
@@ -2512,12 +2512,12 @@
     "quality": 0.25,
     "dividend": 0.15
    },
-   "composite": 6.14,
+   "composite": 6.11,
    "risk_penalty": 0.5,
-   "adjusted": 5.64,
+   "adjusted": 5.61,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": null,
+   "score_change": -0.03,
    "reasons": [
     {
      "type": "caution",
@@ -2525,7 +2525,7 @@
     }
    ],
    "triggers": [
-    "Needs 1.36 more points to reach Buy.",
+    "Needs 1.39 more points to reach Buy.",
     "A move above the 200-day average ($58.49) would lift Trend.",
     "Next earnings report: 2026-11-09."
    ],
@@ -2534,23 +2534,23 @@
     "ma200": 58.48725,
     "low52": 44.57,
     "high52": 74.0,
-    "return_12m": 0.12551125770936333,
-    "volatility": 0.46141651400835393,
+    "return_12m": 0.12421959877269395,
+    "volatility": 0.4614581415900706,
     "beta": 1.2,
-    "market_cap": 86046834688.0,
-    "forward_pe": 8.824035,
-    "trailing_pe": 9.771962,
+    "market_cap": 85948088320.0,
+    "forward_pe": 8.813908,
+    "trailing_pe": 9.760748,
     "peg": 2.04,
     "eps_growth_next": 0.10742568224299065,
     "roe": 0.27009,
     "profit_margin": 0.316,
     "debt_to_equity": 12.706,
-    "fcf_yield": 0.05913785405879264,
-    "dividend_yield": 0.018553940321346593,
+    "fcf_yield": 0.05920579795857873,
+    "dividend_yield": 0.01857525852163922,
     "payout_ratio": 0.2377,
     "dividend_cagr_5y": 0.103094569236859,
     "dividend_years_raised": 2,
-    "target_price": 65.24457,
+    "target_price": 65.243164,
     "analyst_rating": "buy",
     "analyst_count": 12.0
    },
@@ -2608,7 +2608,7 @@
     57.74,
     53.36,
     51.64,
-    52.28
+    52.22
    ]
   },
   {
@@ -2618,8 +2618,8 @@
    "sector": "Consumer Defensive",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 209.105,
-   "day_change": -0.013655660377358547,
+   "price": 209.05,
+   "day_change": -0.013915094339622569,
    "lenses": {
     "trend": 8.1,
     "garp": 2.9,
@@ -2628,10 +2628,10 @@
    },
    "notes": {
     "trend": [
-     "+13.0% vs. the 200-day average ($185.09)",
+     "+12.9% vs. the 200-day average ($185.09)",
      "+12.0% vs. the 50-day average ($186.63)",
      "50-day average above the 200-day",
-     "12-month return +14.5% vs. +17.6% for the S&P/TSX Composite",
+     "12-month return +14.5% vs. +17.5% for the S&P/TSX Composite",
      "92% of the way up its 52-week range ($163.25\u2013$212.92)"
     ],
     "garp": [
@@ -2664,7 +2664,7 @@
    "adjusted": 5.21,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": null,
+   "score_change": 0.0,
    "reasons": [
     {
      "type": "caution",
@@ -2686,19 +2686,19 @@
     "ma200": 185.0931,
     "low52": 163.25,
     "high52": 212.92,
-    "return_12m": 0.14515327895990215,
-    "volatility": 0.248553391352421,
+    "return_12m": 0.14485211426141875,
+    "volatility": 0.24856853296162432,
     "beta": 0.313,
-    "market_cap": 56117403648.0,
-    "forward_pe": 35.722218,
-    "trailing_pe": 41.988956,
+    "market_cap": 56102645760.0,
+    "forward_pe": 35.712822,
+    "trailing_pe": 41.977913,
     "peg": 2.8545,
     "eps_growth_next": 0.17542971887550207,
     "roe": 0.93094003,
     "profit_margin": 0.17325,
     "debt_to_equity": 399.803,
-    "fcf_yield": 0.022094184823252927,
-    "dividend_yield": 0.0022476746132325865,
+    "fcf_yield": 0.022099996732845704,
+    "dividend_yield": 0.002248265965080124,
     "payout_ratio": 0.0907,
     "dividend_cagr_5y": 0.187911093569763,
     "dividend_years_raised": 14,
@@ -2760,7 +2760,7 @@
     206.56,
     207.45,
     207.5,
-    209.105
+    209.05
    ]
   },
   {
@@ -2770,8 +2770,8 @@
    "sector": "Utilities",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 83.64,
-   "day_change": 0.008318264014466559,
+   "price": 83.69,
+   "day_change": 0.008921036769137913,
    "lenses": {
     "trend": 6.9,
     "garp": 3.9,
@@ -2781,9 +2781,9 @@
    "notes": {
     "trend": [
      "+7.7% vs. the 200-day average ($77.69)",
-     "+8.7% vs. the 50-day average ($76.93)",
+     "+8.8% vs. the 50-day average ($76.93)",
      "50-day average below the 200-day",
-     "12-month return +19.5% vs. +17.6% for the S&P/TSX Composite",
+     "12-month return +19.6% vs. +17.5% for the S&P/TSX Composite",
      "97% of the way up its 52-week range ($69.06\u2013$84.09)"
     ],
     "garp": [
@@ -2815,7 +2815,7 @@
    "adjusted": 5.2,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": null,
+   "score_change": 0.0,
    "reasons": [],
    "triggers": [
     "Needs 1.80 more points to reach Buy.",
@@ -2828,19 +2828,19 @@
     "ma200": 77.6942,
     "low52": 69.06,
     "high52": 84.09,
-    "return_12m": 0.19502788887703137,
-    "volatility": 0.1423479906982716,
+    "return_12m": 0.1957423202712878,
+    "volatility": 0.14238157486017483,
     "beta": 0.435,
-    "market_cap": 42731675648.0,
-    "forward_pe": 21.582287,
-    "trailing_pe": 24.599998,
+    "market_cap": 42757222400.0,
+    "forward_pe": 21.59519,
+    "trailing_pe": 24.614706,
     "peg": 2.7021,
     "eps_growth_next": 0.13982352941176468,
     "roe": 0.07467,
     "profit_margin": 0.14694999,
     "debt_to_equity": 132.271,
-    "fcf_yield": -0.06354770766231572,
-    "dividend_yield": 0.030607364897178385,
+    "fcf_yield": -0.06350973893009476,
+    "dividend_yield": 0.030589078742980048,
     "payout_ratio": 0.7456,
     "dividend_cagr_5y": 0.048522415131136976,
     "dividend_years_raised": 20,
@@ -2902,7 +2902,7 @@
     78.81,
     81.13,
     81.97,
-    83.64
+    83.69
    ]
   },
   {
@@ -2912,8 +2912,8 @@
    "sector": "Technology",
    "currency": "CAD",
    "financial_currency": "USD",
-   "price": 360.99,
-   "day_change": 0.03598794662074911,
+   "price": 360.41,
+   "day_change": 0.03432343234323443,
    "lenses": {
     "trend": 0.1,
     "garp": 9.8,
@@ -2922,15 +2922,15 @@
    },
    "notes": {
     "trend": [
-     "\u221221.7% vs. the 200-day average ($461.12)",
-     "\u221220.3% vs. the 50-day average ($452.73)",
+     "\u221221.8% vs. the 200-day average ($461.12)",
+     "\u221220.4% vs. the 50-day average ($452.73)",
      "50-day average below the 200-day",
-     "12-month return \u221226.4% vs. +17.6% for the S&P/TSX Composite",
+     "12-month return \u221226.5% vs. +17.5% for the S&P/TSX Composite",
      "9% of the way up its 52-week range ($330.79\u2013$655.50)"
     ],
     "garp": [
      "PEG 0.16",
-     "Forward P/E 11.6",
+     "Forward P/E 11.5",
      "+112.4% expected EPS growth next year"
     ],
     "quality": [
@@ -2954,7 +2954,7 @@
    "adjusted": 4.98,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": null,
+   "score_change": 0.0,
    "reasons": [
     {
      "type": "caution",
@@ -2975,23 +2975,23 @@
     "ma200": 461.1198,
     "low52": 330.79,
     "high52": 655.5,
-    "return_12m": -0.2642017060135947,
-    "volatility": 0.7942575213857163,
+    "return_12m": -0.26538388042826744,
+    "volatility": 0.794183761748815,
     "beta": 1.345,
-    "market_cap": 45525098496.0,
-    "forward_pe": 11.555787,
-    "trailing_pe": 24.540447,
+    "market_cap": 45451956224.0,
+    "forward_pe": 11.537221,
+    "trailing_pe": 24.50102,
     "peg": 0.16,
     "eps_growth_next": 1.1236500339904825,
     "roe": 0.30228,
     "profit_margin": 0.06834,
     "debt_to_equity": 16.593,
-    "fcf_yield": 0.017633130789833053,
+    "fcf_yield": 0.017661506405661016,
     "dividend_yield": null,
     "payout_ratio": 0.0,
     "dividend_cagr_5y": null,
     "dividend_years_raised": 0,
-    "target_price": 606.5726,
+    "target_price": 606.4383,
     "analyst_rating": "strong_buy",
     "analyst_count": 3.0
    },
@@ -3049,154 +3049,7 @@
     429.26,
     364.4,
     369.32,
-    360.99
-   ]
-  },
-  {
-   "symbol": "CU.TO",
-   "name": "Canadian Utilities Limited",
-   "held": false,
-   "sector": "Utilities",
-   "currency": "CAD",
-   "financial_currency": "CAD",
-   "price": 51.64,
-   "day_change": 0.004083219910558045,
-   "lenses": {
-    "trend": 8.4,
-    "garp": 5.4,
-    "quality": 2.2,
-    "dividend": 3.0
-   },
-   "notes": {
-    "trend": [
-     "+3.6% vs. the 200-day average ($49.83)",
-     "+2.1% vs. the 50-day average ($50.56)",
-     "50-day average above the 200-day",
-     "12-month return +31.2% vs. +17.6% for the S&P/TSX Composite",
-     "71% of the way up its 52-week range ($39.00\u2013$56.90)"
-    ],
-    "garp": [
-     "PEG 2.64",
-     "Forward P/E 18.6",
-     "+1634.8% expected EPS growth next year"
-    ],
-    "quality": [
-     "Return on equity 1.9%",
-     "Profit margin 3.3%",
-     "Debt-to-equity 1.79 (utility scale)",
-     "EPS rose in 1 of the last 3 years"
-    ],
-    "dividend": [
-     "Yield 3.58%",
-     "\u22123.4% dividend growth per year over 5 years",
-     "Payout ratio 1150% of earnings",
-     "25 straight calendar years of increases"
-    ]
-   },
-   "weights": {
-    "trend": 0.3,
-    "garp": 0.3,
-    "quality": 0.25,
-    "dividend": 0.15
-   },
-   "composite": 5.14,
-   "risk_penalty": 0.5,
-   "adjusted": 4.64,
-   "rating": "Don't buy",
-   "borderline": false,
-   "score_change": null,
-   "reasons": [
-    {
-     "type": "caution",
-     "text": "Stretched valuation (forward P/E 18.6)"
-    }
-   ],
-   "triggers": [
-    "Needs 2.36 more points to reach Buy.",
-    "A move below the 200-day average ($49.83) would cut Trend.",
-    "Payout ratio back under 80% (now 1150%) would lift the dividend score.",
-    "Next earnings report: 2026-11-06."
-   ],
-   "metrics": {
-    "ma50": 50.5552,
-    "ma200": 49.83425,
-    "low52": 39.0,
-    "high52": 56.9,
-    "return_12m": 0.31199183406687436,
-    "volatility": 0.16749534721801762,
-    "beta": 0.544,
-    "market_cap": 14063151104.0,
-    "forward_pe": 18.60492,
-    "trailing_pe": 322.75,
-    "peg": 2.64,
-    "eps_growth_next": 16.3475625,
-    "roe": 0.01933,
-    "profit_margin": 0.03297,
-    "debt_to_equity": 179.1,
-    "fcf_yield": -0.02973195615320326,
-    "dividend_yield": 0.03582494190549961,
-    "payout_ratio": 11.5,
-    "dividend_cagr_5y": -0.03424875113262671,
-    "dividend_years_raised": 25,
-    "target_price": 57.0,
-    "analyst_rating": "buy",
-    "analyst_count": 5.0
-   },
-   "next_earnings": "2026-11-06",
-   "news": [],
-   "chart": [
-    42.4,
-    41.84,
-    42.23,
-    41.72,
-    41.52,
-    41.84,
-    42.28,
-    42.79,
-    43.17,
-    43.66,
-    43.81,
-    44.07,
-    43.84,
-    45.91,
-    47.01,
-    47.57,
-    48.29,
-    48.83,
-    47.24,
-    48.5,
-    49.65,
-    50.81,
-    48.43,
-    48.28,
-    48.43,
-    48.2,
-    48.29,
-    50.11,
-    49.6,
-    51.02,
-    51.74,
-    51.3,
-    53.32,
-    52.5,
-    52.63,
-    54.83,
-    55.85,
-    55.72,
-    52.89,
-    53.8,
-    51.7,
-    51.96,
-    50.91,
-    50.02,
-    51.08,
-    50.3,
-    51.42,
-    49.23,
-    49.99,
-    49.59,
-    51.45,
-    51.64
+    360.41
    ]
   },
   {
@@ -3206,8 +3059,8 @@
    "sector": "Basic Materials",
    "currency": "CAD",
    "financial_currency": "USD",
-   "price": 11.13,
-   "day_change": -0.022827041264266934,
+   "price": 11.135,
+   "day_change": -0.022388059701492602,
    "lenses": {
     "trend": 1.7,
     "garp": 10.0,
@@ -3219,13 +3072,13 @@
      "\u221217.4% vs. the 200-day average ($13.48)",
      "\u221220.4% vs. the 50-day average ($13.98)",
      "50-day average above the 200-day",
-     "12-month return \u22129.4% vs. +17.6% for the S&P/TSX Composite",
+     "12-month return \u22129.4% vs. +17.5% for the S&P/TSX Composite",
      "21% of the way up its 52-week range ($9.30\u2013$18.04)"
     ],
     "garp": [
      "PEG 0.30",
-     "Forward P/E 9.6",
-     "+100.5% expected EPS growth next year"
+     "Forward P/E 9.2",
+     "+108.3% expected EPS growth next year"
     ],
     "quality": [
      "Return on equity 10.2%",
@@ -3248,7 +3101,7 @@
    "adjusted": 4.63,
    "rating": "Sell",
    "borderline": true,
-   "score_change": null,
+   "score_change": 0.0,
    "reasons": [
     {
      "type": "caution",
@@ -3269,18 +3122,18 @@
     "ma200": 13.4768,
     "low52": 9.3,
     "high52": 18.04,
-    "return_12m": -0.09438566729150832,
-    "volatility": 0.6024301266175263,
+    "return_12m": -0.09397882315347428,
+    "volatility": 0.6024134001734062,
     "beta": 2.332,
-    "market_cap": 8528368640.0,
-    "forward_pe": 9.571312,
-    "trailing_pe": 19.189655,
+    "market_cap": 8532199936.0,
+    "forward_pe": 9.218861,
+    "trailing_pe": 19.198277,
     "peg": 0.3,
-    "eps_growth_next": 1.0049137931034484,
+    "eps_growth_next": 1.0825000000000005,
     "roe": 0.10159001,
     "profit_margin": 0.116809994,
     "debt_to_equity": 34.986,
-    "fcf_yield": 0.03000332030675447,
+    "fcf_yield": 0.02998984762656176,
     "dividend_yield": null,
     "payout_ratio": 0.0,
     "dividend_cagr_5y": null,
@@ -3343,7 +3196,154 @@
     12.25,
     11.19,
     11.0,
-    11.13
+    11.135
+   ]
+  },
+  {
+   "symbol": "CU.TO",
+   "name": "Canadian Utilities Limited",
+   "held": false,
+   "sector": "Utilities",
+   "currency": "CAD",
+   "financial_currency": "CAD",
+   "price": 51.585,
+   "day_change": 0.0030138051720784986,
+   "lenses": {
+    "trend": 8.3,
+    "garp": 5.4,
+    "quality": 2.2,
+    "dividend": 3.0
+   },
+   "notes": {
+    "trend": [
+     "+3.5% vs. the 200-day average ($49.83)",
+     "+2.0% vs. the 50-day average ($50.56)",
+     "50-day average above the 200-day",
+     "12-month return +31.1% vs. +17.5% for the S&P/TSX Composite",
+     "70% of the way up its 52-week range ($39.00\u2013$56.90)"
+    ],
+    "garp": [
+     "PEG 2.64",
+     "Forward P/E 18.6",
+     "+1634.8% expected EPS growth next year"
+    ],
+    "quality": [
+     "Return on equity 1.9%",
+     "Profit margin 3.3%",
+     "Debt-to-equity 1.79 (utility scale)",
+     "EPS rose in 1 of the last 3 years"
+    ],
+    "dividend": [
+     "Yield 3.59%",
+     "\u22123.4% dividend growth per year over 5 years",
+     "Payout ratio 1150% of earnings",
+     "25 straight calendar years of increases"
+    ]
+   },
+   "weights": {
+    "trend": 0.3,
+    "garp": 0.3,
+    "quality": 0.25,
+    "dividend": 0.15
+   },
+   "composite": 5.11,
+   "risk_penalty": 0.5,
+   "adjusted": 4.61,
+   "rating": "Don't buy",
+   "borderline": false,
+   "score_change": -0.03,
+   "reasons": [
+    {
+     "type": "caution",
+     "text": "Stretched valuation (forward P/E 18.6)"
+    }
+   ],
+   "triggers": [
+    "Needs 2.39 more points to reach Buy.",
+    "A move below the 200-day average ($49.83) would cut Trend.",
+    "Payout ratio back under 80% (now 1150%) would lift the dividend score.",
+    "Next earnings report: 2026-11-06."
+   ],
+   "metrics": {
+    "ma50": 50.5552,
+    "ma200": 49.83425,
+    "low52": 39.0,
+    "high52": 56.9,
+    "return_12m": 0.3105944686115161,
+    "volatility": 0.16747990461324183,
+    "beta": 0.544,
+    "market_cap": 14048173056.0,
+    "forward_pe": 18.585104,
+    "trailing_pe": 322.40625,
+    "peg": 2.64,
+    "eps_growth_next": 16.3475625,
+    "roe": 0.01933,
+    "profit_margin": 0.03297,
+    "debt_to_equity": 179.1,
+    "fcf_yield": -0.029763656123343245,
+    "dividend_yield": 0.03586313850925657,
+    "payout_ratio": 11.5,
+    "dividend_cagr_5y": -0.03424875113262671,
+    "dividend_years_raised": 25,
+    "target_price": 57.0,
+    "analyst_rating": "buy",
+    "analyst_count": 5.0
+   },
+   "next_earnings": "2026-11-06",
+   "news": [],
+   "chart": [
+    42.4,
+    41.84,
+    42.23,
+    41.72,
+    41.52,
+    41.84,
+    42.28,
+    42.79,
+    43.17,
+    43.66,
+    43.81,
+    44.07,
+    43.84,
+    45.91,
+    47.01,
+    47.57,
+    48.29,
+    48.83,
+    47.24,
+    48.5,
+    49.65,
+    50.81,
+    48.43,
+    48.28,
+    48.43,
+    48.2,
+    48.29,
+    50.11,
+    49.6,
+    51.02,
+    51.74,
+    51.3,
+    53.32,
+    52.5,
+    52.63,
+    54.83,
+    55.85,
+    55.72,
+    52.89,
+    53.8,
+    51.7,
+    51.96,
+    50.91,
+    50.02,
+    51.08,
+    50.3,
+    51.42,
+    49.23,
+    49.99,
+    49.59,
+    51.45,
+    51.585
    ]
   },
   {
@@ -3353,8 +3353,8 @@
    "sector": "Energy",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 89.375,
-   "day_change": 0.0036496350364962904,
+   "price": 89.185,
+   "day_change": 0.0015160022459292932,
    "lenses": {
     "trend": 6.3,
     "garp": 3.9,
@@ -3363,15 +3363,15 @@
    },
    "notes": {
     "trend": [
-     "+0.9% vs. the 200-day average ($88.59)",
-     "+3.9% vs. the 50-day average ($86.00)",
+     "+0.7% vs. the 200-day average ($88.59)",
+     "+3.7% vs. the 50-day average ($86.00)",
      "50-day average below the 200-day",
-     "12-month return +27.1% vs. +17.6% for the S&P/TSX Composite",
-     "65% of the way up its 52-week range ($69.41\u2013$100.18)"
+     "12-month return +26.8% vs. +17.5% for the S&P/TSX Composite",
+     "64% of the way up its 52-week range ($69.41\u2013$100.18)"
     ],
     "garp": [
      "PEG 2.38",
-     "Forward P/E 22.9",
+     "Forward P/E 22.8",
      "+11.4% expected EPS growth next year"
     ],
     "quality": [
@@ -3382,7 +3382,7 @@
      "EPS rose in 2 of the last 3 years"
     ],
     "dividend": [
-     "Yield 3.93%",
+     "Yield 3.94%",
      "+2.2% dividend growth per year over 5 years",
      "Payout ratio 98% of earnings",
      "0 straight calendar years of increases"
@@ -3399,12 +3399,12 @@
    "adjusted": 4.27,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": null,
+   "score_change": 0.0,
    "reasons": [],
    "triggers": [
     "Needs 2.73 more points to reach Buy.",
     "A move below the 200-day average ($88.59) would cut Trend.",
-    "Forward P/E falling below 20 (now 22.9) would lift GARP.",
+    "Forward P/E falling below 20 (now 22.8) would lift GARP.",
     "Payout ratio back under 80% (now 98%) would lift the dividend score."
    ],
    "metrics": {
@@ -3412,19 +3412,19 @@
     "ma200": 88.5939,
     "low52": 69.41,
     "high52": 100.18,
-    "return_12m": 0.27079479131388084,
-    "volatility": 0.19145468014825423,
+    "return_12m": 0.2680932068341495,
+    "volatility": 0.19143715743339093,
     "beta": 0.923,
-    "market_cap": 93107920896.0,
-    "forward_pe": 22.8618,
-    "trailing_pe": 25.462963,
+    "market_cap": 92909977600.0,
+    "forward_pe": 22.813196,
+    "trailing_pe": 25.40883,
     "peg": 2.3846,
     "eps_growth_next": 0.11377777777777776,
     "roe": 0.11826,
     "profit_margin": 0.22913,
     "debt_to_equity": 170.37,
-    "fcf_yield": 0.013437363652416703,
-    "dividend_yield": 0.03927272727272727,
+    "fcf_yield": 0.013465991751568348,
+    "dividend_yield": 0.03935639401244603,
     "payout_ratio": 0.9843,
     "dividend_cagr_5y": 0.022472757812224353,
     "dividend_years_raised": 0,
@@ -3486,7 +3486,7 @@
     87.13,
     87.32,
     90.16,
-    89.375
+    89.185
    ]
   },
   {
@@ -3509,7 +3509,7 @@
      "\u22126.3% vs. the 200-day average ($8.27)",
      "+3.6% vs. the 50-day average ($7.49)",
      "50-day average below the 200-day",
-     "12-month return \u22120.8% vs. +17.6% for the S&P/TSX Composite",
+     "12-month return \u22120.8% vs. +17.5% for the S&P/TSX Composite",
      "29% of the way up its 52-week range ($6.96\u2013$9.69)"
     ],
     "garp": [
@@ -3541,7 +3541,7 @@
    "adjusted": 4.19,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": null,
+   "score_change": 0.0,
    "reasons": [],
    "triggers": [
     "Needs 2.81 more points to reach Buy.",
@@ -3638,8 +3638,8 @@
    "sector": "Basic Materials",
    "currency": "CAD",
    "financial_currency": "USD",
-   "price": 235.48,
-   "day_change": -0.012289752946604615,
+   "price": 235.34,
+   "day_change": -0.012876976636886028,
    "lenses": {
     "trend": 2.4,
     "garp": 2.3,
@@ -3648,10 +3648,10 @@
    },
    "notes": {
     "trend": [
-     "\u221210.3% vs. the 200-day average ($262.64)",
+     "\u221210.4% vs. the 200-day average ($262.64)",
      "\u221212.7% vs. the 50-day average ($269.63)",
      "50-day average above the 200-day",
-     "12-month return +3.1% vs. +17.6% for the S&P/TSX Composite",
+     "12-month return +3.1% vs. +17.5% for the S&P/TSX Composite",
      "29% of the way up its 52-week range ($188.48\u2013$348.94)"
     ],
     "garp": [
@@ -3684,7 +3684,7 @@
    "adjusted": 4.1,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": null,
+   "score_change": 0.0,
    "reasons": [
     {
      "type": "caution",
@@ -3701,23 +3701,23 @@
     "ma200": 262.6373,
     "low52": 188.48,
     "high52": 348.94,
-    "return_12m": 0.03122395197480876,
-    "volatility": 0.47673490779151423,
+    "return_12m": 0.030610860729324063,
+    "volatility": 0.47675123521168566,
     "beta": 0.668,
-    "market_cap": 119046086656.0,
-    "forward_pe": 14.422562,
-    "trailing_pe": 13.827363,
+    "market_cap": 118975307776.0,
+    "forward_pe": 14.413987,
+    "trailing_pe": 13.819142,
     "peg": 28.26,
     "eps_growth_next": -0.0412685848502643,
     "roe": 0.23236,
     "profit_margin": 0.41009,
     "debt_to_equity": 1.108,
-    "fcf_yield": 0.031474786355870116,
-    "dividend_yield": 0.010659079327331407,
+    "fcf_yield": 0.03149351083045355,
+    "dividend_yield": 0.010665420243052604,
     "payout_ratio": 0.1426,
     "dividend_cagr_5y": 0.06543262871770872,
     "dividend_years_raised": 11,
-    "target_price": 295.749,
+    "target_price": 295.7025,
     "analyst_rating": "buy",
     "analyst_count": 11.0
    },
@@ -3775,7 +3775,7 @@
     267.66,
     243.39,
     230.79,
-    235.48
+    235.34
    ]
   },
   {
@@ -3785,8 +3785,8 @@
    "sector": "Basic Materials",
    "currency": "CAD",
    "financial_currency": "USD",
-   "price": 28.165,
-   "day_change": -0.020006958942240805,
+   "price": 28.17,
+   "day_change": -0.019832985386221136,
    "lenses": {
     "trend": 0.0,
     "garp": 6.7,
@@ -3798,7 +3798,7 @@
      "\u221229.5% vs. the 200-day average ($39.95)",
      "\u221223.8% vs. the 50-day average ($36.96)",
      "50-day average below the 200-day",
-     "12-month return \u221214.4% vs. +17.6% for the S&P/TSX Composite",
+     "12-month return \u221214.4% vs. +17.5% for the S&P/TSX Composite",
      "3% of the way up its 52-week range ($27.50\u2013$53.57)"
     ],
     "garp": [
@@ -3831,7 +3831,7 @@
    "adjusted": 4.08,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": null,
+   "score_change": 0.0,
    "reasons": [
     {
      "type": "caution",
@@ -3852,23 +3852,23 @@
     "ma200": 39.9549,
     "low52": 27.5,
     "high52": 53.57,
-    "return_12m": -0.14392098452114188,
-    "volatility": 0.5306855991448923,
+    "return_12m": -0.14376903435291255,
+    "volatility": 0.5306790509371211,
     "beta": 1.528,
-    "market_cap": 33179445248.0,
-    "forward_pe": 7.5598145,
-    "trailing_pe": 7.6953554,
+    "market_cap": 33185335296.0,
+    "forward_pe": 7.5611563,
+    "trailing_pe": 7.696721,
     "peg": 1.12,
     "eps_growth_next": 0.017929153005464382,
     "roe": 0.35312,
     "profit_margin": 0.37625,
     "debt_to_equity": 7.468,
-    "fcf_yield": 0.0742639714914621,
-    "dividend_yield": 0.0078111130836144155,
+    "fcf_yield": 0.07425079041756746,
+    "dividend_yield": 0.0078097266595669144,
     "payout_ratio": 0.0587,
     "dividend_cagr_5y": 0.07122458473353399,
     "dividend_years_raised": 5,
-    "target_price": 50.65521,
+    "target_price": 50.651592,
     "analyst_rating": "buy",
     "analyst_count": 8.0
    },
@@ -3926,7 +3926,7 @@
     33.99,
     31.27,
     28.16,
-    28.165
+    28.17
    ]
   },
   {
@@ -3949,7 +3949,7 @@
      "+14.7% vs. the 200-day average ($295.51)",
      "+7.6% vs. the 50-day average ($315.11)",
      "50-day average above the 200-day",
-     "12-month return +68.4% vs. +17.6% for the S&P/TSX Composite",
+     "12-month return +68.4% vs. +17.5% for the S&P/TSX Composite",
      "79% of the way up its 52-week range ($190.00\u2013$377.94)"
     ],
     "garp": [
@@ -3976,7 +3976,7 @@
    "adjusted": 4.0,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": null,
+   "score_change": 0.0,
    "reasons": [
     {
      "type": "caution",
@@ -4082,8 +4082,8 @@
    "sector": "Utilities",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 55.74,
-   "day_change": -0.0026838432635534204,
+   "price": 55.77,
+   "day_change": -0.0021470746108427363,
    "lenses": {
     "trend": 5.0,
     "garp": 1.2,
@@ -4092,10 +4092,10 @@
    },
    "notes": {
     "trend": [
-     "\u22120.8% vs. the 200-day average ($56.19)",
-     "+6.3% vs. the 50-day average ($52.44)",
+     "\u22120.7% vs. the 200-day average ($56.19)",
+     "+6.4% vs. the 50-day average ($52.44)",
      "50-day average below the 200-day",
-     "12-month return +8.7% vs. +17.6% for the S&P/TSX Composite",
+     "12-month return +8.8% vs. +17.5% for the S&P/TSX Composite",
      "54% of the way up its 52-week range ($50.14\u2013$60.57)"
     ],
     "garp": [
@@ -4127,7 +4127,7 @@
    "adjusted": 3.92,
    "rating": "Sell",
    "borderline": false,
-   "score_change": null,
+   "score_change": 0.0,
    "reasons": [],
    "triggers": [
     "Needs 1.08 more points to reach Hold.",
@@ -4140,19 +4140,19 @@
     "ma200": 56.1861,
     "low52": 50.14,
     "high52": 60.57,
-    "return_12m": 0.08739764930994243,
-    "volatility": 0.15317824590658607,
+    "return_12m": 0.08778775160649288,
+    "volatility": 0.1531715660687021,
     "beta": 0.42,
-    "market_cap": 33449359360.0,
-    "forward_pe": 23.287683,
-    "trailing_pe": 23.618647,
+    "market_cap": 33467361280.0,
+    "forward_pe": 23.300217,
+    "trailing_pe": 23.631357,
     "peg": 3.5093,
     "eps_growth_next": 0.014211864406779684,
     "roe": 0.111490004,
     "profit_margin": 0.14868,
     "debt_to_equity": 153.164,
-    "fcf_yield": -0.03961585565027694,
-    "dividend_yield": 0.025296017222820235,
+    "fcf_yield": -0.039594546487054266,
+    "dividend_yield": 0.02528240989779451,
     "payout_ratio": 0.57310003,
     "dividend_cagr_5y": 0.05697363488229734,
     "dividend_years_raised": 8,
@@ -4214,7 +4214,7 @@
     53.52,
     54.45,
     55.24,
-    55.74
+    55.76
    ]
   },
   {
@@ -4224,20 +4224,20 @@
    "sector": "Energy",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 68.67,
-   "day_change": -0.0021795989537923832,
+   "price": 68.6,
+   "day_change": -0.0031967451322290064,
    "lenses": {
-    "trend": 3.4,
+    "trend": 3.3,
     "garp": 4.3,
     "quality": 2.6,
     "dividend": 3.8
    },
    "notes": {
     "trend": [
-     "\u22125.4% vs. the 200-day average ($72.56)",
-     "+1.3% vs. the 50-day average ($67.77)",
+     "\u22125.5% vs. the 200-day average ($72.56)",
+     "+1.2% vs. the 50-day average ($67.77)",
      "50-day average below the 200-day",
-     "12-month return +4.8% vs. +17.6% for the S&P/TSX Composite",
+     "12-month return +4.7% vs. +17.5% for the S&P/TSX Composite",
      "34% of the way up its 52-week range ($62.42\u2013$80.65)"
     ],
     "garp": [
@@ -4253,7 +4253,7 @@
      "EPS rose in 2 of the last 3 years"
     ],
     "dividend": [
-     "Yield 5.65%",
+     "Yield 5.66%",
      "+3.1% dividend growth per year over 5 years",
      "Payout ratio 148% of earnings",
      "30 straight calendar years of increases"
@@ -4265,15 +4265,15 @@
     "quality": 0.25,
     "dividend": 0.15
    },
-   "composite": 3.53,
+   "composite": 3.5,
    "risk_penalty": 0,
-   "adjusted": 3.53,
+   "adjusted": 3.5,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": null,
+   "score_change": -0.03,
    "reasons": [],
    "triggers": [
-    "Needs 3.47 more points to reach Buy.",
+    "Needs 3.50 more points to reach Buy.",
     "A move above the 200-day average ($72.56) would lift Trend.",
     "Forward P/E falling below 20 (now 21.6) would lift GARP.",
     "Payout ratio back under 80% (now 148%) would lift the dividend score."
@@ -4283,19 +4283,19 @@
     "ma200": 72.5573,
     "low52": 62.42,
     "high52": 80.65,
-    "return_12m": 0.04807694882890767,
-    "volatility": 0.17787789456587502,
+    "return_12m": 0.04700857736354336,
+    "volatility": 0.17789478621967073,
     "beta": 0.786,
-    "market_cap": 153054674944.0,
-    "forward_pe": 21.597464,
-    "trailing_pe": 26.513514,
+    "market_cap": 152898666496.0,
+    "forward_pe": 21.575449,
+    "trailing_pe": 26.486486,
     "peg": 5.0296,
     "eps_growth_next": 0.22762162162162158,
     "roe": 0.092209995,
     "profit_margin": 0.07339,
     "debt_to_equity": 162.975,
-    "fcf_yield": -0.006927262982250798,
-    "dividend_yield": 0.056502111547983104,
+    "fcf_yield": -0.006934331137726027,
+    "dividend_yield": 0.0565597667638484,
     "payout_ratio": 1.4768,
     "dividend_cagr_5y": 0.03053582807078925,
     "dividend_years_raised": 30,
@@ -4357,7 +4357,7 @@
     68.04,
     67.37,
     69.11,
-    68.67
+    68.6
    ]
   },
   {
@@ -4367,8 +4367,8 @@
    "sector": "Energy",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 102.3,
-   "day_change": -0.0019512195121951237,
+   "price": 102.2,
+   "day_change": -0.0029268292682926855,
    "lenses": {
     "trend": 0.0,
     "garp": 5.0,
@@ -4377,11 +4377,11 @@
    },
    "notes": {
     "trend": [
-     "\u221229.3% vs. the 200-day average ($144.67)",
-     "\u221219.2% vs. the 50-day average ($126.65)",
+     "\u221229.4% vs. the 200-day average ($144.67)",
+     "\u221219.3% vs. the 50-day average ($126.65)",
      "50-day average below the 200-day",
-     "12-month return \u221227.8% vs. +17.6% for the S&P/TSX Composite",
-     "0% of the way up its 52-week range ($102.13\u2013$182.72)"
+     "12-month return \u221227.9% vs. +17.5% for the S&P/TSX Composite",
+     "0% of the way up its 52-week range ($102.11\u2013$182.72)"
     ],
     "garp": [
      "PEG 1.92",
@@ -4413,7 +4413,7 @@
    "adjusted": 2.63,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": null,
+   "score_change": 0.0,
    "reasons": [
     {
      "type": "caution",
@@ -4433,21 +4433,21 @@
    "metrics": {
     "ma50": 126.65,
     "ma200": 144.6718,
-    "low52": 102.13,
+    "low52": 102.11,
     "high52": 182.72,
-    "return_12m": -0.2784086903520694,
-    "volatility": 0.5013679610778224,
+    "return_12m": -0.279114101232381,
+    "volatility": 0.5013710798233166,
     "beta": 1.126,
-    "market_cap": 44555026432.0,
-    "forward_pe": 40.732147,
-    "trailing_pe": 112.41758,
+    "market_cap": 44511469568.0,
+    "forward_pe": 40.692326,
+    "trailing_pe": 112.307686,
     "peg": 1.92,
     "eps_growth_next": 1.759923076923077,
     "roe": 0.056760002,
     "profit_margin": 0.11432999,
     "debt_to_equity": 13.949,
-    "fcf_yield": 0.00442327754649148,
-    "dividend_yield": 0.002346041055718475,
+    "fcf_yield": 0.004427605961176429,
+    "dividend_yield": 0.0023483365949119373,
     "payout_ratio": 0.2637,
     "dividend_cagr_5y": 0.2457309396155174,
     "dividend_years_raised": 2,
@@ -4509,7 +4509,7 @@
     115.3,
     110.13,
     107.6,
-    102.3
+    102.2
    ]
   },
   {
@@ -4519,21 +4519,21 @@
    "sector": "Utilities",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 21.85,
-   "day_change": 0.0083064143977849,
+   "price": 21.905,
+   "day_change": 0.010844485463774811,
    "lenses": {
-    "trend": 3.7,
+    "trend": 3.8,
     "garp": 5.0,
     "quality": 1.9,
     "dividend": 0.0
    },
    "notes": {
     "trend": [
-     "+0.0% vs. the 200-day average ($21.84)",
-     "+0.6% vs. the 50-day average ($21.73)",
+     "+0.3% vs. the 200-day average ($21.84)",
+     "+0.8% vs. the 50-day average ($21.73)",
      "50-day average below the 200-day",
-     "12-month return \u221215.2% vs. +17.6% for the S&P/TSX Composite",
-     "60% of the way up its 52-week range ($15.96\u2013$25.78)"
+     "12-month return \u221215.0% vs. +17.5% for the S&P/TSX Composite",
+     "61% of the way up its 52-week range ($15.96\u2013$25.78)"
     ],
     "garp": [
      "PEG 2.57",
@@ -4546,7 +4546,7 @@
      "A loss in at least one of the last 4 years"
     ],
     "dividend": [
-     "Yield 3.30%",
+     "Yield 3.29%",
      "\u22128.7% dividend growth per year over 5 years",
      "Payout ratio 121% of earnings",
      "0 straight calendar years of increases"
@@ -4558,12 +4558,12 @@
     "quality": 0.25,
     "dividend": 0.15
    },
-   "composite": 3.08,
+   "composite": 3.11,
    "risk_penalty": 0.75,
-   "adjusted": 2.33,
+   "adjusted": 2.36,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": null,
+   "score_change": 0.03,
    "reasons": [
     {
      "type": "caution",
@@ -4575,7 +4575,7 @@
     }
    ],
    "triggers": [
-    "Needs 4.67 more points to reach Buy.",
+    "Needs 4.64 more points to reach Buy.",
     "A move below the 200-day average ($21.84) would cut Trend.",
     "Payout ratio back under 80% (now 121%) would lift the dividend score.",
     "Next earnings report: 2026-11-12."
@@ -4585,19 +4585,19 @@
     "ma200": 21.84105,
     "low52": 15.96,
     "high52": 25.78,
-    "return_12m": -0.15244376262610382,
-    "volatility": 0.3678036733581261,
+    "return_12m": -0.1503103140725407,
+    "volatility": 0.3678722765688495,
     "beta": 0.534,
-    "market_cap": 5713819648.0,
-    "forward_pe": 11.976541,
+    "market_cap": null,
+    "forward_pe": 12.006688,
     "trailing_pe": null,
     "peg": 2.57,
     "eps_growth_next": null,
     "roe": -0.01272,
     "profit_margin": -0.05509,
     "debt_to_equity": 150.359,
-    "fcf_yield": 0.1525948618810868,
-    "dividend_yield": 0.03295194508009153,
+    "fcf_yield": null,
+    "dividend_yield": 0.03286920794339192,
     "payout_ratio": 1.2121,
     "dividend_cagr_5y": -0.08730332317100986,
     "dividend_years_raised": 0,
@@ -4659,7 +4659,7 @@
     22.18,
     21.54,
     21.65,
-    21.85
+    21.905
    ]
   },
   {
@@ -4669,8 +4669,8 @@
    "sector": "Real Estate",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 9.52,
-   "day_change": 0.0,
+   "price": 9.5,
+   "day_change": -0.0021008403361344463,
    "lenses": {
     "trend": 1.3,
     "garp": 4.3,
@@ -4679,11 +4679,11 @@
    },
    "notes": {
     "trend": [
-     "\u22128.2% vs. the 200-day average ($10.37)",
-     "\u22121.5% vs. the 50-day average ($9.67)",
+     "\u22128.4% vs. the 200-day average ($10.37)",
+     "\u22121.7% vs. the 50-day average ($9.67)",
      "50-day average below the 200-day",
-     "12-month return \u221214.9% vs. +17.6% for the S&P/TSX Composite",
-     "18% of the way up its 52-week range ($9.06\u2013$11.64)"
+     "12-month return \u221215.1% vs. +17.5% for the S&P/TSX Composite",
+     "17% of the way up its 52-week range ($9.06\u2013$11.64)"
     ],
     "garp": [
      "PEG 8.27",
@@ -4693,11 +4693,11 @@
      "Return on equity -12.8%",
      "Profit margin -68.7%",
      "Debt-to-equity 0.64",
-     "Free cash flow yield \u221219.0%",
+     "Free cash flow yield \u221219.1%",
      "A loss in at least one of the last 4 years"
     ],
     "dividend": [
-     "Yield 6.30%",
+     "Yield 6.32%",
      "\u22123.4% dividend growth per year over 5 years",
      "Payout ratio 259% of earnings",
      "0 straight calendar years of increases"
@@ -4714,7 +4714,7 @@
    "adjusted": 1.63,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": null,
+   "score_change": 0.0,
    "reasons": [
     {
      "type": "caution",
@@ -4732,19 +4732,19 @@
     "ma200": 10.371,
     "low52": 9.06,
     "high52": 11.64,
-    "return_12m": -0.14924032039708302,
-    "volatility": 0.22009431985024508,
+    "return_12m": -0.15102767147069118,
+    "volatility": 0.22009912551002134,
     "beta": 1.002,
-    "market_cap": 2519343872.0,
-    "forward_pe": 7.6774197,
+    "market_cap": 2514051072.0,
+    "forward_pe": 7.66129,
     "trailing_pe": null,
     "peg": 8.27,
     "eps_growth_next": null,
     "roe": -0.12810001,
     "profit_margin": -0.68678004,
     "debt_to_equity": 63.919,
-    "fcf_yield": -0.19046249197378323,
-    "dividend_yield": 0.06302521008403361,
+    "fcf_yield": -0.19086347025491135,
+    "dividend_yield": 0.06315789473684211,
     "payout_ratio": 2.5863001,
     "dividend_cagr_5y": -0.03444760613889286,
     "dividend_years_raised": 0,
@@ -4806,7 +4806,7 @@
     9.87,
     9.81,
     9.37,
-    9.52
+    9.5
    ]
   },
   {
@@ -4816,8 +4816,8 @@
    "sector": "Utilities",
    "currency": "CAD",
    "financial_currency": "USD",
-   "price": 42.31,
-   "day_change": 0.009544261512765662,
+   "price": 42.3,
+   "day_change": 0.009305654974946398,
    "lenses": {
     "trend": 3.0,
     "garp": 1.0,
@@ -4827,9 +4827,9 @@
    "notes": {
     "trend": [
      "\u22125.0% vs. the 200-day average ($44.53)",
-     "+1.7% vs. the 50-day average ($41.62)",
+     "+1.6% vs. the 50-day average ($41.62)",
      "50-day average below the 200-day",
-     "12-month return \u22124.5% vs. +17.6% for the S&P/TSX Composite",
+     "12-month return \u22124.5% vs. +17.5% for the S&P/TSX Composite",
      "35% of the way up its 52-week range ($36.64\u2013$52.86)"
     ],
     "garp": [
@@ -4859,7 +4859,7 @@
    "adjusted": 1.58,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": null,
+   "score_change": 0.0,
    "reasons": [
     {
      "type": "caution",
@@ -4877,23 +4877,23 @@
     "ma200": 44.53125,
     "low52": 36.64,
     "high52": 52.86,
-    "return_12m": -0.04470533983534353,
-    "volatility": 0.2771523556138169,
+    "return_12m": -0.04493117266496005,
+    "volatility": 0.27714430247935473,
     "beta": 0.955,
-    "market_cap": 20625842176.0,
-    "forward_pe": -16.281063,
+    "market_cap": 20577699840.0,
+    "forward_pe": -16.277214,
     "trailing_pe": null,
     "peg": 3.52,
     "eps_growth_next": null,
     "roe": 0.00399,
     "profit_margin": -0.01258,
     "debt_to_equity": 105.23,
-    "fcf_yield": -0.5802187462641041,
-    "dividend_yield": 0.052469865280075634,
+    "fcf_yield": -0.5815761907818751,
+    "dividend_yield": 0.052482269503546106,
     "payout_ratio": 14.2651005,
-    "dividend_cagr_5y": 0.05228127687133477,
+    "dividend_cagr_5y": 0.05228126498802377,
     "dividend_years_raised": 4,
-    "target_price": 45.74171,
+    "target_price": 45.738113,
     "analyst_rating": "buy",
     "analyst_count": 4.0
    },
@@ -4951,7 +4951,7 @@
     40.14,
     39.89,
     40.02,
-    42.31
+    42.3
    ]
   },
   {
@@ -4974,7 +4974,7 @@
      "\u221220.6% vs. the 200-day average ($15.73)",
      "+1.2% vs. the 50-day average ($12.35)",
      "50-day average below the 200-day",
-     "12-month return \u221239.1% vs. +17.6% for the S&P/TSX Composite",
+     "12-month return \u221239.1% vs. +17.5% for the S&P/TSX Composite",
      "16% of the way up its 52-week range ($10.89\u2013$20.97)"
     ],
     "garp": [
@@ -5007,7 +5007,7 @@
    "adjusted": 1.29,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": null,
+   "score_change": 0.0,
    "reasons": [
     {
      "type": "caution",
@@ -5113,21 +5113,21 @@
    "sector": "Healthcare",
    "currency": "CAD",
    "financial_currency": "USD",
-   "price": 9.56,
-   "day_change": 0.020277481323372593,
+   "price": 9.54,
+   "day_change": 0.018143009605122717,
    "lenses": {
-    "trend": 3.7,
+    "trend": 3.6,
     "garp": 1.0,
     "quality": 2.0,
     "dividend": null
    },
    "notes": {
     "trend": [
-     "\u22125.8% vs. the 200-day average ($10.15)",
-     "\u221210.0% vs. the 50-day average ($10.62)",
+     "\u22126.0% vs. the 200-day average ($10.15)",
+     "\u221210.2% vs. the 50-day average ($10.62)",
      "50-day average above the 200-day",
-     "12-month return +12.9% vs. +17.6% for the S&P/TSX Composite",
-     "39% of the way up its 52-week range ($7.35\u2013$13.08)"
+     "12-month return +12.6% vs. +17.5% for the S&P/TSX Composite",
+     "38% of the way up its 52-week range ($7.35\u2013$13.08)"
     ],
     "garp": [
      "No earnings yet, so growth-at-a-reasonable-price can't be measured; scored 1"
@@ -5148,12 +5148,12 @@
     "garp": 0.3529,
     "quality": 0.2941
    },
-   "composite": 2.25,
+   "composite": 2.21,
    "risk_penalty": 1.25,
-   "adjusted": 1.0,
+   "adjusted": 0.96,
    "rating": "Sell",
    "borderline": false,
-   "score_change": null,
+   "score_change": -0.04,
    "reasons": [
     {
      "type": "caution",
@@ -5169,7 +5169,7 @@
     }
    ],
    "triggers": [
-    "Needs 4.00 more points to reach Hold.",
+    "Needs 4.04 more points to reach Hold.",
     "A move above the 200-day average ($10.15) would lift Trend.",
     "Next earnings report: 2026-11-03."
    ],
@@ -5178,18 +5178,18 @@
     "ma200": 10.150925,
     "low52": 7.35,
     "high52": 13.08,
-    "return_12m": 0.12868950628383535,
-    "volatility": 0.6558718420870496,
+    "return_12m": 0.126328177224434,
+    "volatility": 0.6558141038941288,
     "beta": 1.332,
-    "market_cap": 631661440.0,
-    "forward_pe": -6.5238166,
+    "market_cap": 630339968.0,
+    "forward_pe": -6.510168,
     "trailing_pe": null,
     "peg": null,
     "eps_growth_next": null,
     "roe": -0.66696,
     "profit_margin": 0.0,
     "debt_to_equity": 1.421,
-    "fcf_yield": -0.02996216454181531,
+    "fcf_yield": -0.030024978520797208,
     "dividend_yield": null,
     "payout_ratio": null,
     "dividend_cagr_5y": null,
@@ -5252,7 +5252,7 @@
     9.35,
     9.57,
     9.52,
-    9.56
+    9.54
    ]
   },
   {
@@ -5262,8 +5262,8 @@
    "sector": "Real Estate",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 4.08,
-   "day_change": -0.012106537530266248,
+   "price": 4.07,
+   "day_change": -0.014527845036319542,
    "lenses": {
     "trend": 0.4,
     "garp": 1.0,
@@ -5272,11 +5272,11 @@
    },
    "notes": {
     "trend": [
-     "\u221210.1% vs. the 200-day average ($4.54)",
-     "\u22123.5% vs. the 50-day average ($4.23)",
+     "\u221210.3% vs. the 200-day average ($4.54)",
+     "\u22123.8% vs. the 50-day average ($4.23)",
      "50-day average below the 200-day",
-     "12-month return \u221216.7% vs. +17.6% for the S&P/TSX Composite",
-     "6% of the way up its 52-week range ($4.00\u2013$5.39)"
+     "12-month return \u221216.9% vs. +17.5% for the S&P/TSX Composite",
+     "5% of the way up its 52-week range ($4.00\u2013$5.39)"
     ],
     "garp": [
      "No earnings yet, so growth-at-a-reasonable-price can't be measured; scored 1"
@@ -5285,7 +5285,7 @@
      "Return on equity -45.3%",
      "Profit margin -11.8%",
      "Debt-to-equity 33.02",
-     "Free cash flow yield +7.4%",
+     "Free cash flow yield +7.5%",
      "A loss in at least one of the last 4 years"
     ],
     "dividend": [
@@ -5306,7 +5306,7 @@
    "adjusted": -0.08,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": null,
+   "score_change": 0.0,
    "reasons": [
     {
      "type": "caution",
@@ -5328,19 +5328,19 @@
     "ma200": 4.5377,
     "low52": 4.0,
     "high52": 5.39,
-    "return_12m": -0.16734697055141345,
-    "volatility": 0.23907985850635788,
+    "return_12m": -0.16938773623509829,
+    "volatility": 0.2392085326536728,
     "beta": 0.863,
-    "market_cap": 1491853568.0,
-    "forward_pe": -51.0,
+    "market_cap": 1488608512.0,
+    "forward_pe": -50.875004,
     "trailing_pe": null,
     "peg": null,
     "eps_growth_next": null,
     "roe": -0.45337,
     "profit_margin": -0.11769,
     "debt_to_equity": 3302.078,
-    "fcf_yield": 0.07448691371833083,
-    "dividend_yield": 0.0024509803921568627,
+    "fcf_yield": 0.07464928965823353,
+    "dividend_yield": 0.002457002457002457,
     "payout_ratio": 1.6216999,
     "dividend_cagr_5y": 0.0,
     "dividend_years_raised": 0,
@@ -5402,7 +5402,7 @@
     4.32,
     4.23,
     4.01,
-    4.08
+    4.07
    ]
   }
  ],
