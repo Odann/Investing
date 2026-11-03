@@ -1,311 +1,16 @@
 {
- "sample": true,
  "calls": [
   {
-   "id": "RY.TO|2026-04-27|Hold",
-   "symbol": "RY.TO",
-   "name": "Royal Bank of Canada",
-   "rating": "Hold",
+   "id": "AXL.V|2026-11-03|Buy more",
+   "symbol": "AXL.V",
+   "name": "Arrow Exploration Corp.",
+   "rating": "Buy more",
    "held": true,
-   "score": 6.57,
-   "logged_at": "2026-04-27T22:37:00+00:00",
-   "price": 249.6,
-   "bench_price": 33032.25,
-   "results": {
-    "30": {
-     "graded_at": "2026-07-26T22:37:00+00:00",
-     "price": 257.3,
-     "return": 0.0308,
-     "benchmark": 0.043,
-     "excess": -0.0122
-    },
-    "90": {
-     "graded_at": "2026-07-26T22:37:00+00:00",
-     "price": 257.3,
-     "return": 0.0308,
-     "benchmark": 0.043,
-     "excess": -0.0122
-    },
-    "180": {
-     "graded_at": "2026-11-03T22:37:00+00:00",
-     "price": 286.22,
-     "return": 0.1467,
-     "benchmark": 0.0753,
-     "excess": 0.0714
-    }
-   }
-  },
-  {
-   "id": "MFC.TO|2026-04-27|Don't buy",
-   "symbol": "MFC.TO",
-   "name": "Manulife Financial Corporation",
-   "rating": "Don't buy",
-   "held": false,
-   "score": 6.4,
-   "logged_at": "2026-04-27T22:37:00+00:00",
-   "price": 49.65,
-   "bench_price": 33032.25,
-   "results": {
-    "30": {
-     "graded_at": "2026-07-26T22:37:00+00:00",
-     "price": 54.27,
-     "return": 0.0931,
-     "benchmark": 0.043,
-     "excess": 0.05
-    },
-    "90": {
-     "graded_at": "2026-07-26T22:37:00+00:00",
-     "price": 54.27,
-     "return": 0.0931,
-     "benchmark": 0.043,
-     "excess": 0.05
-    },
-    "180": {
-     "graded_at": "2026-11-03T22:37:00+00:00",
-     "price": 61.7,
-     "return": 0.2427,
-     "benchmark": 0.0753,
-     "excess": 0.1674
-    }
-   }
-  },
-  {
-   "id": "NA.TO|2026-04-27|Don't buy",
-   "symbol": "NA.TO",
-   "name": "National Bank of Canada",
-   "rating": "Don't buy",
-   "held": false,
-   "score": 6.34,
-   "logged_at": "2026-04-27T22:37:00+00:00",
-   "price": 173.47,
-   "bench_price": 33032.25,
-   "results": {
-    "30": {
-     "graded_at": "2026-07-26T22:37:00+00:00",
-     "price": 184.12,
-     "return": 0.0614,
-     "benchmark": 0.043,
-     "excess": 0.0184
-    },
-    "90": {
-     "graded_at": "2026-07-26T22:37:00+00:00",
-     "price": 184.12,
-     "return": 0.0614,
-     "benchmark": 0.043,
-     "excess": 0.0184
-    },
-    "180": {
-     "graded_at": "2026-11-03T22:37:00+00:00",
-     "price": 195.01,
-     "return": 0.1242,
-     "benchmark": 0.0753,
-     "excess": 0.0489
-    }
-   }
-  },
-  {
-   "id": "TD.TO|2026-04-27|Don't buy",
-   "symbol": "TD.TO",
-   "name": "The Toronto-Dominion Bank",
-   "rating": "Don't buy",
-   "held": false,
-   "score": 6.31,
-   "logged_at": "2026-04-27T22:37:00+00:00",
-   "price": 136.15,
-   "bench_price": 33032.25,
-   "results": {
-    "30": {
-     "graded_at": "2026-07-26T22:37:00+00:00",
-     "price": 152.15,
-     "return": 0.1175,
-     "benchmark": 0.043,
-     "excess": 0.0745
-    },
-    "90": {
-     "graded_at": "2026-07-26T22:37:00+00:00",
-     "price": 152.15,
-     "return": 0.1175,
-     "benchmark": 0.043,
-     "excess": 0.0745
-    },
-    "180": {
-     "graded_at": "2026-11-03T22:37:00+00:00",
-     "price": 171.48,
-     "return": 0.2595,
-     "benchmark": 0.0753,
-     "excess": 0.1842
-    }
-   }
-  },
-  {
-   "id": "BNS.TO|2026-04-27|Don't buy",
-   "symbol": "BNS.TO",
-   "name": "The Bank of Nova Scotia",
-   "rating": "Don't buy",
-   "held": false,
-   "score": 6.01,
-   "logged_at": "2026-04-27T22:37:00+00:00",
-   "price": 105.12,
-   "bench_price": 33032.25,
-   "results": {
-    "30": {
-     "graded_at": "2026-07-26T22:37:00+00:00",
-     "price": 113.43,
-     "return": 0.0791,
-     "benchmark": 0.043,
-     "excess": 0.036
-    },
-    "90": {
-     "graded_at": "2026-07-26T22:37:00+00:00",
-     "price": 113.43,
-     "return": 0.0791,
-     "benchmark": 0.043,
-     "excess": 0.036
-    },
-    "180": {
-     "graded_at": "2026-11-03T22:37:00+00:00",
-     "price": 124.66,
-     "return": 0.1859,
-     "benchmark": 0.0753,
-     "excess": 0.1106
-    }
-   }
-  },
-  {
-   "id": "CNR.TO|2026-04-27|Don't buy",
-   "symbol": "CNR.TO",
-   "name": "Canadian National Railway Company",
-   "rating": "Don't buy",
-   "held": false,
-   "score": 5.73,
-   "logged_at": "2026-04-27T22:37:00+00:00",
-   "price": 149.67,
-   "bench_price": 33032.25,
-   "results": {
-    "30": {
-     "graded_at": "2026-07-26T22:37:00+00:00",
-     "price": 161.68,
-     "return": 0.0802,
-     "benchmark": 0.043,
-     "excess": 0.0372
-    },
-    "90": {
-     "graded_at": "2026-07-26T22:37:00+00:00",
-     "price": 161.68,
-     "return": 0.0802,
-     "benchmark": 0.043,
-     "excess": 0.0372
-    },
-    "180": {
-     "graded_at": "2026-11-03T22:37:00+00:00",
-     "price": 166.02,
-     "return": 0.1092,
-     "benchmark": 0.0753,
-     "excess": 0.034
-    }
-   }
-  },
-  {
-   "id": "DOL.TO|2026-04-27|Don't buy",
-   "symbol": "DOL.TO",
-   "name": "Dollarama Inc.",
-   "rating": "Don't buy",
-   "held": false,
-   "score": 3.46,
-   "logged_at": "2026-04-27T22:37:00+00:00",
-   "price": 188.4,
-   "bench_price": 33032.25,
-   "results": {
-    "30": {
-     "graded_at": "2026-07-26T22:37:00+00:00",
-     "price": 189.86,
-     "return": 0.0077,
-     "benchmark": 0.043,
-     "excess": -0.0353
-    },
-    "90": {
-     "graded_at": "2026-07-26T22:37:00+00:00",
-     "price": 189.86,
-     "return": 0.0077,
-     "benchmark": 0.043,
-     "excess": -0.0353
-    },
-    "180": {
-     "graded_at": "2026-11-03T22:37:00+00:00",
-     "price": 192.96,
-     "return": 0.0242,
-     "benchmark": 0.0753,
-     "excess": -0.0511
-    }
-   }
-  },
-  {
-   "id": "H.TO|2026-04-27|Sell",
-   "symbol": "H.TO",
-   "name": "Hydro One Limited",
-   "rating": "Sell",
-   "held": true,
-   "score": 3.31,
-   "logged_at": "2026-04-27T22:37:00+00:00",
-   "price": 53.04,
-   "bench_price": 33032.25,
-   "results": {
-    "30": {
-     "graded_at": "2026-07-26T22:37:00+00:00",
-     "price": 53.96,
-     "return": 0.0173,
-     "benchmark": 0.043,
-     "excess": -0.0257
-    },
-    "90": {
-     "graded_at": "2026-07-26T22:37:00+00:00",
-     "price": 53.96,
-     "return": 0.0173,
-     "benchmark": 0.043,
-     "excess": -0.0257
-    },
-    "180": {
-     "graded_at": "2026-11-03T22:37:00+00:00",
-     "price": 55.89,
-     "return": 0.0537,
-     "benchmark": 0.0753,
-     "excess": -0.0215
-    }
-   }
-  },
-  {
-   "id": "ENB.TO|2026-04-27|Don't buy",
-   "symbol": "ENB.TO",
-   "name": "Enbridge Inc.",
-   "rating": "Don't buy",
-   "held": false,
-   "score": 2.21,
-   "logged_at": "2026-04-27T22:37:00+00:00",
-   "price": 67.28,
-   "bench_price": 33032.25,
-   "results": {
-    "30": {
-     "graded_at": "2026-07-26T22:37:00+00:00",
-     "price": 66.83,
-     "return": -0.0067,
-     "benchmark": 0.043,
-     "excess": -0.0497
-    },
-    "90": {
-     "graded_at": "2026-07-26T22:37:00+00:00",
-     "price": 66.83,
-     "return": -0.0067,
-     "benchmark": 0.043,
-     "excess": -0.0497
-    },
-    "180": {
-     "graded_at": "2026-11-03T22:37:00+00:00",
-     "price": 66.51,
-     "return": -0.0114,
-     "benchmark": 0.0753,
-     "excess": -0.0867
-    }
-   }
+   "score": 8.49,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 0.68,
+   "bench_price": 35591.69,
+   "results": {}
   },
   {
    "id": "MFC.TO|2026-11-03|Buy",
@@ -313,10 +18,22 @@
    "name": "Manulife Financial Corporation",
    "rating": "Buy",
    "held": false,
-   "score": 7.72,
-   "logged_at": "2026-11-03T22:37:00+00:00",
-   "price": 61.7,
-   "bench_price": 35518.55,
+   "score": 7.96,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 62.77,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "DCBO.TO|2026-11-03|Buy",
+   "symbol": "DCBO.TO",
+   "name": "Docebo Inc.",
+   "rating": "Buy",
+   "held": false,
+   "score": 7.92,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 41.53,
+   "bench_price": 35591.69,
    "results": {}
   },
   {
@@ -325,10 +42,406 @@
    "name": "The Toronto-Dominion Bank",
    "rating": "Buy",
    "held": false,
-   "score": 7.54,
-   "logged_at": "2026-11-03T22:37:00+00:00",
-   "price": 171.48,
-   "bench_price": 35518.55,
+   "score": 7.88,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 174.57,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "NA.TO|2026-11-03|Buy",
+   "symbol": "NA.TO",
+   "name": "National Bank of Canada",
+   "rating": "Buy",
+   "held": false,
+   "score": 7.88,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 213.39,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "SU.TO|2026-11-03|Buy",
+   "symbol": "SU.TO",
+   "name": "Suncor Energy Inc.",
+   "rating": "Buy",
+   "held": false,
+   "score": 7.71,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 106.15,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "RY.TO|2026-11-03|Hold",
+   "symbol": "RY.TO",
+   "name": "Royal Bank of Canada",
+   "rating": "Hold",
+   "held": true,
+   "score": 7.22,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 283.97,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "CNR.TO|2026-11-03|Buy",
+   "symbol": "CNR.TO",
+   "name": "Canadian National Railway Company",
+   "rating": "Buy",
+   "held": false,
+   "score": 7.14,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 177.12,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "POW.TO|2026-11-03|Buy",
+   "symbol": "POW.TO",
+   "name": "Power Corporation of Canada",
+   "rating": "Buy",
+   "held": false,
+   "score": 7.1,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 95.12,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "BNS.TO|2026-11-03|Buy",
+   "symbol": "BNS.TO",
+   "name": "The Bank of Nova Scotia",
+   "rating": "Buy",
+   "held": false,
+   "score": 7.02,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 130.95,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "CVE.TO|2026-11-03|Don't buy",
+   "symbol": "CVE.TO",
+   "name": "Cenovus Energy Inc.",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 6.88,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 43.33,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "SAP.TO|2026-11-03|Don't buy",
+   "symbol": "SAP.TO",
+   "name": "Saputo Inc.",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 6.38,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 40.97,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "CSU.TO|2026-11-03|Don't buy",
+   "symbol": "CSU.TO",
+   "name": "Constellation Software Inc.",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 6.33,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 3434.8,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "KXS.TO|2026-11-03|Don't buy",
+   "symbol": "KXS.TO",
+   "name": "Kinaxis Inc.",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 6.16,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 193.09,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "ALA.TO|2026-11-03|Don't buy",
+   "symbol": "ALA.TO",
+   "name": "AltaGas Ltd.",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 6.07,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 55.23,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "MG.TO|2026-11-03|Don't buy",
+   "symbol": "MG.TO",
+   "name": "Magna International Inc.",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 5.97,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 88.235,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "CJT.TO|2026-11-03|Don't buy",
+   "symbol": "CJT.TO",
+   "name": "Cargojet Inc.",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 5.96,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 92.65,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "ABX.TO|2026-11-03|Don't buy",
+   "symbol": "ABX.TO",
+   "name": "Barrick Mining Corporation",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 5.64,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 52.28,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "DOL.TO|2026-11-03|Don't buy",
+   "symbol": "DOL.TO",
+   "name": "Dollarama Inc.",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 5.21,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 209.105,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "FTS.TO|2026-11-03|Don't buy",
+   "symbol": "FTS.TO",
+   "name": "Fortis Inc.",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 5.2,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 83.64,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "CLS.TO|2026-11-03|Don't buy",
+   "symbol": "CLS.TO",
+   "name": "Celestica Inc.",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 4.98,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 360.99,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "CU.TO|2026-11-03|Don't buy",
+   "symbol": "CU.TO",
+   "name": "Canadian Utilities Limited",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 4.64,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 51.64,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "CS.TO|2026-11-03|Sell",
+   "symbol": "CS.TO",
+   "name": "Capstone Copper Corp.",
+   "rating": "Sell",
+   "held": true,
+   "score": 4.63,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 11.13,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "TRP.TO|2026-11-03|Don't buy",
+   "symbol": "TRP.TO",
+   "name": "TC Energy Corporation",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 4.27,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 89.375,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "AQN.TO|2026-11-03|Don't buy",
+   "symbol": "AQN.TO",
+   "name": "Algonquin Power & Utilities Corp.",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 4.19,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 7.755,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "AEM.TO|2026-11-03|Don't buy",
+   "symbol": "AEM.TO",
+   "name": "Agnico Eagle Mines Limited",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 4.1,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 235.48,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "K.TO|2026-11-03|Don't buy",
+   "symbol": "K.TO",
+   "name": "Kinross Gold Corporation",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 4.08,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 28.165,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "BBD-A.TO|2026-11-03|Don't buy",
+   "symbol": "BBD-A.TO",
+   "name": "Bombardier Inc.",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 4.0,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 338.98,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "H.TO|2026-11-03|Sell",
+   "symbol": "H.TO",
+   "name": "Hydro One Limited",
+   "rating": "Sell",
+   "held": true,
+   "score": 3.92,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 55.74,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "ENB.TO|2026-11-03|Don't buy",
+   "symbol": "ENB.TO",
+   "name": "Enbridge Inc.",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 3.53,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 68.67,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "CCO.TO|2026-11-03|Don't buy",
+   "symbol": "CCO.TO",
+   "name": "Cameco Corporation",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 2.63,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 102.3,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "NPI.TO|2026-11-03|Don't buy",
+   "symbol": "NPI.TO",
+   "name": "Northland Power Inc.",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 2.33,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 21.85,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "HR-UN.TO|2026-11-03|Don't buy",
+   "symbol": "HR-UN.TO",
+   "name": "H&R Real Estate Investment Trust",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 1.63,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 9.52,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "BEP-UN.TO|2026-11-03|Don't buy",
+   "symbol": "BEP-UN.TO",
+   "name": "Brookfield Renewable Partners L.P.",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 1.58,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 42.31,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "T.TO|2026-11-03|Don't buy",
+   "symbol": "T.TO",
+   "name": "TELUS Corporation",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 1.29,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 12.49,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "EPRX.TO|2026-11-03|Sell",
+   "symbol": "EPRX.TO",
+   "name": "Eupraxia Pharmaceuticals Inc.",
+   "rating": "Sell",
+   "held": true,
+   "score": 1.0,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 9.56,
+   "bench_price": 35591.69,
+   "results": {}
+  },
+  {
+   "id": "SVI.TO|2026-11-03|Don't buy",
+   "symbol": "SVI.TO",
+   "name": "StorageVault Canada Inc.",
+   "rating": "Don't buy",
+   "held": false,
+   "score": -0.08,
+   "logged_at": "2026-11-03T16:59:30.444387+00:00",
+   "price": 4.08,
+   "bench_price": 35591.69,
    "results": {}
   }
  ]
