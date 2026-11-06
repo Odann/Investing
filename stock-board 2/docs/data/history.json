@@ -443,6 +443,54 @@
    "price": 4.08,
    "bench_price": 35591.69,
    "results": {}
+  },
+  {
+   "id": "AXL.V|2026-11-06|Hold",
+   "symbol": "AXL.V",
+   "name": "Arrow Exploration Corp.",
+   "rating": "Hold",
+   "held": true,
+   "score": 7.79,
+   "logged_at": "2026-11-06T02:47:28.103402+00:00",
+   "price": 0.59,
+   "bench_price": 35605.27,
+   "results": {}
+  },
+  {
+   "id": "BNS.TO|2026-11-06|Don't buy",
+   "symbol": "BNS.TO",
+   "name": "The Bank of Nova Scotia",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 6.81,
+   "logged_at": "2026-11-06T02:47:28.103402+00:00",
+   "price": 128.57,
+   "bench_price": 35605.27,
+   "results": {}
+  },
+  {
+   "id": "SU.TO|2026-11-06|Don't buy",
+   "symbol": "SU.TO",
+   "name": "Suncor Energy Inc.",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 6.81,
+   "logged_at": "2026-11-06T02:47:28.103402+00:00",
+   "price": 96.75,
+   "bench_price": 35605.27,
+   "results": {}
+  },
+  {
+   "id": "POW.TO|2026-11-06|Don't buy",
+   "symbol": "POW.TO",
+   "name": "Power Corporation of Canada",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 6.71,
+   "logged_at": "2026-11-06T02:47:28.103402+00:00",
+   "price": 91.75,
+   "bench_price": 35605.27,
+   "results": {}
   }
  ]
 }
