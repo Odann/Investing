@@ -24,7 +24,11 @@ same data the Yahoo Finance website shows. That means:
   more on cloud servers like GitHub's. When a stock fails, the run keeps its
   previous data and says so at the top of the page; the next run usually works.
   If every run fails for days, update the library version in `requirements.txt`.
-- The workflow runs once a weekday to stay polite.
+- The workflow runs once a weekday to stay polite. Prices are fetched for every
+  stock each run, but company data (earnings, valuation, news) is cached and
+  refreshed for about a fifth of the stocks per run, plus your holdings daily.
+  That cuts Yahoo requests by more than half. Tune it with `FUNDAMENTALS_*` in
+  `pipeline/config.py`.
 
 ## Set it up (about 10 minutes)
 
@@ -64,6 +68,22 @@ page shows sample data until the first run finishes.
   for single companies.
 - **CDRs:** a Canadian CDR you hold is scored on its US shares (see
   `CDR_HOLDINGS`), with prices in USD and a note on the card.
+- **Your positions** (header) lets you enter quantity and average cost for each
+  holding. They're saved only in that browser, never on GitHub, and power the
+  value, gain, allocation and sector-exposure panels. Enter them on each device.
+- **Add a ticker** (header) checks the symbol and gives you the exact line to
+  paste into `pipeline/config.py`, with a link to edit it on GitHub.
+- **Search, sector filter, sort, and Cards/Table** sit above the lists. Click a
+  table header to sort by it.
+- **Compare** on any card or row picks up to 3 stocks for a side-by-side view.
+- **Since the last update** lists rating changes, new recommendations and big
+  score moves. **Coming up** shows earnings and ex-dividend dates for your
+  holdings in the next 2 weeks. **The week** chip shows a weekly digest.
+- The **market strip** in the header shows the TSX, S&P 500, USD/CAD and the
+  best and worst sectors of the day (median move of the stocks tracked here).
+- Each breakdown has a **score over time** chart, and dotted-underlined terms
+  explain themselves on hover (all of them are listed in the page footer).
+- **Dark mode** follows your phone or computer setting.
 - **Run an update** in the header opens the GitHub page with the "Run workflow"
   button, for when you want fresher data than the schedule gives you.
 - **How the ratings have done** logs every rating at that day's price when it first
@@ -91,13 +111,23 @@ measures; the rest appear under "Not enough data to score".
 4. **Dividend growth (15%):** 5-year dividend growth, payout ratio and years of
    increases. Non-payers show "n/a" and the 15% is spread over the other three.
 5. **Risk adjustment (up to −1.5):** high beta, high volatility, a stretched or
-   missing P/E, heavy debt, or a very small company.
+   missing P/E, heavy debt, a very small company, or a drawdown of 20%+ from the
+   52-week high.
 
 6. **REITs** (Yahoo industry starting "REIT") get their own rules, because their
    earnings swing with property revaluations: GARP uses price-to-book and revenue
    growth, Quality uses operating margin and debt, the dividend skips the payout
    ratio, and losses don't count as a risk flag.
 7. **US stocks** (like AMD) measure relative strength against the S&P 500.
+8. **Sector-relative P/E:** GARP ranks each stock's P/E against the other stocks
+   in its sector scored that run (at least 5), instead of a fixed scale.
+9. **Momentum** uses the 12-month return leaving out the latest month, the
+   standard version in research (the last month tends to reverse).
+10. **Pipelines and utilities** have their dividend judged on operating cash
+    flow instead of the payout ratio of earnings.
+
+**Recommendations** also skip sectors you're already heavy in (2+ held stocks,
+or 35%+ of an ETF you hold) and anything with a risk penalty over 1.0.
 
 **Ratings:** stocks you hold are Buy more at 8+, Hold at 5 to 7.9, Sell below 5.
 Stocks you don't hold are Buy at 7+, Don't buy below 7. Anything within 0.5 of a
@@ -156,7 +186,9 @@ The workflow also rebuilds it on every run.
 | `docs/index.html` | The dashboard |
 | `docs/data/scores.json` | Current scores (rewritten each run) |
 | `docs/data/history.json` | Every rating logged, with results |
-| `docs/data/snapshots.json` | Last run's scores, for "score up/down since the last update" |
+| `docs/data/snapshots.json` | Last run's scores and ratings |
+| `docs/data/score_history.json` | Each stock's score by day, for the chart in its breakdown |
+| `docs/data/fundamentals.json` | Cached company data from Yahoo (refreshed on a rotation) |
 | `.github/workflows/main.yml` | The schedule |
 
 Scores come from fixed rules applied to Yahoo Finance data, which can be delayed or

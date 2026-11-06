@@ -68,6 +68,12 @@ def is_reit(m):
     return bool(prefix) and (m.get("industry") or "").startswith(prefix)
 
 
+def pays_from_cash_flow(m):
+    """Pipelines and utilities pay dividends from cash flow; their earnings carry
+    big non-cash charges, so payout-of-earnings overstates the strain."""
+    return is_utility(m) or (m.get("industry") or "") in getattr(config, "CASH_PAYOUT_INDUSTRIES", set())
+
+
 def eps_cagr(history):
     """Annual EPS growth across the reported years, when every year was profitable."""
     if len(history) < 3 or any(v <= 0 for v in history):
@@ -92,12 +98,15 @@ def trend_lens(m, bench):
         up = ma50 > ma200
         parts.append((1.5 if up else 0.0, 1.5,
                       "50-day average above the 200-day" if up else "50-day average below the 200-day"))
-    r, b = m.get("return_12m"), (bench or {}).get("return_12m")
+    bname = (bench or {}).get("name") or config.BENCHMARK_NAME
+    r, b = m.get("return_12_1"), (bench or {}).get("return_12_1")
+    label = "12-month return, leaving out the last month,"
+    if r is None or b is None:
+        r, b, label = m.get("return_12m"), (bench or {}).get("return_12m"), "12-month return"
     if r is not None and b is not None:
         rs = r - b
         parts.append((lin(rs, -0.25, 0.30, 0, 3.0), 3.0,
-                      f"12-month return {signed(r)} vs. {signed(b)} for the "
-                      f"{(bench or {}).get('name') or config.BENCHMARK_NAME}"))
+                      f"{label} {signed(r)} vs. {signed(b)} for the {bname}"))
     lo, hi = m.get("low52"), m.get("high52")
     if p and lo and hi and hi > lo:
         pos = (p - lo) / (hi - lo)
@@ -118,7 +127,18 @@ def reit_garp(m):
     return finish(parts, 2)
 
 
-def garp_lens(m):
+def pe_of(m):
+    """Forward P/E, or trailing when there's no forecast. None if not meaningful."""
+    for k in ("forward_pe", "trailing_pe"):
+        v = m.get(k)
+        if v is not None and 0 < v < 200:
+            return v
+    return None
+
+
+def garp_lens(m, peers=None):
+    """peers: P/Es of the stocks scored in the same sector this run. With enough
+    of them, the P/E is judged against the sector instead of a fixed scale."""
     if is_reit(m):
         return reit_garp(m)
     teps, feps = m.get("trailing_eps"), m.get("forward_eps")
@@ -129,7 +149,15 @@ def garp_lens(m):
     if peg is not None and peg > 0:
         parts.append((lin(peg, 3.0, 0.8, 0, 4.0), 4.0, f"PEG {peg:.2f}"))
     fpe, tpe = m.get("forward_pe"), m.get("trailing_pe")
-    if fpe is not None and fpe > 0:
+    own = pe_of(m)
+    min_peers = getattr(config, "SECTOR_MIN_PEERS", 5)
+    if own is not None and peers and len(peers) >= min_peers:
+        cheaper_than = sum(1 for p in peers if p > own) / (len(peers) - 1 if len(peers) > 1 else 1)
+        kind = "Forward" if (fpe is not None and fpe > 0) else "Trailing"
+        parts.append((lin(cheaper_than, 0.1, 0.9, 0, 3.0), 3.0,
+                      f"{kind} P/E {own:.1f}: cheaper than {pct(min(cheaper_than, 1), 0)} of the "
+                      f"{len(peers) - 1} other {m.get('sector')} stocks scored"))
+    elif fpe is not None and fpe > 0:
         parts.append((lin(fpe, 30, 10, 0, 3.0), 3.0, f"Forward P/E {fpe:.1f}"))
     elif tpe is not None and tpe > 0:
         parts.append((lin(tpe, 35, 12, 0, 3.0), 3.0, f"Trailing P/E {tpe:.1f} (no forward estimate)"))
@@ -197,8 +225,10 @@ def dividend_lens(m):
         g, label = m.get("dividend_growth_1y"), "dividend growth over the last year"
     if g is not None:
         parts.append((lin(g, 0, 0.15, 0, 4.0), 4.0, f"{signed(g)} {label}"))
-    po = m.get("payout_ratio")
-    if po is not None and po > 0 and not is_reit(m):   # REITs pay from FFO, not earnings
+    po, cp = m.get("payout_ratio"), m.get("cash_payout")
+    if pays_from_cash_flow(m) and cp is not None and cp > 0:
+        parts.append((lin(cp, 0.90, 0.40, 0, 3.0), 3.0, f"Dividends use {pct(cp, 0)} of operating cash flow"))
+    elif po is not None and po > 0 and not is_reit(m):   # REITs pay from FFO, not earnings
         parts.append((lin(po, 0.90, 0.50, 0, 3.0), 3.0, f"Payout ratio {pct(po, 0)} of earnings"))
     yrs = m.get("dividend_years_raised") or 0
     parts.append((lin(yrs, 0, 25, 0, 3.0), 3.0,
@@ -230,6 +260,13 @@ def risk_flags(m):
         if (fpe and fpe > 30) or (tpe and tpe > 40):
             flags.append((0.5, f"Stretched valuation (forward P/E {fpe:.1f})" if fpe
                           else f"Stretched valuation (P/E {tpe:.1f})"))
+    p, hi = m.get("price"), m.get("high52")
+    if p and hi:
+        dd = p / hi - 1
+        if dd <= -0.30:
+            flags.append((0.5, f"Deep drawdown: {pct(-dd, 0)} below its 52-week high"))
+        elif dd <= -0.20:
+            flags.append((0.25, f"Drawdown: {pct(-dd, 0)} below its 52-week high"))
     de = m.get("debt_to_equity")
     if not is_financial(m) and de is not None and de > (300 if (is_utility(m) or is_reit(m)) else 200):
         flags.append((0.5, f"Heavy debt (debt-to-equity {de / 100:.2f})"))
@@ -292,21 +329,21 @@ def triggers(m, lenses, adjusted, held):
                    f"would {'lift' if p < ma200 else 'cut'} Trend.")
     if fpe and fpe > 20:
         out.append(f"Forward P/E falling below 20 (now {fpe:.1f}) would lift GARP.")
-    if po and po > 0.8 and lenses["dividend"] is not None:
+    if po and po > 0.8 and lenses["dividend"] is not None and not pays_from_cash_flow(m) and not is_reit(m):
         out.append(f"Payout ratio back under 80% (now {pct(po, 0)}) would lift the dividend score.")
     if m.get("next_earnings"):
         out.append(f"Next earnings report: {m['next_earnings'][:10]}.")
     return out[:4]
 
 
-def score_stock(m, bench, held, previous=None):
+def score_stock(m, bench, held, previous=None, peers=None):
     """previous: the last update's {"adjusted", "rating"} (or just the score)."""
     if isinstance(previous, dict):
         previous_adjusted, previous_rating = previous.get("adjusted"), previous.get("rating")
     else:
         previous_adjusted, previous_rating = previous, None
     t, t_notes = trend_lens(m, bench)
-    g, g_notes = garp_lens(m)
+    g, g_notes = garp_lens(m, peers)
     q, q_notes = quality_lens(m)
     d, d_notes = dividend_lens(m)
     lenses = {"trend": t, "garp": g, "quality": q, "dividend": d}
@@ -341,6 +378,9 @@ def score_stock(m, bench, held, previous=None):
         "financial_currency": m.get("financial_currency"),
         "price": m.get("price"),
         "day_change": m.get("day_change"),
+        "week_change": m.get("week_change"),
+        "industry": m.get("industry"),
+        "ex_dividend_date": m.get("ex_dividend_date"),
         "lenses": lenses,
         "notes": {"trend": t_notes, "garp": g_notes, "quality": q_notes, "dividend": d_notes},
         "weights": {k: round(v / total_w, 4) for k, v in used.items()},
@@ -357,9 +397,9 @@ def score_stock(m, bench, held, previous=None):
         "rating_kept": kept,
         "reit": is_reit(m),
         "metrics": {k: m.get(k) for k in (
-            "ma50", "ma200", "low52", "high52", "return_12m", "volatility", "beta", "market_cap",
+            "ma50", "ma200", "low52", "high52", "return_12m", "return_12_1", "volatility", "beta", "market_cap",
             "forward_pe", "trailing_pe", "peg", "price_to_book", "eps_growth_next", "roe", "profit_margin",
-            "debt_to_equity", "fcf_yield", "dividend_yield", "payout_ratio", "dividend_cagr_5y",
+            "debt_to_equity", "fcf_yield", "dividend_yield", "payout_ratio", "cash_payout", "dividend_cagr_5y",
             "dividend_years_raised", "target_price", "analyst_rating", "analyst_count")},
         "next_earnings": m.get("next_earnings"),
         "news": m.get("news") or [],

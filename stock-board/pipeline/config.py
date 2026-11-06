@@ -56,6 +56,26 @@ DISCOVERY = [
 ]
 RECOMMEND_COUNT = 6        # how many to show
 RECOMMEND_PER_SECTOR = 2   # at most this many from one sector, for variety
+RECOMMEND_MAX_RISK = 1.0   # skip stocks with a bigger risk penalty (medium risk tolerance)
+# Sectors you already have plenty of aren't recommended. A sector counts as
+# heavy if you hold 2+ stocks in it, or an ETF you hold has 35%+ of its money
+# there. Add sectors here to skip them too.
+HEAVY_SECTORS = []
+HEAVY_ETF_WEIGHT = 0.35
+
+# ---------- Yahoo request budget ----------
+# Prices are fetched every run (one request per stock). Fundamentals (profile,
+# earnings, valuation, news) take several requests, so they're cached and
+# refreshed on a rotation: about 1/FUNDAMENTALS_SPREAD of the stocks each run,
+# never older than FUNDAMENTALS_MAX_AGE_DAYS. Holdings refresh every run so
+# their news and earnings dates stay current.
+FUNDAMENTALS_SPREAD = 5
+FUNDAMENTALS_MAX_AGE_DAYS = 8
+FUNDAMENTALS_DAILY_FOR_HOLDINGS = True
+SCORE_HISTORY_POINTS = 260   # about a year of weekday updates per stock
+
+# Extras for the market strip at the top of the page
+FX_SYMBOL = "CAD=X"          # Canadian dollars per US dollar
 
 # Relative strength is measured against this. ^GSPTSE is the S&P/TSX Composite.
 BENCHMARK = "^GSPTSE"
@@ -104,6 +124,15 @@ UTILITY_SECTORS = {"Utilities"}
 # and losses don't trigger risk flags. Yahoo's REIT industries all start with
 # "REIT" (e.g. "REIT - Diversified"); real estate service companies don't.
 REIT_INDUSTRY_PREFIX = "REIT"
+
+# Pipelines and utilities pay dividends from cash flow. For these (and any
+# sector in UTILITY_SECTORS), the dividend lens uses dividends as a share of
+# operating cash flow instead of the payout ratio of earnings.
+CASH_PAYOUT_INDUSTRIES = {"Oil & Gas Midstream"}
+
+# GARP judges P/E against the other stocks in the same sector scored that run,
+# when there are at least this many of them (fewer: a fixed P/E scale).
+SECTOR_MIN_PEERS = 5
 
 # A rating only changes once the score clears the line by this much, so a stock
 # sitting on a line doesn't flip between ratings (and log a new call) every day.
