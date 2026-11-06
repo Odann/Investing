@@ -9,15 +9,53 @@ from pathlib import Path
 
 # Stocks you own. Only the ticker goes here, never quantities or costs:
 # everything in docs/data is public.
-HOLDINGS = ["RY.TO", "H.TO", "CS.TO", "EPRX.TO", "AXL.V"]
+# AMD: you hold the Canadian CDR (AMD.NE), but Yahoo has little company data
+# for CDRs, so it's scored on the Nasdaq shares (prices shown in USD).
+HOLDINGS = ["RY.TO", "SU.TO", "AXL.V", "AMD"]
+
+# Held CDRs scored on their US shares: {scored symbol: the CDR you hold}.
+# Shown as a note on the card.
+CDR_HOLDINGS = {"AMD": "AMD.NE"}
+
+# ETFs you own. The four lenses don't fit funds, so these are shown with price,
+# 12-month return and yield but not scored or rated.
+ETF_HOLDINGS = ["VFV.TO", "VDY.TO"]
 
 WATCHLIST = [
     "CCO.TO", "BEP-UN.TO", "K.TO", "CVO.TO", "CNR.TO", "CJT.TO", "CLS.TO",
-    "TD.TO", "SAP.TO", "KXS.TO", "BNS.TO", "BBD-A.TO", "SU.TO", "CVE.TO",
+    "TD.TO", "SAP.TO", "KXS.TO", "BNS.TO", "BBD-A.TO", "CVE.TO",
     "POW.TO", "MFC.TO", "MG.TO", "NPI.TO", "NA.TO", "ABX.TO", "SVI.TO",
     "CU.TO", "T.TO", "CSU.TO", "AEM.TO", "HR-UN.TO", "DCBO.TO", "FTS.TO",
     "AQN.TO", "ALA.TO", "DOL.TO", "TRP.TO", "ENB.TO",
+    "H.TO", "CS.TO", "EPRX.TO",   # former holdings, still tracked
 ]
+
+# ---------- Recommendations ----------
+# Each update also scores these large TSX companies. The best Buy-rated stocks
+# you don't own (from this list and the watchlist) show up as "Recommended".
+# Stocks here that fail to load or lack data are skipped quietly.
+DISCOVERY = [
+    # Financials
+    "BMO.TO", "CM.TO", "SLF.TO", "GWO.TO", "IFC.TO", "BN.TO", "BAM.TO",
+    "FFH.TO", "X.TO", "EQB.TO",
+    # Energy
+    "CNQ.TO", "IMO.TO", "TOU.TO", "ARX.TO", "PPL.TO", "KEY.TO", "WCP.TO",
+    # Materials
+    "NTR.TO", "WPM.TO", "FNV.TO", "TECK-B.TO", "FM.TO", "LUN.TO", "IVN.TO",
+    "CCL-B.TO",
+    # Industrials
+    "CP.TO", "WSP.TO", "TFII.TO", "STN.TO", "TIH.TO", "WCN.TO", "RBA.TO",
+    "CAE.TO", "GFL.TO", "ATRL.TO", "AC.TO",
+    # Technology
+    "SHOP.TO", "OTEX.TO", "GIB-A.TO", "DSG.TO", "TOI.V",
+    # Consumer
+    "ATD.TO", "L.TO", "MRU.TO", "WN.TO", "QSR.TO", "GIL.TO", "CTC-A.TO",
+    "EMP-A.TO",
+    # Telecom and utilities
+    "BCE.TO", "RCI-B.TO", "QBR-B.TO", "EMA.TO", "CPX.TO", "BLX.TO",
+]
+RECOMMEND_COUNT = 6        # how many to show
+RECOMMEND_PER_SECTOR = 2   # at most this many from one sector, for variety
 
 # Relative strength is measured against this. ^GSPTSE is the S&P/TSX Composite.
 BENCHMARK = "^GSPTSE"

@@ -44,6 +44,15 @@
       <div id="holdings-grid" class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"></div>
     </section>
 
+    <section id="recommended" aria-labelledby="recs-heading" class="hidden mb-12">
+      <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+        <h2 id="recs-heading" class="font-cond font-semibold text-2xl">Recommended</h2>
+        <p id="recs-count" class="text-sm text-muted"></p>
+      </div>
+      <p id="recs-sub" class="text-sm text-muted mb-4"></p>
+      <div id="recs-grid" class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"></div>
+    </section>
+
     <section id="watchlist" aria-labelledby="watch-heading" class="mb-12">
       <div class="flex flex-wrap items-baseline justify-between gap-2 mb-4">
         <h2 id="watch-heading" class="font-cond font-semibold text-2xl">Watchlist</h2>
@@ -92,6 +101,7 @@
 // ---------- Settings ----------
 const RECENT_CALLS = 10;          // rating changes listed under the results table
 const RECHECK_MINUTES = 10;       // re-read the data while the tab is open
+const WORKFLOW_FILE = 'main.yml'; // the update workflow's file name in .github/workflows
 const LENSES = [['trend', 'Trend'], ['garp', 'GARP'], ['quality', 'Quality'], ['dividend', 'Dividend']];
 
 // ---------- Helpers ----------
@@ -99,7 +109,8 @@ const $ = id => document.getElementById(id);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c =>
   ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const ticker = sym => sym.replace(/\.(TO|V|NE|CN)$/, '').replace('-', '.');
-const exch = sym => sym.endsWith('.V') ? 'TSXV' : sym.endsWith('.TO') ? 'TSX' : '';
+const exch = sym => sym.endsWith('.V') ? 'TSXV' : sym.endsWith('.TO') ? 'TSX' : sym.endsWith('.NE') ? 'Cboe CA'
+  : /^[A-Z]+$/.test(sym) ? 'US' : '';
 const pct = (x, d = 1) => x == null ? '–' : `${(x * 100).toFixed(d)}%`;
 const signedPct = (x, d = 1) => x == null ? '–' : `${x >= 0 ? '+' : '−'}${(Math.abs(x) * 100).toFixed(d)}%`;
 const num = (x, d = 1) => x == null ? '–' : x.toFixed(d);
@@ -179,12 +190,12 @@ function renderFeatured(s) {
     return;
   }
   $('featured').innerHTML = `
-    <h2 class="font-cond font-semibold text-2xl mb-3">Top-rated${view === 'holdings' ? ' holding' : view === 'watch' ? ' on the watchlist' : ''}</h2>
+    <h2 class="font-cond font-semibold text-2xl mb-3">${view === 'recs' ? 'Top recommendation' : `Top-rated${view === 'holdings' ? ' holding' : view === 'watch' ? ' on the watchlist' : ''}`}</h2>
     <article class="relative overflow-hidden rounded-xl bg-white border border-line">
       <div class="absolute inset-y-0 left-0 w-1.5 bg-accent" aria-hidden="true"></div>
       <div class="grid gap-6 md:grid-cols-[1.4fr_1fr] p-5 sm:p-8 pl-6 sm:pl-10">
         <div class="min-w-0">
-          <p class="text-sm text-muted mb-2">${esc(exch(s.symbol))}${s.sector ? `, ${esc(s.sector)}` : ''}${s.held ? ', you hold this' : ''}</p>
+          <p class="text-sm text-muted mb-2">${esc(exch(s.symbol))}${s.sector ? `, ${esc(s.sector)}` : ''}${s.held ? ', you hold this' : s.source === 'new' ? ', new idea' : ''}</p>
           <p class="font-cond font-bold text-5xl sm:text-6xl leading-none">${esc(ticker(s.symbol))}</p>
           <p class="font-cond font-medium text-2xl text-muted mt-1">${esc(s.name)}</p>
           <div class="mt-4">${sparkline(s.chart, true)}</div>
@@ -216,9 +227,10 @@ function renderCard(s) {
         <p class="font-cond font-bold text-3xl leading-none">${esc(ticker(s.symbol))}
           <span class="align-middle text-xs font-sans font-semibold text-muted">${esc(exch(s.symbol))}</span></p>
         <p class="text-sm text-muted truncate mt-1">${esc(s.name)}</p>
+        ${s.source ? `<p class="mt-1.5"><span class="rounded px-1.5 py-0.5 text-[11px] font-semibold ${s.source === 'new' ? 'bg-accent/10 text-accent' : 'bg-line/60 text-ink'}">${s.source === 'new' ? 'New idea' : 'On your watchlist'}</span></p>` : ''}
       </div>
       <div class="text-right shrink-0">
-        <p class="font-semibold tabular-nums">${price(s.price)}</p>
+        <p class="font-semibold tabular-nums">${price(s.price)}${s.currency && s.currency !== 'CAD' ? ` <span class="text-xs text-muted">${esc(s.currency)}</span>` : ''}</p>
         <p class="text-sm tabular-nums ${tone(s.day_change)}">${signedPct(s.day_change, 2)}</p>
       </div>
     </div>
@@ -229,8 +241,36 @@ function renderCard(s) {
     </div>
     ${lensBars(s, false)}
     ${cautions ? `<ul class="text-sm space-y-0.5">${cautions}</ul>` : ''}
+    ${s.cdr ? `<p class="text-xs text-muted">You hold the Canadian CDR (${esc(s.cdr)}); scored on the US shares.</p>` : ''}
     ${s.stale ? '<p class="text-xs text-muted">Couldn\'t refresh this run; showing the last data.</p>' : ''}
     <button type="button" data-open="${esc(s.symbol)}" class="mt-auto self-start text-sm font-medium text-accent underline underline-offset-2">Full breakdown</button>
+  </article>`;
+}
+
+function renderEtf(e) {
+  const vs200 = e.price && e.ma200 ? e.price / e.ma200 - 1 : null;
+  return `<article class="rounded-lg bg-white border border-line p-5 flex flex-col gap-4 ${e.stale ? 'opacity-70' : ''}">
+    <div class="flex items-start justify-between gap-3">
+      <div class="min-w-0">
+        <p class="font-cond font-bold text-3xl leading-none">${esc(ticker(e.symbol))}
+          <span class="align-middle text-xs font-sans font-semibold text-muted">${esc(exch(e.symbol))}</span></p>
+        <p class="text-sm text-muted truncate mt-1">${esc(e.name)}</p>
+      </div>
+      <div class="text-right shrink-0">
+        <p class="font-semibold tabular-nums">${price(e.price)}</p>
+        <p class="text-sm tabular-nums ${tone(e.day_change)}">${signedPct(e.day_change, 2)}</p>
+      </div>
+    </div>
+    ${sparkline(e.chart)}
+    <div class="flex flex-wrap gap-1.5"><span class="shrink-0 rounded px-2 py-0.5 text-xs font-semibold bg-line/60 text-ink">ETF · not scored</span></div>
+    <dl class="grid grid-cols-3 gap-3 text-sm">
+      <div><dt class="text-muted">12 months</dt><dd class="font-semibold ${tone(e.return_12m)}">${signedPct(e.return_12m)}</dd></div>
+      <div><dt class="text-muted">vs. 200-day</dt><dd class="font-semibold ${tone(vs200)}">${signedPct(vs200)}</dd></div>
+      <div><dt class="text-muted">Yield</dt><dd class="font-semibold">${pct(e.dividend_yield, 2)}</dd></div>
+    </dl>
+    ${e.stale ? '<p class="text-xs text-muted">Couldn\'t refresh this run; showing the last data.</p>' : ''}
+    <a class="mt-auto self-start text-sm font-medium text-accent underline underline-offset-2" target="_blank" rel="noopener"
+       href="https://finance.yahoo.com/quote/${encodeURIComponent(e.symbol)}">See it on Yahoo Finance</a>
   </article>`;
 }
 
@@ -252,7 +292,7 @@ function metricRows(s) {
 }
 
 function openDetail(sym) {
-  const s = (data?.stocks || []).find(x => x.symbol === sym);
+  const s = allScored().find(x => x.symbol === sym);
   if (!s) return;
   const w = s.weights, wtxt = LENSES.map(([k, l]) => w[k] ? `${l} ${Math.round(w[k] * 1000) / 10}%` : null).filter(Boolean).join(' · ');
   const fc = s.financial_currency && s.financial_currency !== s.currency
@@ -265,7 +305,7 @@ function openDetail(sym) {
         <h2 id="detail-title" class="font-cond font-bold text-3xl leading-none">${esc(ticker(s.symbol))}
           <span class="font-medium text-muted text-xl">${esc(s.name)}</span></h2>
         <div class="mt-2 flex flex-wrap items-center gap-2 text-sm">${ratingBadge(s)}
-          <span class="text-muted">${s.held ? 'You hold this' : 'Watchlist'} · ${price(s.price)}</span></div>
+          <span class="text-muted">${s.held ? 'You hold this' : s.source === 'new' ? 'Recommended, not on your watchlist' : 'Watchlist'} · ${price(s.price)}${s.currency && s.currency !== 'CAD' ? ` ${esc(s.currency)}` : ''}</span></div>
       </div>
       <button type="button" data-close class="shrink-0 rounded-md border border-line px-3 py-1 text-sm font-medium hover:bg-paper">Close</button>
     </div>
@@ -273,6 +313,7 @@ function openDetail(sym) {
       <div class="rounded-md bg-paper px-3 py-2 font-mono text-xs overflow-x-auto whitespace-nowrap">
         Weights ${esc(wtxt)} · Composite ${s.composite.toFixed(2)} · Risk −${s.risk_penalty.toFixed(2)} · Adjusted ${s.adjusted.toFixed(2)}</div>
       ${fc}
+      ${s.cdr ? `<p class="text-xs text-muted">You hold the Canadian CDR (${esc(s.cdr)}). Yahoo has little company data for CDRs, so this is scored on the US shares; prices here are in ${esc(s.currency || 'USD')}.</p>` : ''}
       <div class="grid gap-5 sm:grid-cols-2">${LENSES.map(([k, l]) => `
         <div class="min-w-0">
           <div class="flex items-baseline justify-between"><h3 class="font-semibold">${l}</h3>
@@ -371,7 +412,7 @@ const SORTS = {
 const lensSort = k => (a, b) => (b.lenses[k] ?? -1) - (a.lenses[k] ?? -1);
 
 function renderFilters() {
-  const views = [['all', 'All stocks'], ['holdings', 'Holdings'], ['watch', 'Watchlist'], ['buy', 'Rated Buy']];
+  const views = [['all', 'All stocks'], ['holdings', 'Holdings'], ['recs', 'Recommended'], ['watch', 'Watchlist'], ['buy', 'Rated Buy']];
   $('filters').innerHTML = views.map(([key, label]) => {
     const on = key === view;
     return `<button type="button" data-view="${key}" aria-pressed="${on}"
@@ -399,19 +440,41 @@ function renderUnscored() {
     <a class="shrink-0 text-accent underline underline-offset-2" target="_blank" rel="noopener" href="https://finance.yahoo.com/quote/${encodeURIComponent(u.symbol)}">${price(u.price)} on Yahoo</a></li>`).join('');
 }
 
+// Watchlist and holdings, plus recommended stocks that aren't on the watchlist
+function allScored() {
+  const all = data?.stocks || [], have = new Set(all.map(s => s.symbol));
+  return all.concat((data?.recommended || []).filter(r => !have.has(r.symbol)));
+}
+
+function renderRecommended() {
+  const recs = data?.recommended || [], st = data?.settings || {};
+  const show = (view === 'all' || view === 'recs') && data && !data.sample;
+  $('recommended').classList.toggle('hidden', !show);
+  if (!show) return;
+  $('recs-count').textContent = recs.length ? `${recs.length} stock${recs.length > 1 ? 's' : ''}` : '';
+  $('recs-sub').textContent = `The highest-scoring Buy-rated stocks you don't own, from your watchlist and ${st.discovery_count || 'about 50'} large TSX companies checked each update`
+    + `${st.recommend_per_sector ? `, with at most ${st.recommend_per_sector} from any one sector` : ''}. Refreshed with every update.`;
+  $('recs-grid').innerHTML = recs.length ? recs.map(renderCard).join('')
+    : `<div class="sm:col-span-2 lg:col-span-3 rounded-lg border border-dashed border-line bg-white px-5 py-8 text-center text-muted">
+        Nothing you don't own is rated Buy right now. The next update will check again.</div>`;
+}
+
 function render() {
   renderFilters();
   const all = data?.stocks || [];
-  const inView = all.filter(s => view === 'all' || (view === 'holdings' ? s.held : view === 'watch' ? !s.held
+  const inView = view === 'recs' ? [] : all.filter(s => view === 'all' || (view === 'holdings' ? s.held : view === 'watch' ? !s.held
     : (s.rating === 'Buy' || s.rating === 'Buy more')));
-  renderFeatured(inView.slice().sort(SORTS.score)[0]);
+  renderFeatured((view === 'recs' ? (data?.recommended || []) : inView).slice().sort(SORTS.score)[0]);
 
   const sorter = SORTS[sortKey] || lensSort(sortKey);
   const held = inView.filter(s => s.held).sort(SORTS.score);
+  const etfs = view === 'all' || view === 'holdings' ? (data?.etfs || []) : [];
   const watch = inView.filter(s => !s.held).sort(sorter);
-  $('holdings').classList.toggle('hidden', !held.length);
-  $('holdings-grid').innerHTML = held.map(renderCard).join('');
-  $('holdings-count').textContent = held.length ? `${held.length} stock${held.length > 1 ? 's' : ''}` : '';
+  $('holdings').classList.toggle('hidden', !held.length && !etfs.length);
+  $('holdings-grid').innerHTML = held.map(renderCard).join('') + etfs.map(renderEtf).join('');
+  $('holdings-count').textContent = [held.length ? `${held.length} stock${held.length > 1 ? 's' : ''}` : '',
+    etfs.length ? `${etfs.length} ETF${etfs.length > 1 ? 's' : ''}` : ''].filter(Boolean).join(' · ');
+  renderRecommended();
   $('watchlist').classList.toggle('hidden', !watch.length);
   $('watch-heading').textContent = view === 'buy' ? 'Rated Buy, not held' : 'Watchlist';
   $('watch-grid').innerHTML = watch.map(renderCard).join('');
@@ -426,7 +489,8 @@ function render() {
     const st = data.settings || {}, w = st.weights || {};
     $('method').textContent = `Score = Trend ${pct(w.trend, 0)}, GARP ${pct(w.garp, 0)}, Quality ${pct(w.quality, 0)}, Dividend ${pct(w.dividend, 0)} `
       + `(spread over the other three for non-payers), minus up to ${st.max_risk_penalty} for risk. `
-      + `Held: ${st.held_buy_more}+ Buy more, ${st.held_hold}+ Hold, else Sell. Not held: ${st.watch_buy}+ Buy, else Don't buy.`;
+      + `Held: ${st.held_buy_more}+ Buy more, ${st.held_hold}+ Hold, else Sell. Not held: ${st.watch_buy}+ Buy, else Don't buy. `
+      + `ETFs are shown but not scored.`;
   }
   requestAnimationFrame(() => document.querySelectorAll('.bar-fill').forEach(b => { b.style.width = b.dataset.w; }));
 }
@@ -444,7 +508,7 @@ async function load() {
     if ($('detail').open) return;    // don't redraw under an open breakdown
     render();
     const hash = decodeURIComponent(location.hash.slice(1));
-    if (hash && data.stocks.some(s => s.symbol === hash)) openDetail(hash);
+    if (hash && allScored().some(s => s.symbol === hash)) openDetail(hash);
   } catch (e) {
     console.error(e);
     $('notice').innerHTML = `<p>Couldn't load the stock data (${esc(e.message)}). If you opened this file directly, run
@@ -458,7 +522,7 @@ async function load() {
   const [owner] = location.hostname.split('.');
   const repo = location.pathname.split('/')[1];
   if (location.hostname.endsWith('github.io') && repo) {
-    $('run-link').href = `https://github.com/${owner}/${repo}/actions/workflows/update-scores.yml`;
+    $('run-link').href = `https://github.com/${owner}/${repo}/actions/workflows/${WORKFLOW_FILE}`;
     $('run-link').classList.remove('hidden');
   }
 })();

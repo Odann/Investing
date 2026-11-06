@@ -33,13 +33,13 @@ same data the Yahoo Finance website shows. That means:
    and drag in **everything inside** this folder, not the folder itself.
    The `.github` folder is hidden on a Mac: in Finder, press **Cmd + Shift + .**
    to show it before you select everything. After committing, check that
-   `.github/workflows/update-scores.yml` appears at the top of the repo.
+   `.github/workflows/main.yml` appears at the top of the repo.
    (The project files can also sit inside a subfolder; the workflow finds them.
    Only `.github` has to be at the top.)
 2. **Turn on Pages.** Settings → Pages → Build and deployment → Source:
    **GitHub Actions**.
 3. **Run it once.** Actions tab → Update scores → Run workflow. When it turns
-   green (a few minutes for ~40 stocks), your dashboard is live at
+   green (about 10 minutes for ~100 stocks), your dashboard is live at
    `https://<your-username>.github.io/<repo-name>/`. Bookmark it, or use
    "Add to Home Screen" on your phone.
 
@@ -54,6 +54,16 @@ page shows sample data until the first run finishes.
 - **Full breakdown** on any card shows each lens's measures, the risk flags, what
   would change the rating, recent headlines, and every number used. Each
   breakdown has its own link (for example `…/#RY.TO`).
+- **Recommended** lists the best Buy-rated stocks you don't own. Each update
+  scores your watchlist plus about 55 large TSX companies (`DISCOVERY` in
+  `pipeline/config.py`), then picks the top 6, at most 2 per sector. "New idea"
+  means it isn't on your watchlist yet. New ideas are logged in the results table
+  too, so you can see whether they beat the index.
+- **ETFs you hold** (`ETF_HOLDINGS`) appear with your holdings showing price,
+  12-month return and yield. They aren't scored, because the lenses are built
+  for single companies.
+- **CDRs:** a Canadian CDR you hold is scored on its US shares (see
+  `CDR_HOLDINGS`), with prices in USD and a note on the card.
 - **Run an update** in the header opens the GitHub page with the "Run workflow"
   button, for when you want fresher data than the schedule gives you.
 - **How the ratings have done** logs every rating at that day's price when it first
@@ -92,13 +102,15 @@ headlines before acting on a rating.
 
 ## Settings
 
-Everything you'd want to change is in `pipeline/config.py`: your holdings, the
-watchlist, weights, rating lines, sector rules and grading periods. The update time
-is in `.github/workflows/update-scores.yml`.
+Everything you'd want to change is in `pipeline/config.py`: your holdings, ETFs,
+the watchlist, the discovery list and how many recommendations to show, weights, rating lines, sector rules and grading periods. The update time
+is in `.github/workflows/main.yml`. If you rename that file, change
+`WORKFLOW_FILE` near the top of the script in `docs/index.html` so the
+"Run an update" link still works.
 
 Yahoo symbols: TSX stocks end in `.TO`, TSX Venture in `.V`, and units or class
-shares use a dash (`BEP.UN` → `BEP-UN.TO`, `BBD.A` → `BBD-A.TO`). ETFs are left
-out because the lenses are built for single companies.
+shares use a dash (`BEP.UN` → `BEP-UN.TO`, `BBD.A` → `BBD-A.TO`). ETFs go in
+`ETF_HOLDINGS`, not `HOLDINGS`, because the lenses are built for single companies.
 
 ## Run it on your own computer
 
@@ -137,7 +149,7 @@ The workflow also rebuilds it on every run.
 | `docs/data/scores.json` | Current scores (rewritten each run) |
 | `docs/data/history.json` | Every rating logged, with results |
 | `docs/data/snapshots.json` | Last run's scores, for "score up/down since the last update" |
-| `.github/workflows/update-scores.yml` | The schedule |
+| `.github/workflows/main.yml` | The schedule |
 
 Scores come from fixed rules applied to Yahoo Finance data, which can be delayed or
 wrong. This is a research tool, not financial advice.

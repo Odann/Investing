@@ -48,13 +48,41 @@ def with_retry(fn, *args):
 
 
 def tickers():
-    """Holdings first, then the watchlist, without duplicates."""
+    """(symbol, group) for holdings, then the watchlist, then the discovery list,
+    without duplicates. group is "held", "watch" or "discover"."""
     seen, out = set(), []
-    for sym in config.HOLDINGS + config.WATCHLIST:
-        if sym not in seen:
-            seen.add(sym)
-            out.append((sym, sym in config.HOLDINGS))
+    for group, syms in (("held", config.HOLDINGS), ("watch", config.WATCHLIST),
+                        ("discover", getattr(config, "DISCOVERY", []))):
+        for sym in syms:
+            if sym not in seen:
+                seen.add(sym)
+                out.append((sym, group))
     return out
+
+
+def etf_record(m: dict) -> dict:
+    """What the dashboard shows for an ETF: no scores, just the basics."""
+    return {k: m.get(k) for k in (
+        "symbol", "name", "currency", "price", "day_change", "return_12m",
+        "ma50", "ma200", "low52", "high52", "dividend_yield", "chart")}
+
+
+def pick_recommendations(candidates: list[dict]) -> list[dict]:
+    """The best Buy-rated stocks you don't own, with a cap per sector for variety."""
+    count = getattr(config, "RECOMMEND_COUNT", 6)
+    per_sector = getattr(config, "RECOMMEND_PER_SECTOR", 2)
+    picks, by_sector = [], {}
+    for s in sorted(candidates, key=lambda x: x["adjusted"], reverse=True):
+        if s.get("stale") or s["held"] or s["rating"] != "Buy":
+            continue
+        sector = s.get("sector") or "Other"
+        if by_sector.get(sector, 0) >= per_sector:
+            continue
+        by_sector[sector] = by_sector.get(sector, 0) + 1
+        picks.append(s)
+        if len(picks) >= count:
+            break
+    return picks
 
 
 def run(fetch_stock=None, fetch_benchmark=None, now: datetime | None = None, pause: float | None = None) -> dict:
@@ -82,27 +110,49 @@ def run(fetch_stock=None, fetch_benchmark=None, now: datetime | None = None, pau
         bench = old.get("benchmark")
         notes.append(f"Couldn't refresh the {config.BENCHMARK_NAME}; relative strength uses the last value.")
 
-    stocks, prices, unscored = [], {}, []
-    for sym, held in tickers():
+    stocks, prices, unscored, discovered = [], {}, [], []
+    cdrs = getattr(config, "CDR_HOLDINGS", {})
+    for sym, group in tickers():
+        held = group == "held"
         try:
             m = with_retry(fetch_stock, sym)
             try:
                 rec = score_stock(m, bench, held, snapshots.get(sym))
             except NotEnoughData as e:
+                if group == "discover":
+                    continue   # not enough data to recommend; skip quietly
                 print(f"{sym}: not enough data for {e}", file=sys.stderr)
                 unscored.append({"symbol": sym, "name": m.get("name") or sym, "held": held,
                                  "price": m.get("price"), "currency": m.get("currency"),
                                  "missing": str(e), "news": m.get("news") or [],
                                  "next_earnings": m.get("next_earnings")})
                 continue
-            stocks.append(rec)
+            if sym in cdrs:
+                rec["cdr"] = cdrs[sym]
+            (discovered if group == "discover" else stocks).append(rec)
             prices[sym] = rec["price"]
         except Exception as e:
             print(f"{sym}: {e}", file=sys.stderr)
+            if group == "discover":
+                continue   # a missed discovery stock just isn't considered this run
             failed.append(sym)
             prev = old_by_symbol.get(sym)
             if prev:
                 stocks.append({**prev, "held": held, "stale": True})
+        if pause:
+            time.sleep(pause)
+
+    old_etfs = {e["symbol"]: e for e in old.get("etfs", [])}
+    etfs = []
+    for sym in getattr(config, "ETF_HOLDINGS", []):
+        try:
+            etfs.append(etf_record(with_retry(fetch_stock, sym)))
+            prices[sym] = etfs[-1]["price"]
+        except Exception as e:
+            print(f"{sym}: {e}", file=sys.stderr)
+            failed.append(sym)
+            if sym in old_etfs:
+                etfs.append({**old_etfs[sym], "stale": True})
         if pause:
             time.sleep(pause)
 
@@ -119,7 +169,12 @@ def run(fetch_stock=None, fetch_benchmark=None, now: datetime | None = None, pau
     stocks.sort(key=lambda s: s["adjusted"], reverse=True)
     bench_price = (bench or {}).get("price")
 
-    log_calls(history, stocks, bench_price, now)
+    watch_syms = {s["symbol"] for s in stocks if not s["held"]}
+    recommended = [{**s, "source": "watchlist" if s["symbol"] in watch_syms else "new"}
+                   for s in pick_recommendations(stocks + discovered)]
+
+    # New ideas are logged too, so the results table shows how they did
+    log_calls(history, stocks + [r for r in recommended if r["source"] == "new"], bench_price, now)
     n = grade_calls(history, prices, bench_price, now)
 
     out = {
@@ -131,18 +186,24 @@ def run(fetch_stock=None, fetch_benchmark=None, now: datetime | None = None, pau
             "held_buy_more": config.HELD_BUY_MORE, "held_hold": config.HELD_HOLD,
             "watch_buy": config.WATCH_BUY, "borderline": config.BORDERLINE,
             "grade_after_days": config.GRADE_AFTER_DAYS,
+            "recommend_count": getattr(config, "RECOMMEND_COUNT", 6),
+            "recommend_per_sector": getattr(config, "RECOMMEND_PER_SECTOR", 2),
+            "discovery_count": len(getattr(config, "DISCOVERY", [])),
         },
         "notes": sorted(set(notes)),
         "failed": failed,
         "stocks": stocks,
+        "recommended": recommended,
+        "etfs": etfs,
         "unscored": unscored,
     }
     save(SCORES_FILE, out)
     save(HISTORY_FILE, history)
-    save(SNAPSHOT_FILE, {s["symbol"]: s["adjusted"] for s in stocks if not s.get("stale")}
+    save(SNAPSHOT_FILE, {s["symbol"]: s["adjusted"] for s in stocks + discovered if not s.get("stale")}
          | {k: v for k, v in snapshots.items() if k in failed})
     print(f"Scored {len(stocks) - len([s for s in stocks if s.get('stale')])} stock(s), "
-          f"{len(unscored)} without enough data, {len(failed)} failed, graded {n} call result(s).")
+          f"{len(unscored)} without enough data, {len(failed)} failed, graded {n} call result(s). "
+          f"Checked {len(discovered)} discovery stock(s); recommending {len(recommended)}.")
     return out
 
 
