@@ -67,8 +67,9 @@ page shows sample data until the first run finishes.
 - **Run an update** in the header opens the GitHub page with the "Run workflow"
   button, for when you want fresher data than the schedule gives you.
 - **How the ratings have done** logs every rating at that day's price when it first
-  appears or changes, then compares the stock with the S&P/TSX Composite after
-  30, 90 and 180 days. If the model is worth anything, Buy calls should beat the
+  appears or changes, then compares its total return (dividends included) over
+  exactly 30, 90 and 180 days with the index's: XIC for Canadian stocks, SPY for
+  US ones. If the model is worth anything, Buy calls should beat the
   index more often than Sell calls. Give it a year before reading much into it.
 
 ## How stocks are scored
@@ -92,9 +93,16 @@ measures; the rest appear under "Not enough data to score".
 5. **Risk adjustment (up to −1.5):** high beta, high volatility, a stretched or
    missing P/E, heavy debt, or a very small company.
 
+6. **REITs** (Yahoo industry starting "REIT") get their own rules, because their
+   earnings swing with property revaluations: GARP uses price-to-book and revenue
+   growth, Quality uses operating margin and debt, the dividend skips the payout
+   ratio, and losses don't count as a risk flag.
+7. **US stocks** (like AMD) measure relative strength against the S&P 500.
+
 **Ratings:** stocks you hold are Buy more at 8+, Hold at 5 to 7.9, Sell below 5.
 Stocks you don't hold are Buy at 7+, Don't buy below 7. Anything within 0.5 of a
-line is marked Borderline.
+line is marked Borderline. A rating only changes once the score clears the line by
+0.25 (`RATING_BUFFER`), so a stock sitting on a line doesn't flip back and forth.
 
 The rules are mechanical on purpose. They can't see things like a lawsuit, a
 regulator's decision or a one-time charge, so read the breakdown and the
