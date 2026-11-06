@@ -33,13 +33,31 @@ def _first(info: dict, *keys):
     return None
 
 
-def price_history(symbol: str):
-    """Daily closes for the last 13 months (a little extra for the 12-month return)."""
+def _history(symbol: str):
+    """Daily prices for the last 13 months (a little extra for the 12-month return)."""
     start = (date.today() - timedelta(days=400)).isoformat()
     hist = yf.Ticker(symbol).history(start=start, interval="1d", auto_adjust=False)
     if hist is None or hist.empty or "Close" not in hist:
         raise YahooError(f"{symbol}: no price history")
-    return hist["Close"].dropna()
+    return hist
+
+
+def price_history(symbol: str):
+    """Daily closes, as traded."""
+    return _history(symbol)["Close"].dropna()
+
+
+def adjusted_by_date(hist) -> dict:
+    """{"YYYY-MM-DD": close adjusted for dividends and splits}. Comparing two of
+    these gives the total return between the dates, dividends included."""
+    col = "Adj Close" if "Adj Close" in hist else "Close"
+    series = hist[col].dropna()
+    return {d.strftime("%Y-%m-%d"): round(float(v), 4) for d, v in series.items()}
+
+
+def fetch_adjusted(symbol: str) -> dict:
+    """Total-return price series for one symbol (used for the grading benchmark)."""
+    return adjusted_by_date(_history(symbol))
 
 
 def twelve_month_return(closes):
@@ -166,7 +184,8 @@ def fetch_stock(symbol: str, news_items: int = 3, news_days: int = 90) -> dict:
         info = t.info or {}
     except Exception as e:
         raise YahooError(f"{symbol}: {e}") from e
-    closes = price_history(symbol)
+    hist = _history(symbol)
+    closes = hist["Close"].dropna()
     price = _first(info, "currentPrice", "regularMarketPrice") or float(closes.iloc[-1])
     prev_close = _first(info, "regularMarketPreviousClose", "previousClose")
 
@@ -218,6 +237,7 @@ def fetch_stock(symbol: str, news_items: int = 3, news_days: int = 90) -> dict:
         "debt_to_equity": _first(info, "debtToEquity"),   # Yahoo gives this as a percent
         "free_cash_flow": fcf,
         "fcf_yield": (fcf / mcap) if (fcf is not None and mcap) else None,
+        "price_to_book": _first(info, "priceToBook"),
         "dividend_rate": div_rate,
         "dividend_yield": (div_rate / price) if (div_rate and price) else None,
         "payout_ratio": _first(info, "payoutRatio"),
@@ -230,6 +250,7 @@ def fetch_stock(symbol: str, news_items: int = 3, news_days: int = 90) -> dict:
         "next_earnings": next_earnings(t),
         "news": headlines(t, news_items, news_days),
         "chart": weekly_chart(closes),
+        "adj_closes": adjusted_by_date(hist),   # for grading only; not saved
     }
 
 

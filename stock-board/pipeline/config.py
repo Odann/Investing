@@ -61,6 +61,17 @@ RECOMMEND_PER_SECTOR = 2   # at most this many from one sector, for variety
 BENCHMARK = "^GSPTSE"
 BENCHMARK_NAME = "S&P/TSX Composite"
 
+# Stocks that trade in US dollars (like AMD) are compared with the S&P 500 instead.
+US_BENCHMARK = "^GSPC"
+US_BENCHMARK_NAME = "S&P 500"
+
+# Ratings are graded on total return (dividends included), so they're compared
+# with index ETFs, whose adjusted prices include dividends. The indexes above
+# are price-only.
+GRADE_BENCHMARK = {"CAD": "XIC.TO", "USD": "SPY"}
+GRADE_BENCHMARK_NAME = {"CAD": "S&P/TSX Composite (XIC, with dividends)",
+                        "USD": "S&P 500 (SPY, with dividends)"}
+
 # ---------- Scoring ----------
 # Composite weights. A stock with no dividend has its dividend weight spread
 # proportionally across the other three lenses.
@@ -85,6 +96,18 @@ FINANCIAL_SECTORS = {"Financial Services"}
 # allows more debt (full marks up to debt-to-equity 1.0, none at 3.0 instead
 # of 0.5 and 2.0), and the heavy-debt risk flag starts at 3.0 instead of 2.0.
 UTILITY_SECTORS = {"Utilities"}
+
+# REITs report earnings that swing with property revaluations, and pay out
+# from funds from operations (FFO), which Yahoo doesn't provide. For these,
+# GARP uses price-to-book and revenue growth, Quality uses the utility debt scale
+# and skips free cash flow and EPS consistency, Dividend skips the payout ratio,
+# and losses don't trigger risk flags. Yahoo's REIT industries all start with
+# "REIT" (e.g. "REIT - Diversified"); real estate service companies don't.
+REIT_INDUSTRY_PREFIX = "REIT"
+
+# A rating only changes once the score clears the line by this much, so a stock
+# sitting on a line doesn't flip between ratings (and log a new call) every day.
+RATING_BUFFER = 0.25
 
 # ---------- Results tracking ----------
 # Every rating is logged with the price on the day it appeared, then graded

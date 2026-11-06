@@ -281,7 +281,7 @@ function metricRows(s) {
     ['52-week range', m.low52 != null ? `${price(m.low52)} – ${price(m.high52)}` : '–'],
     ['12-month return', signedPct(m.return_12m)], ['Volatility (1 yr)', pct(m.volatility, 0)], ['Beta', num(m.beta, 2)],
     ['Market value', bigMoney(m.market_cap)], ['Forward P/E', num(m.forward_pe)], ['Trailing P/E', num(m.trailing_pe)],
-    ['PEG', num(m.peg, 2)], ['Expected EPS growth', signedPct(m.eps_growth_next)], ['Return on equity', pct(m.roe)],
+    ['PEG', num(m.peg, 2)], ['Price-to-book', num(m.price_to_book, 2)], ['Expected EPS growth', signedPct(m.eps_growth_next)], ['Return on equity', pct(m.roe)],
     ['Profit margin', pct(m.profit_margin)], ['Debt-to-equity', m.debt_to_equity == null ? '–' : (m.debt_to_equity / 100).toFixed(2)],
     ['Free cash flow yield', signedPct(m.fcf_yield)], ['Dividend yield', pct(m.dividend_yield, 2)],
     ['Payout ratio', pct(m.payout_ratio, 0)], ['Dividend growth (5 yr/yr)', signedPct(m.dividend_cagr_5y)],
@@ -313,6 +313,7 @@ function openDetail(sym) {
       <div class="rounded-md bg-paper px-3 py-2 font-mono text-xs overflow-x-auto whitespace-nowrap">
         Weights ${esc(wtxt)} · Composite ${s.composite.toFixed(2)} · Risk −${s.risk_penalty.toFixed(2)} · Adjusted ${s.adjusted.toFixed(2)}</div>
       ${fc}
+      ${s.reit ? `<p class="text-xs text-muted">Scored with the REIT rules: Yahoo's earnings for REITs swing with property revaluations, so GARP uses price-to-book and revenue growth, and Quality uses operating margin and debt.</p>` : ''}
       ${s.cdr ? `<p class="text-xs text-muted">You hold the Canadian CDR (${esc(s.cdr)}). Yahoo has little company data for CDRs, so this is scored on the US shares; prices here are in ${esc(s.currency || 'USD')}.</p>` : ''}
       <div class="grid gap-5 sm:grid-cols-2">${LENSES.map(([k, l]) => `
         <div class="min-w-0">
@@ -353,7 +354,10 @@ function renderResults() {
   const calls = history?.calls || [];
   const horizons = data?.settings?.grade_after_days || [30, 90, 180];
   const benchName = data?.benchmark?.name || 'the benchmark';
-  $('results-sub').textContent = `Each rating is logged at that day's price when it first appears or changes, then compared with the ${benchName} after ${horizons.join(', ')} days.`;
+  const gb = data?.settings?.grade_benchmark_name || {};
+  $('results-sub').textContent = gb.CAD
+    ? `Each rating is logged when it first appears or changes. After ${horizons.join(', ')} days, the stock's total return (dividends included) is compared with the ${gb.CAD}${gb.USD ? `, or the ${gb.USD} for US stocks` : ''}.`
+    : `Each rating is logged at that day's price when it first appears or changes, then compared with the ${benchName} after ${horizons.join(', ')} days.`;
   const graded = calls.filter(c => Object.keys(c.results || {}).length);
   if (!graded.length) {
     $('results').innerHTML = `<div class="rounded-lg border border-dashed border-line bg-white px-5 py-8 text-center text-muted">
@@ -491,7 +495,8 @@ function render() {
     $('method').textContent = `Score = Trend ${pct(w.trend, 0)}, GARP ${pct(w.garp, 0)}, Quality ${pct(w.quality, 0)}, Dividend ${pct(w.dividend, 0)} `
       + `(spread over the other three for non-payers), minus up to ${st.max_risk_penalty} for risk. `
       + `Held: ${st.held_buy_more}+ Buy more, ${st.held_hold}+ Hold, else Sell. Not held: ${st.watch_buy}+ Buy, else Don't buy. `
-      + `ETFs are shown but not scored.`;
+      + (st.rating_buffer ? `A rating only changes once the score clears the line by ${st.rating_buffer}. ` : '')
+      + `US stocks are compared with the S&P 500, REITs use their own rules, and ETFs are shown but not scored.`;
   }
   requestAnimationFrame(() => document.querySelectorAll('.bar-fill').forEach(b => { b.style.width = b.dataset.w; }));
 }

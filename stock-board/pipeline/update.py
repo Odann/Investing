@@ -85,11 +85,13 @@ def pick_recommendations(candidates: list[dict]) -> list[dict]:
     return picks
 
 
-def run(fetch_stock=None, fetch_benchmark=None, now: datetime | None = None, pause: float | None = None) -> dict:
-    if fetch_stock is None or fetch_benchmark is None:
+def run(fetch_stock=None, fetch_benchmark=None, now: datetime | None = None, pause: float | None = None,
+        fetch_adjusted=None) -> dict:
+    if fetch_stock is None or fetch_benchmark is None or fetch_adjusted is None:
         from . import yahoo_client
         fetch_stock = fetch_stock or (lambda s: yahoo_client.fetch_stock(s, config.NEWS_PER_STOCK, config.NEWS_DAYS))
         fetch_benchmark = fetch_benchmark or yahoo_client.fetch_benchmark
+        fetch_adjusted = fetch_adjusted or yahoo_client.fetch_adjusted
     pause = config.PAUSE_SECONDS if pause is None else pause
     now = now or datetime.now(timezone.utc)
 
@@ -109,15 +111,41 @@ def run(fetch_stock=None, fetch_benchmark=None, now: datetime | None = None, pau
         print(f"Benchmark {config.BENCHMARK}: {e}", file=sys.stderr)
         bench = old.get("benchmark")
         notes.append(f"Couldn't refresh the {config.BENCHMARK_NAME}; relative strength uses the last value.")
+    if bench:
+        bench = {**bench, "name": config.BENCHMARK_NAME}
 
-    stocks, prices, unscored, discovered = [], {}, [], []
+    us_symbol = getattr(config, "US_BENCHMARK", None)
+    us_bench = None
+    if us_symbol:
+        try:
+            us_bench = {**with_retry(fetch_benchmark, us_symbol), "name": config.US_BENCHMARK_NAME}
+        except Exception as e:
+            print(f"Benchmark {us_symbol}: {e}", file=sys.stderr)
+            us_bench = old.get("us_benchmark")
+
+    def bench_for(m):
+        """US-dollar stocks are compared with the S&P 500, the rest with the TSX."""
+        return us_bench if (m.get("currency") == "USD" and us_bench) else bench
+
+    def previous(sym):
+        """Last update's score and rating; older files stored just the score."""
+        prev = snapshots.get(sym)
+        if prev is None or isinstance(prev, dict):
+            return prev
+        rating = old_by_symbol.get(sym, {}).get("rating")
+        return {"adjusted": prev, "rating": rating}
+
+    old_by_symbol |= {r["symbol"]: r for r in old.get("recommended", []) if r["symbol"] not in old_by_symbol}
+    stocks, prices, unscored, discovered, adjusted = [], {}, [], [], {}
     cdrs = getattr(config, "CDR_HOLDINGS", {})
     for sym, group in tickers():
         held = group == "held"
         try:
             m = with_retry(fetch_stock, sym)
             try:
-                rec = score_stock(m, bench, held, snapshots.get(sym))
+                if m.get("adj_closes"):
+                    adjusted[sym] = m["adj_closes"]
+                rec = score_stock(m, bench_for(m), held, previous(sym))
             except NotEnoughData as e:
                 if group == "discover":
                     continue   # not enough data to recommend; skip quietly
@@ -146,7 +174,10 @@ def run(fetch_stock=None, fetch_benchmark=None, now: datetime | None = None, pau
     etfs = []
     for sym in getattr(config, "ETF_HOLDINGS", []):
         try:
-            etfs.append(etf_record(with_retry(fetch_stock, sym)))
+            m = with_retry(fetch_stock, sym)
+            if m.get("adj_closes"):
+                adjusted[sym] = m["adj_closes"]
+            etfs.append(etf_record(m))
             prices[sym] = etfs[-1]["price"]
         except Exception as e:
             print(f"{sym}: {e}", file=sys.stderr)
@@ -175,11 +206,18 @@ def run(fetch_stock=None, fetch_benchmark=None, now: datetime | None = None, pau
 
     # New ideas are logged too, so the results table shows how they did
     log_calls(history, stocks + [r for r in recommended if r["source"] == "new"], bench_price, now)
-    n = grade_calls(history, prices, bench_price, now)
+    grade_bench = {}
+    for cur, sym in getattr(config, "GRADE_BENCHMARK", {}).items():
+        try:
+            grade_bench[cur] = with_retry(fetch_adjusted, sym)
+        except Exception as e:
+            print(f"Grading benchmark {sym}: {e}", file=sys.stderr)
+    n = grade_calls(history, prices, bench_price, now, adjusted, grade_bench)
 
     out = {
         "generated_at": now.isoformat(),
         "benchmark": {**(bench or {}), "name": config.BENCHMARK_NAME},
+        "us_benchmark": us_bench,
         "settings": {
             "weights": config.WEIGHTS,
             "max_risk_penalty": config.MAX_RISK_PENALTY,
@@ -189,6 +227,8 @@ def run(fetch_stock=None, fetch_benchmark=None, now: datetime | None = None, pau
             "recommend_count": getattr(config, "RECOMMEND_COUNT", 6),
             "recommend_per_sector": getattr(config, "RECOMMEND_PER_SECTOR", 2),
             "discovery_count": len(getattr(config, "DISCOVERY", [])),
+            "rating_buffer": getattr(config, "RATING_BUFFER", 0),
+            "grade_benchmark_name": getattr(config, "GRADE_BENCHMARK_NAME", {}),
         },
         "notes": sorted(set(notes)),
         "failed": failed,
@@ -199,7 +239,8 @@ def run(fetch_stock=None, fetch_benchmark=None, now: datetime | None = None, pau
     }
     save(SCORES_FILE, out)
     save(HISTORY_FILE, history)
-    save(SNAPSHOT_FILE, {s["symbol"]: s["adjusted"] for s in stocks + discovered if not s.get("stale")}
+    save(SNAPSHOT_FILE, {s["symbol"]: {"adjusted": s["adjusted"], "rating": s["rating"]}
+                         for s in stocks + discovered if not s.get("stale")}
          | {k: v for k, v in snapshots.items() if k in failed})
     print(f"Scored {len(stocks) - len([s for s in stocks if s.get('stale')])} stock(s), "
           f"{len(unscored)} without enough data, {len(failed)} failed, graded {n} call result(s). "

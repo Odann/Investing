@@ -63,6 +63,11 @@ def is_utility(m):
     return m.get("sector") in config.UTILITY_SECTORS
 
 
+def is_reit(m):
+    prefix = getattr(config, "REIT_INDUSTRY_PREFIX", None)
+    return bool(prefix) and (m.get("industry") or "").startswith(prefix)
+
+
 def eps_cagr(history):
     """Annual EPS growth across the reported years, when every year was profitable."""
     if len(history) < 3 or any(v <= 0 for v in history):
@@ -91,7 +96,8 @@ def trend_lens(m, bench):
     if r is not None and b is not None:
         rs = r - b
         parts.append((lin(rs, -0.25, 0.30, 0, 3.0), 3.0,
-                      f"12-month return {signed(r)} vs. {signed(b)} for the {config.BENCHMARK_NAME}"))
+                      f"12-month return {signed(r)} vs. {signed(b)} for the "
+                      f"{(bench or {}).get('name') or config.BENCHMARK_NAME}"))
     lo, hi = m.get("low52"), m.get("high52")
     if p and lo and hi and hi > lo:
         pos = (p - lo) / (hi - lo)
@@ -100,7 +106,21 @@ def trend_lens(m, bench):
     return finish(parts, 2)
 
 
+def reit_garp(m):
+    """REITs: Yahoo has no FFO, so value is judged on price-to-book and growth."""
+    parts = []
+    pb = m.get("price_to_book")
+    if pb is not None and pb > 0:
+        parts.append((lin(pb, 1.6, 0.8, 0, 4.0), 4.0, f"Price-to-book {pb:.2f} (REIT: book value tracks property value)"))
+    rg = m.get("revenue_growth")
+    if rg is not None:
+        parts.append((lin(rg, -0.02, 0.08, 0, 3.0), 3.0, f"{signed(rg)} revenue growth, latest quarter vs. a year ago"))
+    return finish(parts, 2)
+
+
 def garp_lens(m):
+    if is_reit(m):
+        return reit_garp(m)
     teps, feps = m.get("trailing_eps"), m.get("forward_eps")
     if (teps is None or teps <= 0) and (feps is None or feps <= 0):
         return 1.0, ["No earnings yet, so growth-at-a-reasonable-price can't be measured; scored 1"]
@@ -123,7 +143,23 @@ def garp_lens(m):
     return finish(parts, 2)
 
 
+def reit_quality(m):
+    """REITs: earnings include property revaluations, so ROE and profit margin
+    swing for reasons that say little about the business. Use operating margin
+    and debt on the utility scale."""
+    parts = []
+    om = m.get("operating_margin")
+    if om is not None:
+        parts.append((lin(om, 0.20, 0.60, 0, 3.0), 3.0, f"Operating margin {pct(om)}"))
+    de = m.get("debt_to_equity")
+    if de is not None:
+        parts.append((lin(de, 300, 100, 0, 2.0), 2.0, f"Debt-to-equity {de / 100:.2f} (REIT scale)"))
+    return finish(parts, 2)
+
+
 def quality_lens(m):
+    if is_reit(m):
+        return reit_quality(m)
     parts = []
     roe = m.get("roe")
     if roe is not None:
@@ -162,7 +198,7 @@ def dividend_lens(m):
     if g is not None:
         parts.append((lin(g, 0, 0.15, 0, 4.0), 4.0, f"{signed(g)} {label}"))
     po = m.get("payout_ratio")
-    if po is not None and po > 0:
+    if po is not None and po > 0 and not is_reit(m):   # REITs pay from FFO, not earnings
         parts.append((lin(po, 0.90, 0.50, 0, 3.0), 3.0, f"Payout ratio {pct(po, 0)} of earnings"))
     yrs = m.get("dividend_years_raised") or 0
     parts.append((lin(yrs, 0, 25, 0, 3.0), 3.0,
@@ -185,7 +221,9 @@ def risk_flags(m):
     elif vol is not None and vol > 0.35:
         flags.append((0.25, f"Volatile ({pct(vol, 0)} a year)"))
     teps = m.get("trailing_eps")
-    if teps is not None and teps <= 0:
+    if is_reit(m):
+        pass   # REIT earnings swing with property values; losses and P/E don't mean much
+    elif teps is not None and teps <= 0:
         flags.append((0.5, "Not profitable over the last 12 months"))
     else:
         fpe, tpe = m.get("forward_pe"), m.get("trailing_pe")
@@ -193,7 +231,7 @@ def risk_flags(m):
             flags.append((0.5, f"Stretched valuation (forward P/E {fpe:.1f})" if fpe
                           else f"Stretched valuation (P/E {tpe:.1f})"))
     de = m.get("debt_to_equity")
-    if not is_financial(m) and de is not None and de > (300 if is_utility(m) else 200):
+    if not is_financial(m) and de is not None and de > (300 if (is_utility(m) or is_reit(m)) else 200):
         flags.append((0.5, f"Heavy debt (debt-to-equity {de / 100:.2f})"))
     cap = m.get("market_cap")
     if cap is not None and cap < 5e8:
@@ -223,6 +261,19 @@ def rate(score, held):
     return "Buy" if score >= config.WATCH_BUY else "Don't buy"
 
 
+def buffered_rating(adjusted, held, previous_rating):
+    """The rating, except a stock just across a line keeps its previous rating
+    until the score clears the line by RATING_BUFFER. Returns (rating, kept)."""
+    new = rate(adjusted, held)
+    buf = getattr(config, "RATING_BUFFER", 0)
+    valid = {"Buy more", "Hold", "Sell"} if held else {"Buy", "Don't buy"}
+    if not buf or previous_rating is None or previous_rating == new or previous_rating not in valid:
+        return new, False
+    if previous_rating in (rate(adjusted + buf, held), rate(adjusted - buf, held)):
+        return previous_rating, True
+    return new, False
+
+
 def triggers(m, lenses, adjusted, held):
     """Two or three observable things that would move the rating."""
     out = []
@@ -248,7 +299,12 @@ def triggers(m, lenses, adjusted, held):
     return out[:4]
 
 
-def score_stock(m, bench, held, previous_adjusted=None):
+def score_stock(m, bench, held, previous=None):
+    """previous: the last update's {"adjusted", "rating"} (or just the score)."""
+    if isinstance(previous, dict):
+        previous_adjusted, previous_rating = previous.get("adjusted"), previous.get("rating")
+    else:
+        previous_adjusted, previous_rating = previous, None
     t, t_notes = trend_lens(m, bench)
     g, g_notes = garp_lens(m)
     q, q_notes = quality_lens(m)
@@ -266,7 +322,7 @@ def score_stock(m, bench, held, previous_adjusted=None):
 
     penalty, risk_reasons = risk_flags(m)
     adjusted = round(composite - penalty, 2)
-    rating = rate(adjusted, held)
+    rating, kept = buffered_rating(adjusted, held, previous_rating)
     border = any(abs(adjusted - th) <= config.BORDERLINE for th in thresholds(held))
 
     change = round(adjusted - previous_adjusted, 2) if previous_adjusted is not None else None
@@ -295,10 +351,14 @@ def score_stock(m, bench, held, previous_adjusted=None):
         "borderline": border,
         "score_change": change,
         "reasons": reasons,
-        "triggers": triggers(m, lenses, adjusted, held),
+        "triggers": ([f"Kept at {rating}: the score is within {config.RATING_BUFFER:.2f} of the line, "
+                      f"so the rating waits for a clearer move."] if kept else [])
+                    + triggers(m, lenses, adjusted, held),
+        "rating_kept": kept,
+        "reit": is_reit(m),
         "metrics": {k: m.get(k) for k in (
             "ma50", "ma200", "low52", "high52", "return_12m", "volatility", "beta", "market_cap",
-            "forward_pe", "trailing_pe", "peg", "eps_growth_next", "roe", "profit_margin",
+            "forward_pe", "trailing_pe", "peg", "price_to_book", "eps_growth_next", "roe", "profit_margin",
             "debt_to_equity", "fcf_yield", "dividend_yield", "payout_ratio", "dividend_cagr_5y",
             "dividend_years_raised", "target_price", "analyst_rating", "analyst_count")},
         "next_earnings": m.get("next_earnings"),
