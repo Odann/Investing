@@ -456,7 +456,8 @@ function renderRecommended() {
     + `${st.recommend_per_sector ? `, with at most ${st.recommend_per_sector} from any one sector` : ''}. Refreshed with every update.`;
   $('recs-grid').innerHTML = recs.length ? recs.map(renderCard).join('')
     : `<div class="sm:col-span-2 lg:col-span-3 rounded-lg border border-dashed border-line bg-white px-5 py-8 text-center text-muted">
-        Nothing you don't own is rated Buy right now. The next update will check again.</div>`;
+        ${data.recommended ? "Nothing you don't own is rated Buy right now. The next update will check again."
+          : 'Recommendations appear after the next data update.'}</div>`;
 }
 
 function render() {
