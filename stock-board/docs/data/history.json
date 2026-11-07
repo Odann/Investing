@@ -491,6 +491,84 @@
    "price": 91.75,
    "bench_price": 35605.27,
    "results": {}
+  },
+  {
+   "id": "CNR.TO|2026-11-07|Don't buy",
+   "symbol": "CNR.TO",
+   "name": "Canadian National Railway Company",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 6.62,
+   "logged_at": "2026-11-07T02:19:23.616615+00:00",
+   "price": 175.21,
+   "currency": "CAD",
+   "bench_price": 35789.0898,
+   "results": {}
+  },
+  {
+   "id": "SU.TO|2026-11-07|Hold",
+   "symbol": "SU.TO",
+   "name": "Suncor Energy Inc.",
+   "rating": "Hold",
+   "held": true,
+   "score": 6.51,
+   "logged_at": "2026-11-07T02:19:23.616615+00:00",
+   "price": 97.1,
+   "currency": "CAD",
+   "bench_price": 35789.0898,
+   "results": {}
+  },
+  {
+   "id": "AMD|2026-11-07|Hold",
+   "symbol": "AMD",
+   "name": "Advanced Micro Devices, Inc.",
+   "rating": "Hold",
+   "held": true,
+   "score": 5.72,
+   "logged_at": "2026-11-07T02:19:23.616615+00:00",
+   "price": 449.04,
+   "currency": "USD",
+   "bench_price": 35789.0898,
+   "results": {}
+  },
+  {
+   "id": "CS.TO|2026-11-07|Don't buy",
+   "symbol": "CS.TO",
+   "name": "Capstone Copper Corp.",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 4.62,
+   "logged_at": "2026-11-07T02:19:23.616615+00:00",
+   "price": 10.99,
+   "currency": "CAD",
+   "bench_price": 35789.0898,
+   "results": {}
+  },
+  {
+   "id": "H.TO|2026-11-07|Don't buy",
+   "symbol": "H.TO",
+   "name": "Hydro One Limited",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 3.9,
+   "logged_at": "2026-11-07T02:19:23.616615+00:00",
+   "price": 57.68,
+   "currency": "CAD",
+   "bench_price": 35789.0898,
+   "results": {}
+  },
+  {
+   "id": "EPRX.TO|2026-11-07|Don't buy",
+   "symbol": "EPRX.TO",
+   "name": "Eupraxia Pharmaceuticals Inc.",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 1.35,
+   "logged_at": "2026-11-07T02:19:23.616615+00:00",
+   "price": 9.71,
+   "currency": "CAD",
+   "bench_price": 35789.0898,
+   "results": {}
   }
  ]
 }
