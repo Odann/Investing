@@ -1,110 +1,106 @@
 {
  "DCBO.TO": {
-  "adjusted": 7.71,
+  "adjusted": 7.78,
+  "rating": "Buy"
+ },
+ "MFC.TO": {
+  "adjusted": 7.56,
   "rating": "Buy"
  },
  "AXL.V": {
   "adjusted": 7.54,
   "rating": "Hold"
  },
- "MFC.TO": {
-  "adjusted": 7.5,
-  "rating": "Buy"
- },
  "NA.TO": {
   "adjusted": 7.24,
   "rating": "Buy"
  },
  "TD.TO": {
-  "adjusted": 7.19,
+  "adjusted": 7.22,
   "rating": "Buy"
  },
  "CNR.TO": {
-  "adjusted": 6.89,
-  "rating": "Don't buy"
- },
- "BNS.TO": {
-  "adjusted": 6.81,
-  "rating": "Don't buy"
- },
- "CVE.TO": {
-  "adjusted": 6.75,
+  "adjusted": 6.92,
   "rating": "Don't buy"
  },
  "POW.TO": {
-  "adjusted": 6.65,
+  "adjusted": 6.83,
   "rating": "Don't buy"
  },
- "RY.TO": {
-  "adjusted": 6.59,
-  "rating": "Hold"
+ "CVE.TO": {
+  "adjusted": 6.81,
+  "rating": "Don't buy"
  },
- "ABX.TO": {
-  "adjusted": 6.54,
+ "BNS.TO": {
+  "adjusted": 6.78,
   "rating": "Don't buy"
  },
  "SU.TO": {
-  "adjusted": 6.39,
+  "adjusted": 6.54,
+  "rating": "Hold"
+ },
+ "RY.TO": {
+  "adjusted": 6.53,
   "rating": "Hold"
  },
  "CSU.TO": {
-  "adjusted": 6.33,
-  "rating": "Don't buy"
- },
- "KXS.TO": {
-  "adjusted": 6.3,
+  "adjusted": 6.38,
   "rating": "Don't buy"
  },
  "CJT.TO": {
-  "adjusted": 6.18,
+  "adjusted": 6.24,
+  "rating": "Don't buy"
+ },
+ "KXS.TO": {
+  "adjusted": 6.09,
   "rating": "Don't buy"
  },
  "SAP.TO": {
-  "adjusted": 5.96,
-  "rating": "Don't buy"
- },
- "MG.TO": {
-  "adjusted": 5.85,
+  "adjusted": 5.9,
   "rating": "Don't buy"
  },
  "ALA.TO": {
-  "adjusted": 5.5,
+  "adjusted": 5.83,
+  "rating": "Don't buy"
+ },
+ "MG.TO": {
+  "adjusted": 5.73,
   "rating": "Don't buy"
  },
  "AMD": {
   "adjusted": 5.48,
   "rating": "Hold"
  },
- "AEM.TO": {
-  "adjusted": 5.16,
+ "ABX.TO": {
+  "adjusted": 5.3,
   "rating": "Don't buy"
  },
  "CLS.TO": {
-  "adjusted": 4.97,
+  "adjusted": 4.86,
   "rating": "Don't buy"
  },
  "CU.TO": {
-  "adjusted": 4.8,
+  "adjusted": 4.84,
+  "rating": "Don't buy"
+ },
+ "AQN.TO": {
+  "adjusted": 4.82,
   "rating": "Don't buy"
  },
  "DOL.TO": {
   "adjusted": 4.77,
   "rating": "Don't buy"
  },
- "CS.TO": {
-  "adjusted": 4.77,
-  "rating": "Don't buy"
- },
- "AQN.TO": {
-  "adjusted": 4.74,
-  "rating": "Don't buy"
- },
  "FTS.TO": {
-  "adjusted": 4.71,
+  "adjusted": 4.76,
+  "rating": "Don't buy"
+ },
+ "AEM.TO": {
+  "adjusted": 4.7,
   "rating": "Don't buy"
  },
  "HR-UN.TO": {
-  "adjusted": 4.63,
+  "adjusted": 4.54,
   "rating": "Don't buy"
  },
  "BBD-A.TO": {
@@ -112,67 +108,71 @@
   "rating": "Don't buy"
  },
  "TRP.TO": {
-  "adjusted": 3.87,
+  "adjusted": 3.96,
+  "rating": "Don't buy"
+ },
+ "CS.TO": {
+  "adjusted": 3.95,
   "rating": "Don't buy"
  },
  "H.TO": {
-  "adjusted": 3.81,
+  "adjusted": 3.88,
   "rating": "Don't buy"
  },
  "K.TO": {
-  "adjusted": 3.71,
+  "adjusted": 3.61,
   "rating": "Don't buy"
  },
  "NPI.TO": {
-  "adjusted": 2.88,
+  "adjusted": 2.85,
   "rating": "Don't buy"
  },
  "ENB.TO": {
-  "adjusted": 2.69,
+  "adjusted": 2.85,
   "rating": "Don't buy"
  },
  "EPRX.TO": {
-  "adjusted": 2.37,
+  "adjusted": 2.51,
   "rating": "Don't buy"
  },
  "CCO.TO": {
-  "adjusted": 2.22,
+  "adjusted": 2.19,
   "rating": "Don't buy"
  },
  "BEP-UN.TO": {
-  "adjusted": 2.07,
+  "adjusted": 1.94,
   "rating": "Don't buy"
  },
  "T.TO": {
-  "adjusted": 0.63,
+  "adjusted": 0.51,
   "rating": "Don't buy"
  },
  "SVI.TO": {
-  "adjusted": 0.21,
+  "adjusted": 0.0,
   "rating": "Don't buy"
  },
  "BMO.TO": {
-  "adjusted": 6.87,
+  "adjusted": 6.83,
   "rating": "Don't buy"
  },
  "CM.TO": {
-  "adjusted": 6.66,
+  "adjusted": 6.69,
   "rating": "Don't buy"
  },
  "SLF.TO": {
-  "adjusted": 6.3,
+  "adjusted": 6.36,
   "rating": "Don't buy"
  },
  "GWO.TO": {
-  "adjusted": 6.92,
+  "adjusted": 7.04,
   "rating": "Don't buy"
  },
  "IFC.TO": {
-  "adjusted": 5.47,
+  "adjusted": 5.56,
   "rating": "Don't buy"
  },
  "BN.TO": {
-  "adjusted": 2.07,
+  "adjusted": 2.01,
   "rating": "Don't buy"
  },
  "BAM.TO": {
@@ -180,19 +180,19 @@
   "rating": "Don't buy"
  },
  "FFH.TO": {
-  "adjusted": 6.41,
+  "adjusted": 6.46,
   "rating": "Don't buy"
  },
  "X.TO": {
-  "adjusted": 6.14,
+  "adjusted": 6.17,
   "rating": "Don't buy"
  },
  "EQB.TO": {
-  "adjusted": 4.58,
+  "adjusted": 4.63,
   "rating": "Don't buy"
  },
  "CNQ.TO": {
-  "adjusted": 6.33,
+  "adjusted": 6.39,
   "rating": "Don't buy"
  },
  "IMO.TO": {
@@ -200,19 +200,19 @@
   "rating": "Don't buy"
  },
  "TOU.TO": {
-  "adjusted": 5.06,
+  "adjusted": 5.42,
   "rating": "Don't buy"
  },
  "PPL.TO": {
-  "adjusted": 5.89,
+  "adjusted": 5.98,
   "rating": "Don't buy"
  },
  "KEY.TO": {
-  "adjusted": 3.6,
+  "adjusted": 3.63,
   "rating": "Don't buy"
  },
  "WCP.TO": {
-  "adjusted": 6.15,
+  "adjusted": 6.46,
   "rating": "Don't buy"
  },
  "NTR.TO": {
@@ -220,7 +220,7 @@
   "rating": "Don't buy"
  },
  "WPM.TO": {
-  "adjusted": 6.7,
+  "adjusted": 6.36,
   "rating": "Don't buy"
  },
  "FNV.TO": {
@@ -228,15 +228,15 @@
   "rating": "Don't buy"
  },
  "TECK-B.TO": {
-  "adjusted": 4.97,
+  "adjusted": 4.79,
   "rating": "Don't buy"
  },
  "FM.TO": {
-  "adjusted": 3.85,
+  "adjusted": 3.78,
   "rating": "Don't buy"
  },
  "LUN.TO": {
-  "adjusted": 3.89,
+  "adjusted": 3.55,
   "rating": "Don't buy"
  },
  "IVN.TO": {
@@ -244,19 +244,19 @@
   "rating": "Don't buy"
  },
  "CCL-B.TO": {
-  "adjusted": 6.37,
+  "adjusted": 6.4,
   "rating": "Don't buy"
  },
  "CP.TO": {
-  "adjusted": 6.33,
+  "adjusted": 6.37,
   "rating": "Don't buy"
  },
  "WSP.TO": {
-  "adjusted": 3.93,
+  "adjusted": 3.66,
   "rating": "Don't buy"
  },
  "TFII.TO": {
-  "adjusted": 5.02,
+  "adjusted": 5.11,
   "rating": "Don't buy"
  },
  "STN.TO": {
@@ -264,23 +264,23 @@
   "rating": "Don't buy"
  },
  "TIH.TO": {
-  "adjusted": 5.47,
+  "adjusted": 5.25,
   "rating": "Don't buy"
  },
  "WCN.TO": {
-  "adjusted": 5.0,
+  "adjusted": 5.03,
   "rating": "Don't buy"
  },
  "RBA.TO": {
-  "adjusted": 5.29,
+  "adjusted": 5.26,
   "rating": "Don't buy"
  },
  "CAE.TO": {
-  "adjusted": 4.36,
+  "adjusted": 4.4,
   "rating": "Don't buy"
  },
  "ATRL.TO": {
-  "adjusted": 5.81,
+  "adjusted": 5.78,
   "rating": "Don't buy"
  },
  "AC.TO": {
@@ -288,11 +288,11 @@
   "rating": "Don't buy"
  },
  "SHOP.TO": {
-  "adjusted": 4.35,
+  "adjusted": 4.0,
   "rating": "Don't buy"
  },
  "OTEX.TO": {
-  "adjusted": 6.57,
+  "adjusted": 6.48,
   "rating": "Don't buy"
  },
  "GIB-A.TO": {
@@ -300,7 +300,7 @@
   "rating": "Buy"
  },
  "DSG.TO": {
-  "adjusted": 6.14,
+  "adjusted": 6.32,
   "rating": "Don't buy"
  },
  "TOI.V": {
@@ -308,19 +308,19 @@
   "rating": "Don't buy"
  },
  "ATD.TO": {
-  "adjusted": 5.47,
+  "adjusted": 5.23,
   "rating": "Don't buy"
  },
  "L.TO": {
-  "adjusted": 6.14,
+  "adjusted": 6.17,
   "rating": "Don't buy"
  },
  "MRU.TO": {
-  "adjusted": 5.92,
+  "adjusted": 6.41,
   "rating": "Don't buy"
  },
  "WN.TO": {
-  "adjusted": 6.18,
+  "adjusted": 6.21,
   "rating": "Don't buy"
  },
  "QSR.TO": {
@@ -328,31 +328,31 @@
   "rating": "Don't buy"
  },
  "GIL.TO": {
-  "adjusted": 3.18,
+  "adjusted": 3.15,
   "rating": "Don't buy"
  },
  "CTC-A.TO": {
-  "adjusted": 6.56,
+  "adjusted": 6.59,
   "rating": "Don't buy"
  },
  "EMP-A.TO": {
-  "adjusted": 5.06,
+  "adjusted": 5.21,
   "rating": "Don't buy"
  },
  "BCE.TO": {
-  "adjusted": 5.22,
+  "adjusted": 5.4,
   "rating": "Don't buy"
  },
  "RCI-B.TO": {
-  "adjusted": 4.0,
+  "adjusted": 4.21,
   "rating": "Don't buy"
  },
  "QBR-B.TO": {
-  "adjusted": 6.06,
+  "adjusted": 6.04,
   "rating": "Don't buy"
  },
  "EMA.TO": {
-  "adjusted": 4.17,
+  "adjusted": 4.25,
   "rating": "Don't buy"
  },
  "CPX.TO": {
