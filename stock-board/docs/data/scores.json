@@ -1,90 +1,90 @@
 {
- "generated_at": "2026-11-12T03:18:36.049901+00:00",
+ "generated_at": "2026-11-13T02:52:15.830542+00:00",
  "benchmark": {
   "symbol": "^GSPTSE",
-  "price": 36411.7188,
-  "day_change": 0.006668936011390514,
-  "return_12m": 0.19738756941267832,
-  "return_12_1": 0.17281886285561532,
+  "price": 36137.1914,
+  "day_change": -0.007539000332031809,
+  "return_12m": 0.17223500577905182,
+  "return_12_1": 0.1672657117635874,
   "name": "S&P/TSX Composite"
  },
  "us_benchmark": {
   "symbol": "^GSPC",
-  "price": 7619.3799,
-  "day_change": 0.013090097199449646,
-  "return_12m": 0.11286900158802071,
-  "return_12_1": 0.1403074500046606,
+  "price": 7592.3999,
+  "day_change": -0.003540968016256807,
+  "return_12m": 0.10823071776115833,
+  "return_12_1": 0.13932877399277177,
   "name": "S&P 500"
  },
  "market": {
   "tsx": {
    "symbol": "^GSPTSE",
    "name": "S&P/TSX Composite",
-   "price": 36411.7188,
-   "day_change": 0.006668936011390514,
-   "return_12m": 0.19738756941267832
+   "price": 36137.1914,
+   "day_change": -0.007539000332031809,
+   "return_12m": 0.17223500577905182
   },
   "sp500": {
    "symbol": "^GSPC",
    "name": "S&P 500",
-   "price": 7619.3799,
-   "day_change": 0.013090097199449646,
-   "return_12m": 0.11286900158802071
+   "price": 7592.3999,
+   "day_change": -0.003540968016256807,
+   "return_12m": 0.10823071776115833
   },
   "usdcad": {
-   "price": 1.4264,
-   "day_change": 0.005484333339299763
+   "price": 1.4259,
+   "day_change": 0.0008071449099962269
   },
   "sectors": [
    {
-    "name": "Energy",
-    "day_change": 0.02174,
-    "count": 13
-   },
-   {
-    "name": "Technology",
-    "day_change": 0.02157,
-    "count": 10
-   },
-   {
-    "name": "Industrials",
-    "day_change": 0.00847,
-    "count": 13
-   },
-   {
-    "name": "Financial Services",
-    "day_change": 0.00742,
-    "count": 16
-   },
-   {
-    "name": "Consumer Cyclical",
-    "day_change": 0.00668,
-    "count": 6
-   },
-   {
     "name": "Consumer Defensive",
-    "day_change": 0.00334,
+    "day_change": 0.00745,
     "count": 6
    },
    {
-    "name": "Real Estate",
-    "day_change": 0.00184,
-    "count": 2
+    "name": "Energy",
+    "day_change": 0.00502,
+    "count": 13
    },
    {
     "name": "Utilities",
-    "day_change": -0.00063,
+    "day_change": -0.00154,
     "count": 8
    },
    {
-    "name": "Basic Materials",
-    "day_change": -0.00423,
-    "count": 11
+    "name": "Industrials",
+    "day_change": -0.00184,
+    "count": 13
+   },
+   {
+    "name": "Consumer Cyclical",
+    "day_change": -0.00277,
+    "count": 6
+   },
+   {
+    "name": "Technology",
+    "day_change": -0.0044,
+    "count": 10
+   },
+   {
+    "name": "Financial Services",
+    "day_change": -0.00443,
+    "count": 16
+   },
+   {
+    "name": "Real Estate",
+    "day_change": -0.00737,
+    "count": 2
    },
    {
     "name": "Communication Services",
-    "day_change": -0.00541,
+    "day_change": -0.00962,
     "count": 4
+   },
+   {
+    "name": "Basic Materials",
+    "day_change": -0.0337,
+    "count": 11
    }
   ]
  },
@@ -170,13 +170,18 @@
  "notes": [],
  "failed": [],
  "changes": {
-  "since": "2026-11-11T02:11:04.923838+00:00",
+  "since": "2026-11-12T03:18:36.049901+00:00",
   "ratings": [],
   "new_recs": [],
   "dropped_recs": [],
   "big_moves": [
    {
-    "symbol": "AMD",
+    "symbol": "AEM.TO",
+    "change": -0.59,
+    "held": false
+   },
+   {
+    "symbol": "AXL.V",
     "change": 0.53,
     "held": true
    }
@@ -184,33 +189,211 @@
  },
  "stocks": [
   {
+   "symbol": "AXL.V",
+   "name": "Arrow Exploration Corp.",
+   "held": true,
+   "sector": "Energy",
+   "currency": "CAD",
+   "financial_currency": "USD",
+   "price": 0.665,
+   "day_change": 0.05555559760468798,
+   "week_change": 0.12711873053819867,
+   "industry": "Oil & Gas E&P",
+   "ex_dividend_date": null,
+   "lenses": {
+    "trend": 8.5,
+    "garp": 10.0,
+    "quality": 7.9,
+    "dividend": null
+   },
+   "notes": {
+    "trend": [
+     "+32.7% vs. the 200-day average ($0.50)",
+     "\u22122.2% vs. the 50-day average ($0.68)",
+     "50-day average above the 200-day",
+     "12-month return, leaving out the last month, +222.7% vs. +16.7% for the S&P/TSX Composite",
+     "79% of the way up its 52-week range ($0.20\u2013$0.79)"
+    ],
+    "garp": [
+     "Forward P/E 4.7: cheaper than 100% of the 13 other Energy stocks scored",
+     "+136.2% expected EPS growth next year"
+    ],
+    "quality": [
+     "Return on equity 24.6%",
+     "Profit margin 16.5%",
+     "Debt-to-equity 0.00",
+     "Free cash flow yield +7.5%",
+     "A loss in at least one of the last 4 years"
+    ],
+    "dividend": [
+     "Pays no dividend"
+    ]
+   },
+   "weights": {
+    "trend": 0.3529,
+    "garp": 0.3529,
+    "quality": 0.2941
+   },
+   "composite": 8.85,
+   "risk_penalty": 0.75,
+   "adjusted": 8.1,
+   "rating": "Hold",
+   "borderline": true,
+   "score_change": 0.53,
+   "reasons": [
+    {
+     "type": "move",
+     "text": "Score up 0.53 since the last update"
+    },
+    {
+     "type": "caution",
+     "text": "Very volatile (70% a year)"
+    },
+    {
+     "type": "caution",
+     "text": "Small company (market value about $190M)"
+    }
+   ],
+   "triggers": [
+    "Kept at Hold: the score is within 0.25 of the line, so the rating waits for a clearer move.",
+    "Drops to Hold if it loses 0.11 points.",
+    "A move below the 200-day average ($0.50) would cut Trend.",
+    "Next earnings report: 2026-11-26."
+   ],
+   "rating_kept": true,
+   "reit": false,
+   "metrics": {
+    "ma50": 0.6798999965190887,
+    "ma200": 0.501074997484684,
+    "low52": 0.20000000298023224,
+    "high52": 0.7900000214576721,
+    "return_12m": 2.022727386641109,
+    "return_12_1": 2.2272726472251665,
+    "volatility": 0.6979811617952436,
+    "beta": -0.603,
+    "market_cap": 190099791.42000002,
+    "forward_pe": 4.693344625591079,
+    "trailing_pe": 11.083333333333334,
+    "peg": null,
+    "price_to_book": 1.9486962489501949,
+    "eps_growth_next": 1.3615000000000004,
+    "roe": 0.24625999,
+    "profit_margin": 0.16479,
+    "debt_to_equity": 0.328,
+    "fcf_yield": 0.07502082928902984,
+    "dividend_yield": null,
+    "payout_ratio": 0.0,
+    "cash_payout": null,
+    "dividend_cagr_5y": null,
+    "dividend_years_raised": 0,
+    "target_price": null,
+    "analyst_rating": "none",
+    "analyst_count": null
+   },
+   "next_earnings": "2026-11-26",
+   "news": [
+    {
+     "title": "Caledonia Mining, Strategic Minerals, Tooru, Galliford Try, Arrow Exploration, Buccaneer Energy",
+     "url": "https://finance.yahoo.com/video/caledonia-mining-strategic-minerals-tooru-111442441.html",
+     "source": "Proactive",
+     "published": "2026-11-12T11:14:42Z"
+    },
+    {
+     "title": "Arrow Exploration ups production volumes, says Icaco field is exceeding expectations",
+     "url": "https://www.proactiveinvestors.com/companies/news/1101646/arrow-exploration-ups-production-volumes-says-icaco-field-is-exceeding-expectations-1101646.html",
+     "source": "Proactive",
+     "published": "2026-11-12T07:34:00Z"
+    },
+    {
+     "title": "Arrow Exploration ups production volumes, says Icaco field is exceeding expectations",
+     "url": "https://www.proactiveinvestors.com/companies/news/1101646/arrow-exploration-ups-production-volumes-says-icaco-field-is-exceeding-expectations-1101646.html",
+     "source": "Proactive",
+     "published": "2026-11-12T07:34:00Z"
+    }
+   ],
+   "chart": [
+    0.21,
+    0.23,
+    0.25,
+    0.24,
+    0.26,
+    0.26,
+    0.26,
+    0.25,
+    0.25,
+    0.3,
+    0.35,
+    0.32,
+    0.34,
+    0.33,
+    0.33,
+    0.38,
+    0.38,
+    0.4,
+    0.4,
+    0.42,
+    0.43,
+    0.4,
+    0.4,
+    0.41,
+    0.41,
+    0.46,
+    0.44,
+    0.47,
+    0.56,
+    0.53,
+    0.51,
+    0.46,
+    0.46,
+    0.47,
+    0.5,
+    0.54,
+    0.52,
+    0.49,
+    0.5,
+    0.53,
+    0.54,
+    0.56,
+    0.63,
+    0.7,
+    0.68,
+    0.66,
+    0.72,
+    0.71,
+    0.79,
+    0.77,
+    0.59,
+    0.665
+   ]
+  },
+  {
    "symbol": "DCBO.TO",
    "name": "Docebo Inc.",
    "held": false,
    "sector": "Technology",
    "currency": "CAD",
    "financial_currency": "USD",
-   "price": 46.94,
-   "day_change": 0.04636642862366469,
-   "week_change": 0.08632260174188922,
+   "price": 46.75,
+   "day_change": -0.004047691356362182,
+   "week_change": 0.09433517472241659,
    "industry": "Software - Application",
    "ex_dividend_date": "2026-11-16",
    "lenses": {
-    "trend": 7.9,
+    "trend": 8.4,
     "garp": 8.8,
     "quality": 8.1,
     "dividend": null
    },
    "notes": {
     "trend": [
-     "+61.8% vs. the 200-day average ($29.02)",
-     "+26.2% vs. the 50-day average ($37.20)",
+     "+60.5% vs. the 200-day average ($29.12)",
+     "+24.9% vs. the 50-day average ($37.43)",
      "50-day average above the 200-day",
-     "12-month return, leaving out the last month, +9.4% vs. +17.3% for the S&P/TSX Composite",
-     "100% of the way up its 52-week range ($20.36\u2013$46.94)"
+     "12-month return, leaving out the last month, +17.9% vs. +16.7% for the S&P/TSX Composite",
+     "99% of the way up its 52-week range ($20.36\u2013$46.94)"
     ],
     "garp": [
-     "Forward P/E 16.2: cheaper than 70% of the 10 other Technology stocks scored",
+     "Forward P/E 16.1: cheaper than 70% of the 10 other Technology stocks scored",
      "+59.3% expected EPS growth next year"
     ],
     "quality": [
@@ -228,12 +411,12 @@
     "garp": 0.3529,
     "quality": 0.2941
    },
-   "composite": 8.28,
+   "composite": 8.45,
    "risk_penalty": 0.5,
-   "adjusted": 7.78,
+   "adjusted": 7.95,
    "rating": "Buy",
    "borderline": false,
-   "score_change": 0.0,
+   "score_change": 0.17,
    "reasons": [
     {
      "type": "caution",
@@ -241,31 +424,31 @@
     }
    ],
    "triggers": [
-    "Drops to Don't buy if it loses 0.79 points.",
-    "A move below the 200-day average ($29.02) would cut Trend.",
+    "Drops to Don't buy if it loses 0.96 points.",
+    "A move below the 200-day average ($29.12) would cut Trend.",
     "Next earnings report: 2026-11-06."
    ],
    "rating_kept": false,
    "reit": false,
    "metrics": {
-    "ma50": 37.204799842834475,
-    "ma200": 29.01659996986389,
+    "ma50": 37.43479984283447,
+    "ma200": 29.123099966049196,
     "low52": 20.360000610351562,
     "high52": 46.939998626708984,
-    "return_12m": 0.4215626279821094,
-    "return_12_1": 0.09418535939542472,
-    "volatility": 0.5654568089733901,
+    "return_12m": 0.41666666666666674,
+    "return_12_1": 0.1793938839074336,
+    "volatility": 0.5654669337701181,
     "beta": 0.806,
-    "market_cap": 1172379589.1399999,
-    "forward_pe": 16.186458065728605,
-    "trailing_pe": 25.79120879120879,
+    "market_cap": 1167634124.25,
+    "forward_pe": 16.12093980768667,
+    "trailing_pe": 25.686813186813186,
     "peg": null,
     "price_to_book": null,
     "eps_growth_next": 0.5933818681318679,
     "roe": 1.86653,
     "profit_margin": 0.13793999,
     "debt_to_equity": null,
-    "fcf_yield": 0.04885096647069047,
+    "fcf_yield": 0.04904950515795102,
     "dividend_yield": null,
     "payout_ratio": 0.0,
     "cash_payout": null,
@@ -348,7 +531,7 @@
     43.05,
     41.56,
     41.13,
-    46.94
+    46.75
    ]
   },
   {
@@ -358,28 +541,28 @@
    "sector": "Financial Services",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 63.38,
-   "day_change": 0.008432817929381109,
-   "week_change": -0.012311003948452526,
+   "price": 62.65,
+   "day_change": -0.011517821551498386,
+   "week_change": 0.016550388448579367,
    "industry": "Insurance - Life",
    "ex_dividend_date": "2026-11-20",
    "lenses": {
-    "trend": 8.9,
+    "trend": 8.5,
     "garp": 9.4,
     "quality": 4.7,
     "dividend": 6.4
    },
    "notes": {
     "trend": [
-     "+13.3% vs. the 200-day average ($55.96)",
-     "+2.8% vs. the 50-day average ($61.66)",
+     "+11.8% vs. the 200-day average ($56.02)",
+     "+1.5% vs. the 50-day average ($61.73)",
      "50-day average above the 200-day",
-     "12-month return, leaving out the last month, +28.8% vs. +17.3% for the S&P/TSX Composite",
-     "96% of the way up its 52-week range ($45.34\u2013$64.17)"
+     "12-month return, leaving out the last month, +27.6% vs. +16.7% for the S&P/TSX Composite",
+     "92% of the way up its 52-week range ($45.34\u2013$64.17)"
     ],
     "garp": [
      "PEG 0.93",
-     "Forward P/E 12.6: cheaper than 80% of the 15 other Financial Services stocks scored",
+     "Forward P/E 12.5: cheaper than 80% of the 15 other Financial Services stocks scored",
      "+43.8% expected EPS growth next year"
     ],
     "quality": [
@@ -388,7 +571,7 @@
      "EPS rose in 2 of the last 3 years"
     ],
     "dividend": [
-     "Yield 3.06%",
+     "Yield 3.10%",
      "+11.1% dividend growth per year over 5 years",
      "Payout ratio 54% of earnings",
      "6 straight calendar years of increases"
@@ -400,40 +583,40 @@
     "quality": 0.25,
     "dividend": 0.15
    },
-   "composite": 7.62,
+   "composite": 7.5,
    "risk_penalty": 0,
-   "adjusted": 7.62,
+   "adjusted": 7.5,
    "rating": "Buy",
-   "borderline": false,
-   "score_change": 0.06,
+   "borderline": true,
+   "score_change": -0.12,
    "reasons": [],
    "triggers": [
-    "Drops to Don't buy if it loses 0.63 points.",
-    "A move below the 200-day average ($55.96) would cut Trend.",
+    "Drops to Don't buy if it loses 0.51 points.",
+    "A move below the 200-day average ($56.02) would cut Trend.",
     "Next earnings report: 2026-11-04."
    ],
    "rating_kept": false,
    "reit": false,
    "metrics": {
-    "ma50": 61.65519973754883,
-    "ma200": 55.9600499534607,
+    "ma50": 61.7347998046875,
+    "ma200": 56.01974996566773,
     "low52": 45.34000015258789,
     "high52": 64.16999816894531,
-    "return_12m": 0.3485106610237283,
-    "return_12_1": 0.2882978561076712,
-    "volatility": 0.2007775502552884,
+    "return_12m": 0.2987147459790491,
+    "return_12_1": 0.2761193870515546,
+    "volatility": 0.20117527863232132,
     "beta": 0.749,
-    "market_cap": 104701211997.24,
-    "forward_pe": 12.627082681691128,
-    "trailing_pe": 18.16045845272206,
+    "market_cap": 103495281344.7,
+    "forward_pe": 12.481646102996988,
+    "trailing_pe": 17.9512893982808,
     "peg": 0.9322,
-    "price_to_book": 2.0287442783521654,
+    "price_to_book": 2.0053775487340353,
     "eps_growth_next": 0.43821489971346717,
     "roe": 0.12242,
     "profit_margin": 0.18968001,
     "debt_to_equity": 50.992,
-    "fcf_yield": 0.04818831491781585,
-    "dividend_yield": 0.03060902492899968,
+    "fcf_yield": 0.048749806855405725,
+    "dividend_yield": 0.030965682362330407,
     "payout_ratio": 0.543,
     "cash_payout": 0.10017197557375071,
     "dividend_cagr_5y": 0.11090836848558672,
@@ -515,185 +698,7 @@
     61.99,
     62.37,
     61.0,
-    63.38
-   ]
-  },
-  {
-   "symbol": "AXL.V",
-   "name": "Arrow Exploration Corp.",
-   "held": true,
-   "sector": "Energy",
-   "currency": "CAD",
-   "financial_currency": "USD",
-   "price": 0.63,
-   "day_change": 0.08620691958562432,
-   "week_change": -0.04545459060957757,
-   "industry": "Oil & Gas E&P",
-   "ex_dividend_date": null,
-   "lenses": {
-    "trend": 7.7,
-    "garp": 10.0,
-    "quality": 7.9,
-    "dividend": null
-   },
-   "notes": {
-    "trend": [
-     "+26.2% vs. the 200-day average ($0.50)",
-     "\u22127.1% vs. the 50-day average ($0.68)",
-     "50-day average above the 200-day",
-     "12-month return, leaving out the last month, +227.3% vs. +17.3% for the S&P/TSX Composite",
-     "73% of the way up its 52-week range ($0.20\u2013$0.79)"
-    ],
-    "garp": [
-     "Forward P/E 4.6: cheaper than 100% of the 13 other Energy stocks scored",
-     "+128.8% expected EPS growth next year"
-    ],
-    "quality": [
-     "Return on equity 24.6%",
-     "Profit margin 16.5%",
-     "Debt-to-equity 0.00",
-     "Free cash flow yield +7.9%",
-     "A loss in at least one of the last 4 years"
-    ],
-    "dividend": [
-     "Pays no dividend"
-    ]
-   },
-   "weights": {
-    "trend": 0.3529,
-    "garp": 0.3529,
-    "quality": 0.2941
-   },
-   "composite": 8.57,
-   "risk_penalty": 1.0,
-   "adjusted": 7.57,
-   "rating": "Hold",
-   "borderline": true,
-   "score_change": 0.03,
-   "reasons": [
-    {
-     "type": "caution",
-     "text": "Very volatile (70% a year)"
-    },
-    {
-     "type": "caution",
-     "text": "Drawdown: 20% below its 52-week high"
-    },
-    {
-     "type": "caution",
-     "text": "Small company (market value about $180M)"
-    }
-   ],
-   "triggers": [
-    "Needs 0.43 more points to reach Buy more.",
-    "Drops to Sell if it loses 2.58 points.",
-    "A move below the 200-day average ($0.50) would cut Trend.",
-    "Next earnings report: 2026-11-26."
-   ],
-   "rating_kept": false,
-   "reit": false,
-   "metrics": {
-    "ma50": 0.6779999959468842,
-    "ma200": 0.4991999973356724,
-    "low52": 0.20000000298023224,
-    "high52": 0.7900000214576721,
-    "return_12m": 1.863636357478859,
-    "return_12_1": 2.2727274205073846,
-    "volatility": 0.6961773949312903,
-    "beta": -0.603,
-    "market_cap": 180094539.24,
-    "forward_pe": 4.589495155532891,
-    "trailing_pe": 10.5,
-    "peg": null,
-    "price_to_book": 1.846133288479132,
-    "eps_growth_next": 1.2878333333333334,
-    "roe": 0.24625999,
-    "profit_margin": 0.16479,
-    "debt_to_equity": 0.328,
-    "fcf_yield": 0.07918865313842038,
-    "dividend_yield": null,
-    "payout_ratio": 0.0,
-    "cash_payout": null,
-    "dividend_cagr_5y": null,
-    "dividend_years_raised": 0,
-    "target_price": null,
-    "analyst_rating": "none",
-    "analyst_count": null
-   },
-   "next_earnings": "2026-11-26",
-   "news": [
-    {
-     "title": "Auxly Cannabis Group And 2 More Canadian Penny Stocks To Watch",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/auxly-cannabis-group-2-more-031554694.html",
-     "source": "Simply Wall St.",
-     "published": "2026-11-09T03:15:54Z"
-    },
-    {
-     "title": "3 Canadian Penny Stocks With Fair Value Gaps Over 70%",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/3-canadian-penny-stocks-fair-002432324.html",
-     "source": "Simply Wall St.",
-     "published": "2026-10-26T00:24:32Z"
-    },
-    {
-     "title": "Metals One, Arrow Exploration, IXICO, Ilika, IP Group - Small Cap Snapshot",
-     "url": "https://finance.yahoo.com/video/metals-one-arrow-exploration-ixico-085038788.html",
-     "source": "Proactive",
-     "published": "2026-10-22T08:50:38Z"
-    }
-   ],
-   "chart": [
-    0.21,
-    0.23,
-    0.25,
-    0.24,
-    0.26,
-    0.26,
-    0.26,
-    0.25,
-    0.25,
-    0.3,
-    0.35,
-    0.32,
-    0.34,
-    0.33,
-    0.33,
-    0.38,
-    0.38,
-    0.4,
-    0.4,
-    0.42,
-    0.43,
-    0.4,
-    0.4,
-    0.41,
-    0.41,
-    0.46,
-    0.44,
-    0.47,
-    0.56,
-    0.53,
-    0.51,
-    0.46,
-    0.46,
-    0.47,
-    0.5,
-    0.54,
-    0.52,
-    0.49,
-    0.5,
-    0.53,
-    0.54,
-    0.56,
-    0.63,
-    0.7,
-    0.68,
-    0.66,
-    0.72,
-    0.71,
-    0.79,
-    0.77,
-    0.59,
-    0.63
+    62.65
    ]
   },
   {
@@ -703,23 +708,23 @@
    "sector": "Financial Services",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 177.06,
-   "day_change": 0.006766375586769735,
-   "week_change": -0.010450987501999798,
+   "price": 176.69,
+   "day_change": -0.0020896595633638215,
+   "week_change": 0.02399304153246873,
    "industry": "Banks - Diversified",
    "ex_dividend_date": "2026-10-09",
    "lenses": {
-    "trend": 9.8,
+    "trend": 9.9,
     "garp": 7.4,
     "quality": 5.0,
     "dividend": 5.4
    },
    "notes": {
     "trend": [
-     "+14.0% vs. the 200-day average ($155.37)",
-     "+3.8% vs. the 50-day average ($170.62)",
+     "+13.6% vs. the 200-day average ($155.60)",
+     "+3.4% vs. the 50-day average ($170.83)",
      "50-day average above the 200-day",
-     "12-month return, leaving out the last month, +43.6% vs. +17.3% for the S&P/TSX Composite",
+     "12-month return, leaving out the last month, +44.8% vs. +16.7% for the S&P/TSX Composite",
      "97% of the way up its 52-week range ($114.05\u2013$178.93)"
     ],
     "garp": [
@@ -733,7 +738,7 @@
      "EPS rose in 1 of the last 3 years"
     ],
     "dividend": [
-     "Yield 2.53%",
+     "Yield 2.54%",
      "+6.8% dividend growth per year over 5 years",
      "Payout ratio 46% of earnings",
      "5 straight calendar years of increases"
@@ -745,40 +750,40 @@
     "quality": 0.25,
     "dividend": 0.15
    },
-   "composite": 7.22,
+   "composite": 7.25,
    "risk_penalty": 0,
-   "adjusted": 7.22,
+   "adjusted": 7.25,
    "rating": "Buy",
    "borderline": true,
-   "score_change": 0.0,
+   "score_change": 0.03,
    "reasons": [],
    "triggers": [
-    "Drops to Don't buy if it loses 0.23 points.",
-    "A move below the 200-day average ($155.37) would cut Trend.",
+    "Drops to Don't buy if it loses 0.26 points.",
+    "A move below the 200-day average ($155.60) would cut Trend.",
     "Next earnings report: 2026-12-03."
    ],
    "rating_kept": false,
    "reit": false,
    "metrics": {
-    "ma50": 170.62220001220703,
-    "ma200": 155.36739978790283,
+    "ma50": 170.83140014648438,
+    "ma200": 155.59874980926514,
     "low52": 114.05000305175781,
     "high52": 178.92999267578125,
-    "return_12m": 0.548404022048717,
-    "return_12_1": 0.43585487216744134,
-    "volatility": 0.17479792898682875,
+    "return_12m": 0.5246354592455766,
+    "return_12_1": 0.4481836458275592,
+    "volatility": 0.1748013836297573,
     "beta": 0.868,
-    "market_cap": 289141941505.56,
-    "forward_pe": 15.825969749569627,
-    "trailing_pe": 19.245652173913044,
+    "market_cap": 288537725316.94,
+    "forward_pe": 15.792898424553583,
+    "trailing_pe": 19.205434782608698,
     "peg": 0.91,
-    "price_to_book": 2.341382137473222,
+    "price_to_book": 2.336489381396948,
     "eps_growth_next": 0.21608043478260863,
     "roe": 0.12828,
     "profit_margin": 0.26617,
     "debt_to_equity": null,
     "fcf_yield": null,
-    "dividend_yield": 0.025302157460747772,
+    "dividend_yield": 0.025355141773728,
     "payout_ratio": 0.4636,
     "cash_payout": null,
     "dividend_cagr_5y": 0.06844733160794769,
@@ -860,7 +865,7 @@
     174.47,
     174.04,
     172.92,
-    177.06
+    176.69
    ]
   },
   {
@@ -870,23 +875,23 @@
    "sector": "Financial Services",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 217.22,
-   "day_change": 0.008075021011993089,
-   "week_change": -0.0079466817674968,
+   "price": 216.65,
+   "day_change": -0.00262410146862857,
+   "week_change": 0.012619756890650313,
    "industry": "Banks - Diversified",
    "ex_dividend_date": "2026-09-28",
    "lenses": {
-    "trend": 8.4,
+    "trend": 8.5,
     "garp": 7.1,
     "quality": 6.0,
     "dividend": 7.1
    },
    "notes": {
     "trend": [
-     "+6.2% vs. the 200-day average ($204.54)",
-     "+3.8% vs. the 50-day average ($209.27)",
+     "+5.8% vs. the 200-day average ($204.81)",
+     "+3.5% vs. the 50-day average ($209.41)",
      "50-day average above the 200-day",
-     "12-month return, leaving out the last month, +23.1% vs. +17.3% for the S&P/TSX Composite",
+     "12-month return, leaving out the last month, +24.1% vs. +16.7% for the S&P/TSX Composite",
      "75% of the way up its 52-week range ($161.54\u2013$235.32)"
     ],
     "garp": [
@@ -900,7 +905,7 @@
      "EPS rose in 1 of the last 3 years"
     ],
     "dividend": [
-     "Yield 2.43%",
+     "Yield 2.44%",
      "+12.5% dividend growth per year over 5 years",
      "Payout ratio 42% of earnings",
      "6 straight calendar years of increases"
@@ -912,40 +917,40 @@
     "quality": 0.25,
     "dividend": 0.15
    },
-   "composite": 7.21,
+   "composite": 7.24,
    "risk_penalty": 0,
-   "adjusted": 7.21,
+   "adjusted": 7.24,
    "rating": "Buy",
    "borderline": true,
-   "score_change": -0.03,
+   "score_change": 0.03,
    "reasons": [],
    "triggers": [
-    "Drops to Don't buy if it loses 0.22 points.",
-    "A move below the 200-day average ($204.54) would cut Trend.",
+    "Drops to Don't buy if it loses 0.25 points.",
+    "A move below the 200-day average ($204.81) would cut Trend.",
     "Next earnings report: 2026-12-04."
    ],
    "rating_kept": false,
    "reit": false,
    "metrics": {
-    "ma50": 209.26519958496092,
-    "ma200": 204.53804931640624,
+    "ma50": 209.4093994140625,
+    "ma200": 204.81149925231932,
     "low52": 161.5399932861328,
     "high52": 235.32000732421875,
-    "return_12m": 0.34977947621191374,
-    "return_12_1": 0.23072147252014563,
-    "volatility": 0.20042625924268254,
+    "return_12m": 0.3288964946247468,
+    "return_12_1": 0.2409372451291769,
+    "volatility": 0.19996625499127724,
     "beta": 1.168,
-    "market_cap": 83160019747.74,
-    "forward_pe": 15.119770690670457,
-    "trailing_pe": 18.16220735785953,
+    "market_cap": 82941802220.55,
+    "forward_pe": 15.080095387780844,
+    "trailing_pe": 18.11454849498328,
     "peg": 1.3898,
-    "price_to_book": 2.520304450735601,
+    "price_to_book": 2.513691001067434,
     "eps_growth_next": 0.20122240802675573,
     "roe": 0.14265999,
     "profit_margin": 0.33283,
     "debt_to_equity": null,
     "fcf_yield": null,
-    "dividend_yield": 0.024307154037381457,
+    "dividend_yield": 0.024371105469651513,
     "payout_ratio": 0.4164,
     "cash_payout": null,
     "dividend_cagr_5y": 0.12509792619595683,
@@ -1027,7 +1032,7 @@
     204.96,
     210.58,
     214.61,
-    217.22
+    216.65
    ]
   },
   {
@@ -1037,39 +1042,39 @@
    "sector": "Energy",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 40.51,
-   "day_change": 0.030002451958870635,
-   "week_change": 0.0214321350829898,
+   "price": 41.21,
+   "day_change": 0.01727970357795261,
+   "week_change": 0.0632095167449569,
    "industry": "Oil & Gas Integrated",
    "ex_dividend_date": "2026-12-15",
    "lenses": {
-    "trend": 7.7,
+    "trend": 7.8,
     "garp": 6.0,
     "quality": 8.2,
     "dividend": 7.0
    },
    "notes": {
     "trend": [
-     "+4.7% vs. the 200-day average ($38.68)",
-     "\u22129.1% vs. the 50-day average ($44.56)",
+     "+6.3% vs. the 200-day average ($38.75)",
+     "\u22127.3% vs. the 50-day average ($44.46)",
      "50-day average above the 200-day",
-     "12-month return, leaving out the last month, +74.9% vs. +17.3% for the S&P/TSX Composite",
-     "73% of the way up its 52-week range ($21.95\u2013$47.23)"
+     "12-month return, leaving out the last month, +83.6% vs. +16.7% for the S&P/TSX Composite",
+     "76% of the way up its 52-week range ($21.95\u2013$47.23)"
     ],
     "garp": [
      "PEG 15.91",
-     "Forward P/E 8.2: cheaper than 92% of the 13 other Energy stocks scored",
+     "Forward P/E 8.3: cheaper than 92% of the 13 other Energy stocks scored",
      "+38.4% expected EPS growth next year"
     ],
     "quality": [
      "Return on equity 27.4%",
      "Profit margin 15.4%",
      "Debt-to-equity 0.33",
-     "Free cash flow yield +14.0%",
+     "Free cash flow yield +13.8%",
      "EPS rose in 1 of the last 3 years"
     ],
     "dividend": [
-     "Yield 2.17%",
+     "Yield 2.14%",
      "+73.1% dividend growth per year over 5 years",
      "Payout ratio 23% of earnings",
      "0 straight calendar years of increases"
@@ -1081,12 +1086,12 @@
     "quality": 0.25,
     "dividend": 0.15
    },
-   "composite": 7.21,
+   "composite": 7.24,
    "risk_penalty": 0.25,
-   "adjusted": 6.96,
+   "adjusted": 6.99,
    "rating": "Don't buy",
    "borderline": true,
-   "score_change": 0.15,
+   "score_change": 0.03,
    "reasons": [
     {
      "type": "caution",
@@ -1094,32 +1099,32 @@
     }
    ],
    "triggers": [
-    "Needs 0.04 more points to reach Buy.",
-    "A move below the 200-day average ($38.68) would cut Trend.",
+    "Needs 0.01 more points to reach Buy.",
+    "A move below the 200-day average ($38.75) would cut Trend.",
     "Next earnings report: 2026-11-04."
    ],
    "rating_kept": false,
    "reit": false,
    "metrics": {
-    "ma50": 44.55699996948242,
-    "ma200": 38.67880002975464,
+    "ma50": 44.459399948120115,
+    "ma200": 38.752600021362305,
     "low52": 21.950000762939453,
     "high52": 47.22999954223633,
-    "return_12m": 0.5836590477856449,
-    "return_12_1": 0.7494136095961559,
-    "volatility": 0.37263751743114865,
+    "return_12m": 0.6218024136930369,
+    "return_12_1": 0.8358914524208465,
+    "volatility": 0.3724167923781088,
     "beta": 0.55,
-    "market_cap": 73214614220.0,
-    "forward_pe": 8.154613566732557,
-    "trailing_pe": 11.284122562674094,
+    "market_cap": 74479739620.0,
+    "forward_pe": 8.295522712541317,
+    "trailing_pe": 11.479108635097493,
     "peg": 15.91,
-    "price_to_book": 2.0773293677247318,
+    "price_to_book": 2.1132249628224193,
     "eps_growth_next": 0.38377158774373266,
     "roe": 0.2744,
     "profit_margin": 0.15416999,
     "debt_to_equity": 32.747,
-    "fcf_yield": 0.1403049772704245,
-    "dividend_yield": 0.021723031350283882,
+    "fcf_yield": 0.13792173329834742,
+    "dividend_yield": 0.021354040281485076,
     "payout_ratio": 0.2284,
     "cash_payout": 0.10060366341511537,
     "dividend_cagr_5y": 0.7313190403391285,
@@ -1201,174 +1206,7 @@
     45.98,
     45.78,
     38.74,
-    40.51
-   ]
-  },
-  {
-   "symbol": "POW.TO",
-   "name": "Power Corporation of Canada",
-   "held": false,
-   "sector": "Financial Services",
-   "currency": "CAD",
-   "financial_currency": "CAD",
-   "price": 95.87,
-   "day_change": 0.013746463529162423,
-   "week_change": -0.0022894536340183347,
-   "industry": "Insurance - Life",
-   "ex_dividend_date": "2026-09-29",
-   "lenses": {
-    "trend": 9.0,
-    "garp": 9.2,
-    "quality": 3.1,
-    "dividend": 4.6
-   },
-   "notes": {
-    "trend": [
-     "+16.0% vs. the 200-day average ($82.61)",
-     "+3.1% vs. the 50-day average ($93.00)",
-     "50-day average above the 200-day",
-     "12-month return, leaving out the last month, +29.5% vs. +17.3% for the S&P/TSX Composite",
-     "94% of the way up its 52-week range ($63.44\u2013$98.05)"
-    ],
-    "garp": [
-     "PEG 0.91",
-     "Forward P/E 13.7: cheaper than 73% of the 15 other Financial Services stocks scored",
-     "+75.0% expected EPS growth next year"
-    ],
-    "quality": [
-     "Return on equity 10.2%",
-     "Profit margin 6.7%",
-     "EPS rose in 2 of the last 3 years"
-    ],
-    "dividend": [
-     "Yield 2.79%",
-     "+7.9% dividend growth per year over 5 years",
-     "Payout ratio 63% of earnings",
-     "4 straight calendar years of increases"
-    ]
-   },
-   "weights": {
-    "trend": 0.3,
-    "garp": 0.3,
-    "quality": 0.25,
-    "dividend": 0.15
-   },
-   "composite": 6.92,
-   "risk_penalty": 0,
-   "adjusted": 6.92,
-   "rating": "Don't buy",
-   "borderline": true,
-   "score_change": 0.09,
-   "reasons": [],
-   "triggers": [
-    "Needs 0.08 more points to reach Buy.",
-    "A move below the 200-day average ($82.61) would cut Trend.",
-    "Next earnings report: 2026-11-11."
-   ],
-   "rating_kept": false,
-   "reit": false,
-   "metrics": {
-    "ma50": 92.99880004882813,
-    "ma200": 82.6116498374939,
-    "low52": 63.439998626708984,
-    "high52": 98.05000305175781,
-    "return_12m": 0.39467567247498825,
-    "return_12_1": 0.29487932648226844,
-    "volatility": 0.21396841058771382,
-    "beta": 0.94,
-    "market_cap": 54920736760.55,
-    "forward_pe": 13.658854890160695,
-    "trailing_pe": 23.90773067331671,
-    "peg": 0.9145,
-    "price_to_book": 2.540006358626537,
-    "eps_growth_next": 0.750346633416459,
-    "roe": 0.102390006,
-    "profit_margin": 0.06672,
-    "debt_to_equity": 47.754,
-    "fcf_yield": -0.6649833168704611,
-    "dividend_yield": 0.02785021383122979,
-    "payout_ratio": 0.6305,
-    "cash_payout": 0.2721626925664856,
-    "dividend_cagr_5y": 0.07868128406993935,
-    "dividend_years_raised": 4,
-    "target_price": 102.15,
-    "analyst_rating": "buy",
-    "analyst_count": 10.0
-   },
-   "next_earnings": "2026-11-11",
-   "news": [
-    {
-     "title": "Did Wealthsimple Funding Round Just Shift Power Corp's (TSX:POW) Investment Narrative?",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/did-wealthsimple-funding-round-just-051307521.html",
-     "source": "Simply Wall St.",
-     "published": "2026-10-30T05:13:07Z"
-    },
-    {
-     "title": "Is Power Corporation Of Canada (TSX:POW) Fully Priced As Wealthsimple Investment Lifts The Story?",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/power-corporation-canada-tsx-pow-141353372.html",
-     "source": "Simply Wall St.",
-     "published": "2026-10-29T14:13:53Z"
-    },
-    {
-     "title": "Power Corporation (TSX:POW) Stock May Be Fully Priced On Wealthsimple Funding",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/power-corporation-tsx-pow-stock-131044185.html",
-     "source": "Simply Wall St.",
-     "published": "2026-10-29T13:10:44Z"
-    }
-   ],
-   "chart": [
-    70.27,
-    71.15,
-    70.51,
-    73.12,
-    72.42,
-    73.46,
-    71.93,
-    72.41,
-    72.19,
-    69.97,
-    68.67,
-    64.5,
-    64.66,
-    65.99,
-    68.52,
-    65.95,
-    66.25,
-    64.88,
-    66.19,
-    68.4,
-    70.07,
-    73.36,
-    73.04,
-    76.21,
-    79.4,
-    79.76,
-    81.5,
-    83.33,
-    83.97,
-    86.62,
-    89.02,
-    86.47,
-    89.74,
-    91.04,
-    91.87,
-    92.9,
-    95.8,
-    93.49,
-    95.0,
-    91.39,
-    92.27,
-    95.28,
-    94.37,
-    94.56,
-    94.28,
-    89.95,
-    89.01,
-    92.59,
-    92.42,
-    96.6,
-    91.36,
-    95.87
+    41.21
    ]
   },
   {
@@ -1378,28 +1216,28 @@
    "sector": "Financial Services",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 132.84,
-   "day_change": 0.011266715291278873,
-   "week_change": -0.01234203466252326,
+   "price": 132.22,
+   "day_change": -0.00466723226648158,
+   "week_change": 0.028389155234938013,
    "industry": "Banks - Diversified",
    "ex_dividend_date": "2026-10-06",
    "lenses": {
-    "trend": 9.1,
+    "trend": 9.0,
     "garp": 8.7,
     "quality": 4.9,
     "dividend": 3.9
    },
    "notes": {
     "trend": [
-     "+15.0% vs. the 200-day average ($115.55)",
-     "+2.2% vs. the 50-day average ($130.03)",
+     "+14.3% vs. the 200-day average ($115.69)",
+     "+1.6% vs. the 50-day average ($130.14)",
      "50-day average above the 200-day",
-     "12-month return, leaving out the last month, +34.7% vs. +17.3% for the S&P/TSX Composite",
-     "96% of the way up its 52-week range ($93.59\u2013$134.50)"
+     "12-month return, leaving out the last month, +35.1% vs. +16.7% for the S&P/TSX Composite",
+     "94% of the way up its 52-week range ($93.59\u2013$134.50)"
     ],
     "garp": [
      "PEG 1.02",
-     "Forward P/E 14.0: cheaper than 67% of the 15 other Financial Services stocks scored",
+     "Forward P/E 13.9: cheaper than 67% of the 15 other Financial Services stocks scored",
      "+26.2% expected EPS growth next year"
     ],
     "quality": [
@@ -1408,7 +1246,7 @@
      "EPS rose in 1 of the last 3 years"
     ],
     "dividend": [
-     "Yield 3.43%",
+     "Yield 3.45%",
      "+4.5% dividend growth per year over 5 years",
      "Payout ratio 58% of earnings",
      "3 straight calendar years of increases"
@@ -1420,12 +1258,12 @@
     "quality": 0.25,
     "dividend": 0.15
    },
-   "composite": 7.15,
+   "composite": 7.12,
    "risk_penalty": 0.25,
-   "adjusted": 6.9,
+   "adjusted": 6.87,
    "rating": "Don't buy",
    "borderline": true,
-   "score_change": 0.12,
+   "score_change": -0.03,
    "reasons": [
     {
      "type": "caution",
@@ -1433,32 +1271,32 @@
     }
    ],
    "triggers": [
-    "Needs 0.10 more points to reach Buy.",
-    "A move below the 200-day average ($115.55) would cut Trend.",
+    "Needs 0.13 more points to reach Buy.",
+    "A move below the 200-day average ($115.69) would cut Trend.",
     "Next earnings report: 2026-12-02."
    ],
    "rating_kept": false,
    "reit": false,
    "metrics": {
-    "ma50": 130.03140075683595,
-    "ma200": 115.55010013580322,
+    "ma50": 130.1406007385254,
+    "ma200": 115.69365013122558,
     "low52": 93.58999633789062,
     "high52": 134.5,
-    "return_12m": 0.4201410630501674,
-    "return_12_1": 0.34733801096613304,
-    "volatility": 0.19006362324729345,
+    "return_12m": 0.39178948653371704,
+    "return_12_1": 0.35094732987253296,
+    "volatility": 0.18996894834336817,
     "beta": 1.204,
-    "market_cap": 161640584758.80002,
-    "forward_pe": 13.995650854657633,
-    "trailing_pe": 17.664893617021278,
+    "market_cap": 160886164685.4,
+    "forward_pe": 13.93032938875965,
+    "trailing_pe": 17.58244680851064,
     "peg": 1.016,
-    "price_to_book": 1.8160938397178246,
+    "price_to_book": 1.8076176414294698,
     "eps_growth_next": 0.26217021276595753,
     "roe": 0.11459,
     "profit_margin": 0.28430998,
     "debt_to_equity": null,
     "fcf_yield": null,
-    "dividend_yield": 0.03432700993676603,
+    "dividend_yield": 0.034487974587808196,
     "payout_ratio": 0.5804,
     "cash_payout": null,
     "dividend_cagr_5y": 0.044708438422444985,
@@ -1540,7 +1378,7 @@
     130.0,
     131.05,
     129.54,
-    132.84
+    132.22
    ]
   },
   {
@@ -1550,9 +1388,9 @@
    "sector": "Industrials",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 181.69,
-   "day_change": 0.010511676071019771,
-   "week_change": 0.0069275104360848605,
+   "price": 181.9,
+   "day_change": 0.00115576780371196,
+   "week_change": 0.02629196715692972,
    "industry": "Railroads",
    "ex_dividend_date": "2026-12-09",
    "lenses": {
@@ -1563,10 +1401,10 @@
    },
    "notes": {
     "trend": [
-     "+12.2% vs. the 200-day average ($161.89)",
-     "+6.1% vs. the 50-day average ($171.27)",
+     "+12.2% vs. the 200-day average ($162.12)",
+     "+6.0% vs. the 50-day average ($171.56)",
      "50-day average above the 200-day",
-     "12-month return, leaving out the last month, +25.0% vs. +17.3% for the S&P/TSX Composite",
+     "12-month return, leaving out the last month, +23.4% vs. +16.7% for the S&P/TSX Composite",
      "96% of the way up its 52-week range ($128.08\u2013$183.92)"
     ],
     "garp": [
@@ -1599,36 +1437,36 @@
    "adjusted": 6.8,
    "rating": "Don't buy",
    "borderline": true,
-   "score_change": -0.12,
+   "score_change": 0.0,
    "reasons": [],
    "triggers": [
     "Needs 0.20 more points to reach Buy.",
-    "A move below the 200-day average ($161.89) would cut Trend.",
+    "A move below the 200-day average ($162.12) would cut Trend.",
     "Forward P/E falling below 20 (now 20.2) would lift GARP.",
     "Next earnings report: 2027-01-28."
    ],
    "rating_kept": false,
    "reit": false,
    "metrics": {
-    "ma50": 171.26880004882813,
-    "ma200": 161.89459983825682,
+    "ma50": 171.55759979248046,
+    "ma200": 162.12149978637694,
     "low52": 128.0800018310547,
     "high52": 183.9199981689453,
-    "return_12m": 0.35155852369647045,
-    "return_12_1": 0.25016742330650477,
-    "volatility": 0.21661040207867738,
+    "return_12m": 0.32667196474909255,
+    "return_12_1": 0.2341186343856827,
+    "volatility": 0.21620347037194884,
     "beta": 0.953,
-    "market_cap": 108959493000.0,
-    "forward_pe": 20.16371574365701,
-    "trailing_pe": 22.82537688442211,
+    "market_cap": 109085430000.0,
+    "forward_pe": 20.187021265734003,
+    "trailing_pe": 22.85175879396985,
     "peg": 2.5197,
-    "price_to_book": 4.975899654926877,
+    "price_to_book": 4.981650873637508,
     "eps_growth_next": 0.13200251256281414,
     "roe": 0.2245,
     "profit_margin": 0.26417,
     "debt_to_equity": 108.792,
-    "fcf_yield": 0.022535898106647762,
-    "dividend_yield": 0.02014420166217183,
+    "fcf_yield": 0.02250988085209913,
+    "dividend_yield": 0.02012094557449148,
     "payout_ratio": 0.45630002,
     "cash_payout": 0.3132441815259558,
     "dividend_cagr_5y": 0.08465096350278944,
@@ -1710,181 +1548,7 @@
     172.5,
     172.81,
     175.21,
-    181.69
-   ]
-  },
-  {
-   "symbol": "CJT.TO",
-   "name": "Cargojet Inc.",
-   "held": false,
-   "sector": "Industrials",
-   "currency": "CAD",
-   "financial_currency": "CAD",
-   "price": 98.62,
-   "day_change": 0.014087431841460551,
-   "week_change": 0.016177224579652316,
-   "industry": "Airlines",
-   "ex_dividend_date": "2026-09-18",
-   "lenses": {
-    "trend": 8.9,
-    "garp": 7.3,
-    "quality": 3.9,
-    "dividend": 5.9
-   },
-   "notes": {
-    "trend": [
-     "+14.6% vs. the 200-day average ($86.07)",
-     "+14.5% vs. the 50-day average ($86.16)",
-     "50-day average above the 200-day",
-     "12-month return, leaving out the last month, +26.6% vs. +17.3% for the S&P/TSX Composite",
-     "100% of the way up its 52-week range ($71.85\u2013$98.62)"
-    ],
-    "garp": [
-     "Forward P/E 21.9: cheaper than 46% of the 13 other Industrials stocks scored",
-     "+47.0% expected EPS growth next year"
-    ],
-    "quality": [
-     "Return on equity 6.3%",
-     "Profit margin 4.5%",
-     "Debt-to-equity 1.19",
-     "Free cash flow yield +6.7%",
-     "EPS rose in 1 of the last 3 years"
-    ],
-    "dividend": [
-     "Yield 1.56%",
-     "+8.2% dividend growth per year over 5 years",
-     "Payout ratio 48% of earnings",
-     "6 straight calendar years of increases"
-    ]
-   },
-   "weights": {
-    "trend": 0.3,
-    "garp": 0.3,
-    "quality": 0.25,
-    "dividend": 0.15
-   },
-   "composite": 6.72,
-   "risk_penalty": 0,
-   "adjusted": 6.72,
-   "rating": "Don't buy",
-   "borderline": true,
-   "score_change": 0.48,
-   "reasons": [
-    {
-     "type": "move",
-     "text": "Score up 0.48 since the last update"
-    }
-   ],
-   "triggers": [
-    "Needs 0.28 more points to reach Buy.",
-    "A move below the 200-day average ($86.07) would cut Trend.",
-    "Forward P/E falling below 20 (now 21.9) would lift GARP.",
-    "Next earnings report: 2026-11-11."
-   ],
-   "rating_kept": false,
-   "reit": false,
-   "metrics": {
-    "ma50": 86.15660018920899,
-    "ma200": 86.07014980316163,
-    "low52": 71.8499984741211,
-    "high52": 98.62000274658203,
-    "return_12m": 0.4332220061860077,
-    "return_12_1": 0.26580441163295876,
-    "volatility": 0.3199787957225442,
-    "beta": 1.101,
-    "market_cap": 1459562094.5800002,
-    "forward_pe": 21.930517041626178,
-    "trailing_pe": 32.22875816993464,
-    "peg": null,
-    "price_to_book": 1.987705331049078,
-    "eps_growth_next": 0.46958496732026145,
-    "roe": 0.063439995,
-    "profit_margin": 0.04492,
-    "debt_to_equity": 119.27,
-    "fcf_yield": 0.0665781883215889,
-    "dividend_yield": 0.01561549381464206,
-    "payout_ratio": 0.4804,
-    "cash_payout": 0.07402332854822995,
-    "dividend_cagr_5y": 0.08218051232896095,
-    "dividend_years_raised": 6,
-    "target_price": 122.0,
-    "analyst_rating": "buy",
-    "analyst_count": 13.0
-   },
-   "next_earnings": "2026-11-11",
-   "news": [
-    {
-     "title": "Auto & Transport Roundup: Market Talk",
-     "url": "https://www.wsj.com/business/auto-transport-roundup-market-talk-6a0cdae5?siteid=yhoof2&yptr=yahoo",
-     "source": "The Wall Street Journal",
-     "published": "2026-09-25T21:10:00Z"
-    },
-    {
-     "title": "Cargojet Inc's Dividend Analysis",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/cargojet-incs-dividend-analysis-110615079.html",
-     "source": "GuruFocus.com",
-     "published": "2026-09-18T11:06:15Z"
-    },
-    {
-     "title": "Cargojet to pass large pilot wage increase onto customers",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/cargojet-pass-large-pilot-wage-124600024.html",
-     "source": "FreightWaves",
-     "published": "2026-08-20T12:46:00Z"
-    }
-   ],
-   "chart": [
-    75.88,
-    81.19,
-    80.21,
-    75.74,
-    83.74,
-    85.35,
-    85.82,
-    90.4,
-    91.37,
-    93.74,
-    92.96,
-    95.43,
-    94.86,
-    97.9,
-    95.42,
-    90.8,
-    85.03,
-    81.4,
-    79.96,
-    82.76,
-    81.31,
-    83.53,
-    79.39,
-    77.62,
-    81.3,
-    82.9,
-    84.8,
-    86.29,
-    81.56,
-    83.18,
-    81.62,
-    81.41,
-    86.87,
-    87.27,
-    86.02,
-    85.47,
-    84.49,
-    86.81,
-    89.26,
-    86.42,
-    85.13,
-    79.24,
-    80.22,
-    81.59,
-    89.15,
-    91.06,
-    87.1,
-    85.62,
-    83.11,
-    85.81,
-    95.12,
-    98.62
+    181.9
    ]
   },
   {
@@ -1894,29 +1558,29 @@
    "sector": "Energy",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 98.21,
-   "day_change": 0.02174361504546396,
-   "week_change": -0.026080893979859687,
+   "price": 98.8,
+   "day_change": 0.00600757532619145,
+   "week_change": 0.021188662033672534,
    "industry": "Oil & Gas Integrated",
    "ex_dividend_date": "2026-12-03",
    "lenses": {
-    "trend": 8.4,
+    "trend": 8.5,
     "garp": 3.4,
     "quality": 8.1,
     "dividend": 7.5
    },
    "notes": {
     "trend": [
-     "+10.2% vs. the 200-day average ($89.11)",
-     "\u22122.4% vs. the 50-day average ($100.62)",
+     "+10.7% vs. the 200-day average ($89.25)",
+     "\u22121.9% vs. the 50-day average ($100.67)",
      "50-day average above the 200-day",
-     "12-month return, leaving out the last month, +66.9% vs. +17.3% for the S&P/TSX Composite",
-     "75% of the way up its 52-week range ($58.06\u2013$111.42)"
+     "12-month return, leaving out the last month, +72.5% vs. +16.7% for the S&P/TSX Composite",
+     "76% of the way up its 52-week range ($58.06\u2013$111.42)"
     ],
     "garp": [
      "PEG 11.41",
      "Forward P/E 9.9: cheaper than 77% of the 13 other Energy stocks scored",
-     "+5.8% expected EPS growth next year"
+     "+5.7% expected EPS growth next year"
     ],
     "quality": [
      "Return on equity 23.5%",
@@ -1926,7 +1590,7 @@
      "EPS rose in 1 of the last 3 years"
     ],
     "dividend": [
-     "Yield 2.69%",
+     "Yield 2.67%",
      "+23.4% dividend growth per year over 5 years",
      "Payout ratio 26% of earnings",
      "4 straight calendar years of increases"
@@ -1938,41 +1602,41 @@
     "quality": 0.25,
     "dividend": 0.15
    },
-   "composite": 6.69,
+   "composite": 6.72,
    "risk_penalty": 0,
-   "adjusted": 6.69,
+   "adjusted": 6.72,
    "rating": "Hold",
    "borderline": false,
-   "score_change": 0.15,
+   "score_change": 0.03,
    "reasons": [],
    "triggers": [
-    "Needs 1.31 more points to reach Buy more.",
-    "Drops to Sell if it loses 1.70 points.",
-    "A move below the 200-day average ($89.11) would cut Trend.",
+    "Needs 1.28 more points to reach Buy more.",
+    "Drops to Sell if it loses 1.73 points.",
+    "A move below the 200-day average ($89.25) would cut Trend.",
     "Next earnings report: 2027-02-02."
    ],
    "rating_kept": false,
    "reit": false,
    "metrics": {
-    "ma50": 100.61519973754883,
-    "ma200": 89.10905014038086,
+    "ma50": 100.6713998413086,
+    "ma200": 89.25015014648437,
     "low52": 58.060001373291016,
     "high52": 111.41999816894531,
-    "return_12m": 0.5912183593983706,
-    "return_12_1": 0.6694750304211594,
-    "volatility": 0.29132126834870714,
+    "return_12m": 0.5956073316117909,
+    "return_12_1": 0.7251292450521674,
+    "volatility": 0.2906610911613668,
     "beta": 0.471,
-    "market_cap": 113061731824.71999,
-    "forward_pe": 9.865225807294099,
-    "trailing_pe": 10.436769394261423,
+    "market_cap": 113740954121.59999,
+    "forward_pe": 9.933711578504976,
+    "trailing_pe": 10.499468650371945,
     "peg": 11.41,
-    "price_to_book": 2.290131517582315,
-    "eps_growth_next": 0.0579351753453774,
+    "price_to_book": 2.3038895625408076,
+    "eps_growth_next": 0.056953241232731155,
     "roe": 0.23455,
     "profit_margin": 0.17683001,
     "debt_to_equity": 29.066,
-    "fcf_yield": 0.10727768142454808,
-    "dividend_yield": 0.026881172996639856,
+    "fcf_yield": 0.10663705559417881,
+    "dividend_yield": 0.026720647773279354,
     "payout_ratio": 0.255,
     "cash_payout": 0.1669265599126875,
     "dividend_cagr_5y": 0.2336341725167208,
@@ -1984,6 +1648,12 @@
    "next_earnings": "2027-02-02",
    "news": [
     {
+     "title": "Top Research Reports for Home Depot, Gilead & TotalEnergies",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/top-research-reports-home-depot-200700776.html",
+     "source": "Zacks",
+     "published": "2026-11-12T20:07:00Z"
+    },
+    {
      "title": "Is Baytex Energy (BTE) Outperforming Other Oils-Energy Stocks This Year?",
      "url": "https://finance.yahoo.com/markets/stocks/articles/baytex-energy-bte-outperforming-other-200710072.html",
      "source": "Zacks",
@@ -1994,12 +1664,6 @@
      "url": "https://finance.yahoo.com/energy/articles/imperial-oil-stock-rises-43-160600909.html",
      "source": "Zacks",
      "published": "2026-11-11T16:06:00Z"
-    },
-    {
-     "title": "CVE Outperforms Industry YTD: Should You Buy the Stock Now?",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/cve-outperforms-industry-ytd-buy-185900937.html",
-     "source": "Zacks",
-     "published": "2026-11-10T18:59:00Z"
     }
    ],
    "chart": [
@@ -2054,7 +1718,179 @@
     111.18,
     111.11,
     97.1,
-    98.21
+    98.8
+   ]
+  },
+  {
+   "symbol": "POW.TO",
+   "name": "Power Corporation of Canada",
+   "held": false,
+   "sector": "Financial Services",
+   "currency": "CAD",
+   "financial_currency": "CAD",
+   "price": 92.93,
+   "day_change": -0.030666552176677242,
+   "week_change": 0.012861038748509968,
+   "industry": "Insurance - Life",
+   "ex_dividend_date": "2026-09-29",
+   "lenses": {
+    "trend": 8.1,
+    "garp": 9.2,
+    "quality": 3.1,
+    "dividend": 4.6
+   },
+   "notes": {
+    "trend": [
+     "+12.3% vs. the 200-day average ($82.73)",
+     "\u22120.1% vs. the 50-day average ($93.05)",
+     "50-day average above the 200-day",
+     "12-month return, leaving out the last month, +29.4% vs. +16.7% for the S&P/TSX Composite",
+     "85% of the way up its 52-week range ($63.44\u2013$98.05)"
+    ],
+    "garp": [
+     "PEG 0.91",
+     "Forward P/E 13.2: cheaper than 73% of the 15 other Financial Services stocks scored",
+     "+75.0% expected EPS growth next year"
+    ],
+    "quality": [
+     "Return on equity 10.2%",
+     "Profit margin 6.7%",
+     "EPS rose in 2 of the last 3 years"
+    ],
+    "dividend": [
+     "Yield 2.87%",
+     "+7.9% dividend growth per year over 5 years",
+     "Payout ratio 63% of earnings",
+     "4 straight calendar years of increases"
+    ]
+   },
+   "weights": {
+    "trend": 0.3,
+    "garp": 0.3,
+    "quality": 0.25,
+    "dividend": 0.15
+   },
+   "composite": 6.65,
+   "risk_penalty": 0,
+   "adjusted": 6.65,
+   "rating": "Don't buy",
+   "borderline": true,
+   "score_change": -0.27,
+   "reasons": [
+    {
+     "type": "caution",
+     "text": "Score down 0.27 since the last update"
+    }
+   ],
+   "triggers": [
+    "Needs 0.35 more points to reach Buy.",
+    "A move below the 200-day average ($82.73) would cut Trend.",
+    "Next earnings report: 2026-11-11."
+   ],
+   "rating_kept": false,
+   "reit": false,
+   "metrics": {
+    "ma50": 93.05240005493164,
+    "ma200": 82.72814985275268,
+    "low52": 63.439998626708984,
+    "high52": 98.05000305175781,
+    "return_12m": 0.3298512300761487,
+    "return_12_1": 0.2939324802924588,
+    "volatility": 0.2161467385463982,
+    "beta": 0.94,
+    "market_cap": 53236508471.450005,
+    "forward_pe": 13.23998523983137,
+    "trailing_pe": 23.174563591022448,
+    "peg": 0.9145,
+    "price_to_book": 2.462113183552353,
+    "eps_growth_next": 0.750346633416459,
+    "roe": 0.102390006,
+    "profit_margin": 0.06672,
+    "debt_to_equity": 47.754,
+    "fcf_yield": -0.6860212050830851,
+    "dividend_yield": 0.028731303131389215,
+    "payout_ratio": 0.6305,
+    "cash_payout": 0.2721626925664856,
+    "dividend_cagr_5y": 0.07868128406993935,
+    "dividend_years_raised": 4,
+    "target_price": 102.15,
+    "analyst_rating": "buy",
+    "analyst_count": 10.0
+   },
+   "next_earnings": "2026-11-11",
+   "news": [
+    {
+     "title": "Did Wealthsimple Funding Round Just Shift Power Corp's (TSX:POW) Investment Narrative?",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/did-wealthsimple-funding-round-just-051307521.html",
+     "source": "Simply Wall St.",
+     "published": "2026-10-30T05:13:07Z"
+    },
+    {
+     "title": "Is Power Corporation Of Canada (TSX:POW) Fully Priced As Wealthsimple Investment Lifts The Story?",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/power-corporation-canada-tsx-pow-141353372.html",
+     "source": "Simply Wall St.",
+     "published": "2026-10-29T14:13:53Z"
+    },
+    {
+     "title": "Power Corporation (TSX:POW) Stock May Be Fully Priced On Wealthsimple Funding",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/power-corporation-tsx-pow-stock-131044185.html",
+     "source": "Simply Wall St.",
+     "published": "2026-10-29T13:10:44Z"
+    }
+   ],
+   "chart": [
+    70.27,
+    71.15,
+    70.51,
+    73.12,
+    72.42,
+    73.46,
+    71.93,
+    72.41,
+    72.19,
+    69.97,
+    68.67,
+    64.5,
+    64.66,
+    65.99,
+    68.52,
+    65.95,
+    66.25,
+    64.88,
+    66.19,
+    68.4,
+    70.07,
+    73.36,
+    73.04,
+    76.21,
+    79.4,
+    79.76,
+    81.5,
+    83.33,
+    83.97,
+    86.62,
+    89.02,
+    86.47,
+    89.74,
+    91.04,
+    91.87,
+    92.9,
+    95.8,
+    93.49,
+    95.0,
+    91.39,
+    92.27,
+    95.28,
+    94.37,
+    94.56,
+    94.28,
+    89.95,
+    89.01,
+    92.59,
+    92.42,
+    96.6,
+    91.36,
+    92.93
    ]
   },
   {
@@ -2064,27 +1900,27 @@
    "sector": "Financial Services",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 290.0,
-   "day_change": 0.008485194262491502,
-   "week_change": -0.008784247393379352,
+   "price": 289.39,
+   "day_change": -0.0021033977640085855,
+   "week_change": 0.012348805281486408,
    "industry": "Banks - Diversified",
    "ex_dividend_date": "2026-10-26",
    "lenses": {
-    "trend": 8.9,
+    "trend": 8.8,
     "garp": 4.2,
     "quality": 7.1,
     "dividend": 6.1
    },
    "notes": {
     "trend": [
-     "+9.4% vs. the 200-day average ($264.98)",
-     "+2.3% vs. the 50-day average ($283.45)",
+     "+9.1% vs. the 200-day average ($265.28)",
+     "+2.1% vs. the 50-day average ($283.57)",
      "50-day average above the 200-day",
-     "12-month return, leaving out the last month, +32.4% vs. +17.3% for the S&P/TSX Composite",
+     "12-month return, leaving out the last month, +32.8% vs. +16.7% for the S&P/TSX Composite",
      "84% of the way up its 52-week range ($205.46\u2013$305.74)"
     ],
     "garp": [
-     "PEG 1.92",
+     "PEG 1.94",
      "Forward P/E 16.2: cheaper than 20% of the 15 other Financial Services stocks scored",
      "+12.6% expected EPS growth next year"
     ],
@@ -2106,41 +1942,41 @@
     "quality": 0.25,
     "dividend": 0.15
    },
-   "composite": 6.62,
+   "composite": 6.59,
    "risk_penalty": 0,
-   "adjusted": 6.62,
+   "adjusted": 6.59,
    "rating": "Hold",
    "borderline": false,
-   "score_change": 0.09,
+   "score_change": -0.03,
    "reasons": [],
    "triggers": [
-    "Needs 1.38 more points to reach Buy more.",
-    "Drops to Sell if it loses 1.63 points.",
-    "A move below the 200-day average ($264.98) would cut Trend.",
+    "Needs 1.41 more points to reach Buy more.",
+    "Drops to Sell if it loses 1.60 points.",
+    "A move below the 200-day average ($265.28) would cut Trend.",
     "Next earnings report: 2026-12-03."
    ],
    "rating_kept": false,
    "reit": false,
    "metrics": {
-    "ma50": 283.4478009033203,
-    "ma200": 264.9771502685547,
+    "ma50": 283.57340148925783,
+    "ma200": 265.27815032958983,
     "low52": 205.4600067138672,
     "high52": 305.739990234375,
-    "return_12m": 0.40225329250747044,
-    "return_12_1": 0.3238238093481389,
-    "volatility": 0.15721538262655915,
+    "return_12m": 0.38623310147175394,
+    "return_12_1": 0.32808012691780997,
+    "volatility": 0.1572193884978963,
     "beta": 0.916,
-    "market_cap": 401484641710.0,
-    "forward_pe": 16.241648852191474,
-    "trailing_pe": 18.284993694829762,
-    "peg": 1.9211,
-    "price_to_book": 2.9981597502222774,
-    "eps_growth_next": 0.12580895334174014,
+    "market_cap": 400640139532.61,
+    "forward_pe": 16.206722942265895,
+    "trailing_pe": 18.24653215636822,
+    "peg": 1.9374,
+    "price_to_book": 2.991853276264913,
+    "eps_growth_next": 0.12586191677175274,
     "roe": 0.16209,
     "profit_margin": 0.33870998,
     "debt_to_equity": null,
     "fcf_yield": null,
-    "dividend_yield": 0.024275862068965516,
+    "dividend_yield": 0.02432703272400567,
     "payout_ratio": 0.4149,
     "cash_payout": null,
     "dividend_cagr_5y": 0.09497709143447408,
@@ -2222,7 +2058,7 @@
     281.77,
     283.93,
     284.16,
-    290.0
+    289.39
    ]
   },
   {
@@ -2232,28 +2068,28 @@
    "sector": "Technology",
    "currency": "CAD",
    "financial_currency": "USD",
-   "price": 3454.21,
-   "day_change": 0.009672225065632256,
-   "week_change": -0.003395870604439577,
+   "price": 3496.8799,
+   "day_change": 0.012353019172991697,
+   "week_change": -0.004217359402698073,
    "industry": "Software - Application",
    "ex_dividend_date": "2026-09-18",
    "lenses": {
-    "trend": 6.9,
+    "trend": 7.0,
     "garp": 8.9,
     "quality": 7.1,
     "dividend": 4.1
    },
    "notes": {
     "trend": [
-     "+23.5% vs. the 200-day average ($2,797.90)",
-     "+11.6% vs. the 50-day average ($3,094.65)",
+     "+24.8% vs. the 200-day average ($2,802.13)",
+     "+12.7% vs. the 50-day average ($3,103.58)",
      "50-day average above the 200-day",
-     "12-month return, leaving out the last month, \u22127.8% vs. +17.3% for the S&P/TSX Composite",
-     "94% of the way up its 52-week range ($2,258.18\u2013$3,526.52)"
+     "12-month return, leaving out the last month, \u22127.8% vs. +16.7% for the S&P/TSX Composite",
+     "98% of the way up its 52-week range ($2,258.18\u2013$3,526.52)"
     ],
     "garp": [
      "PEG 0.62",
-     "Forward P/E 17.9: cheaper than 60% of the 10 other Technology stocks scored",
+     "Forward P/E 18.2: cheaper than 60% of the 10 other Technology stocks scored",
      "+205.1% expected EPS growth next year"
     ],
     "quality": [
@@ -2276,12 +2112,12 @@
     "quality": 0.25,
     "dividend": 0.15
    },
-   "composite": 7.13,
+   "composite": 7.16,
    "risk_penalty": 0.75,
-   "adjusted": 6.38,
+   "adjusted": 6.41,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": 0.0,
+   "score_change": 0.03,
    "reasons": [
     {
      "type": "caution",
@@ -2289,36 +2125,36 @@
     },
     {
      "type": "caution",
-     "text": "Stretched valuation (forward P/E 17.9)"
+     "text": "Stretched valuation (forward P/E 18.2)"
     }
    ],
    "triggers": [
-    "Needs 0.62 more points to reach Buy.",
-    "A move below the 200-day average ($2,797.90) would cut Trend.",
+    "Needs 0.59 more points to reach Buy.",
+    "A move below the 200-day average ($2,802.13) would cut Trend.",
     "Next earnings report: 2026-11-06."
    ],
    "rating_kept": false,
    "reit": false,
    "metrics": {
-    "ma50": 3094.64640625,
-    "ma200": 2797.9010510253906,
+    "ma50": 3103.58400390625,
+    "ma200": 2802.1289501953124,
     "low52": 2258.179931640625,
     "high52": 3526.52001953125,
-    "return_12m": 0.060461656609786196,
-    "return_12_1": -0.07782283590687833,
-    "volatility": 0.4371408875500736,
+    "return_12m": 0.04206235399310443,
+    "return_12_1": -0.07820651331713846,
+    "volatility": 0.4370406175727691,
     "beta": 0.724,
-    "market_cap": 73199994841.3,
-    "forward_pe": 17.94517671391735,
-    "trailing_pe": 54.759194673430564,
+    "market_cap": 74104235307.247,
+    "forward_pe": 18.166853709776078,
+    "trailing_pe": 55.435635700697524,
     "peg": 0.6216,
-    "price_to_book": 12.102193058044918,
+    "price_to_book": 12.25169160259417,
     "eps_growth_next": 2.051471464806595,
     "roe": 0.24221,
     "profit_margin": 0.07293,
     "debt_to_equity": 113.113,
-    "fcf_yield": 0.04334016655162455,
-    "dividend_yield": 0.0016356851494263524,
+    "fcf_yield": 0.042811317799129174,
+    "dividend_yield": 0.0016157260648271051,
     "payout_ratio": 0.088,
     "cash_payout": 0.04157366128472223,
     "dividend_cagr_5y": 0.02159714949472602,
@@ -2400,8 +2236,364 @@
     3395.0,
     3393.3899,
     3526.52,
-    3454.21
+    3496.8799
    ]
+  },
+  {
+   "symbol": "CJT.TO",
+   "name": "Cargojet Inc.",
+   "held": false,
+   "sector": "Industrials",
+   "currency": "CAD",
+   "financial_currency": "CAD",
+   "price": 108.77,
+   "day_change": 0.10292023538638717,
+   "week_change": 0.15210245126513322,
+   "industry": "Airlines",
+   "ex_dividend_date": "2026-09-18",
+   "lenses": {
+    "trend": 8.5,
+    "garp": 6.3,
+    "quality": 3.9,
+    "dividend": 5.9
+   },
+   "notes": {
+    "trend": [
+     "+26.3% vs. the 200-day average ($86.14)",
+     "+25.4% vs. the 50-day average ($86.70)",
+     "50-day average above the 200-day",
+     "12-month return, leaving out the last month, +19.1% vs. +16.7% for the S&P/TSX Composite",
+     "100% of the way up its 52-week range ($71.85\u2013$108.77)"
+    ],
+    "garp": [
+     "Forward P/E 24.2: cheaper than 31% of the 13 other Industrials stocks scored",
+     "+47.0% expected EPS growth next year"
+    ],
+    "quality": [
+     "Return on equity 6.3%",
+     "Profit margin 4.5%",
+     "Debt-to-equity 1.19",
+     "Free cash flow yield +6.0%",
+     "EPS rose in 1 of the last 3 years"
+    ],
+    "dividend": [
+     "Yield 1.42%",
+     "+8.2% dividend growth per year over 5 years",
+     "Payout ratio 48% of earnings",
+     "6 straight calendar years of increases"
+    ]
+   },
+   "weights": {
+    "trend": 0.3,
+    "garp": 0.3,
+    "quality": 0.25,
+    "dividend": 0.15
+   },
+   "composite": 6.3,
+   "risk_penalty": 0,
+   "adjusted": 6.3,
+   "rating": "Don't buy",
+   "borderline": false,
+   "score_change": -0.42,
+   "reasons": [
+    {
+     "type": "caution",
+     "text": "Score down 0.42 since the last update"
+    }
+   ],
+   "triggers": [
+    "Needs 0.70 more points to reach Buy.",
+    "A move below the 200-day average ($86.14) would cut Trend.",
+    "Forward P/E falling below 20 (now 24.2) would lift GARP.",
+    "Next earnings report: 2026-11-11."
+   ],
+   "rating_kept": false,
+   "reit": false,
+   "metrics": {
+    "ma50": 86.70440017700196,
+    "ma200": 86.14399978637695,
+    "low52": 71.8499984741211,
+    "high52": 108.7699966430664,
+    "return_12m": 0.5058838652625539,
+    "return_12_1": 0.19147159848958495,
+    "volatility": 0.3356262122921214,
+    "beta": 1.101,
+    "market_cap": 1609780663.4299998,
+    "forward_pe": 24.18761243781869,
+    "trailing_pe": 35.545751633986924,
+    "peg": null,
+    "price_to_book": 2.192280560314421,
+    "eps_growth_next": 0.46958496732026145,
+    "roe": 0.063439995,
+    "profit_margin": 0.04492,
+    "debt_to_equity": 119.27,
+    "fcf_yield": 0.06036536666613127,
+    "dividend_yield": 0.014158315712052956,
+    "payout_ratio": 0.4804,
+    "cash_payout": 0.07402332854822995,
+    "dividend_cagr_5y": 0.08218051232896095,
+    "dividend_years_raised": 6,
+    "target_price": 122.0,
+    "analyst_rating": "buy",
+    "analyst_count": 13.0
+   },
+   "next_earnings": "2026-11-11",
+   "news": [
+    {
+     "title": "Auto & Transport Roundup: Market Talk",
+     "url": "https://www.wsj.com/business/auto-transport-roundup-market-talk-6a0cdae5?siteid=yhoof2&yptr=yahoo",
+     "source": "The Wall Street Journal",
+     "published": "2026-09-25T21:10:00Z"
+    },
+    {
+     "title": "Cargojet Inc's Dividend Analysis",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/cargojet-incs-dividend-analysis-110615079.html",
+     "source": "GuruFocus.com",
+     "published": "2026-09-18T11:06:15Z"
+    },
+    {
+     "title": "Cargojet to pass large pilot wage increase onto customers",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/cargojet-pass-large-pilot-wage-124600024.html",
+     "source": "FreightWaves",
+     "published": "2026-08-20T12:46:00Z"
+    }
+   ],
+   "chart": [
+    75.88,
+    81.19,
+    80.21,
+    75.74,
+    83.74,
+    85.35,
+    85.82,
+    90.4,
+    91.37,
+    93.74,
+    92.96,
+    95.43,
+    94.86,
+    97.9,
+    95.42,
+    90.8,
+    85.03,
+    81.4,
+    79.96,
+    82.76,
+    81.31,
+    83.53,
+    79.39,
+    77.62,
+    81.3,
+    82.9,
+    84.8,
+    86.29,
+    81.56,
+    83.18,
+    81.62,
+    81.41,
+    86.87,
+    87.27,
+    86.02,
+    85.47,
+    84.49,
+    86.81,
+    89.26,
+    86.42,
+    85.13,
+    79.24,
+    80.22,
+    81.59,
+    89.15,
+    91.06,
+    87.1,
+    85.62,
+    83.11,
+    85.81,
+    95.12,
+    108.77
+   ]
+  },
+  {
+   "symbol": "AMD",
+   "name": "Advanced Micro Devices, Inc.",
+   "held": true,
+   "sector": "Technology",
+   "currency": "USD",
+   "financial_currency": "USD",
+   "price": 585.3,
+   "day_change": 0.05860003969658378,
+   "week_change": 0.44732936851326954,
+   "industry": "Semiconductors",
+   "ex_dividend_date": "1995-04-27",
+   "lenses": {
+    "trend": 9.9,
+    "garp": 7.4,
+    "quality": 5.6,
+    "dividend": null
+   },
+   "notes": {
+    "trend": [
+     "+38.8% vs. the 200-day average ($421.71)",
+     "+5.8% vs. the 50-day average ($552.99)",
+     "50-day average above the 200-day",
+     "12-month return, leaving out the last month, +133.9% vs. +13.9% for the S&P 500",
+     "86% of the way up its 52-week range ($190.95\u2013$649.42)"
+    ],
+    "garp": [
+     "PEG 0.50",
+     "Forward P/E 33.1: cheaper than 20% of the 10 other Technology stocks scored",
+     "+278.0% expected EPS growth next year"
+    ],
+    "quality": [
+     "Return on equity 12.0%",
+     "Profit margin 16.8%",
+     "Debt-to-equity 0.13",
+     "Free cash flow yield +0.8%",
+     "EPS rose in 2 of the last 3 years"
+    ],
+    "dividend": [
+     "Pays no dividend"
+    ]
+   },
+   "weights": {
+    "trend": 0.3529,
+    "garp": 0.3529,
+    "quality": 0.2941
+   },
+   "composite": 7.75,
+   "risk_penalty": 1.5,
+   "adjusted": 6.25,
+   "rating": "Hold",
+   "borderline": false,
+   "score_change": 0.24,
+   "reasons": [
+    {
+     "type": "caution",
+     "text": "High beta (2.54): moves much more than the market"
+    },
+    {
+     "type": "caution",
+     "text": "Very volatile (73% a year)"
+    },
+    {
+     "type": "caution",
+     "text": "Stretched valuation (forward P/E 33.1)"
+    }
+   ],
+   "triggers": [
+    "Needs 1.75 more points to reach Buy more.",
+    "Drops to Sell if it loses 1.26 points.",
+    "A move below the 200-day average ($421.71) would cut Trend.",
+    "Forward P/E falling below 20 (now 33.1) would lift GARP."
+   ],
+   "rating_kept": false,
+   "reit": false,
+   "metrics": {
+    "ma50": 552.9941986083984,
+    "ma200": 421.7086499786377,
+    "low52": 190.9499969482422,
+    "high52": 649.4199829101562,
+    "return_12m": 1.2608055725431635,
+    "return_12_1": 1.3389470239675374,
+    "volatility": 0.733453082611719,
+    "beta": 2.542,
+    "market_cap": 959943068010.2999,
+    "forward_pe": 33.085217753076755,
+    "trailing_pe": 125.06410256410255,
+    "peg": 0.4973,
+    "price_to_book": 14.035634637059061,
+    "eps_growth_next": 2.7800598290598293,
+    "roe": 0.1196,
+    "profit_margin": 0.16769,
+    "debt_to_equity": 13.469,
+    "fcf_yield": 0.007664126514553944,
+    "dividend_yield": null,
+    "payout_ratio": 0.0,
+    "cash_payout": null,
+    "dividend_cagr_5y": null,
+    "dividend_years_raised": 0,
+    "target_price": 658.5292,
+    "analyst_rating": "strong_buy",
+    "analyst_count": 48.0
+   },
+   "next_earnings": "2027-02-02",
+   "news": [
+    {
+     "title": "AMD, Broadcom stocks jump as Nvidia CEO Jensen Huang resigns",
+     "url": "https://finance.yahoo.com/markets/article/amd-broadcom-stocks-jump-as-nvidia-ceo-jensen-huang-resigns-143725561.html",
+     "source": "Yahoo Finance",
+     "published": "2026-11-12T13:39:10Z"
+    },
+    {
+     "title": "AMD CEO Lisa Su on data center backlash: Tech has to sell the vision",
+     "url": "https://finance.yahoo.com/technology/article/amd-ceo-lisa-su-on-data-center-backlash-tech-has-to-sell-the-vision-162604989.html",
+     "source": "Yahoo Finance",
+     "published": "2026-11-12T16:26:04Z"
+    },
+    {
+     "title": "AMD CEO Dr. Lisa Su reflects on her biggest lessons of 2026",
+     "url": "https://finance.yahoo.com/video/amd-ceo-dr-lisa-su-reflects-on-her-biggest-lessons-of-2026-153656562.html",
+     "source": "Yahoo Finance Video",
+     "published": "2026-11-12T15:36:56Z"
+    }
+   ],
+   "chart": [
+    203.78,
+    217.53,
+    217.97,
+    210.78,
+    213.43,
+    214.99,
+    223.47,
+    203.17,
+    231.83,
+    259.68,
+    236.73,
+    208.44,
+    207.32,
+    200.15,
+    200.21,
+    192.43,
+    193.39,
+    201.33,
+    201.99,
+    217.5,
+    245.04,
+    278.39,
+    347.81,
+    360.54,
+    455.19,
+    424.1,
+    467.51,
+    516.1,
+    466.38,
+    511.57,
+    537.37,
+    521.58,
+    517.82,
+    557.89,
+    495.76,
+    521.95,
+    476.15,
+    483.36,
+    514.39,
+    473.25,
+    465.58,
+    477.57,
+    516.13,
+    559.82,
+    630.63,
+    633.91,
+    608.1,
+    528.75,
+    516.79,
+    504.8,
+    449.04,
+    585.3
+   ],
+   "cdr": "AMD.NE",
+   "cdr_price": 15.05,
+   "cdr_day_change": 0.039262152781207815
   },
   {
    "symbol": "KXS.TO",
@@ -2410,27 +2602,27 @@
    "sector": "Technology",
    "currency": "CAD",
    "financial_currency": "USD",
-   "price": 229.37,
-   "day_change": 0.06372021482744117,
-   "week_change": 0.16013346481313784,
+   "price": 228.14,
+   "day_change": -0.005362496201434919,
+   "week_change": 0.11499926058895893,
    "industry": "Software - Application",
    "ex_dividend_date": null,
    "lenses": {
-    "trend": 7.6,
+    "trend": 7.7,
     "garp": 6.2,
     "quality": 6.8,
     "dividend": null
    },
    "notes": {
     "trend": [
-     "+45.8% vs. the 200-day average ($157.35)",
-     "+23.9% vs. the 50-day average ($185.12)",
+     "+44.6% vs. the 200-day average ($157.76)",
+     "+22.5% vs. the 50-day average ($186.20)",
      "50-day average above the 200-day",
-     "12-month return, leaving out the last month, +3.4% vs. +17.3% for the S&P/TSX Composite",
-     "100% of the way up its 52-week range ($118.75\u2013$229.37)"
+     "12-month return, leaving out the last month, +5.2% vs. +16.7% for the S&P/TSX Composite",
+     "99% of the way up its 52-week range ($118.75\u2013$229.37)"
     ],
     "garp": [
-     "Forward P/E 30.3: cheaper than 30% of the 10 other Technology stocks scored",
+     "Forward P/E 30.1: cheaper than 30% of the 10 other Technology stocks scored",
      "+70.6% expected EPS growth next year"
     ],
     "quality": [
@@ -2449,12 +2641,12 @@
     "garp": 0.3529,
     "quality": 0.2941
    },
-   "composite": 6.87,
+   "composite": 6.91,
    "risk_penalty": 0.75,
-   "adjusted": 6.12,
+   "adjusted": 6.16,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": 0.03,
+   "score_change": 0.04,
    "reasons": [
     {
      "type": "caution",
@@ -2462,36 +2654,36 @@
     },
     {
      "type": "caution",
-     "text": "Stretched valuation (forward P/E 30.3)"
+     "text": "Stretched valuation (forward P/E 30.1)"
     }
    ],
    "triggers": [
-    "Needs 0.88 more points to reach Buy.",
-    "A move below the 200-day average ($157.35) would cut Trend.",
-    "Forward P/E falling below 20 (now 30.3) would lift GARP.",
+    "Needs 0.84 more points to reach Buy.",
+    "A move below the 200-day average ($157.76) would cut Trend.",
+    "Forward P/E falling below 20 (now 30.1) would lift GARP.",
     "Next earnings report: 2026-11-04."
    ],
    "rating_kept": false,
    "reit": false,
    "metrics": {
-    "ma50": 185.12199951171874,
-    "ma200": 157.34850006103517,
+    "ma50": 186.20479949951172,
+    "ma200": 157.75890007019044,
     "low52": 118.75,
     "high52": 229.3699951171875,
-    "return_12m": 0.3109852898685779,
-    "return_12_1": 0.033721957419293735,
-    "volatility": 0.39192194513347456,
+    "return_12m": 0.2908957443838063,
+    "return_12_1": 0.051887050249706856,
+    "volatility": 0.3917330241833542,
     "beta": 0.699,
-    "market_cap": 6208925710.12,
-    "forward_pe": 30.283156957521975,
-    "trailing_pe": 51.659909909909906,
+    "market_cap": 6175630254.639999,
+    "forward_pe": 30.12076308274431,
+    "trailing_pe": 51.382882882882875,
     "peg": null,
-    "price_to_book": 10.930186667116512,
+    "price_to_book": 10.871573380284959,
     "eps_growth_next": 0.7058957882882881,
     "roe": 0.21184,
     "profit_margin": 0.14345999,
     "debt_to_equity": 11.179,
-    "fcf_yield": 0.02529308407475934,
+    "fcf_yield": 0.025429449873882487,
     "dividend_yield": null,
     "payout_ratio": 0.0,
     "cash_payout": null,
@@ -2574,376 +2766,8 @@
     199.55,
     194.18,
     206.69,
-    229.37
+    228.14
    ]
-  },
-  {
-   "symbol": "MG.TO",
-   "name": "Magna International Inc.",
-   "held": false,
-   "sector": "Consumer Cyclical",
-   "currency": "CAD",
-   "financial_currency": "USD",
-   "price": 89.34,
-   "day_change": 0.026778463905932526,
-   "week_change": -0.025311010599247896,
-   "industry": "Auto Parts",
-   "ex_dividend_date": "2026-11-13",
-   "lenses": {
-    "trend": 7.2,
-    "garp": 9.6,
-    "quality": 4.7,
-    "dividend": 4.0
-   },
-   "notes": {
-    "trend": [
-     "+2.0% vs. the 200-day average ($87.61)",
-     "\u22121.4% vs. the 50-day average ($90.63)",
-     "50-day average above the 200-day",
-     "12-month return, leaving out the last month, +30.7% vs. +17.3% for the S&P/TSX Composite",
-     "69% of the way up its 52-week range ($64.40\u2013$100.49)"
-    ],
-    "garp": [
-     "PEG 0.34",
-     "Forward P/E 8.1: cheaper than 80% of the 5 other Consumer Cyclical stocks scored",
-     "+159.7% expected EPS growth next year"
-    ],
-    "quality": [
-     "Return on equity 7.1%",
-     "Profit margin 2.0%",
-     "Debt-to-equity 0.54",
-     "Free cash flow yield +10.1%",
-     "EPS rose in 1 of the last 3 years"
-    ],
-    "dividend": [
-     "Yield 3.13%",
-     "+5.0% dividend growth per year over 5 years",
-     "Payout ratio 64% of earnings",
-     "6 straight calendar years of increases"
-    ]
-   },
-   "weights": {
-    "trend": 0.3,
-    "garp": 0.3,
-    "quality": 0.25,
-    "dividend": 0.15
-   },
-   "composite": 6.82,
-   "risk_penalty": 0.75,
-   "adjusted": 6.07,
-   "rating": "Don't buy",
-   "borderline": false,
-   "score_change": 0.34,
-   "reasons": [
-    {
-     "type": "move",
-     "text": "Score up 0.34 since the last update"
-    },
-    {
-     "type": "caution",
-     "text": "High beta (1.82): moves much more than the market"
-    },
-    {
-     "type": "caution",
-     "text": "Volatile (37% a year)"
-    }
-   ],
-   "triggers": [
-    "Needs 0.93 more points to reach Buy.",
-    "A move below the 200-day average ($87.61) would cut Trend.",
-    "Next earnings report: 2026-10-30."
-   ],
-   "rating_kept": false,
-   "reit": false,
-   "metrics": {
-    "ma50": 90.63060012817382,
-    "ma200": 87.60799983978272,
-    "low52": 64.4000015258789,
-    "high52": 100.48999786376953,
-    "return_12m": 0.27994258498303504,
-    "return_12_1": 0.3071632360261305,
-    "volatility": 0.3717832205244726,
-    "beta": 1.816,
-    "market_cap": 23083981800.66,
-    "forward_pe": 8.074338137447034,
-    "trailing_pe": 20.971830985915496,
-    "peg": 0.342,
-    "price_to_book": 1.4266191744387657,
-    "eps_growth_next": 1.597343661971831,
-    "roe": 0.07091,
-    "profit_margin": 0.01985,
-    "debt_to_equity": 53.988,
-    "fcf_yield": 0.10114697283001857,
-    "dividend_yield": 0.03134094470561898,
-    "payout_ratio": 0.64169997,
-    "cash_payout": 0.15855223047162573,
-    "dividend_cagr_5y": 0.05028460388113287,
-    "dividend_years_raised": 6,
-    "target_price": 94.844345,
-    "analyst_rating": "buy",
-    "analyst_count": 7.0
-   },
-   "next_earnings": "2026-10-30",
-   "news": [
-    {
-     "title": "3 Great Canadian Dividend Stocks To Own In November 2026",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/3-great-canadian-dividend-stocks-001537995.html",
-     "source": "Simply Wall St.",
-     "published": "2026-11-10T00:15:37Z"
-    },
-    {
-     "title": "Seeing Machines tipped for upside as latest data shows momentum, brokers eye longer-term finance as a potential catalyst",
-     "url": "https://www.proactiveinvestors.com/companies/news/1101423/seeing-machines-tipped-for-upside-as-latest-data-shows-momentum-brokers-eye-longer-term-finance-as-a-potential-catalyst-1101423.html",
-     "source": "Proactive",
-     "published": "2026-11-09T13:14:00Z"
-    },
-    {
-     "title": "3 Canadian Dividend Stocks With Yields Over 3%",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/3-canadian-dividend-stocks-yields-044248133.html",
-     "source": "Simply Wall St.",
-     "published": "2026-11-05T04:42:48Z"
-    }
-   ],
-   "chart": [
-    68.03,
-    68.39,
-    67.83,
-    71.43,
-    76.22,
-    73.47,
-    75.02,
-    78.18,
-    76.32,
-    72.9,
-    69.61,
-    73.8,
-    93.52,
-    88.86,
-    86.01,
-    79.95,
-    75.59,
-    71.65,
-    75.5,
-    76.73,
-    80.02,
-    83.03,
-    85.96,
-    82.68,
-    86.32,
-    83.05,
-    89.19,
-    89.35,
-    92.13,
-    93.21,
-    91.94,
-    91.49,
-    90.34,
-    91.04,
-    93.17,
-    92.55,
-    96.14,
-    98.04,
-    97.56,
-    100.44,
-    91.48,
-    95.35,
-    91.64,
-    88.58,
-    91.95,
-    92.04,
-    91.24,
-    93.19,
-    89.49,
-    88.91,
-    87.38,
-    89.34
-   ]
-  },
-  {
-   "symbol": "AMD",
-   "name": "Advanced Micro Devices, Inc.",
-   "held": true,
-   "sector": "Technology",
-   "currency": "USD",
-   "financial_currency": "USD",
-   "price": 552.9,
-   "day_change": 0.07315463759244678,
-   "week_change": 0.1311838164305048,
-   "industry": "Semiconductors",
-   "ex_dividend_date": "1995-04-27",
-   "lenses": {
-    "trend": 9.2,
-    "garp": 7.4,
-    "quality": 5.6,
-    "dividend": null
-   },
-   "notes": {
-    "trend": [
-     "+31.6% vs. the 200-day average ($420.05)",
-     "+0.4% vs. the 50-day average ($550.43)",
-     "50-day average above the 200-day",
-     "12-month return, leaving out the last month, +150.2% vs. +14.0% for the S&P 500",
-     "79% of the way up its 52-week range ($190.95\u2013$649.42)"
-    ],
-    "garp": [
-     "PEG 0.46",
-     "Forward P/E 31.3: cheaper than 20% of the 10 other Technology stocks scored",
-     "+278.0% expected EPS growth next year"
-    ],
-    "quality": [
-     "Return on equity 12.0%",
-     "Profit margin 16.8%",
-     "Debt-to-equity 0.13",
-     "Free cash flow yield +0.8%",
-     "EPS rose in 2 of the last 3 years"
-    ],
-    "dividend": [
-     "Pays no dividend"
-    ]
-   },
-   "weights": {
-    "trend": 0.3529,
-    "garp": 0.3529,
-    "quality": 0.2941
-   },
-   "composite": 7.51,
-   "risk_penalty": 1.5,
-   "adjusted": 6.01,
-   "rating": "Hold",
-   "borderline": false,
-   "score_change": 0.53,
-   "reasons": [
-    {
-     "type": "move",
-     "text": "Score up 0.53 since the last update"
-    },
-    {
-     "type": "caution",
-     "text": "High beta (2.54): moves much more than the market"
-    },
-    {
-     "type": "caution",
-     "text": "Very volatile (73% a year)"
-    },
-    {
-     "type": "caution",
-     "text": "Stretched valuation (forward P/E 31.3)"
-    }
-   ],
-   "triggers": [
-    "Needs 1.99 more points to reach Buy more.",
-    "Drops to Sell if it loses 1.02 points.",
-    "A move below the 200-day average ($420.05) would cut Trend.",
-    "Forward P/E falling below 20 (now 31.3) would lift GARP."
-   ],
-   "rating_kept": false,
-   "reit": false,
-   "metrics": {
-    "ma50": 550.4293988037109,
-    "ma200": 420.04585006713864,
-    "low52": 190.9499969482422,
-    "high52": 649.4199829101562,
-    "return_12m": 1.327804035317492,
-    "return_12_1": 1.5018523894632385,
-    "volatility": 0.7321028495890245,
-    "beta": 2.542,
-    "market_cap": 906804241077.8999,
-    "forward_pe": 31.255882737018123,
-    "trailing_pe": 118.14102564102565,
-    "peg": 0.4634,
-    "price_to_book": 13.258674851922015,
-    "eps_growth_next": 2.7798012820512823,
-    "roe": 0.1196,
-    "profit_margin": 0.16769,
-    "debt_to_equity": 13.469,
-    "fcf_yield": 0.008113245160008001,
-    "dividend_yield": null,
-    "payout_ratio": 0.0,
-    "cash_payout": null,
-    "dividend_cagr_5y": null,
-    "dividend_years_raised": 0,
-    "target_price": 657.4875,
-    "analyst_rating": "strong_buy",
-    "analyst_count": 48.0
-   },
-   "next_earnings": "2027-02-02",
-   "news": [
-    {
-     "title": "Anthropic's Mythos claim may put Nvidia\u2019s CUDA moat in a vulnerable spot",
-     "url": "https://finance.yahoo.com/video/anthropics-mythos-claim-may-put-nvidias-cuda-moat-in-a-vulnerable-spot-214346380.html",
-     "source": "Yahoo Finance Video",
-     "published": "2026-11-11T21:43:46Z"
-    },
-    {
-     "title": "Dow Jones Futures Rise, Techs Fall As Nvidia May Oust CEO Huang After CoreWave Leads Rally",
-     "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-coreweave-sandisk-nvidia-amd-nebius-bloom/?src=A00220&yptr=yahoo",
-     "source": "Investor's Business Daily",
-     "published": "2026-11-12T03:07:20Z"
-    },
-    {
-     "title": "Jensen Huang\u2019s Future At Nvidia Hangs In Balance As Board Weighs Fallout: Analysts Warn Of Challenges Ahead",
-     "url": "https://stocktwits.com/news-articles/markets/equity/jensen-huang-s-future-at-nvidia-hangs-in-balance-as-board-reportedly-weighs-fallout-analysts-warn-of-challenges-ahead/cNGzikhR99g",
-     "source": "Stocktwits",
-     "published": "2026-11-12T02:43:31Z"
-    }
-   ],
-   "chart": [
-    203.78,
-    217.53,
-    217.97,
-    210.78,
-    213.43,
-    214.99,
-    223.47,
-    203.17,
-    231.83,
-    259.68,
-    236.73,
-    208.44,
-    207.32,
-    200.15,
-    200.21,
-    192.43,
-    193.39,
-    201.33,
-    201.99,
-    217.5,
-    245.04,
-    278.39,
-    347.81,
-    360.54,
-    455.19,
-    424.1,
-    467.51,
-    516.1,
-    466.38,
-    511.57,
-    537.37,
-    521.58,
-    517.82,
-    557.89,
-    495.76,
-    521.95,
-    476.15,
-    483.36,
-    514.39,
-    473.25,
-    465.58,
-    477.57,
-    516.13,
-    559.82,
-    630.63,
-    633.91,
-    608.1,
-    528.75,
-    516.79,
-    504.8,
-    449.04,
-    552.9
-   ],
-   "cdr": "AMD.NE",
-   "cdr_price": 14.23,
-   "cdr_day_change": -0.01736214146732029
   },
   {
    "symbol": "ALA.TO",
@@ -2952,27 +2776,27 @@
    "sector": "Energy",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 55.77,
-   "day_change": 0.01918858212055885,
-   "week_change": 0.014184374531530652,
+   "price": 55.81,
+   "day_change": 0.0007172478967010232,
+   "week_change": 0.03678245355537135,
    "industry": "Oil & Gas Midstream",
    "ex_dividend_date": "2026-12-16",
    "lenses": {
-    "trend": 9.0,
+    "trend": 9.1,
     "garp": 6.3,
     "quality": 2.4,
     "dividend": 5.3
    },
    "notes": {
     "trend": [
-     "+8.1% vs. the 200-day average ($51.59)",
-     "+3.0% vs. the 50-day average ($54.16)",
+     "+8.0% vs. the 200-day average ($51.66)",
+     "+3.0% vs. the 50-day average ($54.21)",
      "50-day average above the 200-day",
-     "12-month return, leaving out the last month, +31.1% vs. +17.3% for the S&P/TSX Composite",
+     "12-month return, leaving out the last month, +31.5% vs. +16.7% for the S&P/TSX Composite",
      "92% of the way up its 52-week range ($40.41\u2013$57.18)"
     ],
     "garp": [
-     "Forward P/E 21.3: cheaper than 31% of the 13 other Energy stocks scored",
+     "Forward P/E 21.4: cheaper than 31% of the 13 other Energy stocks scored",
      "+30.7% expected EPS growth next year"
     ],
     "quality": [
@@ -2995,41 +2819,41 @@
     "quality": 0.25,
     "dividend": 0.15
    },
-   "composite": 5.98,
+   "composite": 6.01,
    "risk_penalty": 0,
-   "adjusted": 5.98,
+   "adjusted": 6.01,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": 0.15,
+   "score_change": 0.03,
    "reasons": [],
    "triggers": [
-    "Needs 1.02 more points to reach Buy.",
-    "A move below the 200-day average ($51.59) would cut Trend.",
-    "Forward P/E falling below 20 (now 21.3) would lift GARP.",
+    "Needs 0.99 more points to reach Buy.",
+    "A move below the 200-day average ($51.66) would cut Trend.",
+    "Forward P/E falling below 20 (now 21.4) would lift GARP.",
     "Next earnings report: 2026-10-29."
    ],
    "rating_kept": false,
    "reit": false,
    "metrics": {
-    "ma50": 54.160200119018555,
-    "ma200": 51.58769996643066,
+    "ma50": 54.2060001373291,
+    "ma200": 51.65744997024536,
     "low52": 40.40999984741211,
     "high52": 57.18000030517578,
-    "return_12m": 0.3187514601657757,
-    "return_12_1": 0.3109481538543415,
-    "volatility": 0.19306063206003626,
+    "return_12m": 0.3030585801382091,
+    "return_12_1": 0.3151996129547576,
+    "volatility": 0.19298315649724435,
     "beta": 0.468,
-    "market_cap": 17400829098.510002,
-    "forward_pe": 21.34238512730042,
-    "trailing_pe": 27.885,
+    "market_cap": 17413309521.030003,
+    "forward_pe": 21.357692557909925,
+    "trailing_pe": 27.905,
     "peg": null,
-    "price_to_book": 1.8959069893935274,
+    "price_to_book": 1.8972667935817242,
     "eps_growth_next": 0.3065549999999999,
     "roe": 0.06628,
     "profit_margin": 0.04354,
     "debt_to_equity": 110.639,
-    "fcf_yield": -0.018935879327049675,
-    "dividend_yield": 0.024027254796485566,
+    "fcf_yield": -0.018922307652204987,
+    "dividend_yield": 0.024010034044078123,
     "payout_ratio": 0.65849996,
     "cash_payout": 0.29970905751872423,
     "dividend_cagr_5y": 0.058101439664158594,
@@ -3111,7 +2935,185 @@
     55.34,
     55.52,
     53.07,
-    55.77
+    55.81
+   ]
+  },
+  {
+   "symbol": "MG.TO",
+   "name": "Magna International Inc.",
+   "held": false,
+   "sector": "Consumer Cyclical",
+   "currency": "CAD",
+   "financial_currency": "USD",
+   "price": 88.96,
+   "day_change": -0.004253383355656171,
+   "week_change": 0.01079419299151585,
+   "industry": "Auto Parts",
+   "ex_dividend_date": "2026-11-13",
+   "lenses": {
+    "trend": 7.0,
+    "garp": 9.6,
+    "quality": 4.7,
+    "dividend": 4.0
+   },
+   "notes": {
+    "trend": [
+     "+1.4% vs. the 200-day average ($87.69)",
+     "\u22121.9% vs. the 50-day average ($90.64)",
+     "50-day average above the 200-day",
+     "12-month return, leaving out the last month, +31.6% vs. +16.7% for the S&P/TSX Composite",
+     "68% of the way up its 52-week range ($64.40\u2013$100.49)"
+    ],
+    "garp": [
+     "PEG 0.34",
+     "Forward P/E 8.0: cheaper than 80% of the 5 other Consumer Cyclical stocks scored",
+     "+159.7% expected EPS growth next year"
+    ],
+    "quality": [
+     "Return on equity 7.1%",
+     "Profit margin 2.0%",
+     "Debt-to-equity 0.54",
+     "Free cash flow yield +10.2%",
+     "EPS rose in 1 of the last 3 years"
+    ],
+    "dividend": [
+     "Yield 3.15%",
+     "+5.0% dividend growth per year over 5 years",
+     "Payout ratio 64% of earnings",
+     "6 straight calendar years of increases"
+    ]
+   },
+   "weights": {
+    "trend": 0.3,
+    "garp": 0.3,
+    "quality": 0.25,
+    "dividend": 0.15
+   },
+   "composite": 6.75,
+   "risk_penalty": 0.75,
+   "adjusted": 6.0,
+   "rating": "Don't buy",
+   "borderline": false,
+   "score_change": -0.07,
+   "reasons": [
+    {
+     "type": "caution",
+     "text": "High beta (1.82): moves much more than the market"
+    },
+    {
+     "type": "caution",
+     "text": "Volatile (37% a year)"
+    }
+   ],
+   "triggers": [
+    "Needs 1.00 more points to reach Buy.",
+    "A move below the 200-day average ($87.69) would cut Trend.",
+    "Next earnings report: 2026-10-30."
+   ],
+   "rating_kept": false,
+   "reit": false,
+   "metrics": {
+    "ma50": 90.64080017089844,
+    "ma200": 87.6891498184204,
+    "low52": 64.4000015258789,
+    "high52": 100.48999786376953,
+    "return_12m": 0.26112840841898377,
+    "return_12_1": 0.31570734837011183,
+    "volatility": 0.3716544828500278,
+    "beta": 1.816,
+    "market_cap": 22985796071.039997,
+    "forward_pe": 8.039994635183435,
+    "trailing_pe": 20.88262910798122,
+    "peg": 0.342,
+    "price_to_book": 1.420551172577486,
+    "eps_growth_next": 1.597343661971831,
+    "roe": 0.07091,
+    "profit_margin": 0.01985,
+    "debt_to_equity": 53.988,
+    "fcf_yield": 0.10157903049273673,
+    "dividend_yield": 0.03147482014388489,
+    "payout_ratio": 0.64169997,
+    "cash_payout": 0.15855223047162573,
+    "dividend_cagr_5y": 0.05028460388113287,
+    "dividend_years_raised": 6,
+    "target_price": 94.844345,
+    "analyst_rating": "buy",
+    "analyst_count": 7.0
+   },
+   "next_earnings": "2026-10-30",
+   "news": [
+    {
+     "title": "3 Great Canadian Dividend Stocks To Own In November 2026",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/3-great-canadian-dividend-stocks-001537995.html",
+     "source": "Simply Wall St.",
+     "published": "2026-11-10T00:15:37Z"
+    },
+    {
+     "title": "Seeing Machines tipped for upside as latest data shows momentum, brokers eye longer-term finance as a potential catalyst",
+     "url": "https://www.proactiveinvestors.com/companies/news/1101423/seeing-machines-tipped-for-upside-as-latest-data-shows-momentum-brokers-eye-longer-term-finance-as-a-potential-catalyst-1101423.html",
+     "source": "Proactive",
+     "published": "2026-11-09T13:14:00Z"
+    },
+    {
+     "title": "3 Canadian Dividend Stocks With Yields Over 3%",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/3-canadian-dividend-stocks-yields-044248133.html",
+     "source": "Simply Wall St.",
+     "published": "2026-11-05T04:42:48Z"
+    }
+   ],
+   "chart": [
+    68.03,
+    68.39,
+    67.83,
+    71.43,
+    76.22,
+    73.47,
+    75.02,
+    78.18,
+    76.32,
+    72.9,
+    69.61,
+    73.8,
+    93.52,
+    88.86,
+    86.01,
+    79.95,
+    75.59,
+    71.65,
+    75.5,
+    76.73,
+    80.02,
+    83.03,
+    85.96,
+    82.68,
+    86.32,
+    83.05,
+    89.19,
+    89.35,
+    92.13,
+    93.21,
+    91.94,
+    91.49,
+    90.34,
+    91.04,
+    93.17,
+    92.55,
+    96.14,
+    98.04,
+    97.56,
+    100.44,
+    91.48,
+    95.35,
+    91.64,
+    88.58,
+    91.95,
+    92.04,
+    91.24,
+    93.19,
+    89.49,
+    88.91,
+    87.38,
+    88.96
    ]
   },
   {
@@ -3121,9 +3123,9 @@
    "sector": "Consumer Defensive",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 44.46,
-   "day_change": 0.002706335847357133,
-   "week_change": 0.06926400015853296,
+   "price": 45.07,
+   "day_change": 0.013720211941358418,
+   "week_change": 0.08289286043917787,
    "industry": "Packaged Foods",
    "ex_dividend_date": "2026-12-01",
    "lenses": {
@@ -3134,15 +3136,15 @@
    },
    "notes": {
     "trend": [
-     "+7.7% vs. the 200-day average ($41.30)",
-     "+10.3% vs. the 50-day average ($40.30)",
+     "+9.1% vs. the 200-day average ($41.32)",
+     "+11.6% vs. the 50-day average ($40.38)",
      "50-day average below the 200-day",
-     "12-month return, leaving out the last month, +5.0% vs. +17.3% for the S&P/TSX Composite",
-     "92% of the way up its 52-week range ($37.10\u2013$45.06)"
+     "12-month return, leaving out the last month, +3.5% vs. +16.7% for the S&P/TSX Composite",
+     "100% of the way up its 52-week range ($37.10\u2013$45.07)"
     ],
     "garp": [
      "PEG 1.33",
-     "Forward P/E 18.9: cheaper than 60% of the 5 other Consumer Defensive stocks scored",
+     "Forward P/E 19.2: cheaper than 60% of the 5 other Consumer Defensive stocks scored",
      "+31.5% expected EPS growth next year"
     ],
     "quality": [
@@ -3153,7 +3155,7 @@
      "A loss in at least one of the last 4 years"
     ],
     "dividend": [
-     "Yield 1.89%",
+     "Yield 1.86%",
      "+2.8% dividend growth per year over 5 years",
      "Payout ratio 45% of earnings",
      "6 straight calendar years of increases"
@@ -3174,31 +3176,31 @@
    "reasons": [],
    "triggers": [
     "Needs 1.10 more points to reach Buy.",
-    "A move below the 200-day average ($41.30) would cut Trend.",
+    "A move below the 200-day average ($41.32) would cut Trend.",
     "Next earnings report: 2027-02-04."
    ],
    "rating_kept": false,
    "reit": false,
    "metrics": {
-    "ma50": 40.297199935913085,
-    "ma200": 41.29594999313355,
+    "ma50": 40.38119995117187,
+    "ma200": 41.31534999847412,
     "low52": 37.099998474121094,
-    "high52": 45.060001373291016,
-    "return_12m": 0.20422538703887305,
-    "return_12_1": 0.05010840684099649,
-    "volatility": 0.24516842844896666,
+    "high52": 45.06999969482422,
+    "return_12m": 0.20637042180177056,
+    "return_12_1": 0.03506417390771621,
+    "volatility": 0.24544586980918726,
     "beta": 0.128,
-    "market_cap": 17460858673.44,
-    "forward_pe": 18.891816095861305,
-    "trailing_pe": 24.837988826815643,
+    "market_cap": 17700425110.48,
+    "forward_pe": 19.151015551967365,
+    "trailing_pe": 25.17877094972067,
     "peg": 1.3303,
-    "price_to_book": 2.47,
+    "price_to_book": 2.503888888888889,
     "eps_growth_next": 0.3147486033519553,
     "roe": 0.108009994,
     "profit_margin": 0.03281,
     "debt_to_equity": 43.614,
-    "fcf_yield": 0.011683274220087915,
-    "dividend_yield": 0.018893387314439944,
+    "fcf_yield": 0.011525146923122002,
+    "dividend_yield": 0.018637674728200576,
     "payout_ratio": 0.4525,
     "cash_payout": 0.15837482267115283,
     "dividend_cagr_5y": 0.02815639324725061,
@@ -3280,52 +3282,51 @@
     40.48,
     40.32,
     43.99,
-    44.46
+    45.07
    ]
   },
   {
-   "symbol": "ABX.TO",
-   "name": "Barrick Mining Corporation",
+   "symbol": "FTS.TO",
+   "name": "Fortis Inc.",
    "held": false,
-   "sector": "Basic Materials",
+   "sector": "Utilities",
    "currency": "CAD",
-   "financial_currency": "USD",
-   "price": 55.67,
-   "day_change": -0.013118271236810641,
-   "week_change": -0.007133966970858219,
-   "industry": "Gold",
-   "ex_dividend_date": "2026-08-31",
+   "financial_currency": "CAD",
+   "price": 84.43,
+   "day_change": 0.0024934585778779716,
+   "week_change": -0.01585267042590055,
+   "industry": "Utilities - Regulated Electric",
+   "ex_dividend_date": "2026-11-17",
    "lenses": {
-    "trend": 2.9,
-    "garp": 5.9,
-    "quality": 9.7,
-    "dividend": 6.0
+    "trend": 7.6,
+    "garp": 3.2,
+    "quality": 4.9,
+    "dividend": 5.0
    },
    "notes": {
     "trend": [
-     "\u22124.1% vs. the 200-day average ($58.05)",
-     "\u22123.7% vs. the 50-day average ($57.78)",
-     "50-day average below the 200-day",
-     "12-month return, leaving out the last month, +16.6% vs. +17.3% for the S&P/TSX Composite",
-     "29% of the way up its 52-week range ($48.92\u2013$71.86)"
+     "+8.0% vs. the 200-day average ($78.18)",
+     "+7.9% vs. the 50-day average ($78.26)",
+     "50-day average above the 200-day",
+     "12-month return, leaving out the last month, +4.1% vs. +16.7% for the S&P/TSX Composite",
+     "92% of the way up its 52-week range ($69.11\u2013$85.79)"
     ],
     "garp": [
-     "PEG 2.04",
-     "Forward P/E 9.5: cheaper than 90% of the 10 other Basic Materials stocks scored",
-     "+7.6% expected EPS growth next year"
+     "PEG 2.74",
+     "Forward P/E 21.8: cheaper than 43% of the 7 other Utilities stocks scored",
+     "+10.3% expected EPS growth next year"
     ],
     "quality": [
-     "Return on equity 27.0%",
-     "Profit margin 30.3%",
-     "Debt-to-equity 0.13",
-     "Free cash flow yield +5.6%",
+     "Return on equity 7.6%",
+     "Profit margin 15.0%",
+     "Debt-to-equity 1.35 (utility scale)",
      "EPS rose in 3 of the last 3 years"
     ],
     "dividend": [
-     "Yield 2.34%",
-     "+10.3% dividend growth per year over 5 years",
-     "Payout ratio 24% of earnings",
-     "2 straight calendar years of increases"
+     "Yield 3.15%",
+     "+4.9% dividend growth per year over 5 years",
+     "Dividends use 30% of operating cash flow",
+     "6 straight calendar years of increases"
     ]
    },
    "weights": {
@@ -3334,131 +3335,128 @@
     "quality": 0.25,
     "dividend": 0.15
    },
-   "composite": 5.96,
-   "risk_penalty": 0.75,
+   "composite": 5.21,
+   "risk_penalty": 0,
    "adjusted": 5.21,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": -0.09,
+   "score_change": 0.45,
    "reasons": [
     {
-     "type": "caution",
-     "text": "Very volatile (47% a year)"
-    },
-    {
-     "type": "caution",
-     "text": "Drawdown: 23% below its 52-week high"
+     "type": "move",
+     "text": "Score up 0.45 since the last update"
     }
    ],
    "triggers": [
     "Needs 1.79 more points to reach Buy.",
-    "A move above the 200-day average ($58.05) would lift Trend.",
-    "Next earnings report: 2027-02-04."
+    "A move below the 200-day average ($78.18) would cut Trend.",
+    "Forward P/E falling below 20 (now 21.8) would lift GARP.",
+    "Next earnings report: 2026-11-03."
    ],
    "rating_kept": false,
    "reit": false,
    "metrics": {
-    "ma50": 57.78160011291504,
-    "ma200": 58.04545000076294,
-    "low52": 48.91999816894531,
-    "high52": 71.86000061035156,
-    "return_12m": 0.10940609466682827,
-    "return_12_1": 0.16640092513630056,
-    "volatility": 0.46810977378998375,
-    "beta": null,
-    "market_cap": 90665999110.0,
-    "forward_pe": 9.524648685548865,
-    "trailing_pe": 10.25230202578269,
-    "peg": 2.04,
-    "price_to_book": 2.366656324856081,
-    "eps_growth_next": 0.0763968692449355,
-    "roe": 0.27011,
-    "profit_margin": 0.30315,
-    "debt_to_equity": 12.532,
-    "fcf_yield": 0.0563882852909092,
-    "dividend_yield": 0.02344171007724088,
-    "payout_ratio": 0.2417,
-    "cash_payout": 0.22483509329813073,
-    "dividend_cagr_5y": 0.103094569236859,
-    "dividend_years_raised": 2,
-    "target_price": 65.7444,
-    "analyst_rating": "buy",
-    "analyst_count": 12.0
+    "ma50": 78.25799972534179,
+    "ma200": 78.18134979248048,
+    "low52": 69.11000061035156,
+    "high52": 85.79000091552734,
+    "return_12m": 0.14496884663809495,
+    "return_12_1": 0.0410903019673885,
+    "volatility": 0.1427374168520631,
+    "beta": 0.435,
+    "market_cap": 43548994000.0,
+    "forward_pe": 21.752348367350095,
+    "trailing_pe": 23.985795454545457,
+    "peg": 2.7421,
+    "price_to_book": 1.7953897843746014,
+    "eps_growth_next": 0.10267613636363637,
+    "roe": 0.07554,
+    "profit_margin": 0.15006,
+    "debt_to_equity": 135.043,
+    "fcf_yield": -0.06704804873334158,
+    "dividend_yield": 0.031505389079711,
+    "payout_ratio": 0.72730005,
+    "cash_payout": 0.30147835216554286,
+    "dividend_cagr_5y": 0.048522415131136976,
+    "dividend_years_raised": 6,
+    "target_price": 82.91347,
+    "analyst_rating": "hold",
+    "analyst_count": 15.0
    },
-   "next_earnings": "2027-02-04",
+   "next_earnings": "2026-11-03",
    "news": [
     {
-     "title": "Barrick Moves Toward Listing North American Gold Assets With SEC Filing",
-     "url": "https://www.wsj.com/business/barrick-moves-toward-listing-north-american-gold-assets-with-sec-filing-f6f9b6b8?siteid=yhoof2&yptr=yahoo",
-     "source": "The Wall Street Journal",
-     "published": "2026-11-11T00:06:00Z"
+     "title": "Sell Alert: 5 High-Profile Stocks Just Dumped by Top Analysts",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/sell-alert-5-high-profile-203124084.html",
+     "source": "Insider Monkey",
+     "published": "2026-11-08T20:31:24Z"
     },
     {
-     "title": "Barrick Q3 Earnings Call Highlights IPO Plans and Cost Discipline",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/barrick-q3-earnings-call-highlights-194800692.html",
-     "source": "Zacks",
-     "published": "2026-11-10T19:48:00Z"
+     "title": "Molson Coors downgraded, SiTime upgraded: Wall Street's top analyst calls",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/molson-coors-downgraded-sitime-upgraded-150719956.html",
+     "source": "The Fly",
+     "published": "2026-11-06T15:07:19Z"
     },
     {
-     "title": "Newmont Stock Up 26% YTD: Should You Buy, Sell or Hold the Stock?",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/newmont-stock-26-ytd-buy-120800954.html",
-     "source": "Zacks",
-     "published": "2026-11-10T12:08:00Z"
+     "title": "Fortis (TSX:FTS) Just Gave Investors Something To Parse",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/fortis-tsx-fts-just-gave-232324941.html",
+     "source": "Simply Wall St.",
+     "published": "2026-11-04T23:23:24Z"
     }
    ],
    "chart": [
-    51.53,
-    58.43,
-    56.79,
-    59.26,
-    61.62,
-    62.06,
-    60.52,
-    66.52,
-    67.79,
-    69.96,
-    62.24,
-    61.75,
-    65.32,
-    65.6,
-    69.21,
-    61.73,
-    58.09,
-    50.96,
-    53.43,
-    58.04,
-    60.27,
-    59.35,
-    56.14,
-    52.75,
-    59.05,
-    55.82,
-    56.21,
-    58.9,
-    54.91,
-    56.25,
-    56.19,
-    52.9,
-    55.56,
-    51.9,
-    48.92,
-    52.34,
-    51.45,
-    60.96,
-    57.8,
-    65.56,
-    63.54,
-    61.92,
-    60.52,
-    60.24,
-    60.7,
-    57.41,
-    58.53,
-    57.74,
-    53.36,
-    51.64,
-    57.2,
-    55.67
+    72.66,
+    73.26,
+    70.68,
+    70.16,
+    70.1,
+    70.64,
+    71.25,
+    71.63,
+    72.28,
+    72.19,
+    72.6,
+    73.74,
+    77.42,
+    76.99,
+    78.47,
+    78.59,
+    79.92,
+    75.65,
+    77.29,
+    79.02,
+    79.72,
+    77.93,
+    77.03,
+    77.74,
+    76.74,
+    75.25,
+    77.99,
+    76.26,
+    77.83,
+    79.61,
+    79.14,
+    82.57,
+    81.88,
+    81.23,
+    82.42,
+    82.99,
+    79.8,
+    78.24,
+    78.68,
+    75.59,
+    76.06,
+    76.47,
+    75.36,
+    75.78,
+    75.1,
+    75.31,
+    76.03,
+    78.81,
+    81.13,
+    81.97,
+    84.91,
+    84.43
    ]
   },
   {
@@ -3468,28 +3466,28 @@
    "sector": "Technology",
    "currency": "CAD",
    "financial_currency": "USD",
-   "price": 345.43,
-   "day_change": 0.08380393873236192,
-   "week_change": 0.04599685952820476,
+   "price": 361.92,
+   "day_change": 0.047737663496494775,
+   "week_change": 0.25479326914022393,
    "industry": "Electronic Components",
    "ex_dividend_date": null,
    "lenses": {
-    "trend": 1.2,
+    "trend": 1.1,
     "garp": 10.0,
-    "quality": 7.7,
+    "quality": 7.6,
     "dividend": null
    },
    "notes": {
     "trend": [
-     "\u221224.5% vs. the 200-day average ($457.56)",
-     "\u221221.3% vs. the 50-day average ($439.07)",
+     "\u221220.8% vs. the 200-day average ($457.11)",
+     "\u221217.4% vs. the 50-day average ($438.17)",
      "50-day average below the 200-day",
-     "12-month return, leaving out the last month, +11.2% vs. +17.3% for the S&P/TSX Composite",
-     "16% of the way up its 52-week range ($288.43\u2013$652.82)"
+     "12-month return, leaving out the last month, +8.5% vs. +16.7% for the S&P/TSX Composite",
+     "20% of the way up its 52-week range ($288.43\u2013$652.82)"
     ],
     "garp": [
      "PEG 0.13",
-     "Forward P/E 11.1: cheaper than 90% of the 10 other Technology stocks scored",
+     "Forward P/E 11.6: cheaper than 90% of the 10 other Technology stocks scored",
      "+112.2% expected EPS growth next year"
     ],
     "quality": [
@@ -3508,12 +3506,12 @@
     "garp": 0.3529,
     "quality": 0.2941
    },
-   "composite": 6.22,
+   "composite": 6.15,
    "risk_penalty": 1.25,
-   "adjusted": 4.97,
+   "adjusted": 4.9,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": 0.11,
+   "score_change": -0.07,
    "reasons": [
     {
      "type": "caution",
@@ -3525,35 +3523,35 @@
     },
     {
      "type": "caution",
-     "text": "Deep drawdown: 47% below its 52-week high"
+     "text": "Deep drawdown: 45% below its 52-week high"
     }
    ],
    "triggers": [
-    "Needs 2.03 more points to reach Buy.",
-    "A move above the 200-day average ($457.56) would lift Trend.",
+    "Needs 2.10 more points to reach Buy.",
+    "A move above the 200-day average ($457.11) would lift Trend.",
     "Next earnings report: 2027-01-27."
    ],
    "rating_kept": false,
    "reit": false,
    "metrics": {
-    "ma50": 439.0715997314453,
-    "ma200": 457.55764999389646,
+    "ma50": 438.16780029296876,
+    "ma200": 457.105950012207,
     "low52": 288.42999267578125,
     "high52": 652.8200073242188,
-    "return_12m": -0.2569320534686198,
-    "return_12_1": 0.11168710275023863,
-    "volatility": 0.8095404163072771,
+    "return_12m": -0.22696394743556003,
+    "return_12_1": 0.08481785337665171,
+    "volatility": 0.810065867379283,
     "beta": 1.345,
-    "market_cap": 43562801837.44,
-    "forward_pe": 11.065898848400742,
-    "trailing_pe": 23.482664853840923,
+    "market_cap": 45642385551.36,
+    "forward_pe": 11.594158327919395,
+    "trailing_pe": 24.603670972127805,
     "peg": 0.1339,
-    "price_to_book": 4.99155411068346,
+    "price_to_book": 5.229838936220242,
     "eps_growth_next": 1.1220747790618626,
     "roe": 0.30228,
     "profit_margin": 0.06834,
     "debt_to_equity": 16.593,
-    "fcf_yield": 0.018427419315120302,
+    "fcf_yield": 0.017587819004260624,
     "dividend_yield": null,
     "payout_ratio": 0.0,
     "cash_payout": null,
@@ -3636,7 +3634,7 @@
     364.4,
     369.32,
     292.16,
-    345.43
+    361.92
    ]
   },
   {
@@ -3646,28 +3644,28 @@
    "sector": "Utilities",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 52.78,
-   "day_change": -0.0017022915529815164,
-   "week_change": -0.00919845455708801,
+   "price": 53.24,
+   "day_change": 0.008715477639426483,
+   "week_change": 0.010630246204383464,
    "industry": "Utilities - Diversified",
    "ex_dividend_date": "2026-11-05",
    "lenses": {
-    "trend": 8.1,
+    "trend": 8.0,
     "garp": 6.0,
     "quality": 2.1,
     "dividend": 3.9
    },
    "notes": {
     "trend": [
-     "+5.3% vs. the 200-day average ($50.14)",
-     "+4.3% vs. the 50-day average ($50.62)",
+     "+6.1% vs. the 200-day average ($50.19)",
+     "+5.1% vs. the 50-day average ($50.66)",
      "50-day average above the 200-day",
-     "12-month return, leaving out the last month, +17.3% vs. +17.3% for the S&P/TSX Composite",
-     "75% of the way up its 52-week range ($41.13\u2013$56.60)"
+     "12-month return, leaving out the last month, +13.2% vs. +16.7% for the S&P/TSX Composite",
+     "78% of the way up its 52-week range ($41.13\u2013$56.60)"
     ],
     "garp": [
      "PEG 2.64",
-     "Forward P/E 18.9: cheaper than 71% of the 7 other Utilities stocks scored",
+     "Forward P/E 19.0: cheaper than 71% of the 7 other Utilities stocks scored",
      "+1899.4% expected EPS growth next year"
     ],
     "quality": [
@@ -3677,7 +3675,7 @@
      "EPS rose in 1 of the last 3 years"
     ],
     "dividend": [
-     "Yield 3.51%",
+     "Yield 3.47%",
      "+1.0% dividend growth per year over 5 years",
      "Dividends use 17% of operating cash flow",
      "5 straight calendar years of increases"
@@ -3689,45 +3687,45 @@
     "quality": 0.25,
     "dividend": 0.15
    },
-   "composite": 5.34,
+   "composite": 5.31,
    "risk_penalty": 0.5,
-   "adjusted": 4.84,
+   "adjusted": 4.81,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": 0.0,
+   "score_change": -0.03,
    "reasons": [
     {
      "type": "caution",
-     "text": "Stretched valuation (forward P/E 18.9)"
+     "text": "Stretched valuation (forward P/E 19.0)"
     }
    ],
    "triggers": [
-    "Needs 2.16 more points to reach Buy.",
-    "A move below the 200-day average ($50.14) would cut Trend.",
+    "Needs 2.19 more points to reach Buy.",
+    "A move below the 200-day average ($50.19) would cut Trend.",
     "Next earnings report: 2026-11-06."
    ],
    "rating_kept": false,
    "reit": false,
    "metrics": {
-    "ma50": 50.61699989318848,
-    "ma200": 50.141549949646,
+    "ma50": 50.6607999420166,
+    "ma200": 50.188449954986574,
     "low52": 41.130001068115234,
     "high52": 56.599998474121094,
-    "return_12m": 0.25786463133713866,
-    "return_12_1": 0.1732602625449995,
-    "volatility": 0.16582189182089893,
+    "return_12m": 0.2506460432260671,
+    "return_12_1": 0.1315480036238279,
+    "volatility": 0.16599419672066482,
     "beta": 0.544,
-    "market_cap": 10861239248.86,
-    "forward_pe": 18.855319893827186,
-    "trailing_pe": 377.0,
+    "market_cap": 10955899537.880001,
+    "forward_pe": 19.019651973235305,
+    "trailing_pe": 380.2857142857143,
     "peg": 2.64,
-    "price_to_book": 2.8982483114601068,
+    "price_to_book": 2.9235077700291034,
     "eps_growth_next": 18.99435714285714,
     "roe": 0.018760001,
     "profit_margin": 0.030480001,
     "debt_to_equity": 184.152,
-    "fcf_yield": -0.05104159509774056,
-    "dividend_yield": 0.03505115574081091,
+    "fcf_yield": -0.050600589580367145,
+    "dividend_yield": 0.03474830954169797,
     "payout_ratio": 13.175699,
     "cash_payout": 0.17288783405070063,
     "dividend_cagr_5y": 0.009805797673485328,
@@ -3809,7 +3807,7 @@
     49.59,
     51.45,
     52.19,
-    52.78
+    53.24
    ]
   },
   {
@@ -3819,9 +3817,9 @@
    "sector": "Consumer Defensive",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 218.47,
-   "day_change": 0.011435190836588616,
-   "week_change": -0.0069545399058948965,
+   "price": 220.42,
+   "day_change": 0.008925696605238898,
+   "week_change": 0.007864660469611984,
    "industry": "Discount Stores",
    "ex_dividend_date": "2026-10-09",
    "lenses": {
@@ -3832,15 +3830,15 @@
    },
    "notes": {
     "trend": [
-     "+17.5% vs. the 200-day average ($185.88)",
-     "+13.9% vs. the 50-day average ($191.77)",
+     "+18.5% vs. the 200-day average ($186.05)",
+     "+14.4% vs. the 50-day average ($192.66)",
      "50-day average above the 200-day",
-     "12-month return, leaving out the last month, +1.6% vs. +17.3% for the S&P/TSX Composite",
-     "97% of the way up its 52-week range ($165.50\u2013$220.00)"
+     "12-month return, leaving out the last month, +0.9% vs. +16.7% for the S&P/TSX Composite",
+     "100% of the way up its 52-week range ($165.50\u2013$220.42)"
     ],
     "garp": [
      "PEG 2.97",
-     "Forward P/E 37.3: cheaper than 0% of the 5 other Consumer Defensive stocks scored",
+     "Forward P/E 37.7: cheaper than 0% of the 5 other Consumer Defensive stocks scored",
      "+17.5% expected EPS growth next year"
     ],
     "quality": [
@@ -3851,7 +3849,7 @@
      "EPS rose in 3 of the last 3 years"
     ],
     "dividend": [
-     "Yield 0.22%",
+     "Yield 0.21%",
      "+18.8% dividend growth per year over 5 years",
      "Payout ratio 9% of earnings",
      "5 straight calendar years of increases"
@@ -3868,11 +3866,11 @@
    "adjusted": 4.8,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": 0.03,
+   "score_change": 0.0,
    "reasons": [
     {
      "type": "caution",
-     "text": "Stretched valuation (forward P/E 37.3)"
+     "text": "Stretched valuation (forward P/E 37.7)"
     },
     {
      "type": "caution",
@@ -3881,32 +3879,32 @@
    ],
    "triggers": [
     "Needs 2.20 more points to reach Buy.",
-    "A move below the 200-day average ($185.88) would cut Trend.",
-    "Forward P/E falling below 20 (now 37.3) would lift GARP.",
+    "A move below the 200-day average ($186.05) would cut Trend.",
+    "Forward P/E falling below 20 (now 37.7) would lift GARP.",
     "Next earnings report: 2026-12-10."
    ],
    "rating_kept": false,
    "reit": false,
    "metrics": {
-    "ma50": 191.76580017089844,
-    "ma200": 185.88450004577638,
+    "ma50": 192.66460021972657,
+    "ma200": 186.05480003356934,
     "low52": 165.5,
-    "high52": 220.0,
-    "return_12m": 0.15666028998807602,
-    "return_12_1": 0.016147753674938148,
-    "volatility": 0.2528491759709755,
+    "high52": 220.4199981689453,
+    "return_12m": 0.15246263985993758,
+    "return_12_1": 0.008888488214248591,
+    "volatility": 0.25289940510621683,
     "beta": 0.313,
-    "market_cap": 58630686849.7,
-    "forward_pe": 37.322076519908975,
-    "trailing_pe": 43.869477911646584,
+    "market_cap": 59154007394.2,
+    "forward_pe": 37.65520257480815,
+    "trailing_pe": 44.26104417670682,
     "peg": 2.9714,
-    "price_to_book": 39.79417122040073,
+    "price_to_book": 40.14936247723133,
     "eps_growth_next": 0.17542971887550207,
     "roe": 0.93094003,
     "profit_margin": 0.17325,
     "debt_to_equity": 399.803,
-    "fcf_yield": 0.021147087892359293,
-    "dividend_yield": 0.0021513251247310843,
+    "fcf_yield": 0.020960004953469443,
+    "dividend_yield": 0.002132292895381544,
     "payout_ratio": 0.0907,
     "cash_payout": 0.06308172415551587,
     "dividend_cagr_5y": 0.187911093569763,
@@ -3988,7 +3986,7 @@
     207.45,
     207.5,
     215.49,
-    218.47
+    220.42
    ]
   },
   {
@@ -3998,28 +3996,28 @@
    "sector": "Utilities",
    "currency": "CAD",
    "financial_currency": "USD",
-   "price": 7.93,
-   "day_change": -0.005018815922963271,
-   "week_change": 0.007623881023129053,
+   "price": 7.9,
+   "day_change": -0.0037830685524083973,
+   "week_change": 0.002538068608636479,
    "industry": "Utilities - Diversified",
    "ex_dividend_date": "2026-12-31",
    "lenses": {
-    "trend": 3.4,
+    "trend": 3.3,
     "garp": 8.9,
     "quality": 2.6,
     "dividend": 3.0
    },
    "notes": {
     "trend": [
-     "\u22123.7% vs. the 200-day average ($8.24)",
-     "+5.9% vs. the 50-day average ($7.49)",
+     "\u22124.0% vs. the 200-day average ($8.23)",
+     "+5.5% vs. the 50-day average ($7.49)",
      "50-day average below the 200-day",
-     "12-month return, leaving out the last month, \u221216.3% vs. +17.3% for the S&P/TSX Composite",
-     "35% of the way up its 52-week range ($7.06\u2013$9.54)"
+     "12-month return, leaving out the last month, \u221215.5% vs. +16.7% for the S&P/TSX Composite",
+     "34% of the way up its 52-week range ($7.06\u2013$9.54)"
     ],
     "garp": [
      "PEG 1.30",
-     "Forward P/E 13.9: cheaper than 86% of the 7 other Utilities stocks scored",
+     "Forward P/E 13.8: cheaper than 86% of the 7 other Utilities stocks scored",
      "+78.6% expected EPS growth next year"
     ],
     "quality": [
@@ -4029,7 +4027,7 @@
      "A loss in at least one of the last 4 years"
     ],
     "dividend": [
-     "Yield 4.58%",
+     "Yield 4.59%",
      "\u221215.0% dividend growth per year over 5 years",
      "Dividends use 41% of operating cash flow",
      "0 straight calendar years of increases"
@@ -4041,40 +4039,40 @@
     "quality": 0.25,
     "dividend": 0.15
    },
-   "composite": 4.79,
+   "composite": 4.76,
    "risk_penalty": 0,
-   "adjusted": 4.79,
+   "adjusted": 4.76,
    "rating": "Don't buy",
    "borderline": false,
    "score_change": -0.03,
    "reasons": [],
    "triggers": [
-    "Needs 2.21 more points to reach Buy.",
-    "A move above the 200-day average ($8.24) would lift Trend.",
+    "Needs 2.24 more points to reach Buy.",
+    "A move above the 200-day average ($8.23) would lift Trend.",
     "Next earnings report: 2026-11-06."
    ],
    "rating_kept": false,
    "reit": false,
    "metrics": {
-    "ma50": 7.489599990844726,
-    "ma200": 8.236749980449677,
+    "ma50": 7.489999990463257,
+    "ma200": 8.231149978637696,
     "low52": 7.059999942779541,
     "high52": 9.539999961853027,
-    "return_12m": -0.08850574687444202,
-    "return_12_1": -0.16321834834347315,
-    "volatility": 0.23459026121131127,
+    "return_12m": -0.0845886453526169,
+    "return_12_1": -0.15527232153167825,
+    "volatility": 0.2340222675512889,
     "beta": 0.94,
-    "market_cap": 6105826811.5,
-    "forward_pe": 13.87759790645323,
-    "trailing_pe": 24.78125,
+    "market_cap": 6082727845.0,
+    "forward_pe": 13.825097536063119,
+    "trailing_pe": 24.6875,
     "peg": 1.3,
-    "price_to_book": 0.9730819517839734,
+    "price_to_book": 0.9694006833661274,
     "eps_growth_next": 0.7857016874999998,
     "roe": 0.02174,
     "profit_margin": 0.06538,
     "debt_to_equity": 130.722,
-    "fcf_yield": -0.02974003515101175,
-    "dividend_yield": 0.04577553593947037,
+    "fcf_yield": -0.029852971993357364,
+    "dividend_yield": 0.04594936708860759,
     "payout_ratio": 1.1290001,
     "cash_payout": 0.40749013210426555,
     "dividend_cagr_5y": -0.15018470228637237,
@@ -4156,51 +4154,52 @@
     7.55,
     7.63,
     7.8,
-    7.93
+    7.9
    ]
   },
   {
-   "symbol": "FTS.TO",
-   "name": "Fortis Inc.",
+   "symbol": "ABX.TO",
+   "name": "Barrick Mining Corporation",
    "held": false,
-   "sector": "Utilities",
+   "sector": "Basic Materials",
    "currency": "CAD",
-   "financial_currency": "CAD",
-   "price": 84.22,
-   "day_change": -0.0054322045679603415,
-   "week_change": -0.009526021054006795,
-   "industry": "Utilities - Regulated Electric",
-   "ex_dividend_date": "2026-11-17",
+   "financial_currency": "USD",
+   "price": 53.96,
+   "day_change": -0.030716708114184144,
+   "week_change": -0.04546258182063567,
+   "industry": "Gold",
+   "ex_dividend_date": "2026-08-31",
    "lenses": {
-    "trend": 6.1,
-    "garp": 3.2,
-    "quality": 4.9,
-    "dividend": 5.0
+    "trend": 1.7,
+    "garp": 5.5,
+    "quality": 9.7,
+    "dividend": 6.0
    },
    "notes": {
     "trend": [
-     "+7.8% vs. the 200-day average ($78.12)",
-     "+7.8% vs. the 50-day average ($78.10)",
+     "\u22126.9% vs. the 200-day average ($57.96)",
+     "\u22126.4% vs. the 50-day average ($57.66)",
      "50-day average below the 200-day",
-     "12-month return, leaving out the last month, +4.7% vs. +17.3% for the S&P/TSX Composite",
-     "91% of the way up its 52-week range ($69.11\u2013$85.79)"
+     "12-month return, leaving out the last month, +10.2% vs. +16.7% for the S&P/TSX Composite",
+     "22% of the way up its 52-week range ($48.92\u2013$71.86)"
     ],
     "garp": [
-     "PEG 2.74",
-     "Forward P/E 21.7: cheaper than 43% of the 7 other Utilities stocks scored",
-     "+10.3% expected EPS growth next year"
+     "PEG 2.04",
+     "Forward P/E 9.2: cheaper than 80% of the 10 other Basic Materials stocks scored",
+     "+7.6% expected EPS growth next year"
     ],
     "quality": [
-     "Return on equity 7.6%",
-     "Profit margin 15.0%",
-     "Debt-to-equity 1.35 (utility scale)",
+     "Return on equity 27.0%",
+     "Profit margin 30.3%",
+     "Debt-to-equity 0.13",
+     "Free cash flow yield +5.8%",
      "EPS rose in 3 of the last 3 years"
     ],
     "dividend": [
-     "Yield 3.16%",
-     "+4.9% dividend growth per year over 5 years",
-     "Dividends use 30% of operating cash flow",
-     "6 straight calendar years of increases"
+     "Yield 2.42%",
+     "+10.3% dividend growth per year over 5 years",
+     "Payout ratio 24% of earnings",
+     "2 straight calendar years of increases"
     ]
    },
    "weights": {
@@ -4209,123 +4208,135 @@
     "quality": 0.25,
     "dividend": 0.15
    },
-   "composite": 4.76,
-   "risk_penalty": 0,
-   "adjusted": 4.76,
+   "composite": 5.48,
+   "risk_penalty": 0.75,
+   "adjusted": 4.73,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": 0.0,
-   "reasons": [],
+   "score_change": -0.48,
+   "reasons": [
+    {
+     "type": "caution",
+     "text": "Score down 0.48 since the last update"
+    },
+    {
+     "type": "caution",
+     "text": "Very volatile (47% a year)"
+    },
+    {
+     "type": "caution",
+     "text": "Drawdown: 25% below its 52-week high"
+    }
+   ],
    "triggers": [
-    "Needs 2.24 more points to reach Buy.",
-    "A move below the 200-day average ($78.12) would cut Trend.",
-    "Forward P/E falling below 20 (now 21.7) would lift GARP.",
-    "Next earnings report: 2026-11-03."
+    "Needs 2.27 more points to reach Buy.",
+    "A move above the 200-day average ($57.96) would lift Trend.",
+    "Next earnings report: 2027-02-04."
    ],
    "rating_kept": false,
    "reit": false,
    "metrics": {
-    "ma50": 78.09719970703125,
-    "ma200": 78.12374980926514,
-    "low52": 69.11000061035156,
-    "high52": 85.79000091552734,
-    "return_12m": 0.1594163261062045,
-    "return_12_1": 0.046668494192354526,
-    "volatility": 0.1429559842864362,
-    "beta": 0.435,
-    "market_cap": 43440676000.0,
-    "forward_pe": 21.698244456925558,
-    "trailing_pe": 23.926136363636363,
-    "peg": 2.7421,
-    "price_to_book": 1.7909241696083016,
-    "eps_growth_next": 0.10267613636363637,
-    "roe": 0.07554,
-    "profit_margin": 0.15006,
-    "debt_to_equity": 135.043,
-    "fcf_yield": -0.0672152309968657,
-    "dividend_yield": 0.03158394680598433,
-    "payout_ratio": 0.72730005,
-    "cash_payout": 0.30147835216554286,
-    "dividend_cagr_5y": 0.048522415131136976,
-    "dividend_years_raised": 6,
-    "target_price": 82.91347,
-    "analyst_rating": "hold",
-    "analyst_count": 15.0
+    "ma50": 57.66300010681152,
+    "ma200": 57.960949993133546,
+    "low52": 48.91999816894531,
+    "high52": 71.86000061035156,
+    "return_12m": 0.031345554266329234,
+    "return_12_1": 0.10244649544372608,
+    "volatility": 0.46847736601328394,
+    "beta": null,
+    "market_cap": 87881036680.0,
+    "forward_pe": 9.232082684968866,
+    "trailing_pe": 9.937384898710865,
+    "peg": 2.04,
+    "price_to_book": 2.2939603967888296,
+    "eps_growth_next": 0.0763968692449355,
+    "roe": 0.27011,
+    "profit_margin": 0.30315,
+    "debt_to_equity": 12.532,
+    "fcf_yield": 0.05817523799379013,
+    "dividend_yield": 0.02418458117123795,
+    "payout_ratio": 0.2417,
+    "cash_payout": 0.22483509329813073,
+    "dividend_cagr_5y": 0.103094569236859,
+    "dividend_years_raised": 2,
+    "target_price": 65.7444,
+    "analyst_rating": "buy",
+    "analyst_count": 12.0
    },
-   "next_earnings": "2026-11-03",
+   "next_earnings": "2027-02-04",
    "news": [
     {
-     "title": "Sell Alert: 5 High-Profile Stocks Just Dumped by Top Analysts",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/sell-alert-5-high-profile-203124084.html",
-     "source": "Insider Monkey",
-     "published": "2026-11-08T20:31:24Z"
+     "title": "Barrick Moves Toward Listing North American Gold Assets With SEC Filing",
+     "url": "https://www.wsj.com/business/barrick-moves-toward-listing-north-american-gold-assets-with-sec-filing-f6f9b6b8?siteid=yhoof2&yptr=yahoo",
+     "source": "The Wall Street Journal",
+     "published": "2026-11-11T00:06:00Z"
     },
     {
-     "title": "Molson Coors downgraded, SiTime upgraded: Wall Street's top analyst calls",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/molson-coors-downgraded-sitime-upgraded-150719956.html",
-     "source": "The Fly",
-     "published": "2026-11-06T15:07:19Z"
+     "title": "Barrick Q3 Earnings Call Highlights IPO Plans and Cost Discipline",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/barrick-q3-earnings-call-highlights-194800692.html",
+     "source": "Zacks",
+     "published": "2026-11-10T19:48:00Z"
     },
     {
-     "title": "Fortis (TSX:FTS) Just Gave Investors Something To Parse",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/fortis-tsx-fts-just-gave-232324941.html",
-     "source": "Simply Wall St.",
-     "published": "2026-11-04T23:23:24Z"
+     "title": "Newmont Stock Up 26% YTD: Should You Buy, Sell or Hold the Stock?",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/newmont-stock-26-ytd-buy-120800954.html",
+     "source": "Zacks",
+     "published": "2026-11-10T12:08:00Z"
     }
    ],
    "chart": [
-    72.66,
-    73.26,
-    70.68,
-    70.16,
-    70.1,
-    70.64,
-    71.25,
-    71.63,
-    72.28,
-    72.19,
-    72.6,
-    73.74,
-    77.42,
-    76.99,
-    78.47,
-    78.59,
-    79.92,
-    75.65,
-    77.29,
-    79.02,
-    79.72,
-    77.93,
-    77.03,
-    77.74,
-    76.74,
-    75.25,
-    77.99,
-    76.26,
-    77.83,
-    79.61,
-    79.14,
-    82.57,
-    81.88,
-    81.23,
-    82.42,
-    82.99,
-    79.8,
-    78.24,
-    78.68,
-    75.59,
-    76.06,
-    76.47,
-    75.36,
-    75.78,
-    75.1,
-    75.31,
-    76.03,
-    78.81,
-    81.13,
-    81.97,
-    84.91,
-    84.22
+    51.53,
+    58.43,
+    56.79,
+    59.26,
+    61.62,
+    62.06,
+    60.52,
+    66.52,
+    67.79,
+    69.96,
+    62.24,
+    61.75,
+    65.32,
+    65.6,
+    69.21,
+    61.73,
+    58.09,
+    50.96,
+    53.43,
+    58.04,
+    60.27,
+    59.35,
+    56.14,
+    52.75,
+    59.05,
+    55.82,
+    56.21,
+    58.9,
+    54.91,
+    56.25,
+    56.19,
+    52.9,
+    55.56,
+    51.9,
+    48.92,
+    52.34,
+    51.45,
+    60.96,
+    57.8,
+    65.56,
+    63.54,
+    61.92,
+    60.52,
+    60.24,
+    60.7,
+    57.41,
+    58.53,
+    57.74,
+    53.36,
+    51.64,
+    57.2,
+    53.96
    ]
   },
   {
@@ -4335,27 +4346,27 @@
    "sector": "Real Estate",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 9.5,
-   "day_change": 0.008492560834195695,
-   "week_change": -0.020618537443073293,
+   "price": 9.36,
+   "day_change": -0.014736878244500429,
+   "week_change": -0.03005181070641283,
    "industry": "REIT - Diversified",
    "ex_dividend_date": "2026-07-31",
    "lenses": {
-    "trend": 1.5,
+    "trend": 0.9,
     "garp": 5.7,
     "quality": 10.0,
     "dividend": 0.0
    },
    "notes": {
     "trend": [
-     "\u22128.0% vs. the 200-day average ($10.33)",
-     "\u22121.0% vs. the 50-day average ($9.60)",
+     "\u22129.3% vs. the 200-day average ($10.32)",
+     "\u22122.4% vs. the 50-day average ($9.59)",
      "50-day average below the 200-day",
-     "12-month return, leaving out the last month, \u221214.5% vs. +17.3% for the S&P/TSX Composite",
-     "17% of the way up its 52-week range ($9.12\u2013$11.39)"
+     "12-month return, leaving out the last month, \u221213.0% vs. +16.7% for the S&P/TSX Composite",
+     "11% of the way up its 52-week range ($9.12\u2013$11.39)"
     ],
     "garp": [
-     "Price-to-book 0.60 (REIT: book value tracks property value)",
+     "Price-to-book 0.59 (REIT: book value tracks property value)",
      "\u221212.3% revenue growth, latest quarter vs. a year ago"
     ],
     "quality": [
@@ -4363,7 +4374,7 @@
      "Debt-to-equity 0.64 (REIT scale)"
     ],
     "dividend": [
-     "Yield 6.32%",
+     "Yield 6.41%",
      "\u22123.4% dividend growth per year over 5 years",
      "0 straight calendar years of increases"
     ]
@@ -4374,40 +4385,40 @@
     "quality": 0.25,
     "dividend": 0.15
    },
-   "composite": 4.66,
+   "composite": 4.48,
    "risk_penalty": 0,
-   "adjusted": 4.66,
+   "adjusted": 4.48,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": 0.12,
+   "score_change": -0.18,
    "reasons": [],
    "triggers": [
-    "Needs 2.34 more points to reach Buy.",
-    "A move above the 200-day average ($10.33) would lift Trend.",
+    "Needs 2.52 more points to reach Buy.",
+    "A move above the 200-day average ($10.32) would lift Trend.",
     "Next earnings report: 2026-11-16."
    ],
    "rating_kept": false,
    "reit": true,
    "metrics": {
-    "ma50": 9.598400039672851,
-    "ma200": 10.330450010299682,
+    "ma50": 9.590600032806396,
+    "ma200": 10.3239000082016,
     "low52": 9.119999885559082,
     "high52": 11.390000343322754,
-    "return_12m": -0.15102767147069118,
-    "return_12_1": -0.14477211316424288,
-    "volatility": 0.2199699858208432,
+    "return_12m": -0.16204121819641315,
+    "return_12_1": -0.12981197845669368,
+    "volatility": 0.2204027803597006,
     "beta": 1.002,
-    "market_cap": 2514050930.0,
-    "forward_pe": 7.661290322580645,
+    "market_cap": 2477001758.3999996,
+    "forward_pe": 7.548387096774193,
     "trailing_pe": null,
     "peg": 8.27,
-    "price_to_book": 0.6001642554804473,
+    "price_to_book": 0.5913197296102091,
     "eps_growth_next": null,
     "roe": -0.12810001,
     "profit_margin": -0.68678004,
     "debt_to_equity": 63.919,
-    "fcf_yield": -0.1908634810353663,
-    "dividend_yield": 0.06315789473684211,
+    "fcf_yield": -0.19371827669187822,
+    "dividend_yield": 0.06410256410256411,
     "payout_ratio": 2.5863001,
     "cash_payout": 0.7825135415676094,
     "dividend_cagr_5y": -0.03444760613889286,
@@ -4489,189 +4500,7 @@
     9.81,
     9.37,
     9.54,
-    9.5
-   ]
-  },
-  {
-   "symbol": "AEM.TO",
-   "name": "Agnico Eagle Mines Limited",
-   "held": false,
-   "sector": "Basic Materials",
-   "currency": "CAD",
-   "financial_currency": "USD",
-   "price": 265.03,
-   "day_change": -0.020221815973024526,
-   "week_change": 0.03402130741587506,
-   "industry": "Gold",
-   "ex_dividend_date": "2026-12-01",
-   "lenses": {
-    "trend": 6.3,
-    "garp": 0.7,
-    "quality": 9.0,
-    "dividend": 5.5
-   },
-   "notes": {
-    "trend": [
-     "+1.2% vs. the 200-day average ($261.79)",
-     "\u22120.0% vs. the 50-day average ($265.09)",
-     "50-day average above the 200-day",
-     "12-month return, leaving out the last month, +14.8% vs. +17.3% for the S&P/TSX Composite",
-     "48% of the way up its 52-week range ($191.66\u2013$344.78)"
-    ],
-    "garp": [
-     "PEG 28.26",
-     "Forward P/E 16.2: cheaper than 30% of the 10 other Basic Materials stocks scored",
-     "\u22124.2% expected EPS growth next year"
-    ],
-    "quality": [
-     "Return on equity 23.2%",
-     "Profit margin 41.0%",
-     "Debt-to-equity 0.01",
-     "Free cash flow yield +2.8%",
-     "EPS rose in 2 of the last 3 years"
-    ],
-    "dividend": [
-     "Yield 0.96%",
-     "+6.5% dividend growth per year over 5 years",
-     "Payout ratio 14% of earnings",
-     "6 straight calendar years of increases"
-    ]
-   },
-   "weights": {
-    "trend": 0.3,
-    "garp": 0.3,
-    "quality": 0.25,
-    "dividend": 0.15
-   },
-   "composite": 5.17,
-   "risk_penalty": 0.75,
-   "adjusted": 4.42,
-   "rating": "Don't buy",
-   "borderline": false,
-   "score_change": -0.28,
-   "reasons": [
-    {
-     "type": "caution",
-     "text": "Score down 0.28 since the last update"
-    },
-    {
-     "type": "caution",
-     "text": "Very volatile (49% a year)"
-    },
-    {
-     "type": "caution",
-     "text": "Drawdown: 23% below its 52-week high"
-    }
-   ],
-   "triggers": [
-    "Needs 2.58 more points to reach Buy.",
-    "A move below the 200-day average ($261.79) would cut Trend.",
-    "Next earnings report: 2026-10-28."
-   ],
-   "rating_kept": false,
-   "reit": false,
-   "metrics": {
-    "ma50": 265.0869995117188,
-    "ma200": 261.7912007141113,
-    "low52": 191.66000366210938,
-    "high52": 344.7799987792969,
-    "return_12m": 0.12754731052242319,
-    "return_12_1": 0.14796844530501585,
-    "volatility": 0.4885219683170347,
-    "beta": 0.668,
-    "market_cap": 133984983859.43,
-    "forward_pe": 16.245195490942276,
-    "trailing_pe": 15.562536699941278,
-    "peg": 28.26,
-    "price_to_book": 3.2214012968015107,
-    "eps_growth_next": -0.04202219612448632,
-    "roe": 0.23236,
-    "profit_margin": 0.41009,
-    "debt_to_equity": 1.108,
-    "fcf_yield": 0.02796544833659198,
-    "dividend_yield": 0.009583820699543449,
-    "payout_ratio": 0.1426,
-    "cash_payout": 0.1745513241543874,
-    "dividend_cagr_5y": 0.06543262871770872,
-    "dividend_years_raised": 6,
-    "target_price": 299.12506,
-    "analyst_rating": "buy",
-    "analyst_count": 11.0
-   },
-   "next_earnings": "2026-10-28",
-   "news": [
-    {
-     "title": "Can Alamos Gold Stock Jump 50%?",
-     "url": "https://www.trefis.com/stock/agi/articles/623940/can-alamos-gold-stock-jump-50/2026-11-10",
-     "source": "Trefis",
-     "published": "2026-11-10T17:42:59Z"
-    },
-    {
-     "title": "Forget the ETF Outflows: Gold Miners Offer 3X Leverage As Cash Flow Surges",
-     "url": "https://finance.yahoo.com/markets/commodities/articles/forget-etf-outflows-gold-miners-133032447.html",
-     "source": "Benzinga",
-     "published": "2026-11-10T13:30:32Z"
-    },
-    {
-     "title": "Newmont Stock Up 26% YTD: Should You Buy, Sell or Hold the Stock?",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/newmont-stock-26-ytd-buy-120800954.html",
-     "source": "Zacks",
-     "published": "2026-11-10T12:08:00Z"
-    }
-   ],
-   "chart": [
-    225.52,
-    243.79,
-    233.57,
-    231.62,
-    241.5,
-    247.68,
-    234.07,
-    265.89,
-    274.73,
-    293.89,
-    258.84,
-    268.94,
-    295.07,
-    311.56,
-    342.63,
-    300.11,
-    284.98,
-    248.3,
-    268.22,
-    290.14,
-    302.27,
-    301.31,
-    273.41,
-    249.67,
-    264.48,
-    247.83,
-    242.94,
-    253.48,
-    228.02,
-    227.41,
-    231.28,
-    223.07,
-    224.0,
-    207.94,
-    191.93,
-    204.81,
-    203.52,
-    249.37,
-    258.85,
-    297.82,
-    286.76,
-    283.22,
-    278.09,
-    278.97,
-    275.1,
-    262.2,
-    269.83,
-    267.66,
-    243.39,
-    230.79,
-    270.75,
-    265.03
+    9.36
    ]
   },
   {
@@ -4681,33 +4510,33 @@
    "sector": "Industrials",
    "currency": "CAD",
    "financial_currency": "USD",
-   "price": 345.895,
-   "day_change": 0.008469631365369601,
-   "week_change": -0.0030695252122293626,
+   "price": 330.56,
+   "day_change": -0.04434806767438493,
+   "week_change": 0.05637218258311605,
    "industry": "Aerospace & Defense",
    "ex_dividend_date": "2014-12-10",
    "lenses": {
-    "trend": 9.7,
+    "trend": 9.2,
     "garp": 1.0,
     "quality": 5.1,
     "dividend": null
    },
    "notes": {
     "trend": [
-     "+16.1% vs. the 200-day average ($297.89)",
-     "+9.2% vs. the 50-day average ($316.87)",
+     "+10.8% vs. the 200-day average ($298.29)",
+     "+4.1% vs. the 50-day average ($317.40)",
      "50-day average above the 200-day",
-     "12-month return, leaving out the last month, +45.1% vs. +17.3% for the S&P/TSX Composite",
-     "83% of the way up its 52-week range ($205.94\u2013$375.57)"
+     "12-month return, leaving out the last month, +36.9% vs. +16.7% for the S&P/TSX Composite",
+     "73% of the way up its 52-week range ($205.94\u2013$375.57)"
     ],
     "garp": [
      "PEG 9.35",
-     "Forward P/E 25.6: cheaper than 23% of the 13 other Industrials stocks scored",
+     "Forward P/E 24.4: cheaper than 23% of the 13 other Industrials stocks scored",
      "+3.3% expected EPS growth next year"
     ],
     "quality": [
      "Profit margin 9.8%",
-     "Free cash flow yield +25.3%",
+     "Free cash flow yield +26.5%",
      "A loss in at least one of the last 4 years"
     ],
     "dividend": [
@@ -4719,12 +4548,12 @@
     "garp": 0.3529,
     "quality": 0.2941
    },
-   "composite": 5.28,
+   "composite": 5.1,
    "risk_penalty": 1.0,
-   "adjusted": 4.28,
+   "adjusted": 4.1,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": -0.03,
+   "score_change": -0.18,
    "reasons": [
     {
      "type": "caution",
@@ -4736,32 +4565,32 @@
     }
    ],
    "triggers": [
-    "Needs 2.72 more points to reach Buy.",
-    "A move below the 200-day average ($297.89) would cut Trend.",
-    "Forward P/E falling below 20 (now 25.6) would lift GARP.",
+    "Needs 2.90 more points to reach Buy.",
+    "A move below the 200-day average ($298.29) would cut Trend.",
+    "Forward P/E falling below 20 (now 24.4) would lift GARP.",
     "Next earnings report: 2026-11-05."
    ],
    "rating_kept": false,
    "reit": false,
    "metrics": {
-    "ma50": 316.8726995849609,
-    "ma200": 297.8897749328613,
+    "ma50": 317.40379943847654,
+    "ma200": 298.29259994506833,
     "low52": 205.94000244140625,
     "high52": 375.57000732421875,
-    "return_12m": 0.6956467459150257,
-    "return_12_1": 0.4512476129858358,
-    "volatility": 0.5057870086349883,
+    "return_12m": 0.523809564003634,
+    "return_12_1": 0.36882871187483146,
+    "volatility": 0.5077493551108264,
     "beta": 2.151,
-    "market_cap": 4177601168.015,
-    "forward_pe": 25.58016565596805,
-    "trailing_pe": 26.42436974789916,
+    "market_cap": 3992390297.92,
+    "forward_pe": 24.446087856825912,
+    "trailing_pe": 25.252864782276546,
     "peg": 9.3453,
     "price_to_book": null,
     "eps_growth_next": 0.03300229182582126,
     "roe": null,
     "profit_margin": 0.098000005,
     "debt_to_equity": null,
-    "fcf_yield": 0.2531656281833466,
+    "fcf_yield": 0.2649102279782148,
     "dividend_yield": null,
     "payout_ratio": 0.0,
     "cash_payout": null,
@@ -4844,7 +4673,7 @@
     332.66,
     330.6,
     315.0,
-    345.895
+    330.56
    ]
   },
   {
@@ -4854,28 +4683,28 @@
    "sector": "Energy",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 91.58,
-   "day_change": 0.017668674353033875,
-   "week_change": 0.046389457766391695,
+   "price": 92.04,
+   "day_change": 0.00502292067345933,
+   "week_change": 0.049247601854850886,
    "industry": "Oil & Gas Midstream",
    "ex_dividend_date": "2026-12-31",
    "lenses": {
-    "trend": 6.0,
+    "trend": 6.2,
     "garp": 2.1,
     "quality": 4.4,
     "dividend": 3.4
    },
    "notes": {
     "trend": [
-     "+2.8% vs. the 200-day average ($89.04)",
-     "+6.0% vs. the 50-day average ($86.38)",
+     "+3.3% vs. the 200-day average ($89.11)",
+     "+6.4% vs. the 50-day average ($86.47)",
      "50-day average below the 200-day",
-     "12-month return, leaving out the last month, +14.3% vs. +17.3% for the S&P/TSX Composite",
-     "69% of the way up its 52-week range ($73.64\u2013$99.60)"
+     "12-month return, leaving out the last month, +14.3% vs. +16.7% for the S&P/TSX Composite",
+     "71% of the way up its 52-week range ($73.64\u2013$99.60)"
     ],
     "garp": [
      "PEG 2.38",
-     "Forward P/E 23.2: cheaper than 8% of the 13 other Energy stocks scored",
+     "Forward P/E 23.3: cheaper than 8% of the 13 other Energy stocks scored",
      "+6.5% expected EPS growth next year"
     ],
     "quality": [
@@ -4886,7 +4715,7 @@
      "EPS rose in 2 of the last 3 years"
     ],
     "dividend": [
-     "Yield 3.83%",
+     "Yield 3.81%",
      "+2.2% dividend growth per year over 5 years",
      "Dividends use 43% of operating cash flow",
      "0 straight calendar years of increases"
@@ -4898,41 +4727,41 @@
     "quality": 0.25,
     "dividend": 0.15
    },
-   "composite": 4.04,
+   "composite": 4.1,
    "risk_penalty": 0,
-   "adjusted": 4.04,
+   "adjusted": 4.1,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": 0.08,
+   "score_change": 0.06,
    "reasons": [],
    "triggers": [
-    "Needs 2.96 more points to reach Buy.",
-    "A move below the 200-day average ($89.04) would cut Trend.",
-    "Forward P/E falling below 20 (now 23.2) would lift GARP.",
+    "Needs 2.90 more points to reach Buy.",
+    "A move below the 200-day average ($89.11) would cut Trend.",
+    "Forward P/E falling below 20 (now 23.3) would lift GARP.",
     "Next earnings report: 2026-11-05."
    ],
    "rating_kept": false,
    "reit": false,
    "metrics": {
-    "ma50": 86.38359985351562,
-    "ma200": 89.04274990081787,
+    "ma50": 86.4681999206543,
+    "ma200": 89.1111999130249,
     "low52": 73.63999938964844,
     "high52": 99.5999984741211,
-    "return_12m": 0.2215552933159708,
-    "return_12_1": 0.14299054349945473,
-    "volatility": 0.19047737813388377,
+    "return_12m": 0.1996871669846907,
+    "return_12_1": 0.14298750060164012,
+    "volatility": 0.19051410047204118,
     "beta": 0.923,
-    "market_cap": 95405012335.68,
-    "forward_pe": 23.170790331925748,
-    "trailing_pe": 24.684636118598384,
+    "market_cap": 95884225107.84001,
+    "forward_pe": 23.2871756076703,
+    "trailing_pe": 24.808625336927225,
     "peg": 2.3801,
-    "price_to_book": 3.7291310367293753,
+    "price_to_book": 3.7478622037625215,
     "eps_growth_next": 0.06533423180592979,
     "roe": 0.12145001,
     "profit_margin": 0.2505,
     "debt_to_equity": 168.376,
-    "fcf_yield": 0.005192337340275543,
-    "dividend_yield": 0.03832714566499235,
+    "fcf_yield": 0.005166386936358475,
+    "dividend_yield": 0.03813559322033898,
     "payout_ratio": 0.9387,
     "cash_payout": 0.4303909845762711,
     "dividend_cagr_5y": 0.022472757812224353,
@@ -5014,7 +4843,7 @@
     87.32,
     90.16,
     87.52,
-    91.58
+    92.04
    ]
   },
   {
@@ -5024,23 +4853,23 @@
    "sector": "Utilities",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 57.04,
-   "day_change": -0.006790865185025807,
-   "week_change": -0.002448397847171102,
+   "price": 57.08,
+   "day_change": 0.0007012783114535015,
+   "week_change": -0.009027719736833584,
    "industry": "Utilities - Regulated Electric",
    "ex_dividend_date": "2026-09-09",
    "lenses": {
-    "trend": 4.8,
+    "trend": 4.9,
     "garp": 1.1,
     "quality": 5.3,
     "dividend": 5.2
    },
    "notes": {
     "trend": [
-     "+1.3% vs. the 200-day average ($56.33)",
-     "+7.7% vs. the 50-day average ($52.97)",
+     "+1.3% vs. the 200-day average ($56.34)",
+     "+7.6% vs. the 50-day average ($53.05)",
      "50-day average below the 200-day",
-     "12-month return, leaving out the last month, \u22122.6% vs. +17.3% for the S&P/TSX Composite",
+     "12-month return, leaving out the last month, \u22122.2% vs. +16.7% for the S&P/TSX Composite",
      "67% of the way up its 52-week range ($50.64\u2013$60.19)"
     ],
     "garp": [
@@ -5067,41 +4896,41 @@
     "quality": 0.25,
     "dividend": 0.15
    },
-   "composite": 3.88,
+   "composite": 3.9,
    "risk_penalty": 0,
-   "adjusted": 3.88,
+   "adjusted": 3.9,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": 0.0,
+   "score_change": 0.02,
    "reasons": [],
    "triggers": [
-    "Needs 3.12 more points to reach Buy.",
-    "A move below the 200-day average ($56.33) would cut Trend.",
+    "Needs 3.10 more points to reach Buy.",
+    "A move below the 200-day average ($56.34) would cut Trend.",
     "Forward P/E falling below 20 (now 23.8) would lift GARP.",
     "Next earnings report: 2026-11-10."
    ],
    "rating_kept": false,
    "reit": false,
    "metrics": {
-    "ma50": 52.974400177001954,
-    "ma200": 56.32540012359619,
+    "ma50": 53.052800216674804,
+    "ma200": 56.34175012588501,
     "low52": 50.63999938964844,
     "high52": 60.189998626708984,
-    "return_12m": 0.09355830295995204,
-    "return_12_1": -0.026457075769790284,
-    "volatility": 0.15452823694984508,
+    "return_12m": 0.08434655191655205,
+    "return_12_1": -0.022416419431186885,
+    "volatility": 0.15420088568898102,
     "beta": null,
-    "market_cap": 34229563681.6,
-    "forward_pe": 23.77716824931011,
-    "trailing_pe": 24.37606837606838,
+    "market_cap": 34253567583.2,
+    "forward_pe": 23.79384228034048,
+    "trailing_pe": 24.393162393162395,
     "peg": 3.6561,
-    "price_to_book": 2.588021778584392,
+    "price_to_book": 2.5898366606170597,
     "eps_growth_next": 0.02518803418803439,
     "roe": 0.10904,
     "profit_margin": 0.14491999,
     "debt_to_equity": 147.995,
-    "fcf_yield": -0.024857898158292487,
-    "dividend_yield": 0.024719495091164095,
+    "fcf_yield": -0.024840478467922273,
+    "dividend_yield": 0.02470217238962859,
     "payout_ratio": 0.5865,
     "cash_payout": 0.2980406876806608,
     "dividend_cagr_5y": 0.05697363488229734,
@@ -5183,7 +5012,7 @@
     54.45,
     55.24,
     57.68,
-    57.04
+    57.08
    ]
   },
   {
@@ -5193,35 +5022,35 @@
    "sector": "Basic Materials",
    "currency": "CAD",
    "financial_currency": "USD",
-   "price": 11.49,
-   "day_change": 0.02497767457790978,
-   "week_change": 0.007894750491184155,
+   "price": 10.74,
+   "day_change": -0.06527415273629833,
+   "week_change": 0.0009319878199876008,
    "industry": "Copper",
    "ex_dividend_date": null,
    "lenses": {
-    "trend": 1.4,
-    "garp": 9.6,
+    "trend": 1.0,
+    "garp": 10.0,
     "quality": 5.1,
     "dividend": null
    },
    "notes": {
     "trend": [
-     "\u221214.0% vs. the 200-day average ($13.36)",
-     "\u221213.4% vs. the 50-day average ($13.27)",
+     "\u221219.4% vs. the 200-day average ($13.33)",
+     "\u221218.5% vs. the 50-day average ($13.18)",
      "50-day average below the 200-day",
-     "12-month return, leaving out the last month, +12.1% vs. +17.3% for the S&P/TSX Composite",
-     "28% of the way up its 52-week range ($9.45\u2013$16.66)"
+     "12-month return, leaving out the last month, +6.2% vs. +16.7% for the S&P/TSX Composite",
+     "18% of the way up its 52-week range ($9.45\u2013$16.66)"
     ],
     "garp": [
      "PEG 0.30",
-     "Forward P/E 9.7: cheaper than 80% of the 10 other Basic Materials stocks scored",
+     "Forward P/E 9.0: cheaper than 90% of the 10 other Basic Materials stocks scored",
      "+105.0% expected EPS growth next year"
     ],
     "quality": [
      "Return on equity 10.2%",
      "Profit margin 11.7%",
      "Debt-to-equity 0.35",
-     "Free cash flow yield +2.9%",
+     "Free cash flow yield +3.1%",
      "A loss in at least one of the last 4 years"
     ],
     "dividend": [
@@ -5238,7 +5067,7 @@
    "adjusted": 3.88,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": -0.07,
+   "score_change": 0.0,
    "reasons": [
     {
      "type": "caution",
@@ -5250,35 +5079,35 @@
     },
     {
      "type": "caution",
-     "text": "Deep drawdown: 31% below its 52-week high"
+     "text": "Deep drawdown: 36% below its 52-week high"
     }
    ],
    "triggers": [
     "Needs 3.12 more points to reach Buy.",
-    "A move above the 200-day average ($13.36) would lift Trend.",
+    "A move above the 200-day average ($13.33) would lift Trend.",
     "Next earnings report: 2026-10-29."
    ],
    "rating_kept": false,
    "reit": false,
    "metrics": {
-    "ma50": 13.268199996948242,
-    "ma200": 13.355349988937379,
+    "ma50": 13.179799995422364,
+    "ma200": 13.330349988937378,
     "low52": 9.449999809265137,
     "high52": 16.65999984741211,
-    "return_12m": -0.05742410445949553,
-    "return_12_1": 0.12059067412884894,
-    "volatility": 0.6063878330796202,
+    "return_12m": -0.1476190915904244,
+    "return_12_1": 0.061904738837810225,
+    "volatility": 0.609871262930613,
     "beta": 2.332,
-    "market_cap": 8804219106.75,
-    "forward_pe": 9.662932687455848,
-    "trailing_pe": 19.81034482758621,
+    "market_cap": 8229531175.5,
+    "forward_pe": 9.03219295589868,
+    "trailing_pe": 18.517241379310345,
     "peg": 0.3,
-    "price_to_book": 1.695007016797977,
+    "price_to_book": 1.5843668720983701,
     "eps_growth_next": 1.0501379310344827,
     "roe": 0.10159001,
     "profit_margin": 0.116809994,
     "debt_to_equity": 34.986,
-    "fcf_yield": 0.02906326761039181,
+    "fcf_yield": 0.031092825404413587,
     "dividend_yield": null,
     "payout_ratio": 0.0,
     "cash_payout": null,
@@ -5361,7 +5190,189 @@
     11.19,
     11.0,
     10.99,
-    11.49
+    10.74
+   ]
+  },
+  {
+   "symbol": "AEM.TO",
+   "name": "Agnico Eagle Mines Limited",
+   "held": false,
+   "sector": "Basic Materials",
+   "currency": "CAD",
+   "financial_currency": "USD",
+   "price": 254.28,
+   "day_change": -0.040561446060874196,
+   "week_change": -0.03990940940393073,
+   "industry": "Gold",
+   "ex_dividend_date": "2026-12-01",
+   "lenses": {
+    "trend": 4.3,
+    "garp": 0.7,
+    "quality": 9.0,
+    "dividend": 5.5
+   },
+   "notes": {
+    "trend": [
+     "\u22122.8% vs. the 200-day average ($261.60)",
+     "\u22124.0% vs. the 50-day average ($264.80)",
+     "50-day average above the 200-day",
+     "12-month return, leaving out the last month, +8.9% vs. +16.7% for the S&P/TSX Composite",
+     "41% of the way up its 52-week range ($191.66\u2013$344.78)"
+    ],
+    "garp": [
+     "PEG 28.26",
+     "Forward P/E 15.6: cheaper than 30% of the 10 other Basic Materials stocks scored",
+     "\u22124.2% expected EPS growth next year"
+    ],
+    "quality": [
+     "Return on equity 23.2%",
+     "Profit margin 41.0%",
+     "Debt-to-equity 0.01",
+     "Free cash flow yield +2.9%",
+     "EPS rose in 2 of the last 3 years"
+    ],
+    "dividend": [
+     "Yield 1.00%",
+     "+6.5% dividend growth per year over 5 years",
+     "Payout ratio 14% of earnings",
+     "6 straight calendar years of increases"
+    ]
+   },
+   "weights": {
+    "trend": 0.3,
+    "garp": 0.3,
+    "quality": 0.25,
+    "dividend": 0.15
+   },
+   "composite": 4.58,
+   "risk_penalty": 0.75,
+   "adjusted": 3.83,
+   "rating": "Don't buy",
+   "borderline": false,
+   "score_change": -0.59,
+   "reasons": [
+    {
+     "type": "caution",
+     "text": "Score down 0.59 since the last update"
+    },
+    {
+     "type": "caution",
+     "text": "Very volatile (49% a year)"
+    },
+    {
+     "type": "caution",
+     "text": "Drawdown: 26% below its 52-week high"
+    }
+   ],
+   "triggers": [
+    "Needs 3.17 more points to reach Buy.",
+    "A move above the 200-day average ($261.60) would lift Trend.",
+    "Next earnings report: 2026-10-28."
+   ],
+   "rating_kept": false,
+   "reit": false,
+   "metrics": {
+    "ma50": 264.7973992919922,
+    "ma200": 261.5951007080078,
+    "low52": 191.66000366210938,
+    "high52": 344.7799987792969,
+    "return_12m": 0.04879357385011707,
+    "return_12_1": 0.08904933746519572,
+    "volatility": 0.490275727575197,
+    "beta": 0.668,
+    "market_cap": 128550359188.68001,
+    "forward_pe": 15.586266873323028,
+    "trailing_pe": 14.931297709923664,
+    "peg": 28.26,
+    "price_to_book": 3.0907366024626954,
+    "eps_growth_next": -0.04202219612448632,
+    "roe": 0.23236,
+    "profit_margin": 0.41009,
+    "debt_to_equity": 1.108,
+    "fcf_yield": 0.0291477220884339,
+    "dividend_yield": 0.009988988516595878,
+    "payout_ratio": 0.1426,
+    "cash_payout": 0.1745513241543874,
+    "dividend_cagr_5y": 0.06543262871770872,
+    "dividend_years_raised": 6,
+    "target_price": 299.12506,
+    "analyst_rating": "buy",
+    "analyst_count": 11.0
+   },
+   "next_earnings": "2026-10-28",
+   "news": [
+    {
+     "title": "Can Alamos Gold Stock Jump 50%?",
+     "url": "https://www.trefis.com/stock/agi/articles/623940/can-alamos-gold-stock-jump-50/2026-11-10",
+     "source": "Trefis",
+     "published": "2026-11-10T17:42:59Z"
+    },
+    {
+     "title": "Forget the ETF Outflows: Gold Miners Offer 3X Leverage As Cash Flow Surges",
+     "url": "https://finance.yahoo.com/markets/commodities/articles/forget-etf-outflows-gold-miners-133032447.html",
+     "source": "Benzinga",
+     "published": "2026-11-10T13:30:32Z"
+    },
+    {
+     "title": "Newmont Stock Up 26% YTD: Should You Buy, Sell or Hold the Stock?",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/newmont-stock-26-ytd-buy-120800954.html",
+     "source": "Zacks",
+     "published": "2026-11-10T12:08:00Z"
+    }
+   ],
+   "chart": [
+    225.52,
+    243.79,
+    233.57,
+    231.62,
+    241.5,
+    247.68,
+    234.07,
+    265.89,
+    274.73,
+    293.89,
+    258.84,
+    268.94,
+    295.07,
+    311.56,
+    342.63,
+    300.11,
+    284.98,
+    248.3,
+    268.22,
+    290.14,
+    302.27,
+    301.31,
+    273.41,
+    249.67,
+    264.48,
+    247.83,
+    242.94,
+    253.48,
+    228.02,
+    227.41,
+    231.28,
+    223.07,
+    224.0,
+    207.94,
+    191.93,
+    204.81,
+    203.52,
+    249.37,
+    258.85,
+    297.82,
+    286.76,
+    283.22,
+    278.09,
+    278.97,
+    275.1,
+    262.2,
+    269.83,
+    267.66,
+    243.39,
+    230.79,
+    270.75,
+    254.28
    ]
   },
   {
@@ -5371,39 +5382,39 @@
    "sector": "Basic Materials",
    "currency": "CAD",
    "financial_currency": "USD",
-   "price": 30.56,
-   "day_change": -0.00032712558003489267,
-   "week_change": 0.02173184961037422,
+   "price": 29.53,
+   "day_change": -0.03370414912620523,
+   "week_change": -0.02412424113399625,
    "industry": "Gold",
    "ex_dividend_date": "2026-11-19",
    "lenses": {
-    "trend": 0.3,
+    "trend": 0.1,
     "garp": 6.6,
     "quality": 9.0,
     "dividend": 5.5
    },
    "notes": {
     "trend": [
-     "\u221222.2% vs. the 200-day average ($39.28)",
-     "\u221212.6% vs. the 50-day average ($34.96)",
+     "\u221224.6% vs. the 200-day average ($39.17)",
+     "\u221215.0% vs. the 50-day average ($34.73)",
      "50-day average below the 200-day",
-     "12-month return, leaving out the last month, \u22124.6% vs. +17.3% for the S&P/TSX Composite",
-     "11% of the way up its 52-week range ($27.82\u2013$51.92)"
+     "12-month return, leaving out the last month, \u22128.7% vs. +16.7% for the S&P/TSX Composite",
+     "7% of the way up its 52-week range ($27.82\u2013$51.92)"
     ],
     "garp": [
      "PEG 1.12",
-     "Forward P/E 8.3: cheaper than 100% of the 10 other Basic Materials stocks scored",
+     "Forward P/E 8.0: cheaper than 100% of the 10 other Basic Materials stocks scored",
      "+1.1% expected EPS growth next year"
     ],
     "quality": [
      "Return on equity 35.3%",
      "Profit margin 37.6%",
      "Debt-to-equity 0.07",
-     "Free cash flow yield +6.8%",
+     "Free cash flow yield +7.1%",
      "A loss in at least one of the last 4 years"
     ],
     "dividend": [
-     "Yield 0.75%",
+     "Yield 0.78%",
      "+7.1% dividend growth per year over 5 years",
      "Payout ratio 6% of earnings",
      "5 straight calendar years of increases"
@@ -5415,12 +5426,12 @@
     "quality": 0.25,
     "dividend": 0.15
    },
-   "composite": 5.14,
+   "composite": 5.08,
    "risk_penalty": 1.5,
-   "adjusted": 3.64,
+   "adjusted": 3.58,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": 0.03,
+   "score_change": -0.06,
    "reasons": [
     {
      "type": "caution",
@@ -5432,36 +5443,36 @@
     },
     {
      "type": "caution",
-     "text": "Deep drawdown: 41% below its 52-week high"
+     "text": "Deep drawdown: 43% below its 52-week high"
     }
    ],
    "triggers": [
-    "Needs 3.36 more points to reach Buy.",
-    "A move above the 200-day average ($39.28) would lift Trend.",
+    "Needs 3.42 more points to reach Buy.",
+    "A move above the 200-day average ($39.17) would lift Trend.",
     "Next earnings report: 2026-10-28."
    ],
    "rating_kept": false,
    "reit": false,
    "metrics": {
-    "ma50": 34.9569998550415,
-    "ma200": 39.2793000793457,
+    "ma50": 34.73079986572266,
+    "ma200": 39.16990008354187,
     "low52": 27.81999969482422,
     "high52": 51.91999816894531,
-    "return_12m": -0.13891242545405802,
-    "return_12_1": -0.04621028815957362,
-    "volatility": 0.5324175305727473,
+    "return_12m": -0.19095888529738336,
+    "return_12_1": -0.08712329603221314,
+    "volatility": 0.5334603961828233,
     "beta": 1.528,
-    "market_cap": 36000845405.6,
-    "forward_pe": 8.256188223801056,
-    "trailing_pe": 8.349726775956283,
+    "market_cap": 34787466126.55,
+    "forward_pe": 7.9779200997658775,
+    "trailing_pe": 8.068306010928962,
     "peg": 1.12,
-    "price_to_book": 2.571026067394367,
+    "price_to_book": 2.4843717202276063,
     "eps_growth_next": 0.011329508196721294,
     "roe": 0.35312,
     "profit_margin": 0.37625,
     "debt_to_equity": 7.468,
-    "fcf_yield": 0.06844387536568,
-    "dividend_yield": 0.007526178010471205,
+    "fcf_yield": 0.07083118290467934,
+    "dividend_yield": 0.0077886894683372844,
     "payout_ratio": 0.0587,
     "cash_payout": 0.06549877374184308,
     "dividend_cagr_5y": 0.07122458473353399,
@@ -5543,7 +5554,7 @@
     31.27,
     28.16,
     31.36,
-    30.56
+    29.53
    ]
   },
   {
@@ -5553,28 +5564,28 @@
    "sector": "Utilities",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 22.79,
-   "day_change": 0.00043899159703264523,
-   "week_change": 0.026576582536557147,
+   "price": 22.57,
+   "day_change": -0.009653409910713617,
+   "week_change": 0.009391729818443606,
    "industry": "Utilities - Renewable",
    "ex_dividend_date": "2026-10-30",
    "lenses": {
-    "trend": 5.0,
+    "trend": 4.9,
     "garp": 5.4,
     "quality": 1.9,
     "dividend": 0.0
    },
    "notes": {
     "trend": [
-     "+3.8% vs. the 200-day average ($21.96)",
-     "+3.9% vs. the 50-day average ($21.93)",
+     "+2.7% vs. the 200-day average ($21.98)",
+     "+2.8% vs. the 50-day average ($21.96)",
      "50-day average below the 200-day",
-     "12-month return, leaving out the last month, \u221210.8% vs. +17.3% for the S&P/TSX Composite",
-     "74% of the way up its 52-week range ($16.24\u2013$25.07)"
+     "12-month return, leaving out the last month, \u221211.4% vs. +16.7% for the S&P/TSX Composite",
+     "80% of the way up its 52-week range ($16.24\u2013$24.20)"
     ],
     "garp": [
      "PEG 2.57",
-     "Forward P/E 13.6: cheaper than 100% of the 7 other Utilities stocks scored"
+     "Forward P/E 13.4: cheaper than 100% of the 7 other Utilities stocks scored"
     ],
     "quality": [
      "Return on equity -1.3%",
@@ -5583,7 +5594,7 @@
      "A loss in at least one of the last 4 years"
     ],
     "dividend": [
-     "Yield 3.33%",
+     "Yield 3.37%",
      "\u22128.7% dividend growth per year over 5 years",
      "Payout ratio 121% of earnings",
      "0 straight calendar years of increases"
@@ -5595,12 +5606,12 @@
     "quality": 0.25,
     "dividend": 0.15
    },
-   "composite": 3.6,
+   "composite": 3.56,
    "risk_penalty": 0.75,
-   "adjusted": 2.85,
+   "adjusted": 2.81,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": 0.0,
+   "score_change": -0.04,
    "reasons": [
     {
      "type": "caution",
@@ -5612,32 +5623,32 @@
     }
    ],
    "triggers": [
-    "Needs 4.15 more points to reach Buy.",
-    "A move below the 200-day average ($21.96) would cut Trend.",
+    "Needs 4.19 more points to reach Buy.",
+    "A move below the 200-day average ($21.98) would cut Trend.",
     "Next earnings report: 2026-11-12."
    ],
    "rating_kept": false,
    "reit": false,
    "metrics": {
-    "ma50": 21.925600090026855,
-    "ma200": 21.96040002822876,
+    "ma50": 21.959000091552735,
+    "ma200": 21.97745002746582,
     "low52": 16.239999771118164,
-    "high52": 25.06999969482422,
-    "return_12m": -0.08839996337890621,
-    "return_12_1": -0.10839996337890623,
-    "volatility": 0.36831167500891887,
+    "high52": 24.200000762939453,
+    "return_12m": -0.09972078302482523,
+    "return_12_1": -0.11447941630718428,
+    "volatility": 0.3677421955819257,
     "beta": 0.534,
     "market_cap": null,
-    "forward_pe": 13.570322734309872,
+    "forward_pe": 13.439323567940932,
     "trailing_pe": null,
     "peg": 2.57,
-    "price_to_book": 1.4869185098192732,
+    "price_to_book": 1.4725647550075032,
     "eps_growth_next": null,
     "roe": -0.01272,
     "profit_margin": -0.05509,
     "debt_to_equity": 150.359,
     "fcf_yield": null,
-    "dividend_yield": 0.03334795963141729,
+    "dividend_yield": 0.033673017279574655,
     "payout_ratio": 1.2121,
     "cash_payout": null,
     "dividend_cagr_5y": -0.08730332317100986,
@@ -5719,177 +5730,7 @@
     21.54,
     21.65,
     22.64,
-    22.79
-   ]
-  },
-  {
-   "symbol": "EPRX.TO",
-   "name": "Eupraxia Pharmaceuticals Inc.",
-   "held": false,
-   "sector": "Healthcare",
-   "currency": "CAD",
-   "financial_currency": "USD",
-   "price": 11.45,
-   "day_change": 0.054327824239398526,
-   "week_change": 0.2078059453749812,
-   "industry": "Biotechnology",
-   "ex_dividend_date": null,
-   "lenses": {
-    "trend": 7.9,
-    "garp": 1.0,
-    "quality": 2.0,
-    "dividend": null
-   },
-   "notes": {
-    "trend": [
-     "+13.6% vs. the 200-day average ($10.08)",
-     "+7.3% vs. the 50-day average ($10.67)",
-     "50-day average above the 200-day",
-     "12-month return, leaving out the last month, +14.5% vs. +17.3% for the S&P/TSX Composite",
-     "69% of the way up its 52-week range ($8.06\u2013$12.99)"
-    ],
-    "garp": [
-     "No earnings yet, so growth-at-a-reasonable-price can't be measured; scored 1"
-    ],
-    "quality": [
-     "Return on equity -66.7%",
-     "Profit margin 0.0%",
-     "Debt-to-equity 0.01",
-     "Free cash flow yield \u22122.5%",
-     "A loss in at least one of the last 4 years"
-    ],
-    "dividend": [
-     "Pays no dividend"
-    ]
-   },
-   "weights": {
-    "trend": 0.3529,
-    "garp": 0.3529,
-    "quality": 0.2941
-   },
-   "composite": 3.73,
-   "risk_penalty": 1.25,
-   "adjusted": 2.48,
-   "rating": "Don't buy",
-   "borderline": false,
-   "score_change": -0.03,
-   "reasons": [
-    {
-     "type": "caution",
-     "text": "Above-market beta (1.33)"
-    },
-    {
-     "type": "caution",
-     "text": "Very volatile (64% a year)"
-    },
-    {
-     "type": "caution",
-     "text": "Not profitable over the last 12 months"
-    }
-   ],
-   "triggers": [
-    "Needs 4.52 more points to reach Buy.",
-    "A move below the 200-day average ($10.08) would cut Trend.",
-    "Next earnings report: 2026-11-10."
-   ],
-   "rating_kept": false,
-   "reit": false,
-   "metrics": {
-    "ma50": 10.674099941253662,
-    "ma200": 10.07607500076294,
-    "low52": 8.0600004196167,
-    "high52": 12.989999771118164,
-    "return_12m": 0.23383622184643893,
-    "return_12_1": 0.14547418322365568,
-    "volatility": 0.6438321308727575,
-    "beta": 1.332,
-    "market_cap": 756540120.8499999,
-    "forward_pe": null,
-    "trailing_pe": null,
-    "peg": null,
-    "price_to_book": 8.096639795486658,
-    "eps_growth_next": null,
-    "roe": -0.66696,
-    "profit_margin": 0.0,
-    "debt_to_equity": 1.421,
-    "fcf_yield": -0.025016444572346044,
-    "dividend_yield": null,
-    "payout_ratio": null,
-    "cash_payout": null,
-    "dividend_cagr_5y": null,
-    "dividend_years_raised": 0,
-    "target_price": 16.33333,
-    "analyst_rating": "strong_buy",
-    "analyst_count": 3.0
-   },
-   "next_earnings": "2026-11-10",
-   "news": [
-    {
-     "title": "Eupraxia Says Resolve Trial Updated Data Suggest Annual Dosing Possible in EoE Patients",
-     "url": "https://finance.yahoo.com/healthcare/articles/eupraxia-says-resolve-trial-updated-162740543.html",
-     "source": "MT Newswires",
-     "published": "2026-09-30T16:27:40Z"
-    },
-    {
-     "title": "Eupraxia Pharma (EPRX): When Painful Swallowing Nearly Disappeared, Investors Took Notice",
-     "url": "https://finance.yahoo.com/healthcare/articles/eupraxia-pharma-eprx-painful-swallowing-075610532.html",
-     "source": "Insider Monkey",
-     "published": "2026-09-12T07:56:10Z"
-    }
-   ],
-   "chart": [
-    8.88,
-    8.73,
-    8.54,
-    8.63,
-    9.11,
-    10.02,
-    10.46,
-    11.26,
-    12.24,
-    12.35,
-    11.25,
-    11.46,
-    11.48,
-    11.68,
-    11.14,
-    10.91,
-    10.15,
-    9.79,
-    9.31,
-    9.95,
-    9.52,
-    9.74,
-    9.88,
-    10.75,
-    10.31,
-    9.54,
-    9.7,
-    9.93,
-    8.33,
-    8.45,
-    9.06,
-    9.38,
-    9.53,
-    9.46,
-    9.27,
-    8.22,
-    8.98,
-    9.46,
-    9.31,
-    9.3,
-    9.28,
-    11.64,
-    11.69,
-    11.97,
-    11.31,
-    10.32,
-    10.63,
-    9.35,
-    9.57,
-    9.52,
-    9.71,
-    11.45
+    22.57
    ]
   },
   {
@@ -5899,28 +5740,28 @@
    "sector": "Energy",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 68.25,
-   "day_change": 0.00782632560164287,
-   "week_change": 0.003381407943027881,
+   "price": 68.57,
+   "day_change": 0.004688640217204609,
+   "week_change": 0.018416721076006448,
    "industry": "Oil & Gas Midstream",
    "ex_dividend_date": "2026-11-13",
    "lenses": {
-    "trend": 2.8,
+    "trend": 3.1,
     "garp": 1.8,
     "quality": 2.6,
     "dividend": 2.7
    },
    "notes": {
     "trend": [
-     "\u22126.0% vs. the 200-day average ($72.62)",
-     "+1.1% vs. the 50-day average ($67.49)",
+     "\u22125.6% vs. the 200-day average ($72.64)",
+     "+1.7% vs. the 50-day average ($67.45)",
      "50-day average below the 200-day",
-     "12-month return, leaving out the last month, \u22121.7% vs. +17.3% for the S&P/TSX Composite",
-     "32% of the way up its 52-week range ($62.71\u2013$80.21)"
+     "12-month return, leaving out the last month, \u22121.0% vs. +16.7% for the S&P/TSX Composite",
+     "33% of the way up its 52-week range ($62.71\u2013$80.21)"
     ],
     "garp": [
      "PEG 4.94",
-     "Forward P/E 21.8: cheaper than 23% of the 13 other Energy stocks scored",
+     "Forward P/E 21.9: cheaper than 23% of the 13 other Energy stocks scored",
      "+8.5% expected EPS growth next year"
     ],
     "quality": [
@@ -5931,7 +5772,7 @@
      "EPS rose in 2 of the last 3 years"
     ],
     "dividend": [
-     "Yield 5.68%",
+     "Yield 5.66%",
      "+2.9% dividend growth per year over 5 years",
      "Dividends use 70% of operating cash flow",
      "6 straight calendar years of increases"
@@ -5943,46 +5784,41 @@
     "quality": 0.25,
     "dividend": 0.15
    },
-   "composite": 2.44,
+   "composite": 2.52,
    "risk_penalty": 0,
-   "adjusted": 2.44,
+   "adjusted": 2.52,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": -0.41,
-   "reasons": [
-    {
-     "type": "caution",
-     "text": "Score down 0.41 since the last update"
-    }
-   ],
+   "score_change": 0.08,
+   "reasons": [],
    "triggers": [
-    "Needs 4.56 more points to reach Buy.",
-    "A move above the 200-day average ($72.62) would lift Trend.",
-    "Forward P/E falling below 20 (now 21.8) would lift GARP.",
+    "Needs 4.48 more points to reach Buy.",
+    "A move above the 200-day average ($72.64) would lift Trend.",
+    "Forward P/E falling below 20 (now 21.9) would lift GARP.",
     "Next earnings report: 2026-11-06."
    ],
    "rating_kept": false,
    "reit": false,
    "metrics": {
-    "ma50": 67.48740020751953,
-    "ma200": 72.62265045166015,
+    "ma50": 67.44800018310546,
+    "ma200": 72.63955043792724,
     "low52": 62.709999084472656,
     "high52": 80.20999908447266,
-    "return_12m": 0.008421981268528889,
-    "return_12_1": -0.017287206910012953,
-    "volatility": 0.17966242364985563,
+    "return_12m": 0.004688640217204609,
+    "return_12_1": -0.010256365542010037,
+    "volatility": 0.17955193832365185,
     "beta": 0.786,
-    "market_cap": 152121612006.0,
-    "forward_pe": 21.835947248190738,
-    "trailing_pe": 23.697916666666668,
+    "market_cap": 152834856194.15997,
+    "forward_pe": 21.93832824627749,
+    "trailing_pe": 23.809027777777775,
     "peg": 4.9425,
-    "price_to_book": 2.5040358086292924,
+    "price_to_book": 2.515776342823598,
     "eps_growth_next": 0.0852708333333334,
     "roe": 0.09849,
     "profit_margin": 0.07488,
     "debt_to_equity": 160.737,
-    "fcf_yield": -0.013566448506466006,
-    "dividend_yield": 0.056849816849816846,
+    "fcf_yield": -0.013503137094448083,
+    "dividend_yield": 0.05658451217733703,
     "payout_ratio": 1.3377,
     "cash_payout": 0.7049878468083205,
     "dividend_cagr_5y": 0.02898846999526339,
@@ -6064,7 +5900,181 @@
     67.37,
     69.11,
     66.14,
-    68.25
+    68.57
+   ]
+  },
+  {
+   "symbol": "EPRX.TO",
+   "name": "Eupraxia Pharmaceuticals Inc.",
+   "held": false,
+   "sector": "Healthcare",
+   "currency": "CAD",
+   "financial_currency": "USD",
+   "price": 11.11,
+   "day_change": -0.0296943369652084,
+   "week_change": 0.2036836628038894,
+   "industry": "Biotechnology",
+   "ex_dividend_date": null,
+   "lenses": {
+    "trend": 7.2,
+    "garp": 1.0,
+    "quality": 2.0,
+    "dividend": null
+   },
+   "notes": {
+    "trend": [
+     "+10.3% vs. the 200-day average ($10.07)",
+     "+3.6% vs. the 50-day average ($10.72)",
+     "50-day average above the 200-day",
+     "12-month return, leaving out the last month, +2.6% vs. +16.7% for the S&P/TSX Composite",
+     "62% of the way up its 52-week range ($8.06\u2013$12.99)"
+    ],
+    "garp": [
+     "No earnings yet, so growth-at-a-reasonable-price can't be measured; scored 1"
+    ],
+    "quality": [
+     "Return on equity -66.7%",
+     "Profit margin 0.0%",
+     "Debt-to-equity 0.01",
+     "Free cash flow yield \u22122.6%",
+     "A loss in at least one of the last 4 years"
+    ],
+    "dividend": [
+     "Pays no dividend"
+    ]
+   },
+   "weights": {
+    "trend": 0.3529,
+    "garp": 0.3529,
+    "quality": 0.2941
+   },
+   "composite": 3.48,
+   "risk_penalty": 1.25,
+   "adjusted": 2.23,
+   "rating": "Don't buy",
+   "borderline": false,
+   "score_change": -0.25,
+   "reasons": [
+    {
+     "type": "caution",
+     "text": "Score down 0.25 since the last update"
+    },
+    {
+     "type": "caution",
+     "text": "Above-market beta (1.33)"
+    },
+    {
+     "type": "caution",
+     "text": "Very volatile (64% a year)"
+    },
+    {
+     "type": "caution",
+     "text": "Not profitable over the last 12 months"
+    }
+   ],
+   "triggers": [
+    "Needs 4.77 more points to reach Buy.",
+    "A move below the 200-day average ($10.07) would cut Trend.",
+    "Next earnings report: 2026-11-10."
+   ],
+   "rating_kept": false,
+   "reit": false,
+   "metrics": {
+    "ma50": 10.720499935150146,
+    "ma200": 10.070124998092652,
+    "low52": 8.0600004196167,
+    "high52": 12.989999771118164,
+    "return_12m": 0.18823520891994505,
+    "return_12_1": 0.025668423671276752,
+    "volatility": 0.641051820612513,
+    "beta": 1.332,
+    "market_cap": 734075174.03,
+    "forward_pe": null,
+    "trailing_pe": null,
+    "peg": null,
+    "price_to_book": 7.856215557018058,
+    "eps_growth_next": null,
+    "roe": -0.66696,
+    "profit_margin": 0.0,
+    "debt_to_equity": 1.421,
+    "fcf_yield": -0.025782024334236018,
+    "dividend_yield": null,
+    "payout_ratio": null,
+    "cash_payout": null,
+    "dividend_cagr_5y": null,
+    "dividend_years_raised": 0,
+    "target_price": 16.33333,
+    "analyst_rating": "strong_buy",
+    "analyst_count": 3.0
+   },
+   "next_earnings": "2026-11-10",
+   "news": [
+    {
+     "title": "Eupraxia Says Resolve Trial Updated Data Suggest Annual Dosing Possible in EoE Patients",
+     "url": "https://finance.yahoo.com/healthcare/articles/eupraxia-says-resolve-trial-updated-162740543.html",
+     "source": "MT Newswires",
+     "published": "2026-09-30T16:27:40Z"
+    },
+    {
+     "title": "Eupraxia Pharma (EPRX): When Painful Swallowing Nearly Disappeared, Investors Took Notice",
+     "url": "https://finance.yahoo.com/healthcare/articles/eupraxia-pharma-eprx-painful-swallowing-075610532.html",
+     "source": "Insider Monkey",
+     "published": "2026-09-12T07:56:10Z"
+    }
+   ],
+   "chart": [
+    8.88,
+    8.73,
+    8.54,
+    8.63,
+    9.11,
+    10.02,
+    10.46,
+    11.26,
+    12.24,
+    12.35,
+    11.25,
+    11.46,
+    11.48,
+    11.68,
+    11.14,
+    10.91,
+    10.15,
+    9.79,
+    9.31,
+    9.95,
+    9.52,
+    9.74,
+    9.88,
+    10.75,
+    10.31,
+    9.54,
+    9.7,
+    9.93,
+    8.33,
+    8.45,
+    9.06,
+    9.38,
+    9.53,
+    9.46,
+    9.27,
+    8.22,
+    8.98,
+    9.46,
+    9.31,
+    9.3,
+    9.28,
+    11.64,
+    11.69,
+    11.97,
+    11.31,
+    10.32,
+    10.63,
+    9.35,
+    9.57,
+    9.52,
+    9.71,
+    11.11
    ]
   },
   {
@@ -6074,28 +6084,28 @@
    "sector": "Energy",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 105.87,
-   "day_change": 0.023590857915565033,
-   "week_change": 0.05795945907310518,
+   "price": 102.37,
+   "day_change": -0.03305941162935311,
+   "week_change": 0.06802299818733215,
    "industry": "Uranium",
    "ex_dividend_date": "2026-11-30",
    "lenses": {
-    "trend": 0.4,
+    "trend": 0.2,
     "garp": 5.0,
     "quality": 4.2,
     "dividend": 7.2
    },
    "notes": {
     "trend": [
-     "\u221225.7% vs. the 200-day average ($142.45)",
-     "\u221212.4% vs. the 50-day average ($120.87)",
+     "\u221228.0% vs. the 200-day average ($142.10)",
+     "\u221214.9% vs. the 50-day average ($120.24)",
      "50-day average below the 200-day",
-     "12-month return, leaving out the last month, \u22123.1% vs. +17.3% for the S&P/TSX Composite",
-     "12% of the way up its 52-week range ($95.85\u2013$181.66)"
+     "12-month return, leaving out the last month, \u22125.5% vs. +16.7% for the S&P/TSX Composite",
+     "8% of the way up its 52-week range ($95.85\u2013$181.66)"
     ],
     "garp": [
      "PEG 1.92",
-     "Forward P/E 43.8: cheaper than 0% of the 13 other Energy stocks scored",
+     "Forward P/E 42.4: cheaper than 0% of the 13 other Energy stocks scored",
      "+180.9% expected EPS growth next year"
     ],
     "quality": [
@@ -6118,12 +6128,12 @@
     "quality": 0.25,
     "dividend": 0.15
    },
-   "composite": 3.75,
+   "composite": 3.69,
    "risk_penalty": 1.5,
-   "adjusted": 2.25,
+   "adjusted": 2.19,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": 0.06,
+   "score_change": -0.06,
    "reasons": [
     {
      "type": "caution",
@@ -6131,41 +6141,41 @@
     },
     {
      "type": "caution",
-     "text": "Stretched valuation (forward P/E 43.8)"
+     "text": "Stretched valuation (forward P/E 42.4)"
     },
     {
      "type": "caution",
-     "text": "Deep drawdown: 42% below its 52-week high"
+     "text": "Deep drawdown: 44% below its 52-week high"
     }
    ],
    "triggers": [
-    "Needs 4.75 more points to reach Buy.",
-    "A move above the 200-day average ($142.45) would lift Trend.",
-    "Forward P/E falling below 20 (now 43.8) would lift GARP.",
+    "Needs 4.81 more points to reach Buy.",
+    "A move above the 200-day average ($142.10) would lift Trend.",
+    "Forward P/E falling below 20 (now 42.4) would lift GARP.",
     "Next earnings report: 2026-10-30."
    ],
    "rating_kept": false,
    "reit": false,
    "metrics": {
-    "ma50": 120.87000015258789,
-    "ma200": 142.44725025177001,
+    "ma50": 120.24160034179687,
+    "ma200": 142.10410026550292,
     "low52": 95.8499984741211,
     "high52": 181.66000366210938,
-    "return_12m": -0.18310186913092963,
-    "return_12_1": -0.030787077972643906,
-    "volatility": 0.5055413996913822,
+    "return_12m": -0.21059524577147493,
+    "return_12_1": -0.0548272160897868,
+    "volatility": 0.5062509924819237,
     "beta": 1.126,
-    "market_cap": 46109876380.86,
-    "forward_pe": 43.83251977990585,
-    "trailing_pe": 123.1046511627907,
+    "market_cap": 44585510957.86,
+    "forward_pe": 42.38344242815682,
+    "trailing_pe": 119.03488372093024,
     "peg": 1.92,
-    "price_to_book": 6.374254922030224,
+    "price_to_book": 6.163525799265458,
     "eps_growth_next": 1.8085232558139537,
     "roe": 0.056760002,
     "profit_margin": 0.11432999,
     "debt_to_equity": 13.949,
-    "fcf_yield": 0.004274122237330627,
-    "dividend_yield": 0.0022669311419665624,
+    "fcf_yield": 0.004420253211548242,
+    "dividend_yield": 0.0023444368467324408,
     "payout_ratio": 0.2637,
     "cash_payout": 0.13241958012276905,
     "dividend_cagr_5y": 0.2457309396155174,
@@ -6247,7 +6257,7 @@
     110.13,
     107.6,
     100.65,
-    105.87
+    102.37
    ]
   },
   {
@@ -6257,24 +6267,24 @@
    "sector": "Utilities",
    "currency": "CAD",
    "financial_currency": "USD",
-   "price": 43.37,
-   "day_change": 0.01640498694581405,
-   "week_change": 0.010484640776733611,
+   "price": 42.18,
+   "day_change": -0.027438290431548107,
+   "week_change": -0.01884162227648245,
    "industry": "Utilities - Renewable",
    "ex_dividend_date": "2026-08-31",
    "lenses": {
-    "trend": 4.2,
+    "trend": 3.2,
     "garp": 1.0,
     "quality": 2.3,
     "dividend": 3.4
    },
    "notes": {
     "trend": [
-     "\u22122.9% vs. the 200-day average ($44.68)",
-     "+4.8% vs. the 50-day average ($41.40)",
+     "\u22125.6% vs. the 200-day average ($44.70)",
+     "+1.9% vs. the 50-day average ($41.38)",
      "50-day average below the 200-day",
-     "12-month return, leaving out the last month, +2.2% vs. +17.3% for the S&P/TSX Composite",
-     "45% of the way up its 52-week range ($36.78\u2013$51.56)"
+     "12-month return, leaving out the last month, \u22120.7% vs. +16.7% for the S&P/TSX Composite",
+     "37% of the way up its 52-week range ($36.78\u2013$51.56)"
     ],
     "garp": [
      "No earnings yet, so growth-at-a-reasonable-price can't be measured; scored 1"
@@ -6286,7 +6296,7 @@
      "A loss in at least one of the last 4 years"
     ],
     "dividend": [
-     "Yield 5.12%",
+     "Yield 5.26%",
      "+5.4% dividend growth per year over 5 years",
      "Dividends use 66% of operating cash flow",
      "4 straight calendar years of increases"
@@ -6298,48 +6308,52 @@
     "quality": 0.25,
     "dividend": 0.15
    },
-   "composite": 2.65,
+   "composite": 2.34,
    "risk_penalty": 0.5,
-   "adjusted": 2.15,
+   "adjusted": 1.84,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": 0.21,
+   "score_change": -0.31,
    "reasons": [
+    {
+     "type": "caution",
+     "text": "Score down 0.31 since the last update"
+    },
     {
      "type": "caution",
      "text": "Not profitable over the last 12 months"
     }
    ],
    "triggers": [
-    "Needs 4.85 more points to reach Buy.",
-    "A move above the 200-day average ($44.68) would lift Trend.",
+    "Needs 5.16 more points to reach Buy.",
+    "A move above the 200-day average ($44.70) would lift Trend.",
     "Next earnings report: 2027-01-29."
    ],
    "rating_kept": false,
    "reit": false,
    "metrics": {
-    "ma50": 41.40179977416992,
-    "ma200": 44.68459993362427,
+    "ma50": 41.37579978942871,
+    "ma200": 44.69969993591309,
     "low52": 36.779998779296875,
     "high52": 51.560001373291016,
-    "return_12m": 0.0531811221583145,
-    "return_12_1": 0.021612418238291742,
-    "volatility": 0.2755630063648188,
+    "return_12m": 0.02953378199708756,
+    "return_12_1": -0.006590198919184664,
+    "volatility": 0.27109028736992913,
     "beta": 0.955,
-    "market_cap": 13131667223.38,
+    "market_cap": 12771356317.32,
     "forward_pe": null,
     "trailing_pe": null,
     "peg": 3.52,
-    "price_to_book": 2.387730818337618,
+    "price_to_book": 2.3222154926788274,
     "eps_growth_next": null,
     "roe": -0.0074699996,
     "profit_margin": -0.04188,
     "debt_to_equity": 114.098,
-    "fcf_yield": -0.7813459139241766,
-    "dividend_yield": 0.05118745676735071,
+    "fcf_yield": -0.8033895753174854,
+    "dividend_yield": 0.052631578947368425,
     "payout_ratio": 14.2651005,
     "cash_payout": 0.6564225080859376,
-    "dividend_cagr_5y": 0.054412925438002135,
+    "dividend_cagr_5y": 0.05433752355251387,
     "dividend_years_raised": 4,
     "target_price": 48.022068,
     "analyst_rating": "buy",
@@ -6418,7 +6432,7 @@
     39.89,
     40.02,
     43.93,
-    43.37
+    42.18
    ]
   },
   {
@@ -6428,39 +6442,39 @@
    "sector": "Communication Services",
    "currency": "CAD",
    "financial_currency": "CAD",
-   "price": 12.33,
-   "day_change": -0.007246389052740332,
-   "week_change": -0.0434445620404339,
+   "price": 12.14,
+   "day_change": -0.015409536217271258,
+   "week_change": -0.07960570663111677,
    "industry": "Telecom Services",
    "ex_dividend_date": "2026-12-11",
    "lenses": {
-    "trend": 1.6,
+    "trend": 1.2,
     "garp": 2.1,
     "quality": 2.7,
     "dividend": 1.5
    },
    "notes": {
     "trend": [
-     "\u221220.5% vs. the 200-day average ($15.52)",
-     "+0.8% vs. the 50-day average ($12.23)",
+     "\u221221.6% vs. the 200-day average ($15.48)",
+     "\u22120.5% vs. the 50-day average ($12.20)",
      "50-day average below the 200-day",
-     "12-month return, leaving out the last month, \u221246.7% vs. +17.3% for the S&P/TSX Composite",
-     "14% of the way up its 52-week range ($11.03\u2013$20.62)"
+     "12-month return, leaving out the last month, \u221244.8% vs. +16.7% for the S&P/TSX Composite",
+     "12% of the way up its 52-week range ($11.03\u2013$20.62)"
     ],
     "garp": [
      "PEG 13.49",
-     "Forward P/E 16.2",
+     "Forward P/E 16.0",
      "\u221214.5% EPS growth per year, last reported years"
     ],
     "quality": [
      "Return on equity -12.9%",
      "Profit margin -10.3%",
      "Debt-to-equity 2.21",
-     "Free cash flow yield +10.3%",
+     "Free cash flow yield +10.5%",
      "EPS rose in 2 of the last 3 years"
     ],
     "dividend": [
-     "Yield 11.70%",
+     "Yield 11.88%",
      "+2.8% dividend growth per year over 5 years",
      "Payout ratio 283% of earnings",
      "6 straight calendar years of increases"
@@ -6472,12 +6486,12 @@
     "quality": 0.25,
     "dividend": 0.15
    },
-   "composite": 2.01,
+   "composite": 1.89,
    "risk_penalty": 1.5,
-   "adjusted": 0.51,
+   "adjusted": 0.39,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": 0.0,
+   "score_change": -0.12,
    "reasons": [
     {
      "type": "caution",
@@ -6485,7 +6499,7 @@
     },
     {
      "type": "caution",
-     "text": "Deep drawdown: 40% below its 52-week high"
+     "text": "Deep drawdown: 41% below its 52-week high"
     },
     {
      "type": "caution",
@@ -6493,33 +6507,33 @@
     }
    ],
    "triggers": [
-    "Needs 6.49 more points to reach Buy.",
-    "A move above the 200-day average ($15.52) would lift Trend.",
+    "Needs 6.61 more points to reach Buy.",
+    "A move above the 200-day average ($15.48) would lift Trend.",
     "Payout ratio back under 80% (now 283%) would lift the dividend score.",
     "Next earnings report: 2026-11-06."
    ],
    "rating_kept": false,
    "reit": false,
    "metrics": {
-    "ma50": 12.227799949645997,
-    "ma200": 15.516899991035462,
+    "ma50": 12.201799964904785,
+    "ma200": 15.483499994277954,
     "low52": 11.029999732971191,
     "high52": 20.6200008392334,
-    "return_12m": -0.4040599514045562,
-    "return_12_1": -0.4668922451299693,
-    "volatility": 0.25689127834839115,
+    "return_12m": -0.4092457034534056,
+    "return_12_1": -0.44768852540876203,
+    "volatility": 0.25723357096378474,
     "beta": 0.788,
-    "market_cap": 19604700000.0,
-    "forward_pe": 16.224324644393857,
+    "market_cap": 19302600000.0,
+    "forward_pe": 15.974314775583247,
     "trailing_pe": null,
     "peg": 13.4876,
-    "price_to_book": 1.4583086930810172,
+    "price_to_book": 1.4358367829686576,
     "eps_growth_next": null,
     "roe": -0.12942,
     "profit_margin": -0.10313,
     "debt_to_equity": 220.918,
-    "fcf_yield": 0.10339994960392151,
-    "dividend_yield": 0.11695052716950527,
+    "fcf_yield": 0.1050182354708692,
+    "dividend_yield": 0.11878088962108731,
     "payout_ratio": 2.8295002,
     "cash_payout": 0.45791491326012496,
     "dividend_cagr_5y": 0.028332459909701457,
@@ -6601,7 +6615,7 @@
     12.34,
     12.37,
     12.81,
-    12.33
+    12.14
    ]
   },
   {
@@ -6612,8 +6626,8 @@
    "currency": "CAD",
    "financial_currency": "CAD",
    "price": 4.14,
-   "day_change": -0.0048076878990646055,
-   "week_change": -0.016627119008812974,
+   "day_change": 0.0,
+   "week_change": -0.002409693651091449,
    "industry": "Real Estate Services",
    "ex_dividend_date": "2026-09-29",
    "lenses": {
@@ -6624,10 +6638,10 @@
    },
    "notes": {
     "trend": [
-     "\u22128.1% vs. the 200-day average ($4.50)",
-     "\u22121.3% vs. the 50-day average ($4.19)",
+     "\u22128.0% vs. the 200-day average ($4.50)",
+     "\u22121.2% vs. the 50-day average ($4.19)",
      "50-day average below the 200-day",
-     "12-month return, leaving out the last month, \u221214.7% vs. +17.3% for the S&P/TSX Composite",
+     "12-month return, leaving out the last month, \u221216.3% vs. +16.7% for the S&P/TSX Composite",
      "10% of the way up its 52-week range ($4.01\u2013$5.34)"
     ],
     "garp": [
@@ -6658,7 +6672,7 @@
    "adjusted": -0.03,
    "rating": "Don't buy",
    "borderline": false,
-   "score_change": -0.03,
+   "score_change": 0.0,
    "reasons": [
     {
      "type": "caution",
@@ -6682,13 +6696,13 @@
    "rating_kept": false,
    "reit": false,
    "metrics": {
-    "ma50": 4.192800035476685,
-    "ma200": 4.504500007629394,
+    "ma50": 4.188400030136108,
+    "ma200": 4.500550007820129,
     "low52": 4.010000228881836,
     "high52": 5.340000152587891,
-    "return_12m": -0.14285715696057866,
-    "return_12_1": -0.14699793982650633,
-    "volatility": 0.24003834422217882,
+    "return_12m": -0.15682281157958766,
+    "return_12_1": -0.16293273701818078,
+    "volatility": 0.24001150602180663,
     "beta": 0.863,
     "market_cap": 1514211048.54,
     "forward_pe": null,
@@ -6792,15 +6806,15 @@
    "symbol": "VFV.TO",
    "name": "Vanguard S&P 500 Index ETF",
    "currency": "CAD",
-   "price": 192.64,
-   "day_change": 0.017482689096191883,
-   "week_change": 0.011764735110138203,
-   "return_12m": 0.1315789072703233,
-   "ma50": 191.3092007446289,
-   "ma200": 180.82880004882813,
+   "price": 192.06,
+   "day_change": -0.00301080685679167,
+   "week_change": 0.05117393958268046,
+   "return_12m": 0.12823827985048308,
+   "ma50": 191.38380065917968,
+   "ma200": 180.9482000732422,
    "low52": 156.6699981689453,
    "high52": 197.55999755859375,
-   "dividend_yield": 0.008409468438538207,
+   "dividend_yield": 0.008434864104967198,
    "chart": [
     165.23,
     170.08,
@@ -6853,7 +6867,7 @@
     189.37,
     187.84,
     184.9,
-    192.64
+    192.06
    ],
    "ex_dividend_date": null,
    "expense_ratio": 0.09,
@@ -6884,15 +6898,15 @@
    "symbol": "VDY.TO",
    "name": "Vanguard FTSE Canadian High Dividend Yield Index ETF",
    "currency": "CAD",
-   "price": 78.63,
-   "day_change": 0.010538487605101565,
-   "week_change": -0.004305482614023526,
-   "return_12m": 0.3270885612391219,
-   "ma50": 77.10940017700196,
-   "ma200": 73.08280019760132,
+   "price": 78.44,
+   "day_change": -0.002416314620988458,
+   "week_change": 0.019893365055847045,
+   "return_12m": 0.31060993218443267,
+   "ma50": 77.14400024414063,
+   "ma200": 73.1580502128601,
    "low52": 59.220001220703125,
    "high52": 79.4800033569336,
-   "dividend_yield": 0.02791555385984993,
+   "dividend_yield": 0.02798317185109638,
    "chart": [
     59.57,
     60.62,
@@ -6945,7 +6959,7 @@
     78.1,
     78.9,
     76.84,
-    78.63
+    78.44
    ],
    "ex_dividend_date": null,
    "expense_ratio": 0.22,
@@ -7022,7 +7036,7 @@
    "symbol": "CVO.TO",
    "name": "Coveo Solutions Inc.",
    "held": false,
-   "price": 4.97,
+   "price": 4.99,
    "currency": "CAD",
    "missing": "GARP",
    "news": [
