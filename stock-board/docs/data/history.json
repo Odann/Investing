@@ -569,6 +569,19 @@
    "currency": "CAD",
    "bench_price": 35789.0898,
    "results": {}
+  },
+  {
+   "id": "NA.TO|2026-11-19|Don't buy",
+   "symbol": "NA.TO",
+   "name": "National Bank of Canada",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 6.67,
+   "logged_at": "2026-11-19T03:48:36.181488+00:00",
+   "price": 205.5,
+   "currency": "CAD",
+   "bench_price": 34578.0508,
+   "results": {}
   }
  ]
 }
