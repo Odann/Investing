@@ -582,6 +582,19 @@
    "currency": "CAD",
    "bench_price": 34578.0508,
    "results": {}
+  },
+  {
+   "id": "TD.TO|2026-11-21|Don't buy",
+   "symbol": "TD.TO",
+   "name": "The Toronto-Dominion Bank",
+   "rating": "Don't buy",
+   "held": false,
+   "score": 6.62,
+   "logged_at": "2026-11-21T03:25:21.113318+00:00",
+   "price": 162.05,
+   "currency": "CAD",
+   "bench_price": 33189.8516,
+   "results": {}
   }
  ]
 }
